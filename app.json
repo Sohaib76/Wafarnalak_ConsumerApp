@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "وفرنا لك",
+    "slug": "wafarnalak",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.4",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "notification": {
+      "icon": "./assets/noti-icon.png"
+    },
+    "splash": {
+      "image": "./assets/logo-combine.png",
+      "resizemode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 290000
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wafarnalak.wafarnalakapp",
+      "buildNumber": "8",
+      "config": {
+        "googleMapsApiKey": "AIzaSyCZenxJupQXwOicw8u9pBnFiniI8w03Vus"
+      },
+      "usesIcloudStorage": true,
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "The app record your current location coordinates to detect your city name and adress.",
+        "NOTIFICATIONS": "WAFARNALAK wants to send you notifications .",
+        "NSUserNotificationAlertStyle": "hello",
+        "NSPhotoLibraryUsageDescription": "The app take your photo library pictures to showcase your profile picture in your app account.",
+        "NSCameraUsageDescription": "The app take your photo library pictures to showcase your profile picture in your app account.",
+        "NSMicrophoneUsageDescription": "The app take your photo library pictures to showcase your profile picture in your app account.",
+        "UIBackgroundModes": ["audio"]
+      },
+      "appStoreUrl": "https://apps.apple.com/pk/app/wafarnalak/id1492622050"
+    },
+    "android": {
+      "useNextNotificationsApi": true,
+      "package": "com.wafarnalak.wafarnalakapp",
+      "versionCode": 10,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "NOTIFICATIONS",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "INTERNET"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCZenxJupQXwOicw8u9pBnFiniI8w03Vus"
+        }
+      },
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.wafarnalak.wafarnalakapp",
+      "googleServicesFile": "./google-services.json"
+    }
+  }
+}

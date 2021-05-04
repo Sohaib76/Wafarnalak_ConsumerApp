@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "200064457252",
+    "firebase_url": "https://foren-se-customers.firebaseio.com",
+    "project_id": "foren-se-customers",
+    "storage_bucket": "foren-se-customers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200064457252:android:d47e6f1883d13546b156b1",
+        "android_client_info": {
+          "package_name": "com.wafarnalak.wafarnalakapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200064457252-24bl1egt0r2pq0keen66p6d6tokeqqpb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdKnV7vKwqao7aAmKMh8BhO4VfsBEmjlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200064457252-24bl1egt0r2pq0keen66p6d6tokeqqpb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "200064457252-ldpid717cgbmtur7ctvb4hhabmk5u5ot.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.forense.customer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
