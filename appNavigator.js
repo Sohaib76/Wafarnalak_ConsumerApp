@@ -32,6 +32,7 @@ import Splash from "./screens/Splash";
 import Chat from "./screens/Chat";
 import CameraComponent from "./screens/Common/Camera";
 import MapDirections from "./screens/Common/MapDirections";
+import Login from "./screens/Login";
 const profileNavigator = createStackNavigator(
   {
     Splash: { screen: Splash },
@@ -64,19 +65,20 @@ const profileNavigator = createStackNavigator(
     GroomingServices: { screen: GroomingServices },
     SalonBookingDetail: { screen: SalonBookingDetail },
     BookingProfileScreen: { screen: BookingProfileScreen },
-    Chat: { screen: Chat }
+    Chat: { screen: Chat },
+    // Login: { screen: Login },
   },
   {
     initialRouteName: "LandingSecreen",
     headerMode: "none",
     defaultNavigationOptions: {
-      gesturesEnabled: false
-    }
+      gesturesEnabled: false,
+    },
   }
 );
 
 const AppNavigator = createAppContainer(profileNavigator, {
-  headerMode: "none"
+  headerMode: "none",
 });
 
 export default AppNavigator;

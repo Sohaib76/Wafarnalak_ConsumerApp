@@ -707,7 +707,7 @@ import {
   Dimensions,
   TouchableOpacity,
   BackHandler,
-  ScrollView
+  ScrollView,
 } from "react-native";
 import {
   Container,
@@ -719,7 +719,7 @@ import {
   Left,
   Toast,
   Right,
-  Footer
+  Footer,
 } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
@@ -742,7 +742,7 @@ export default class PromotionService extends React.Component {
       selectedServices: [],
       totalOrderPrice: 0,
       isRefresh: false,
-      toolTipVisible: -1
+      toolTipVisible: -1,
     };
     console.log("props ======", this.props.navigation.state.params);
   }
@@ -753,7 +753,7 @@ export default class PromotionService extends React.Component {
 
     this.setState({
       lan: navigation.getParam("lan"),
-      selectedServices: jobs !== null ? JSON.parse(jobs) : []
+      selectedServices: jobs !== null ? JSON.parse(jobs) : [],
     });
     let lan = await AsyncStorage.getItem("lan");
     this.setState({ lan: lan });
@@ -762,28 +762,28 @@ export default class PromotionService extends React.Component {
       this.handleBackButtonClick
     );
   };
-  getServiceObj = serviceid => {
+  getServiceObj = (serviceid) => {
     fetch(
       "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/v1.2/get_service_object",
       {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          serviceid: serviceid
-        })
+          serviceid: serviceid,
+        }),
       }
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         if (responseJson.error == false) {
           this.setState({ services: responseJson.services });
           console.log("service-----", this.state.services);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({ loading: false });
       });
   };
@@ -808,7 +808,7 @@ export default class PromotionService extends React.Component {
           width: Dimensions.get("screen").width - 30,
           height: 67,
           borderWidth: 1,
-          borderBottomColor: "lightgray"
+          borderBottomColor: "lightgray",
         }}
       >
         <Left style={{ flexDirection: "row" }}>
@@ -817,12 +817,12 @@ export default class PromotionService extends React.Component {
               uri:
                 data.seo_name !== null
                   ? data.seo_name
-                  : "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/image-placeholder.png?alt=media&token=10ced05a-f905-4951-9298-ff47e771f070"
+                  : "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/image-placeholder.png?alt=media&token=10ced05a-f905-4951-9298-ff47e771f070",
             }}
             style={{
               width: 45,
               height: 45,
-              marginTop: 4
+              marginTop: 4,
             }}
             resizeMode="contain"
           />
@@ -835,7 +835,7 @@ export default class PromotionService extends React.Component {
 
                 marginLeft: 12,
                 width: Dimensions.get("screen").width - 30,
-                color: "#0865b0"
+                color: "#0865b0",
               }}
             >
               {this.state.lan == "en" ? data.name : data.name_ar}
@@ -846,7 +846,7 @@ export default class PromotionService extends React.Component {
                   color: "#4a4b4c",
                   fontSize: 11,
                   marginLeft: 12,
-                  marginRight: 10
+                  marginRight: 10,
                 }}
               >
                 {this.state.lan == "en" ? "Total Services" : "مجموع الخدمات"}
@@ -856,7 +856,7 @@ export default class PromotionService extends React.Component {
                   backgroundColor: "#0865b0",
                   marginLeft: 5,
                   paddingLeft: 4,
-                  paddingRight: 4
+                  paddingRight: 4,
                 }}
               >
                 <Text style={{ color: "white", fontSize: 10 }}>
@@ -869,7 +869,7 @@ export default class PromotionService extends React.Component {
                 textAlign: "left",
                 color: "#4a4b4c",
                 fontSize: 10,
-                marginLeft: 12
+                marginLeft: 12,
               }}
             >
               {this.state.lan == "en" ? "24/7 Booking" : "حجز على مدار الساعة"}
@@ -905,7 +905,7 @@ export default class PromotionService extends React.Component {
       </View>
     );
   };
-  minusMeters = job => {
+  minusMeters = (job) => {
     if (job.meter && job.meter >= 50) {
       job.meter = job.meter - 50;
       job.m_price = job.meter * job.price;
@@ -922,7 +922,7 @@ export default class PromotionService extends React.Component {
 
     this.setState({ isRefresh: !this.state.isRefresh });
   };
-  plusMeters = job => {
+  plusMeters = (job) => {
     if (job.meter) {
       job.meter = job.meter + 50;
       job.m_price = job.meter * job.price;
@@ -938,7 +938,7 @@ export default class PromotionService extends React.Component {
     }
     this.setState({ isRefresh: !this.state.isRefresh });
   };
-  plusFloors = job => {
+  plusFloors = (job) => {
     if (job.items) {
       job.items++;
     } else {
@@ -955,7 +955,7 @@ export default class PromotionService extends React.Component {
     job.selected = true;
     this.addRemoveIntoSelectedServices(job, true);
   };
-  minusFloors = job => {
+  minusFloors = (job) => {
     if (job.items && job.items >= 1) {
       job.items--;
       if (job.m_price) {
@@ -975,25 +975,25 @@ export default class PromotionService extends React.Component {
       this.addRemoveIntoSelectedServices(job, false);
     }
   };
-  cahngeToolTip = tIndex => {
+  cahngeToolTip = (tIndex) => {
     if (this.state.toolTipVisible == -1) {
       this.setState({ toolTipVisible: tIndex });
     } else {
       this.setState({ toolTipVisible: -1 });
     }
   };
-  _renderContent = data => {
+  _renderContent = (data) => {
     console.log("data", data, "jobs ", data.jobs[5]);
     return (
       <View
         style={{
           width: Dimensions.get("screen").width,
-          alignSelf: "center"
+          alignSelf: "center",
         }}
       >
         {data.jobs &&
           data.jobs.map(
-            function(job, index) {
+            function (job, index) {
               console.log("job ", job);
               if (job.pricetype == 1) {
                 return (
@@ -1094,8 +1094,8 @@ export default class PromotionService extends React.Component {
   minusVarient = (varient, job) => {
     if (job.selected && job.selected == true) {
       let total = 0;
-      varient.variants_attr.forEach(var_attr => {
-        var_attr.attr.forEach(attr => {
+      varient.variants_attr.forEach((var_attr) => {
+        var_attr.attr.forEach((attr) => {
           if (attr.selected && attr.t_price) {
             total = total + attr.t_price;
           }
@@ -1110,8 +1110,8 @@ export default class PromotionService extends React.Component {
   plusVarient = (varient, job) => {
     if (job.selected && job.selected == true) {
       let total = 0;
-      varient.variants_attr.forEach(var_attr => {
-        var_attr.attr.forEach(attr => {
+      varient.variants_attr.forEach((var_attr) => {
+        var_attr.attr.forEach((attr) => {
           if (attr.selected && attr.t_price) {
             total = total + attr.t_price;
           }
@@ -1126,9 +1126,9 @@ export default class PromotionService extends React.Component {
   calculateSubVariant = (attr, varient, job) => {
     if (job.selected && job.selected == true) {
       varient.subvariants &&
-        varient.subvariants.forEach(subvariant => {
-          subvariant.subvariants_attr.forEach(sub_atr => {
-            sub_atr.attr.forEach(in_attr => {
+        varient.subvariants.forEach((subvariant) => {
+          subvariant.subvariants_attr.forEach((sub_atr) => {
+            sub_atr.attr.forEach((in_attr) => {
               if (
                 in_attr.selected == true &&
                 in_attr.attr_type == attr.attr_type
@@ -1151,8 +1151,8 @@ export default class PromotionService extends React.Component {
   };
   calculateVarient = (attr, varient, job) => {
     if (job.selected && job.selected == true) {
-      varient.variants_attr.forEach(var_attr => {
-        var_attr.attr.forEach(inner_attr => {
+      varient.variants_attr.forEach((var_attr) => {
+        var_attr.attr.forEach((inner_attr) => {
           if (
             inner_attr.selected == true &&
             inner_attr.attr_type == attr.attr_type
@@ -1175,7 +1175,7 @@ export default class PromotionService extends React.Component {
       this.setState({ selectedServices: copySelectedJobs });
     }
   };
-  plusQuantity = job => {
+  plusQuantity = (job) => {
     if (job.items) job.items++;
     else job.items = 1;
     if (job.id === 70 || job.id === 61 || job.id === 82) {
@@ -1189,7 +1189,7 @@ export default class PromotionService extends React.Component {
     job.selected = true;
     this.addRemoveIntoSelectedServices(job, true);
   };
-  minusQuantity = job => {
+  minusQuantity = (job) => {
     if (job.items && job.items >= 1) {
       job.items--;
       if (job.id === 70 || job.id === 61 || job.id === 82) {
@@ -1207,7 +1207,7 @@ export default class PromotionService extends React.Component {
       this.addRemoveIntoSelectedServices(job, false);
     }
   };
-  selectJob = job => {
+  selectJob = (job) => {
     job.selected = !job.selected;
     job.items = 1;
     if (job.selected) job.t_price = job.saleprice ? job.saleprice : job.price;
@@ -1223,7 +1223,7 @@ export default class PromotionService extends React.Component {
       (job.jobServiceIcon = this.state.services.seo_name);
 
     let allServices = this.state.selectedServices;
-    let index = allServices.findIndex(service => service.id === job.id);
+    let index = allServices.findIndex((service) => service.id === job.id);
 
     if (add === false && job.items > 0) {
       allServices.splice(index, 1);
@@ -1235,7 +1235,7 @@ export default class PromotionService extends React.Component {
         allServices.splice(index, 1);
 
         this.setState({
-          selectedServices: allServices
+          selectedServices: allServices,
         });
       } else {
         if (index > -1) {
@@ -1244,7 +1244,7 @@ export default class PromotionService extends React.Component {
           allServices.push(job);
         }
         this.setState({
-          selectedServices: allServices
+          selectedServices: allServices,
         });
       }
     }
@@ -1253,7 +1253,7 @@ export default class PromotionService extends React.Component {
   };
   calculateTotalOrderPrices = () => {
     let total = 0;
-    this.state.selectedServices.forEach(service => {
+    this.state.selectedServices.forEach((service) => {
       total = total + service.t_price;
     });
     this.setState({ totalOrderPrice: total });
@@ -1267,11 +1267,11 @@ export default class PromotionService extends React.Component {
       await Analytics.logEvent(this.state.services.name, {
         name: this.state.services.name,
         screen: "promotionScreen",
-        purpose: "checkout order from categories screen"
+        purpose: "checkout order from categories screen",
       });
       this.props.navigation.navigate("MyCart", {
         lan: this.state.lan,
-        isPackage: false
+        isPackage: false,
       });
     } else {
       Toast.show({
@@ -1279,7 +1279,7 @@ export default class PromotionService extends React.Component {
           this.state.lan == "en"
             ? "Select any service first to proceed"
             : "أختر اي خدمة للإستمرار",
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
@@ -1295,7 +1295,7 @@ export default class PromotionService extends React.Component {
             borderBottomColor: "#0866b0",
             backgroundColor: "#ffffff",
             height: 60,
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <Left style={{ marginLeft: 10 }}>
@@ -1314,14 +1314,14 @@ export default class PromotionService extends React.Component {
               justifyContent: "center",
               alignItems: "center",
               position: Platform.OS === "android" ? "absolute" : "relative",
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           >
             <Title
               style={{
                 fontFamily: "montserrat_semi_blod",
                 color: "#0866b0",
-                fontSize: 18
+                fontSize: 18,
               }}
             >
               {lan == "en"
@@ -1340,7 +1340,7 @@ export default class PromotionService extends React.Component {
             style={{
               width: Dimensions.get("screen").width,
               // paddingBottom: 50,
-              height: Dimensions.get("screen").height - 130
+              height: Dimensions.get("screen").height - 130,
               // this.state.services.id == 17 ||
               // this.state.services.id == 45 ||
               // this.state.services.id == 47
@@ -1352,12 +1352,12 @@ export default class PromotionService extends React.Component {
               source={{
                 uri:
                   "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/" +
-                  this.state.services.banner
+                  this.state.services.banner,
               }}
               style={{
                 width: Dimensions.get("screen").width,
                 height: 196,
-                alignSelf: "center"
+                alignSelf: "center",
               }}
               resizeMode="contain"
             />
@@ -1377,13 +1377,16 @@ export default class PromotionService extends React.Component {
         </View>
         <View
           style={{
-            backgroundColor: "white",
+            backgroundColor: "white", //white
             borderWidth: 0,
             height: 90,
             position: "absolute",
             bottom: 0,
             alignSelf: "center",
-            width: "100%"
+            width: "100%",
+            marginBottom: 0,
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <TouchableOpacity onPress={this.checkout}>
@@ -1392,7 +1395,7 @@ export default class PromotionService extends React.Component {
                 backgroundColor: "#0764af",
                 borderRadius: 12,
                 width: Dimensions.get("screen").width - 120,
-                alignSelf: "center"
+                alignSelf: "center",
               }}
             >
               <LinearGradient

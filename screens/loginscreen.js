@@ -588,7 +588,7 @@ import {
   Modal,
   TouchableOpacity,
   TouchableWithoutFeedback,
-  View
+  View,
 } from "react-native";
 import {
   Body,
@@ -601,7 +601,7 @@ import {
   Text,
   Thumbnail,
   Title,
-  Toast
+  Toast,
 } from "native-base";
 
 import { Ionicons } from "@expo/vector-icons";
@@ -620,7 +620,7 @@ let persianNumbers = [
   /۶/g,
   /۷/g,
   /۸/g,
-  /۹/g
+  /۹/g,
 ];
 let arabicNumbers = [
   /٠/g,
@@ -632,7 +632,7 @@ let arabicNumbers = [
   /٦/g,
   /٧/g,
   /٨/g,
-  /٩/g
+  /٩/g,
 ];
 // let arabicNumbers = [
 //   /0/g,
@@ -658,13 +658,19 @@ export default class LoginScreen extends React.Component {
       referralCode: "",
       user: {},
       referralModalVisible: false,
-      otpid: ""
+      otpid: "",
     };
   }
   componentDidMount = () => {
     this.registerForPushNotificationAsync();
     const { navigation } = this.props;
-    let lan = navigation.getParam("lan");
+    //let lan = navigation.getParam("lan");
+    console.log(lan);
+    if (navigation.getParam("lan") == undefined) {
+      var lan = "en";
+    } else {
+      var lan = navigation.getParam("lan");
+    }
     this.setState({ lan: lan });
   };
   registerForPushNotificationAsync = async () => {
@@ -694,16 +700,16 @@ export default class LoginScreen extends React.Component {
           method: "POST",
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             otpid: this.state.otpid,
-            otpentered: this.state.referralCode
-          })
+            otpentered: this.state.referralCode,
+          }),
         }
       )
-        .then(response => response.json())
-        .then(responseJson => {
+        .then((response) => response.json())
+        .then((responseJson) => {
           if (responseJson.error == false) {
             this.saveUserInformation(responseJson);
             // Toast.show({
@@ -715,27 +721,27 @@ export default class LoginScreen extends React.Component {
             Toast.show({
               text: responseJson.message,
               position: "bottom",
-              duration: 3000
+              duration: 3000,
             });
           }
 
           this.setState({ loading: false });
         })
-        .catch(error => {});
+        .catch((error) => {});
     } else {
       Toast.show({
         text:
           this.state.lan === "en"
             ? "Please enter referral code, if any?"
             : "يرجى ادخال رمز الدعوة، اذا موجود؟",
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
-  saveUserInformation = async user => {
+  saveUserInformation = async (user) => {
     console.log("save user info > ", user);
     await Analytics.setUserProperties({
-      ["userId"]: user.customerid.toString()
+      ["userId"]: user.customerid.toString(),
     });
     await Analytics.setUserProperty("email", user.email);
     await Analytics.setUserProperty("userMobile", user.mobile.toString());
@@ -746,7 +752,20 @@ export default class LoginScreen extends React.Component {
       this.setState({ referralModalVisible: false });
     }
     this.setState({ loading: false, user: user, referralModalVisible: false });
-    this.props.navigation.goBack();
+
+    let userObj = this.props.navigation.getParam("user");
+    console.log("Obj");
+    console.log(user);
+    if (this.props.navigation.getParam("goToHelp") == true) {
+      this.props.navigation.navigate("Chat", {
+        user,
+      });
+      console.log("True");
+    } else {
+      this.props.navigation.goBack();
+      console.log("False");
+      console.log(this.props.goBack);
+    }
   };
   hideReferralModal = () => {
     this.saveUserInformation(this.state.user);
@@ -762,7 +781,7 @@ export default class LoginScreen extends React.Component {
         name: "Login",
         screen: "loginScreen",
         purpose: "loggin in",
-        login_number: this.state.mobile.toString()
+        login_number: this.state.mobile.toString(),
       });
       fetch(
         "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/V1.2/customer_login",
@@ -770,16 +789,16 @@ export default class LoginScreen extends React.Component {
           method: "POST",
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             mobile: this.state.mobile,
-            customerdeviceid: this.state.token
-          })
+            customerdeviceid: this.state.token,
+          }),
         }
       )
-        .then(response => response.json())
-        .then(responseJson => {
+        .then((response) => response.json())
+        .then((responseJson) => {
           if (responseJson.error === false) {
             this.setState({
               fisttime: responseJson.firsttime,
@@ -787,17 +806,17 @@ export default class LoginScreen extends React.Component {
               // referralModalVisible: responseJson.firsttime == 1 ? true : false,
               referralModalVisible: true,
               otpid: responseJson.otpid,
-              loading: false
+              loading: false,
             });
           } else {
             Toast.show({
               text: responseJson.message,
-              position: "bottom"
+              position: "bottom",
             });
             this.setState({ loading: false });
           }
         })
-        .catch(error => {
+        .catch((error) => {
           this.setState({ loading: false });
         });
     } else {
@@ -806,7 +825,7 @@ export default class LoginScreen extends React.Component {
           this.state.lan === "en"
             ? "Please enter your valid mobile number!"
             : "يرجى إدخال رقم الجوال بشكل صحيح",
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
@@ -822,7 +841,7 @@ export default class LoginScreen extends React.Component {
             alignSelf: "center",
             marginTop: 45,
             marginLeft: 7,
-            marginRight: 7
+            marginRight: 7,
           }}
         >
           {this.state.lan == "en" ? (
@@ -830,7 +849,7 @@ export default class LoginScreen extends React.Component {
               style={{
                 width: Dimensions.get("screen").width - 8,
                 height: 278,
-                alignSelf: "center"
+                alignSelf: "center",
               }}
               resizeMode="contain"
               source={require("../assets/login-screen-icons/comb-banner.png")}
@@ -840,7 +859,7 @@ export default class LoginScreen extends React.Component {
               style={{
                 width: Dimensions.get("screen").width - 8,
                 height: 278,
-                alignSelf: "center"
+                alignSelf: "center",
               }}
               resizeMode="contain"
               source={require("../assets/login-screen-icons/comb-banner-ar.png")}
@@ -852,7 +871,7 @@ export default class LoginScreen extends React.Component {
               borderColor: "#9fc7db",
               backgroundColor: "#9fc7db",
               width: Dimensions.get("screen").width,
-              height: 83
+              height: 83,
             }}
           >
             {this.state.lan == "en" ? (
@@ -876,7 +895,7 @@ export default class LoginScreen extends React.Component {
             marginTop: 50,
             width: Dimensions.get("screen").width - 40,
             height: 170,
-            backgroundColor: "white"
+            backgroundColor: "white",
           }}
         >
           <View style={{ flexDirection: "row", marginTop: 30 }}>
@@ -891,14 +910,14 @@ export default class LoginScreen extends React.Component {
               style={{
                 textAlign: this.state.lan == "en" ? "left" : "right",
                 backgroundColor: "white",
-                paddingTop: 24
+                paddingTop: 24,
               }}
               placeholder="05XXXXXXXX"
               placeholderTextColor="lightgray"
               keyboardType="phone-pad"
               returnKeyType="done"
               maxLength={10}
-              onChangeText={phone => {
+              onChangeText={(phone) => {
                 // fixNumbers = phone => {
                 if (typeof phone === "string") {
                   for (var i = 0; i < 10; i++) {
@@ -918,7 +937,7 @@ export default class LoginScreen extends React.Component {
               width: Dimensions.get("screen").width - 120,
               borderWidth: 0.5,
               borderColor: "#6ea8cd",
-              backgroundColor: "#6ea8cd"
+              backgroundColor: "#6ea8cd",
             }}
           ></View>
 
@@ -952,7 +971,7 @@ export default class LoginScreen extends React.Component {
               width: Dimensions.get("screen").width - 120,
               borderWidth: 0.5,
               borderColor: "#6ea8cd",
-              backgroundColor: "#6ea8cd"
+              backgroundColor: "#6ea8cd",
             }}
           ></View>
           {/* <View
@@ -979,7 +998,7 @@ export default class LoginScreen extends React.Component {
               top: -5,
               height: 245,
               backgroundColor: "#0866b0",
-              transform: [{ rotate: "6deg" }]
+              transform: [{ rotate: "6deg" }],
             }}
           ></View>
           <View>
@@ -988,11 +1007,11 @@ export default class LoginScreen extends React.Component {
                 fontSize: 12,
                 color: "lightgray",
                 alignSelf: "center",
-                marginTop: 12
+                marginTop: 12,
               }}
             >
               {this.state.lan == "en"
-                ? "Please Enter Your Mobile Number"
+                ? "Please Enter Your Mobile Number Here"
                 : "يرجى إدخال رقم جوالك"}
             </Text>
           </View>
@@ -1026,7 +1045,7 @@ export default class LoginScreen extends React.Component {
               height: 235,
               borderRadius: 20,
               width: 330,
-              backgroundColor: "#283a97"
+              backgroundColor: "#283a97",
             }}
           >
             <View style={{ flex: 1, alignSelf: "center", marginTop: -24 }}>
@@ -1048,7 +1067,7 @@ export default class LoginScreen extends React.Component {
                   style={{
                     color: "white",
                     fontSize: 12,
-                    alignSelf: "center"
+                    alignSelf: "center",
                   }}
                 >
                   Please enter the 4 digit OTP code.
@@ -1059,7 +1078,7 @@ export default class LoginScreen extends React.Component {
                     fontFamily: "montserrat_arabic_regular",
                     color: "white",
                     fontSize: 12,
-                    alignSelf: "center"
+                    alignSelf: "center",
                   }}
                 >
                   أدخل الرمز 4 أرقام المرسل لجوالك
@@ -1074,12 +1093,12 @@ export default class LoginScreen extends React.Component {
                   backgroundColor: "white",
                   borderRadius: 2,
                   marginTop: 10,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
                 keyboardType="default"
                 maxLength={4}
                 returnKeyType="done"
-                onChangeText={ref => {
+                onChangeText={(ref) => {
                   if (typeof ref === "string") {
                     for (var i = 0; i < 10; i++) {
                       ref = ref.replace(arabicNumbers[i], i);
@@ -1098,7 +1117,7 @@ export default class LoginScreen extends React.Component {
                   height: 32,
                   backgroundColor: "#6ea8cd",
                   top: 15,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
               >
                 <View>
@@ -1111,7 +1130,7 @@ export default class LoginScreen extends React.Component {
                       style={{
                         fontFamily: "montserrat_arabic_regular",
                         color: "white",
-                        textAlign: "center"
+                        textAlign: "center",
                       }}
                     >
                       {" "}
@@ -1128,7 +1147,7 @@ export default class LoginScreen extends React.Component {
                     marginTop: 25,
                     flexWrap: "wrap",
                     flex: 1,
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   {/* To proceed without a referral code, close the pop-up */}
@@ -1142,7 +1161,7 @@ export default class LoginScreen extends React.Component {
                     flexWrap: "wrap",
                     flex: 1,
                     fontFamily: "montserrat_arabic_regular",
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   {/* للإستمرار بدون رمز الدعوة، اغلق الشاشه المنبثقة */}

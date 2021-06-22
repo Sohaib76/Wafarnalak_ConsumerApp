@@ -10,7 +10,7 @@ import {
   Left,
   Right,
   Text,
-  Toast
+  Toast,
 } from "native-base";
 import {
   Animated,
@@ -25,7 +25,7 @@ import {
   View,
   Modal,
   StatusBar,
-  Alert
+  Alert,
 } from "react-native";
 import { NavigationEvents, SafeAreaView } from "react-navigation";
 import * as Updates from "expo-updates";
@@ -51,7 +51,7 @@ import VarientbaseJob from "./jobs/varientbaseJob";
 import axios from "axios";
 import {
   heightPercentageToDP as hp,
-  widthPercentageToDP as wp
+  widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 Analytics.setUnavailabilityLogging(false);
 Analytics.setDebugModeEnabled(true);
@@ -66,7 +66,7 @@ const AcBanners_ar = [
   "https://i.ibb.co/DQ6tMXq/Split-Ac-30-Per-Off-Arabic-min.png", //split Ac
   "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png", //split ac
   // "https://i.ibb.co/Y8fghB0/Tower-AC-Refill-Cleaning-Banner-Ar-min.png" //Tower  Ac
-  "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png"
+  "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
 ];
 const AcBanners = [
   "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png", //window ac
@@ -74,7 +74,7 @@ const AcBanners = [
   "https://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png", //split ac
   "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png", // split ac installation
   // "https://i.ibb.co/8x8cvqp/Tower-AC-Refill-Cleaning-Banner-Eng-min.png" //tower ac
-  "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png"
+  "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
 
   // "https://i.ibb.co/61nTkWV/Desert-Cooler-Cleaning-1.png", //dessert cooler
   // "https://i.ibb.co/61nTkWV/Desert-Cooler-Cleaning-1.png", //dessert cooler
@@ -118,14 +118,13 @@ const AcOffersDataEng = [
       saleprice: 84,
 
       productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448"
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
     },
     webbanner:
       "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
     banner: {
-      url:
-        "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png"
-    }
+      url: "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
+    },
   },
   {
     job: {
@@ -154,12 +153,12 @@ const AcOffersDataEng = [
       i_notes_ar: "تنظيف مكيفين ويندو او اكثر بـ75 ريال للمكيف الواحد",
 
       productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448"
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
     },
     webbanner: "https://i.ibb.co/XZngvwL/Window-ac-installation-english.png",
     banner: {
-      url: "https://i.ibb.co/XZngvwL/Window-ac-installation-english.png"
-    }
+      url: "https://i.ibb.co/XZngvwL/Window-ac-installation-english.png",
+    },
   },
 
   {
@@ -189,12 +188,12 @@ const AcOffersDataEng = [
       t_price: 0,
 
       productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de"
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de",
     },
     webbanner: "https://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png",
     banner: {
-      url: "https://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png"
-    }
+      url: "https://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png",
+    },
   },
   {
     job: {
@@ -221,12 +220,12 @@ const AcOffersDataEng = [
       i_notes: "2 or more = SAR 150 / Unit",
       i_notes_ar: "(لعدد وحدتين او أكثر، السعر 150 ريال للوحدة (مكيف)",
 
-      productseoname: "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png"
+      productseoname: "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png",
     },
     webbanner: "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png",
     banner: {
-      url: "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png"
-    }
+      url: "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png",
+    },
   },
   {
     job: {
@@ -255,13 +254,13 @@ const AcOffersDataEng = [
       saleprice: 168,
       t_price: 0,
       productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973"
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
     },
     webbanner: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
     banner: {
-      url: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png"
-    }
-  }
+      url: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
+    },
+  },
 ];
 const AcOffersData_ar = [
   {
@@ -290,12 +289,12 @@ const AcOffersData_ar = [
       saleprice: 84,
 
       productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448"
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
     },
     webbanner: "https://i.ibb.co/sPqjBGJ/Tower-AC-banner-arabic.png",
     banner: {
-      url: "https://i.ibb.co/sPqjBGJ/Tower-AC-banner-arabic.png"
-    }
+      url: "https://i.ibb.co/sPqjBGJ/Tower-AC-banner-arabic.png",
+    },
   },
   {
     job: {
@@ -324,12 +323,12 @@ const AcOffersData_ar = [
       i_notes_ar: "تنظيف مكيفين ويندو او اكثر بـ75 ريال للمكيف الواحد",
 
       productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448"
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
     },
     webbanner: "https://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png",
     banner: {
-      url: "https://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png"
-    }
+      url: "https://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png",
+    },
   },
 
   {
@@ -359,12 +358,12 @@ const AcOffersData_ar = [
       t_price: 0,
 
       productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de"
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de",
     },
     webbanner: "https://i.ibb.co/DQ6tMXq/Split-Ac-30-Per-Off-Arabic-min.png",
     banner: {
-      url: "https://i.ibb.co/DQ6tMXq/Split-Ac-30-Per-Off-Arabic-min.png"
-    }
+      url: "https://i.ibb.co/DQ6tMXq/Split-Ac-30-Per-Off-Arabic-min.png",
+    },
   },
   {
     job: {
@@ -393,12 +392,12 @@ const AcOffersData_ar = [
       i_notes_ar: "(لعدد وحدتين او أكثر، السعر 150 ريال للوحدة (مكيف)",
 
       productseoname:
-        "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png"
+        "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png",
     },
     webbanner: "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png",
     banner: {
-      url: "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png"
-    }
+      url: "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png",
+    },
   },
   {
     job: {
@@ -428,13 +427,13 @@ const AcOffersData_ar = [
       saleprice: 168,
       t_price: 0,
       productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973"
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
     },
     webbanner: "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
     banner: {
-      url: "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png"
-    }
-  }
+      url: "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
+    },
+  },
 ];
 
 // const AcOffersDataEng = [
@@ -785,16 +784,16 @@ export default class LandingSecreen extends React.Component {
   scroll = new Animated.Value(0);
   tabYButton = this.nScroll.interpolate({
     inputRange: [0, 0.5, 1],
-    outputRange: [0, 0.7, 0]
+    outputRange: [0, 0.7, 0],
   });
   imgScale = this.nScroll.interpolate({
     inputRange: [-25, 0],
     outputRange: [1.2, 1],
-    extrapolateRight: "clamp"
+    extrapolateRight: "clamp",
   });
   tabY = this.nScroll.interpolate({
     inputRange: [0, SCROLL_HEIGHT, SCROLL_HEIGHT + 1],
-    outputRange: [0, 0, 1]
+    outputRange: [0, 0, 1],
   });
   constructor(props) {
     super(props);
@@ -826,10 +825,10 @@ export default class LandingSecreen extends React.Component {
       videoPopup: false,
       findPoup: false,
       orderPopup: false,
-      videoSelected: 0
+      videoSelected: 0,
     };
   }
-  _handleNotificationBackground = notification => {
+  _handleNotificationBackground = (notification) => {
     this._handleNotification(notification.notification);
     console.log(
       "notification recieved in background ",
@@ -842,17 +841,17 @@ export default class LandingSecreen extends React.Component {
     let user = await AsyncStorage.getItem("user");
     this.setState({
       lan: lan !== null ? lan : "en",
-      user: user !== null ? JSON.parse(user) : null
+      user: user !== null ? JSON.parse(user) : null,
     });
     this.checkUserLocation();
     this.getOffers();
     this.getCategories();
-    this._notificationSubscription = Notifications.addNotificationReceivedListener(
-      this._handleNotification
-    );
-    this._notificationSubscriptionBackground = Notifications.addNotificationResponseReceivedListener(
-      this._handleNotificationBackground
-    );
+    this._notificationSubscription =
+      Notifications.addNotificationReceivedListener(this._handleNotification);
+    this._notificationSubscriptionBackground =
+      Notifications.addNotificationResponseReceivedListener(
+        this._handleNotificationBackground
+      );
   };
   checkUserLocation = async () => {
     //  console.log("location function ");
@@ -864,7 +863,7 @@ export default class LandingSecreen extends React.Component {
           this.state.lan == "en"
             ? "Please allow location permission"
             : "يرجى السماح لتحديد الموقع",
-        position: "bottom"
+        position: "bottom",
       });
     } else {
       // console.log("else ");
@@ -877,7 +876,7 @@ export default class LandingSecreen extends React.Component {
     }
   };
   _renderHeader = (data, expanded) => {
-    let index = data.jobs.findIndex(job => job.selected == true);
+    let index = data.jobs.findIndex((job) => job.selected == true);
 
     return (
       <View
@@ -890,7 +889,7 @@ export default class LandingSecreen extends React.Component {
 
           width: Dimensions.get("screen").width - 30,
           height: 70,
-          borderWidth: 0
+          borderWidth: 0,
         }}
       >
         <Left style={{ flexDirection: "row" }}>
@@ -899,12 +898,12 @@ export default class LandingSecreen extends React.Component {
               uri:
                 data.seo_name !== null
                   ? data.seo_name
-                  : "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/image-placeholder.png?alt=media&token=10ced05a-f905-4951-9298-ff47e771f070"
+                  : "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/image-placeholder.png?alt=media&token=10ced05a-f905-4951-9298-ff47e771f070",
             }}
             style={{
               width: 45,
               height: 45,
-              marginTop: 4
+              marginTop: 4,
             }}
             resizeMode="contain"
           />
@@ -916,7 +915,7 @@ export default class LandingSecreen extends React.Component {
                 textAlign: "left",
                 marginLeft: 12,
                 width: Dimensions.get("screen").width - 30,
-                color: "#0865b0"
+                color: "#0865b0",
               }}
             >
               {this.state.lan == "en" ? data.name : data.name_ar}
@@ -927,7 +926,7 @@ export default class LandingSecreen extends React.Component {
                   color: "#4a4b4c",
                   fontSize: 11,
                   marginLeft: 12,
-                  marginRight: 10
+                  marginRight: 10,
                 }}
               >
                 {this.state.lan == "en" ? "Total Services" : "مجموع الخدمات"}
@@ -936,7 +935,7 @@ export default class LandingSecreen extends React.Component {
                 style={{
                   backgroundColor: "#0865b0",
                   justifyContent: "center",
-                  margin: 2
+                  margin: 2,
                 }}
               >
                 <Text
@@ -946,7 +945,7 @@ export default class LandingSecreen extends React.Component {
                     paddingRight: 3,
                     color: "white",
                     fontSize: 7,
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   {data.jobs ? data.jobs.length : 0}
@@ -958,7 +957,7 @@ export default class LandingSecreen extends React.Component {
                 textAlign: "left",
                 color: "#4a4b4c",
                 fontSize: 10,
-                marginLeft: 12
+                marginLeft: 12,
               }}
             >
               {this.state.lan == "en" ? "24/7 Booking" : "حجز على مدار الساعة"}
@@ -973,7 +972,7 @@ export default class LandingSecreen extends React.Component {
               marginTop: 2,
               height: 15,
               position: "absolute",
-              left: Dimensions.get("screen").width / 2
+              left: Dimensions.get("screen").width / 2,
             }}
           />
         ) : (
@@ -1021,7 +1020,7 @@ export default class LandingSecreen extends React.Component {
       </View>
     );
   };
-  minusMeters = job => {
+  minusMeters = (job) => {
     if (job.meter && job.meter >= 50) {
       job.meter = job.meter - 50;
       job.m_price = job.meter * job.price;
@@ -1046,7 +1045,7 @@ export default class LandingSecreen extends React.Component {
       this.addRemoveIntoSelectedServices(job, true);
     }
   };
-  plusMeters = job => {
+  plusMeters = (job) => {
     if (job.meter) {
       job.meter = job.meter + 50;
       job.m_price = job.meter * job.price;
@@ -1064,7 +1063,7 @@ export default class LandingSecreen extends React.Component {
     this.addRemoveIntoSelectedServices(job, true);
   };
   // ------------------------increase counter --------------------
-  plusFloors = job => {
+  plusFloors = (job) => {
     if (job.items) {
       job.items++;
     } else {
@@ -1082,7 +1081,7 @@ export default class LandingSecreen extends React.Component {
     this.addRemoveIntoSelectedServices(job, true);
   };
   // ---------------------Decrease item-----------------------
-  minusFloors = job => {
+  minusFloors = (job) => {
     if (job.items && job.items >= 1) {
       job.items--;
       if (job.items == 0) {
@@ -1109,25 +1108,25 @@ export default class LandingSecreen extends React.Component {
       this.addRemoveIntoSelectedServices(job, false);
     }
   };
-  cahngeToolTip = tIndex => {
+  cahngeToolTip = (tIndex) => {
     if (this.state.toolTipVisible == -1) {
       this.setState({ toolTipVisible: tIndex });
     } else {
       this.setState({ toolTipVisible: -1 });
     }
   };
-  _renderContent = data => {
+  _renderContent = (data) => {
     return (
       <View
         style={{
           width: Dimensions.get("screen").width,
           alignSelf: "center",
-          marginTop: -5
+          marginTop: -5,
         }}
       >
         {data.jobs &&
           data.jobs.map(
-            function(job, index) {
+            function (job, index) {
               job.jobserviceName = data.name;
               job.jobserviceNameAr = data.name_ar;
               job.jobServiceIcon = data.seo_name;
@@ -1241,8 +1240,8 @@ export default class LandingSecreen extends React.Component {
   minusVarient = (varient, job) => {
     if (job.selected && job.selected == true) {
       let total = 0;
-      varient.variants_attr.forEach(var_attr => {
-        var_attr.attr.forEach(attr => {
+      varient.variants_attr.forEach((var_attr) => {
+        var_attr.attr.forEach((attr) => {
           if (attr.selected && attr.t_price) {
             total = total + attr.t_price;
           }
@@ -1259,8 +1258,8 @@ export default class LandingSecreen extends React.Component {
   plusVarient = (varient, job) => {
     if (job.selected && job.selected == true) {
       let total = 0;
-      varient.variants_attr.forEach(var_attr => {
-        var_attr.attr.forEach(attr => {
+      varient.variants_attr.forEach((var_attr) => {
+        var_attr.attr.forEach((attr) => {
           if (attr.selected && attr.t_price) {
             total = total + attr.t_price;
           }
@@ -1277,10 +1276,10 @@ export default class LandingSecreen extends React.Component {
   calculateSubVariant = (attr, varient, job) => {
     if (job.selected && job.selected == true) {
       varient.subvariants &&
-        varient.subvariants.forEach(subvariant => {
+        varient.subvariants.forEach((subvariant) => {
           subvariant.subvariants_attr &&
-            subvariant.subvariants_attr.forEach(sub_atr => {
-              sub_atr.attr.forEach(in_attr => {
+            subvariant.subvariants_attr.forEach((sub_atr) => {
+              sub_atr.attr.forEach((in_attr) => {
                 if (
                   in_attr.selected == true &&
                   in_attr.attr_id == attr.attr_id
@@ -1303,8 +1302,8 @@ export default class LandingSecreen extends React.Component {
   };
   calculateVarient = (attr, varient, job) => {
     if (job.selected && job.selected == true) {
-      varient.variants_attr.forEach(var_attr => {
-        var_attr.attr.forEach(inner_attr => {
+      varient.variants_attr.forEach((var_attr) => {
+        var_attr.attr.forEach((inner_attr) => {
           if (
             inner_attr.selected == true &&
             inner_attr.attr_id == attr.attr_id
@@ -1327,7 +1326,7 @@ export default class LandingSecreen extends React.Component {
       this.setState({ selectedServices: copySelectedJobs });
     }
   };
-  plusQuantity = job => {
+  plusQuantity = (job) => {
     console.log("plusQuantity ", job);
     if (job.items) job.items++;
     else job.items = 1;
@@ -1362,24 +1361,24 @@ export default class LandingSecreen extends React.Component {
     job.selected = true;
     this.addRemoveIntoSelectedServices(job, true);
   };
-  clearVariantsAndSubVariants = job => {
+  clearVariantsAndSubVariants = (job) => {
     if (job.variants) {
-      job.variants.forEach(variant => {
+      job.variants.forEach((variant) => {
         if (variant.items > 0) {
           variant.items = 0;
         }
-        variant.variants_attr.forEach(var_atr => {
-          var_atr.attr.forEach(atr => {
+        variant.variants_attr.forEach((var_atr) => {
+          var_atr.attr.forEach((atr) => {
             if (atr.selected && atr.selected == true) {
               atr.selected = false;
             }
           });
         });
         if (variant.subvariants) {
-          variant.subvariants.forEach(sub_variant => {
+          variant.subvariants.forEach((sub_variant) => {
             sub_variant.subvariants_attr &&
-              sub_variant.subvariants_attr.forEach(sub_var_atr => {
-                sub_var_atr.attr.forEach(atr => {
+              sub_variant.subvariants_attr.forEach((sub_var_atr) => {
+                sub_var_atr.attr.forEach((atr) => {
                   if (atr.selected && atr.selected == true) {
                     atr.selected = false;
                   }
@@ -1390,7 +1389,7 @@ export default class LandingSecreen extends React.Component {
       });
     }
   };
-  minusQuantity = job => {
+  minusQuantity = (job) => {
     if (job.items && job.items >= 1) {
       job.items--;
       if (
@@ -1434,7 +1433,7 @@ export default class LandingSecreen extends React.Component {
       this.addRemoveIntoSelectedServices(job, false);
     }
   };
-  selectJob = job => {
+  selectJob = (job) => {
     job.selected = !job.selected;
     job.items = 1;
     if (job.selected) job.t_price = job.saleprice ? job.saleprice : job.price;
@@ -1445,7 +1444,7 @@ export default class LandingSecreen extends React.Component {
   };
   addRemoveIntoSelectedServices = async (job, add) => {
     let catIndex = this.state.categories.findIndex(
-      cat => cat.id == this.state.selectedCategoryId
+      (cat) => cat.id == this.state.selectedCategoryId
     );
     // let cartIndex = this.state.cartDetails
     //   ? this.state.cartDetails.findIndex(
@@ -1475,7 +1474,7 @@ export default class LandingSecreen extends React.Component {
         : ([] = []);
     let index =
       allServices && allServices.length > 0
-        ? allServices.findIndex(service => service.id === job.id)
+        ? allServices.findIndex((service) => service.id === job.id)
         : -1;
 
     if (add === false && job.items > 0) {
@@ -1487,7 +1486,7 @@ export default class LandingSecreen extends React.Component {
         allServices.splice(index, 1);
 
         this.setState({
-          selectedServices: allServices
+          selectedServices: allServices,
         });
       } else {
         if (index > -1) {
@@ -1496,26 +1495,30 @@ export default class LandingSecreen extends React.Component {
           allServices.push(job);
         }
         this.setState({
-          selectedServices: allServices
+          selectedServices: allServices,
         });
       }
       await AsyncStorage.setItem("jobs", JSON.stringify(allServices));
     }
   };
   openChat = () => {
-    // if (this.state.user !== null) {
-    //   this.props.navigation.navigate("Chat", { user: this.state.user });
-    // } else {
-    //   Toast.show({
-    //     text:
-    //       this.state.lan == "en"
-    //         ? "Please Login First to Start Chat"
-    //         : "سلة الطلبات فارغة",
-    //     position: "bottom"
-    //   });
-    // }
+    if (this.state.user !== null) {
+      this.props.navigation.navigate("Chat", { user: this.state.user });
+    } else {
+      Toast.show({
+        text:
+          this.state.lan == "en"
+            ? "Please Login First to Start Chat"
+            : "سلة الطلبات فارغة",
+        position: "bottom",
+      });
+      this.props.navigation.navigate("Login", {
+        goToHelp: true,
+        user: this.state.user,
+      });
+    }
 
-    Linking.openURL("https://wa.me/+966577311430");
+    //  Linking.openURL("https://wa.me/+966577311430"); (Uncomment)
   };
   getOffers = () => {
     axios
@@ -1524,11 +1527,11 @@ export default class LandingSecreen extends React.Component {
         {
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json"
-          }
+            "Content-Type": "application/json",
+          },
         }
       )
-      .then(response => {
+      .then((response) => {
         // console.log("get offers success");
         let responseJson = response.data;
 
@@ -1538,7 +1541,7 @@ export default class LandingSecreen extends React.Component {
           this.state.lan === "en"
             ? responseJson.banners.enbanners
             : responseJson.banners.arbanners;
-        ban.forEach(ban => {
+        ban.forEach((ban) => {
           let actualUrl =
             "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/" +
             ban.banner.url;
@@ -1551,22 +1554,22 @@ export default class LandingSecreen extends React.Component {
           this.setState({ dataSource: AcOffersData_ar, offersUrls: urls });
         }
       })
-      .catch(async error => {
+      .catch(async (error) => {
         console.log("error in get offers", error);
         await Analytics.logEvent("getOffersError", {
-          getOffersError: error.toString()
+          getOffersError: error.toString(),
         });
       });
   };
-  toggleSwitch = value => {
+  toggleSwitch = (value) => {
     this.setState({ isEnabled: !this.state.isEnabled });
   };
-  categorySelection = async category => {
+  categorySelection = async (category) => {
     this._accordion.setSelected(-1);
     this.setState({
       selectedCategoryId: category.id,
       products: category.products,
-      toolTipVisible: false
+      toolTipVisible: false,
     });
   };
 
@@ -1577,11 +1580,11 @@ export default class LandingSecreen extends React.Component {
         {
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json"
-          }
+            "Content-Type": "application/json",
+          },
         }
       )
-      .then(async response => {
+      .then(async (response) => {
         console.log("get categories success", response);
         let responseJson = {
           error: false,
@@ -1623,7 +1626,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف اسبليت",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 73,
@@ -1632,7 +1635,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة لإصلاح  مكيف الكاسيت (السقف)",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 62,
@@ -1641,7 +1644,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف ويندو (شباك)  ",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 80,
@@ -1650,7 +1653,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف صحراوي (مبرد)",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 78,
@@ -1659,7 +1662,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح تكييف مركزي",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 76,
@@ -1668,14 +1671,14 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف تاور (برج/نقال)",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
-                        }
-                      ]
-                    }
+                          pricetype: 2,
+                        },
+                      ],
+                    },
                   ],
-                  is_same_price: true
-                }
-              ]
+                  is_same_price: true,
+                },
+              ],
             },
             {
               offerid: 2,
@@ -1714,7 +1717,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "موازنة السرير ",
                           choose_type: 1,
                           pricetype: 1,
-                          price: 69
+                          price: 69,
                         },
                         {
                           id: 250,
@@ -1723,7 +1726,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إزالة أو تثبيت السرير",
                           choose_type: 1,
                           pricetype: 1,
-                          price: 110
+                          price: 110,
                         },
                         {
                           id: 252,
@@ -1732,9 +1735,9 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح السرير",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25
-                        }
-                      ]
+                          price: 25,
+                        },
+                      ],
                     },
                     {
                       title: "Optional Services",
@@ -1748,53 +1751,49 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تركيب ستائر (رولز)",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 69
+                          price: 69,
                         },
                         {
                           id: 261,
                           serviceid: 4,
-                          name:
-                            "Single Layer curtain installation\r\nLess than 2.5m",
+                          name: "Single Layer curtain installation\r\nLess than 2.5m",
                           name_ar:
                             "تركيب ستارة (طبقات) | طبقة واحدة | اصغر من 2.5 م",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 69
+                          price: 69,
                         },
                         {
                           id: 262,
                           serviceid: 4,
-                          name:
-                            "Single Layer curtain installation\r\nEqual or more than 2.5m",
+                          name: "Single Layer curtain installation\r\nEqual or more than 2.5m",
                           name_ar:
                             "تركيب ستارة (طبقات) | طبقة واحدة | 2.5 م او اكثر  ",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 89
+                          price: 89,
                         },
                         {
                           id: 263,
                           serviceid: 4,
-                          name:
-                            "Double Layer curtain installation\r\nLess than 2.5m",
+                          name: "Double Layer curtain installation\r\nLess than 2.5m",
                           name_ar:
                             "تركيب ستارة (طبقات) | طبقة مزدوجة | اصغر من 2.5 م",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 119
+                          price: 119,
                         },
                         {
                           id: 264,
                           serviceid: 4,
-                          name:
-                            "Double Layer curtain installation\r\nEqual or more than 2.5m",
+                          name: "Double Layer curtain installation\r\nEqual or more than 2.5m",
                           name_ar:
                             "تركيب ستارة (طبقات) | طبقة مزدوجة | 2.5 م او اكثر  ",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 129
-                        }
-                      ]
+                          price: 129,
+                        },
+                      ],
                     },
                     {
                       title: "Choose at least one of these",
@@ -1808,7 +1807,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تركيب او إزالة الرفوف",
                           price: 49,
                           choose_type: 1,
-                          pricetype: 1
+                          pricetype: 1,
                         },
                         {
                           id: 253,
@@ -1817,7 +1816,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إزالة أو تثبيت الطاولات",
                           price: 79,
                           choose_type: 1,
-                          pricetype: 1
+                          pricetype: 1,
                         },
                         {
                           id: 259,
@@ -1826,11 +1825,11 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح الخزانة",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
-                        }
-                      ]
-                    }
-                  ]
+                          pricetype: 2,
+                        },
+                      ],
+                    },
+                  ],
                 },
                 {
                   serviceid: 29,
@@ -1851,7 +1850,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف اسبليت",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 73,
@@ -1860,7 +1859,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة لإصلاح  مكيف الكاسيت (السقف)",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 62,
@@ -1869,7 +1868,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف ويندو (شباك)  ",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 76,
@@ -1878,7 +1877,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف تاور (برج/نقال)",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 80,
@@ -1887,7 +1886,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف صحراوي (مبرد)",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 78,
@@ -1896,14 +1895,14 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح تكييف مركزي",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
-                        }
-                      ]
-                    }
+                          pricetype: 2,
+                        },
+                      ],
+                    },
                   ],
-                  is_same_price: true
-                }
-              ]
+                  is_same_price: true,
+                },
+              ],
             },
             {
               offerid: 3,
@@ -1942,9 +1941,9 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح/استبدال من المفاتيح",
                           choose_type: 1,
                           pricetype: 1,
-                          price: 17
-                        }
-                      ]
+                          price: 17,
+                        },
+                      ],
                     },
                     {
                       title: "Choose at least one of these",
@@ -1958,7 +1957,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "محول كهربا ء من 220 الى 110",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25
+                          price: 25,
                         },
                         {
                           id: 12,
@@ -1967,9 +1966,9 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "محول كهربا ء من 110 الى 220",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25
-                        }
-                      ]
+                          price: 25,
+                        },
+                      ],
                     },
                     {
                       title: "Free Services",
@@ -1983,7 +1982,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة تسليك كهربائي",
                           choose_type: 3,
                           price: 25,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 21,
@@ -1992,9 +1991,9 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "صيانة  لوحات التحكم والتوزيع الكهربائي",
                           choose_type: 3,
                           price: 25,
-                          pricetype: 2
-                        }
-                      ]
+                          pricetype: 2,
+                        },
+                      ],
                     },
                     {
                       title: "Choose at least one of these",
@@ -2008,7 +2007,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تغيير الاضواء العادية",
                           price: 10,
                           choose_type: 1,
-                          pricetype: 1
+                          pricetype: 1,
                         },
                         {
                           id: 8,
@@ -2017,13 +2016,13 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تغيير أضواء الفلورسنت",
                           price: 10,
                           choose_type: 1,
-                          pricetype: 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+                          pricetype: 1,
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
             },
             {
               offerid: 4,
@@ -2063,9 +2062,9 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح/استبدال من المفاتيح",
                           choose_type: 1,
                           pricetype: 1,
-                          price: 17
-                        }
-                      ]
+                          price: 17,
+                        },
+                      ],
                     },
                     {
                       title: "Choose at least one of these",
@@ -2079,7 +2078,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تغيير الاضواء العادية",
                           price: 10,
                           choose_type: 1,
-                          pricetype: 1
+                          pricetype: 1,
                         },
                         {
                           id: 8,
@@ -2088,11 +2087,11 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تغيير أضواء الفلورسنت",
                           price: 10,
                           choose_type: 1,
-                          pricetype: 1
-                        }
-                      ]
-                    }
-                  ]
+                          pricetype: 1,
+                        },
+                      ],
+                    },
+                  ],
                 },
                 {
                   serviceid: 3,
@@ -2113,7 +2112,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح / استبدال مرحاض الحمام",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25
+                          price: 25,
                         },
                         {
                           id: 29,
@@ -2122,9 +2121,9 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح رأس الدش",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25
-                        }
-                      ]
+                          price: 25,
+                        },
+                      ],
                     },
                     {
                       title: "Free Services",
@@ -2138,7 +2137,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إنسداد المخارج ",
                           choose_type: 3,
                           price: 25,
-                          pricetype: 1
+                          pricetype: 1,
                         },
                         {
                           id: 18,
@@ -2147,9 +2146,9 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تركيب مراوح الحمام",
                           choose_type: 3,
                           price: 25,
-                          pricetype: 2
-                        }
-                      ]
+                          pricetype: 2,
+                        },
+                      ],
                     },
                     {
                       jobs: [
@@ -2160,7 +2159,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح الخلاطات",
                           price: 25,
                           choose_type: 0,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 32,
@@ -2169,7 +2168,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح / استبدال الصنابير",
                           price: 25,
                           choose_type: 0,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 27,
@@ -2178,7 +2177,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تصليح المغاسل مع الأدراج",
                           price: 25,
                           choose_type: 0,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 22,
@@ -2187,16 +2186,16 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تصليح المغاسل",
                           price: 25,
                           choose_type: 0,
-                          pricetype: 2
-                        }
+                          pricetype: 2,
+                        },
                       ],
                       title: "Optional Services",
                       title_ar: "الخدمات الإختيارية",
-                      choose_type: 0
-                    }
-                  ]
-                }
-              ]
+                      choose_type: 0,
+                    },
+                  ],
+                },
+              ],
             },
             {
               offerid: 6,
@@ -2235,7 +2234,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "موازنة السرير ",
                           choose_type: 1,
                           pricetype: 1,
-                          price: 69
+                          price: 69,
                         },
                         {
                           id: 250,
@@ -2244,7 +2243,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إزالة أو تثبيت السرير",
                           choose_type: 1,
                           pricetype: 1,
-                          price: 110
+                          price: 110,
                         },
                         {
                           id: 252,
@@ -2253,9 +2252,9 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح السرير",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25
-                        }
-                      ]
+                          price: 25,
+                        },
+                      ],
                     },
                     {
                       title: "Optional Services",
@@ -2269,53 +2268,49 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تركيب ستائر (رولز)",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 69
+                          price: 69,
                         },
                         {
                           id: 261,
                           serviceid: 4,
-                          name:
-                            "Single Layer curtain installation\r\nLess than 2.5m",
+                          name: "Single Layer curtain installation\r\nLess than 2.5m",
                           name_ar:
                             "تركيب ستارة (طبقات) | طبقة واحدة | اصغر من 2.5 م",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 69
+                          price: 69,
                         },
                         {
                           id: 262,
                           serviceid: 4,
-                          name:
-                            "Single Layer curtain installation\r\nEqual or more than 2.5m",
+                          name: "Single Layer curtain installation\r\nEqual or more than 2.5m",
                           name_ar:
                             "تركيب ستارة (طبقات) | طبقة واحدة | 2.5 م او اكثر  ",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 89
+                          price: 89,
                         },
                         {
                           id: 263,
                           serviceid: 4,
-                          name:
-                            "Double Layer curtain installation\r\nLess than 2.5m",
+                          name: "Double Layer curtain installation\r\nLess than 2.5m",
                           name_ar:
                             "تركيب ستارة (طبقات) | طبقة مزدوجة | اصغر من 2.5 م",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 119
+                          price: 119,
                         },
                         {
                           id: 264,
                           serviceid: 4,
-                          name:
-                            "Double Layer curtain installation\r\nEqual or more than 2.5m",
+                          name: "Double Layer curtain installation\r\nEqual or more than 2.5m",
                           name_ar:
                             "تركيب ستارة (طبقات) | طبقة مزدوجة | 2.5 م او اكثر  ",
                           choose_type: 0,
                           pricetype: 1,
-                          price: 129
-                        }
-                      ]
+                          price: 129,
+                        },
+                      ],
                     },
                     {
                       title: "Choose at least one of these",
@@ -2325,12 +2320,11 @@ export default class LandingSecreen extends React.Component {
                         {
                           id: 248,
                           serviceid: 4,
-                          name:
-                            "IKEA or similar furniture assembly & installation",
+                          name: "IKEA or similar furniture assembly & installation",
                           name_ar: "تجميع وتركيب على طريقة ايكيا او غيرها",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25
+                          price: 25,
                         },
                         {
                           id: 247,
@@ -2339,9 +2333,9 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تجميع الأثاث (عام)",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25
-                        }
-                      ]
+                          price: 25,
+                        },
+                      ],
                     },
                     {
                       title: "Choose at least one of these",
@@ -2355,7 +2349,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تركيب او إزالة الرفوف",
                           price: 49,
                           choose_type: 1,
-                          pricetype: 1
+                          pricetype: 1,
                         },
                         {
                           id: 253,
@@ -2364,7 +2358,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إزالة أو تثبيت الطاولات",
                           price: 79,
                           choose_type: 1,
-                          pricetype: 1
+                          pricetype: 1,
                         },
                         {
                           id: 259,
@@ -2373,11 +2367,11 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح الخزانة",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
-                        }
-                      ]
-                    }
-                  ]
+                          pricetype: 2,
+                        },
+                      ],
+                    },
+                  ],
                 },
                 {
                   serviceid: 29,
@@ -2398,7 +2392,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف اسبليت",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 73,
@@ -2407,7 +2401,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة لإصلاح  مكيف الكاسيت (السقف)",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 62,
@@ -2416,7 +2410,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف ويندو (شباك)  ",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 76,
@@ -2425,7 +2419,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف تاور (برج/نقال)",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 78,
@@ -2434,7 +2428,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح تكييف مركزي",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
+                          pricetype: 2,
                         },
                         {
                           id: 80,
@@ -2443,15 +2437,15 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إستشارة إصلاح مكيف صحراوي (مبرد)",
                           price: 25,
                           choose_type: 1,
-                          pricetype: 2
-                        }
-                      ]
-                    }
+                          pricetype: 2,
+                        },
+                      ],
+                    },
                   ],
-                  is_same_price: true
-                }
-              ]
-            }
+                  is_same_price: true,
+                },
+              ],
+            },
           ],
           services: [
             {
@@ -2485,7 +2479,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 230,
@@ -2505,7 +2499,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 61,
@@ -2526,7 +2520,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 60,
@@ -2546,7 +2540,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 62,
@@ -2560,7 +2554,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 63,
@@ -2574,7 +2568,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 64,
@@ -2588,9 +2582,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 27,
@@ -2613,7 +2607,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 223,
@@ -2633,7 +2627,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 70,
@@ -2654,7 +2648,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 65,
@@ -2674,7 +2668,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 67,
@@ -2688,7 +2682,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 68,
@@ -2702,7 +2696,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 69,
@@ -2716,9 +2710,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 28,
@@ -2740,7 +2734,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 232,
@@ -2760,7 +2754,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 71,
@@ -2780,7 +2774,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 72,
@@ -2794,7 +2788,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 73,
@@ -2808,9 +2802,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 29,
@@ -2832,7 +2826,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 228,
@@ -2852,7 +2846,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 74,
@@ -2872,7 +2866,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 75,
@@ -2886,7 +2880,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 76,
@@ -2900,9 +2894,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 30,
@@ -2930,7 +2924,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 78,
@@ -2945,9 +2939,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 31,
@@ -2976,9 +2970,8 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      note:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      note_ar: null
+                      note: "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      note_ar: null,
                     },
                     {
                       id: 79,
@@ -2998,7 +2991,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 80,
@@ -3012,7 +3005,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 81,
@@ -3032,9 +3025,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 32,
@@ -3055,11 +3048,11 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
-                }
-              ]
+                      carttype: 1,
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 3,
@@ -3098,7 +3091,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 47,
@@ -3118,7 +3111,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 48,
@@ -3132,9 +3125,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 11,
@@ -3155,7 +3148,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 23,
@@ -3169,7 +3162,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 26,
@@ -3183,7 +3176,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 27,
@@ -3197,9 +3190,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 12,
@@ -3220,7 +3213,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 25,
@@ -3234,7 +3227,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 203,
@@ -3248,9 +3241,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 15,
@@ -3271,7 +3264,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 29,
@@ -3285,7 +3278,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 30,
@@ -3299,9 +3292,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 16,
@@ -3322,7 +3315,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 32,
@@ -3336,9 +3329,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 17,
@@ -3359,7 +3352,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 34,
@@ -3373,7 +3366,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 35,
@@ -3387,9 +3380,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 18,
@@ -3410,7 +3403,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 37,
@@ -3424,7 +3417,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 38,
@@ -3438,7 +3431,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 39,
@@ -3452,9 +3445,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 19,
@@ -3475,7 +3468,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 41,
@@ -3489,9 +3482,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 20,
@@ -3512,7 +3505,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 43,
@@ -3526,7 +3519,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 44,
@@ -3540,7 +3533,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 45,
@@ -3554,9 +3547,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 22,
@@ -3577,7 +3570,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 50,
@@ -3591,7 +3584,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 51,
@@ -3605,7 +3598,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 52,
@@ -3619,9 +3612,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 23,
@@ -3642,7 +3635,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 56,
@@ -3656,7 +3649,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 57,
@@ -3670,7 +3663,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 58,
@@ -3684,7 +3677,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 59,
@@ -3698,9 +3691,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 25,
@@ -3721,11 +3714,11 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
-                }
-              ]
+                      carttype: 1,
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 1,
@@ -3761,7 +3754,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 2,
@@ -3779,9 +3772,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 2,
@@ -3806,7 +3799,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 4,
@@ -3824,7 +3817,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 5,
@@ -3842,9 +3835,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 3,
@@ -3869,7 +3862,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 7,
@@ -3887,9 +3880,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 4,
@@ -3914,7 +3907,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 9,
@@ -3932,9 +3925,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 5,
@@ -3955,7 +3948,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 204,
@@ -3969,9 +3962,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 6,
@@ -3992,7 +3985,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 14,
@@ -4006,7 +3999,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 15,
@@ -4020,7 +4013,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 16,
@@ -4034,7 +4027,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 17,
@@ -4048,7 +4041,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 18,
@@ -4062,7 +4055,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 19,
@@ -4076,7 +4069,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 20,
@@ -4090,9 +4083,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 10,
@@ -4113,9 +4106,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 93,
@@ -4136,7 +4129,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 235,
@@ -4150,9 +4143,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 94,
@@ -4173,7 +4166,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 12,
@@ -4187,9 +4180,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 98,
@@ -4210,11 +4203,11 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
-                }
-              ]
+                      carttype: 1,
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 4,
@@ -4246,7 +4239,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 246,
@@ -4260,7 +4253,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 247,
@@ -4274,7 +4267,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 248,
@@ -4288,7 +4281,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 249,
@@ -4302,9 +4295,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 86,
@@ -4325,7 +4318,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 251,
@@ -4339,7 +4332,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 252,
@@ -4353,9 +4346,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 87,
@@ -4376,7 +4369,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 254,
@@ -4390,9 +4383,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 88,
@@ -4413,7 +4406,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 257,
@@ -4427,7 +4420,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 258,
@@ -4441,7 +4434,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 259,
@@ -4455,7 +4448,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 255,
@@ -4469,9 +4462,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 89,
@@ -4492,14 +4485,13 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 261,
                       serviceid: 4,
                       pricelimit: 49,
-                      name:
-                        "Single Layer curtain installation\r\nLess than 2.5m",
+                      name: "Single Layer curtain installation\r\nLess than 2.5m",
                       name_ar:
                         "تركيب ستارة (طبقات) | طبقة واحدة | اصغر من 2.5 م",
                       price: 69,
@@ -4508,14 +4500,13 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 262,
                       serviceid: 4,
                       pricelimit: 49,
-                      name:
-                        "Single Layer curtain installation\r\nEqual or more than 2.5m",
+                      name: "Single Layer curtain installation\r\nEqual or more than 2.5m",
                       name_ar:
                         "تركيب ستارة (طبقات) | طبقة واحدة | 2.5 م او اكثر  ",
                       price: 89,
@@ -4524,14 +4515,13 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 263,
                       serviceid: 4,
                       pricelimit: 49,
-                      name:
-                        "Double Layer curtain installation\r\nLess than 2.5m",
+                      name: "Double Layer curtain installation\r\nLess than 2.5m",
                       name_ar:
                         "تركيب ستارة (طبقات) | طبقة مزدوجة | اصغر من 2.5 م",
                       price: 119,
@@ -4540,14 +4530,13 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 264,
                       serviceid: 4,
                       pricelimit: 49,
-                      name:
-                        "Double Layer curtain installation\r\nEqual or more than 2.5m",
+                      name: "Double Layer curtain installation\r\nEqual or more than 2.5m",
                       name_ar:
                         "تركيب ستارة (طبقات) | طبقة مزدوجة | 2.5 م او اكثر  ",
                       price: 129,
@@ -4556,7 +4545,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 265,
@@ -4570,7 +4559,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 266,
@@ -4584,9 +4573,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 90,
@@ -4607,7 +4596,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 268,
@@ -4621,7 +4610,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 269,
@@ -4635,7 +4624,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 270,
@@ -4649,7 +4638,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 271,
@@ -4663,7 +4652,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 272,
@@ -4677,7 +4666,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 273,
@@ -4691,7 +4680,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 274,
@@ -4705,9 +4694,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 91,
@@ -4728,7 +4717,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 276,
@@ -4742,7 +4731,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 277,
@@ -4756,7 +4745,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 279,
@@ -4770,9 +4759,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 92,
@@ -4793,11 +4782,11 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
-                }
-              ]
+                      carttype: 1,
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 53,
@@ -4834,12 +4823,11 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 2,
-                      note:
-                        "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
+                      note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
                       note_ar:
-                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة"
-                    }
-                  ]
+                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
+                    },
+                  ],
                 },
                 {
                   id: 103,
@@ -4865,12 +4853,11 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 2,
-                      note:
-                        "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
+                      note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
                       note_ar:
-                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة"
-                    }
-                  ]
+                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
+                    },
+                  ],
                 },
                 {
                   id: 104,
@@ -4896,12 +4883,11 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 2,
-                      note:
-                        "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
+                      note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
                       note_ar:
-                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة"
-                    }
-                  ]
+                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
+                    },
+                  ],
                 },
                 {
                   id: 105,
@@ -4927,14 +4913,13 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 2,
-                      note:
-                        "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
+                      note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
                       note_ar:
-                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة"
-                    }
-                  ]
-                }
-              ]
+                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 48,
@@ -4966,7 +4951,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 85,
@@ -4980,9 +4965,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 34,
@@ -5003,9 +4988,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 35,
@@ -5026,9 +5011,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 36,
@@ -5049,7 +5034,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 88,
@@ -5063,9 +5048,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 95,
@@ -5086,11 +5071,11 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
-                }
-              ]
+                      carttype: 1,
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 56,
@@ -5127,10 +5112,9 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                       approxprice: 400,
-                      note:
-                        "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
                       note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض"
+                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
                     },
                     {
                       id: 333,
@@ -5148,7 +5132,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      approxprice: 500
+                      approxprice: 500,
                     },
                     {
                       id: 334,
@@ -5166,9 +5150,9 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      approxprice: 600
-                    }
-                  ]
+                      approxprice: 600,
+                    },
+                  ],
                 },
                 {
                   id: 114,
@@ -5194,10 +5178,9 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                       approxprice: 1800,
-                      note:
-                        "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
                       note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض"
+                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
                     },
                     {
                       id: 336,
@@ -5216,9 +5199,9 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      approxprice: 1400
-                    }
-                  ]
+                      approxprice: 1400,
+                    },
+                  ],
                 },
                 {
                   id: 115,
@@ -5244,10 +5227,9 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                       approxprice: 400,
-                      note:
-                        "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
                       note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض"
+                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
                     },
                     {
                       id: 338,
@@ -5265,7 +5247,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      approxprice: 400
+                      approxprice: 400,
                     },
                     {
                       id: 339,
@@ -5283,9 +5265,9 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      approxprice: 500
-                    }
-                  ]
+                      approxprice: 500,
+                    },
+                  ],
                 },
                 {
                   id: 116,
@@ -5311,12 +5293,11 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                       approxprice: 150,
-                      note:
-                        "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
                       note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض"
-                    }
-                  ]
+                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
+                    },
+                  ],
                 },
                 {
                   id: 117,
@@ -5342,12 +5323,11 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                       approxprice: 300,
-                      note:
-                        "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
                       note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض"
-                    }
-                  ]
+                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
+                    },
+                  ],
                 },
                 {
                   id: 118,
@@ -5373,14 +5353,13 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                       approxprice: 500,
-                      note:
-                        "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
                       note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض"
-                    }
-                  ]
-                }
-              ]
+                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 17,
@@ -5413,10 +5392,9 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      note:
-                        "1- Service Includes furniture and fixtures, curtains fixing, TV mounting, LCD/LED fixing, kitchen cabinet fixing and AC fixing.\r\n2- Please select how many kitchens, bedrooms, living rooms and halls do you have at your residence",
+                      note: "1- Service Includes furniture and fixtures, curtains fixing, TV mounting, LCD/LED fixing, kitchen cabinet fixing and AC fixing.\r\n2- Please select how many kitchens, bedrooms, living rooms and halls do you have at your residence",
                       note_ar:
-                        "1- الخدمة تشمل الآثاث والتجهيزات وتركيب الستائر واصلاح التلفاز بنوعيه LED او LCD وايضاً اصلاح المكيف وخزانات المطبخ. \r\n2- يرجى تحديد عدد المطابخ وغرف النوم والجلوس والصالات في سكنك"
+                        "1- الخدمة تشمل الآثاث والتجهيزات وتركيب الستائر واصلاح التلفاز بنوعيه LED او LCD وايضاً اصلاح المكيف وخزانات المطبخ. \r\n2- يرجى تحديد عدد المطابخ وغرف النوم والجلوس والصالات في سكنك",
                     },
                     {
                       id: 286,
@@ -5430,7 +5408,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 288,
@@ -5444,7 +5422,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 289,
@@ -5458,7 +5436,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 316,
@@ -5472,9 +5450,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 97,
@@ -5495,11 +5473,11 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
-                }
-              ]
+                      carttype: 1,
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 52,
@@ -5531,7 +5509,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 292,
@@ -5545,7 +5523,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 293,
@@ -5559,9 +5537,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 100,
@@ -5582,7 +5560,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 295,
@@ -5596,9 +5574,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 101,
@@ -5619,11 +5597,11 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
-                }
-              ]
+                      carttype: 1,
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 45,
@@ -5659,7 +5637,7 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                       note: "1- We use EPA approved products.",
-                      note_ar: " نستخدم منتجات EPA المرخصة"
+                      note_ar: " نستخدم منتجات EPA المرخصة",
                     },
                     {
                       id: 226,
@@ -5675,7 +5653,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 227,
@@ -5695,7 +5673,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 236,
@@ -5714,9 +5692,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 80,
@@ -5745,9 +5723,9 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                       note: "1- We use EPA approved products. ",
-                      note_ar: " نستخدم منتجات EPA المرخصة"
-                    }
-                  ]
+                      note_ar: " نستخدم منتجات EPA المرخصة",
+                    },
+                  ],
                 },
                 {
                   id: 81,
@@ -5772,11 +5750,11 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                       note: "1- We use EPA approved products. ",
-                      note_ar: " نستخدم منتجات EPA المرخصة"
-                    }
-                  ]
-                }
-              ]
+                      note_ar: " نستخدم منتجات EPA المرخصة",
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 47,
@@ -5811,10 +5789,9 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      note:
-                        "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
+                      note: "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
                       note_ar:
-                        "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة"
+                        "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة",
                     },
                     {
                       id: 240,
@@ -5830,7 +5807,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 241,
@@ -5848,7 +5825,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 242,
@@ -5867,9 +5844,9 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
+                      carttype: 1,
+                    },
+                  ],
                 },
                 {
                   id: 83,
@@ -5897,12 +5874,11 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      note:
-                        "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
+                      note: "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
                       note_ar:
-                        "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة"
-                    }
-                  ]
+                        "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة",
+                    },
+                  ],
                 },
                 {
                   id: 84,
@@ -5926,14 +5902,13 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
-                      note:
-                        "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
+                      note: "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
                       note_ar:
-                        "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة"
-                    }
-                  ]
-                }
-              ]
+                        "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة",
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 54,
@@ -5970,14 +5945,13 @@ export default class LandingSecreen extends React.Component {
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 20,
-                      note:
-                        "1. Our Professional will visit you and let you choose the floor materials, design and size. \r\n2. All prices are subjected to discount. ",
+                      note: "1. Our Professional will visit you and let you choose the floor materials, design and size. \r\n2. All prices are subjected to discount. ",
                       note_ar:
                         "1-" +
                         " سيقوم فنيونا بزيارتك لتحديد المواد المستخدمة للأرضية، وكذلك التصميم والحجم." +
                         "\n" +
                         "2-" +
-                        " كل الأسعار قابلة للتخفيض "
+                        " كل الأسعار قابلة للتخفيض ",
                     },
                     {
                       id: 318,
@@ -5995,7 +5969,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 35
+                      meterprice: 35,
                     },
                     {
                       id: 319,
@@ -6013,7 +5987,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 20
+                      meterprice: 20,
                     },
                     {
                       id: 320,
@@ -6031,7 +6005,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 35
+                      meterprice: 35,
                     },
                     {
                       id: 321,
@@ -6049,7 +6023,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 25
+                      meterprice: 25,
                     },
                     {
                       id: 322,
@@ -6067,7 +6041,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 55
+                      meterprice: 55,
                     },
                     {
                       id: 343,
@@ -6085,9 +6059,9 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 25
-                    }
-                  ]
+                      meterprice: 25,
+                    },
+                  ],
                 },
                 {
                   id: 111,
@@ -6113,14 +6087,13 @@ export default class LandingSecreen extends React.Component {
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 35,
-                      note:
-                        "1. Our Professional will visit you and let you choose the ceiling materials, design and size. \r\n2. All prices are subjected to discount. ",
+                      note: "1. Our Professional will visit you and let you choose the ceiling materials, design and size. \r\n2. All prices are subjected to discount. ",
                       note_ar:
                         "1-" +
                         "سيقوم فنيونا بزيارتك لتحديد المواد المستخدمة للسقف وكذلك التصميم والحجم." +
                         "\n" +
                         "2-" +
-                        " كل الأسعار قابلة للتخفيض "
+                        " كل الأسعار قابلة للتخفيض ",
                     },
                     {
                       id: 325,
@@ -6138,7 +6111,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 75
+                      meterprice: 75,
                     },
                     {
                       id: 326,
@@ -6156,7 +6129,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 75
+                      meterprice: 75,
                     },
                     {
                       id: 327,
@@ -6174,9 +6147,9 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 40
-                    }
-                  ]
+                      meterprice: 40,
+                    },
+                  ],
                 },
                 {
                   id: 112,
@@ -6202,14 +6175,13 @@ export default class LandingSecreen extends React.Component {
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 15,
-                      note:
-                        "1. Our Professional will visit you and let you choose the wall materials, design and size. \r\n2. All prices are subjected to discount. ",
+                      note: "1. Our Professional will visit you and let you choose the wall materials, design and size. \r\n2. All prices are subjected to discount. ",
                       note_ar:
                         "1-" +
                         " سيقوم فنيونا بزيارتك لتحديد المواد المستخدمة للجدران وكذلك التصميم والحجم." +
                         "\n" +
                         "2-" +
-                        " كل الأسعار قابلة للتخفيض "
+                        " كل الأسعار قابلة للتخفيض ",
                     },
                     {
                       id: 330,
@@ -6227,11 +6199,11 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 55
-                    }
-                  ]
-                }
-              ]
+                      meterprice: 55,
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: 55,
@@ -6288,7 +6260,7 @@ export default class LandingSecreen extends React.Component {
                         "\n" +
                         " كل كاميرا تشمل: كابلات، مجموعة منتجات المراقبة، محول الطاقة و/او جهاز الاستقبال." +
                         "\n" +
-                        " نحن نجلب كل أدوات العمل الضرورية مثل الدريل والمفاتيح والسلم واي شيء مطلوب عند تنفيذ العمل."
+                        " نحن نجلب كل أدوات العمل الضرورية مثل الدريل والمفاتيح والسلم واي شيء مطلوب عند تنفيذ العمل.",
                     },
                     {
                       id: 310,
@@ -6302,7 +6274,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 311,
@@ -6316,7 +6288,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 312,
@@ -6330,7 +6302,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 313,
@@ -6344,7 +6316,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 314,
@@ -6358,7 +6330,7 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
+                      carttype: 1,
                     },
                     {
                       id: 315,
@@ -6375,12 +6347,12 @@ export default class LandingSecreen extends React.Component {
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1
-                    }
-                  ]
-                }
-              ]
-            }
+                      carttype: 1,
+                    },
+                  ],
+                },
+              ],
+            },
 
             // {
             //   id: 100,
@@ -6422,7 +6394,7 @@ export default class LandingSecreen extends React.Component {
             //     }
             //   ]
             // }
-          ]
+          ],
         };
         if (responseJson.error === false) {
           // console.log("responseJson.services.", responseJson.services);
@@ -6430,7 +6402,7 @@ export default class LandingSecreen extends React.Component {
             this.state.location ==
             "4994 King Fahd Rd, Al Muntazah, Al-Kharj 16439, Saudi Arabia"
           ) {
-            let servicesArray = responseJson.services.filter(i => {
+            let servicesArray = responseJson.services.filter((i) => {
               return (
                 i.name !== "Gardening Services" ||
                 i.name !== "Paint" ||
@@ -6445,7 +6417,7 @@ export default class LandingSecreen extends React.Component {
                 visible: true,
                 freshCategories: responseJson.services,
                 products: responseJson.services[0].products,
-                selectedCategoryId: responseJson.services[0].id
+                selectedCategoryId: responseJson.services[0].id,
                 // findPoup: true
               },
 
@@ -6469,7 +6441,7 @@ export default class LandingSecreen extends React.Component {
                 deals: responseJson.offers,
                 freshCategories: responseJson.services,
                 products: responseJson.services[0].products,
-                selectedCategoryId: responseJson.services[0].id
+                selectedCategoryId: responseJson.services[0].id,
                 // findPoup: true
               },
 
@@ -6494,14 +6466,14 @@ export default class LandingSecreen extends React.Component {
           // }, 500);
           console.log("get categories success", response);
           await Analytics.logEvent("getCategoriesError_True", {
-            getCategoriesError: response.toString()
+            getCategoriesError: response.toString(),
           });
         }
       })
-      .catch(async error => {
+      .catch(async (error) => {
         //console.log(error, "error");
         await Analytics.logEvent("getCategoriesError", {
-          getCategoriesError: error.toString()
+          getCategoriesError: error.toString(),
         });
       });
     this.setState({ loading: false });
@@ -6513,18 +6485,19 @@ export default class LandingSecreen extends React.Component {
     if (jobs == null) {
       this.setState({
         selectedServices: [],
-        user: user !== null ? JSON.parse(user) : null
+        user: user !== null ? JSON.parse(user) : null,
       });
       this.getCategories();
     }
     let allJobs = JSON.parse(jobs);
 
     if (allJobs.length > 0) {
-      this.state.categories.forEach(category => {
-        category.products.forEach(product => {
-          product.jobs.forEach(job => {
+      this.state.categories.forEach((category) => {
+        category.products.forEach((product) => {
+          product.jobs.forEach((job) => {
             let index = allJobs.findIndex(
-              j => j.id == job.id && j.selected == true && job.selected == true
+              (j) =>
+                j.id == job.id && j.selected == true && job.selected == true
             );
             if (index == -1) {
               job.selected = false;
@@ -6537,12 +6510,12 @@ export default class LandingSecreen extends React.Component {
     }
     this.setState({ selectedServices: jobs !== null ? JSON.parse(jobs) : [] });
   };
-  navigationSetup = async option => {
+  navigationSetup = async (option) => {
     if (option == 4) {
       this.props.navigation.navigate("ProfileSecreen", {
         cartItem: this.state.selectedServices.length,
         lan: this.state.lan,
-        location: this.state.location
+        location: this.state.location,
       });
     }
     if (option == 3) {
@@ -6550,18 +6523,18 @@ export default class LandingSecreen extends React.Component {
         this.props.navigation.navigate("MyCart", {
           lan: this.state.lan,
           isPackage: false,
-          manualy: false
+          manualy: false,
         });
         await Analytics.logEvent("Cart", {
           name: "Cart",
           screen: "landingScreen",
-          purpose: "checkout order from landing screen"
+          purpose: "checkout order from landing screen",
         });
       } else {
         Toast.show({
           text:
             this.state.lan == "en" ? "Your cart is empty" : "سلة الطلبات فارغة",
-          position: "bottom"
+          position: "bottom",
         });
       }
     }
@@ -6569,7 +6542,7 @@ export default class LandingSecreen extends React.Component {
       this.props.navigation.navigate("MyOrders", {
         cartItem: this.state.selectedServices.length,
         lan: this.state.lan,
-        location: this.state.location
+        location: this.state.location,
       });
     }
   };
@@ -6603,7 +6576,7 @@ export default class LandingSecreen extends React.Component {
     //this.updateLanguage(2);
   };
   componentWillUnmount() {}
-  openPromotionScreen = async index => {
+  openPromotionScreen = async (index) => {
     console.log(" promotion screen ", this.state.dataSource[index]);
     if (
       Platform.OS === "android" &&
@@ -6617,12 +6590,12 @@ export default class LandingSecreen extends React.Component {
       this.props.navigation.navigate("Promotion", {
         job: this.state.dataSource[index].job,
         lan: this.state.lan,
-        url: this.state.dataSource[index].banner.url
+        url: this.state.dataSource[index].banner.url,
       });
       await Analytics.logEvent("PromotionalBanners", {
         name: "PromotionalBanners",
         screen: "landingScreen",
-        purpose: "promotion banner clicked"
+        purpose: "promotion banner clicked",
       });
     }
     if (
@@ -6631,11 +6604,11 @@ export default class LandingSecreen extends React.Component {
     ) {
       this.props.navigation.navigate("PromotionService", {
         serviceid: this.state.dataSource[index].categoryid,
-        lan: this.state.lan
+        lan: this.state.lan,
       });
     }
   };
-  consoleNotificationFirebase = async notification => {
+  consoleNotificationFirebase = async (notification) => {
     // let notificationId = "";
     // if (notification.data.customerid !== undefined) {
     //   notificationId =
@@ -6648,39 +6621,39 @@ export default class LandingSecreen extends React.Component {
     if (notification.request.content.data) {
       await Analytics.logEvent("notificationRecieved", {
         notificationRecieved:
-          "notification valid" + this.state.user?.name.toString()
+          "notification valid" + this.state.user?.name.toString(),
       })
-        .then(response => {
+        .then((response) => {
           console.log("success firebase analytics  ", response);
         })
-        .catch(error => {
+        .catch((error) => {
           console.log("ERRor firebase analytics  ", error);
         });
     } else {
       await Analytics.logEvent("notificationRecieved", {
         notificationRecieved:
-          "notification Not valid" + this.state.user?.name.toString()
+          "notification Not valid" + this.state.user?.name.toString(),
       })
-        .then(response => {
+        .then((response) => {
           console.log("success firebase analytics  ", response);
         })
-        .catch(error => {
+        .catch((error) => {
           console.log("ERRor firebase analytics  ", error);
         });
       await Analytics.logEvent("notificationRecieved_error", {
         notificationRecieved_error:
-          "notification Not valid" + this.state.user?.name.toString()
+          "notification Not valid" + this.state.user?.name.toString(),
       })
-        .then(response => {
+        .then((response) => {
           console.log("success firebase analytics  ", response);
         })
-        .catch(error => {
+        .catch((error) => {
           console.log("ERRor firebase analytics  ", error);
         });
     }
   };
 
-  _handleNotification = notification => {
+  _handleNotification = (notification) => {
     console.log("notifications recieved ", notification);
     // console.log("notifications > data  ", notification.request.content.data);
     // console.log("notifications > job  ", notification.request.content.data.job);
@@ -6699,27 +6672,27 @@ export default class LandingSecreen extends React.Component {
           url:
             this.state.lan == "en"
               ? notification.request.content.data.bannerUrl
-              : notification.request.content.data.bannerUrl_ar
+              : notification.request.content.data.bannerUrl_ar,
         });
       } else if (notification.request.content.data.isOffer) {
         this.props.navigation.navigate("PackageOffer", {
           lan: this.state.lan,
           offerid: notification.request.content.data.offerId,
-          isOffer: notification.request.content.data.isOffer
+          isOffer: notification.request.content.data.isOffer,
         });
       } else if (notification.request.content.data.is_point_screen == "true") {
         this.props.navigation.navigate("PointsScreen", {
-          lan: this.state.lan
+          lan: this.state.lan,
         });
       } else if (notification.request.content.data.serviceid) {
         this.props.navigation.navigate("PromotionService", {
           serviceid: notification.request.content.data.serviceid,
-          lan: this.state.lan
+          lan: this.state.lan,
         });
       } else if (notification.request.content.data.statusid) {
         this.props.navigation.navigate("PromotionService", {
           serviceid: notification.request.content.data.serviceid,
-          lan: this.state.lan
+          lan: this.state.lan,
         });
       } else {
         this.props.navigation.navigate("OrderDetails", {
@@ -6728,7 +6701,7 @@ export default class LandingSecreen extends React.Component {
           user: this.state.user,
           isHistory:
             notification.request.content.data.statusid == 5 ? true : false,
-          isFeedback: false
+          isFeedback: false,
         });
       }
     } else {
@@ -6772,11 +6745,11 @@ export default class LandingSecreen extends React.Component {
           visible={this.state.popup}
           lan={this.state.lan}
           selectedItem={0}
-          openVideoPlayer={index => {
+          openVideoPlayer={(index) => {
             this.setState({
               videoSelected: index,
               popup: false,
-              videoPopup: true
+              videoPopup: true,
             });
           }}
           setPopupfalse={() => {
@@ -6795,7 +6768,7 @@ export default class LandingSecreen extends React.Component {
           style={{
             backgroundColor: "white",
             //marginTop: Constants.statusBarHeight,
-            marginBottom: 110
+            marginBottom: 110,
           }}
         >
           {
@@ -6815,20 +6788,20 @@ export default class LandingSecreen extends React.Component {
                 borderBottomWidth: 2,
                 borderColor: "#0764af",
                 flexDirection: "row",
-                justifyContent: "space-between"
+                justifyContent: "space-between",
               }}
             >
               <View
                 style={{
                   width: portion,
-                  height: 50
+                  height: 50,
                 }}
               >
                 <View
                   style={{
                     alignSelf: "flex-start",
                     justifyContent: "center",
-                    flex: 2
+                    flex: 2,
                   }}
                 >
                   {this.state.lan == "en" ? (
@@ -6836,7 +6809,7 @@ export default class LandingSecreen extends React.Component {
                       style={{
                         color: "#0764af",
                         fontSize: 16,
-                        fontFamily: "montserrat_semi_blod"
+                        fontFamily: "montserrat_semi_blod",
                       }}
                     >
                       {this.state.location}
@@ -6846,7 +6819,7 @@ export default class LandingSecreen extends React.Component {
                       style={{
                         color: "#0764af",
                         fontSize: 16,
-                        alignSelf: "flex-end"
+                        alignSelf: "flex-end",
                       }}
                     >
                       {this.state.location}
@@ -6886,7 +6859,7 @@ export default class LandingSecreen extends React.Component {
                   flexDirection: "row",
                   alignSelf: "center",
                   justifyContent: "center",
-                  alignItems: "flex-end"
+                  alignItems: "flex-end",
                 }}
               >
                 <TouchableOpacity onPress={this.openChat}>
@@ -6903,7 +6876,7 @@ export default class LandingSecreen extends React.Component {
                     alignSelf: "flex-end",
                     justifyContent: "center",
                     flex: 2,
-                    width: portion
+                    width: portion,
                   }}
                 >
                   <Text
@@ -6911,7 +6884,7 @@ export default class LandingSecreen extends React.Component {
                       color: "#0764af",
                       fontSize: 16,
                       textAlign: "right",
-                      fontFamily: "montserrat_arabic_regular"
+                      fontFamily: "montserrat_arabic_regular",
                     }}
                   >
                     {this.state.lan == "en" ? "العربية" : "English"}
@@ -6921,7 +6894,7 @@ export default class LandingSecreen extends React.Component {
             </View>
           </View>
           <Animated.ScrollView
-            ref={s => (this._anScrollView = s)}
+            ref={(s) => (this._anScrollView = s)}
             scrollEventThrottle={16}
             showsVerticalScrollIndicator={false}
             onScroll={Animated.event(
@@ -6936,9 +6909,11 @@ export default class LandingSecreen extends React.Component {
                 // images={this.state.offersUrls}
                 sliderBoxHeight={153}
                 ImageComponentStyle={{
-                  width: "100%"
+                  width: "100%",
                 }}
-                onCurrentImagePressed={index => this.openPromotionScreen(index)}
+                onCurrentImagePressed={(index) =>
+                  this.openPromotionScreen(index)
+                }
                 dotColor="#ff8a29"
                 inactiveDotColor="#F5F5F5"
                 paginationBoxVerticalPadding={20}
@@ -6950,7 +6925,7 @@ export default class LandingSecreen extends React.Component {
             <View
               style={{
                 width: Dimensions.get("screen").width - 30,
-                alignSelf: "center"
+                alignSelf: "center",
               }}
             >
               <FlatList
@@ -6963,7 +6938,7 @@ export default class LandingSecreen extends React.Component {
                     lan={this.state.lan}
                   />
                 )}
-                keyExtractor={item => item.id}
+                keyExtractor={(item) => item.id}
                 showsHorizontalScrollIndicator={false}
               />
             </View>
@@ -6976,7 +6951,7 @@ export default class LandingSecreen extends React.Component {
                 backgroundColor: "white",
                 width: Dimensions.get("screen").width - 30,
                 alignSelf: "center",
-                height: 105
+                height: 105,
               }}
             >
               <Animated.FlatList
@@ -6990,7 +6965,7 @@ export default class LandingSecreen extends React.Component {
                     categorySelection={this.categorySelection}
                     selectedCategoryId={this.state.selectedCategoryId}
                     location={this.state.location}
-                    openVideoPopup={item => {
+                    openVideoPopup={(item) => {
                       console.log(item, "item");
                       this.setState({ videoSelected: item }, () =>
                         this.setState({ videoPopup: true })
@@ -6999,7 +6974,7 @@ export default class LandingSecreen extends React.Component {
                     item={index}
                   />
                 )}
-                keyExtractor={item => item.id}
+                keyExtractor={(item) => item.id}
               />
             </Animated.View>
             {/* <Animated.View
@@ -7051,7 +7026,7 @@ export default class LandingSecreen extends React.Component {
             <View style={{ marginTop: 10, marginBottom: 12 }}>
               <Accordion
                 style={{ borderWidth: 0 }}
-                ref={c => (this._accordion = c)}
+                ref={(c) => (this._accordion = c)}
                 dataArray={this.state.products}
                 renderHeader={this._renderHeader}
                 renderContent={this._renderContent}
@@ -7090,7 +7065,7 @@ export default class LandingSecreen extends React.Component {
           style={{
             position: "absolute",
             bottom: 0,
-            alignSelf: "center"
+            alignSelf: "center",
           }}
         >
           <View
@@ -7100,7 +7075,7 @@ export default class LandingSecreen extends React.Component {
               alignSelf: "center",
               justifyContent: "space-between",
               margin: 12,
-              width: Dimensions.get("screen").width - 30
+              width: Dimensions.get("screen").width - 30,
             }}
           >
             <View>
@@ -7145,14 +7120,14 @@ export default class LandingSecreen extends React.Component {
                           right: 0,
                           bottom: 0,
                           top: 0,
-                          position: "absolute"
+                          position: "absolute",
                         }}
                       >
                         <Text
                           style={{
                             fontSize: 10,
 
-                            justifyContent: "center"
+                            justifyContent: "center",
                           }}
                         >
                           {this.state.selectedServices &&
@@ -7193,7 +7168,7 @@ export default class LandingSecreen extends React.Component {
                           width: 4,
                           height: 4,
                           borderRadius: 2,
-                          backgroundColor: "red"
+                          backgroundColor: "red",
                         }}
                       ></View>
                     ) : (

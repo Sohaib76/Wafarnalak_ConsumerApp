@@ -68,8 +68,6 @@ import {
   StatusBar,
 } from "react-native";
 import Fire from "./Fire";
-import Ionicons from "react-native-vector-icons/Ionicons";
-
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -127,7 +125,7 @@ const Chat = (props) => {
   const [isRecording, setIsRecording] = useState(false);
   const [recording, setRecording] = useState(null);
   const [sound, setSound] = useState(null);
-  const [playAudio, setPlayAudio] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const [videoSource, setvideoSource] = useState("");
   const [VideoPopup, setVideoPopup] = useState(false);
@@ -142,6 +140,31 @@ const Chat = (props) => {
     let temp = [];
 
     ////////////
+    let d = new Date();
+    let created = d.toISOString();
+
+    const help_msg = {
+      _id: "21a9a5ff-caf0-4dfa-b999-366cc888e094",
+      createdAt: created, // "2021-04-15T10:17:45.079Z"
+      receiverId: "12",
+      senderId: "-1",
+      senderMobile: "0568600000000",
+      text: "Welcome , How we may help you?",
+      timestamp: created,
+      type: "text",
+      user: {
+        _id: -1,
+        avatar: 6,
+        name: "Wafarnalak",
+        // avatar: require("../assets/Profile2-min.png"), //Wafarnalk logo
+      },
+    };
+
+    help_msg.user.avatar = require("../assets/Profile2-min.png"); //Wafarnalk logo
+
+    setMessages((previousMessages) =>
+      GiftedChat.append(previousMessages, help_msg)
+    );
 
     /////////
 
@@ -246,7 +269,6 @@ const Chat = (props) => {
           //...
         }
       );
-
     // db.collection(
     //   "-1" + props.navigation.state.params.user.customerid.toString()
     // )
@@ -324,43 +346,6 @@ const Chat = (props) => {
     //   });
 
     //   setMessages(temp);
-
-    let d = new Date();
-    let created = d.toISOString();
-
-    // const help_msg = {
-    //   _id: "21a9a5ff-caf0-4dfa-b999-366cc888e094",
-    //   createdAt: created, // "2021-04-15T10:17:45.079Z"
-    //   receiverId: "12",
-    //   senderId: "-1",
-    //   senderMobile: "0568600000000",
-    //   text: "Welcome , How we may help you?",
-    //   timestamp: created,
-    //   type: "text",
-    //   user: {
-    //     _id: -1,
-    //     avatar: 6,
-    //     name: "Wafarnalak",
-    //     // avatar: require("../assets/Profile2-min.png"), //Wafarnalk logo
-    //   },
-    // };
-
-    // help_msg.user.avatar = require("../assets/Profile2-min.png"); //Wafarnalk logo
-
-    // console.log("Help:", help_msg);
-
-    // const help = {
-    //   _id: 0,
-    //   text: "Welcome.",
-    //   createdAt: new Date().getTime().toString(),
-    //   system: true,
-    // };
-
-    // setMessages((previousMessages) =>
-    //   GiftedChat.append(previousMessages, help)
-    // );
-
-    console.log(new Date().getTime().toString());
   }, [props.navigation]);
   const getGalleryPermissions = async () => {
     // const { stat } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
@@ -381,7 +366,7 @@ const Chat = (props) => {
     // return <CameraComponent />;
   };
   const uploadImagetofirebaseConsole = async (image) => {
-    console.log("hello", image); //image.uri
+    console.log("hello", image.uri);
     const blob = await new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
       xhr.onload = function () {
@@ -391,7 +376,7 @@ const Chat = (props) => {
         reject(new TypeError("network request failed"));
       };
       xhr.responseType = "blob";
-      xhr.open("GET", image, true); //image.uri
+      xhr.open("GET", image.uri, true);
       xhr.send(null);
     });
     let d = new Date();
@@ -481,9 +466,6 @@ const Chat = (props) => {
       sound.setOnPlaybackStatusUpdate(null);
       setSound(null);
     }
-
-    console.log("Requesting permissions..");
-    await Audio.requestPermissionsAsync();
 
     await Audio.setAudioModeAsync({
       allowsRecordingIOS: true,
@@ -849,123 +831,40 @@ const Chat = (props) => {
     // console.log("new msg ", msg);
     // setMessages(previousMessages => GiftedChat.append(previousMessages, msg));
   };
-
-  // Just Created
-
-  // const playSound = async (uri) => {
-  //   setPlayAudio(true);
-
-  //   setPlayAudio(false);
-
-  //   console.log(uri);
-  //   // console.log(val.currentMessage.uri);
-
-  //   // const sound = new Audio.Sound();
-  //   // try {
-  //   //   await sound.loadAsync({ uri: props.currentMessage.uri });
-  //   //   await sound.playAsync();
-  //   //   // Your sound is playing!
-  //   //   console.log("Playing");
-
-  //   //   // Don't forget to unload the sound from memory
-  //   //   // when you are done using the Sound object
-  //   //   await sound.unloadAsync();
-
-  //   setPlayAudio(false);
-  //   // } catch (error) {
-  //   //   // An error occurred!
-  //   //   console.log(error);
-  //   // }
-  // };
-
-  // renderAudio = (props) => {
-  //   console.log("Rendering");
-  //   console.log(props.currentMessage);
-  //   return props.currentMessage.type != "audio" ? (
-  //     <View />
-  //   ) : (
-  //     <Ionicons
-  //       name="ios-play"
-  //       size={35}
-  //       color={playAudio ? "blue" : "red"}
-  //       style={{
-  //         left: 90,
-  //         position: "relative",
-  //         shadowColor: "#000",
-  //         shadowOffset: { width: 0, height: 0 },
-  //         shadowOpacity: 0.5,
-  //         backgroundColor: "transparent",
-  //       }}
-  //       onPress={playSound(props.currentMessage.uri)}
-
-  //       // const sound = new Sound(props.currentMessage.audio, "", (error) => {
-  //       //   if (error) {
-  //       //     console.log("failed to load the sound", error);
-  //       //   }
-  //       //     setPlayAudio(false);
-  //       //     sound.play((success) => {
-  //       //       console.log(success, "success play");
-  //       //       if (!success) {
-  //       //         Alert.alert("There was an error playing this audio");
-  //       //       }
-  //       //     });
-  //       //   });
-  //       // }}
-  //     />
-  //   );
-  // };
-
-  // const playMic = async (uri) => {
-  //   console.log(uri);
-  //   console.log("TTT");
-  // };
-
   const renderBubble = (props) => {
-    console.log("renderBubble");
-    // {this.renderAudio(props)}
-
     return (
-      <View>
-        {/* {renderAudio(props)} */}
-
-        <Bubble {...props} />
-      </View>
+      <Bubble
+        {...props}
+        textStyle={{
+          left: {
+            color: "#4a4b4c",
+          },
+          right: {
+            color: "white",
+          },
+        }}
+        wrapperStyle={{
+          left: {
+            backgroundColor: "#d6d6d6",
+            borderRadius: 0,
+            borderColor: "#c9c9c9",
+          },
+          right: {
+            backgroundColor: "#631255",
+            borderBottomRightRadius: 0,
+            borderTopRightRadius: 0,
+          },
+        }}
+        tickStyle={{
+          color: "white",
+          height: 20,
+        }}
+        timeTextStyle={{
+          left: { color: "#8b8d8f", alignSelf: "flex-end" },
+          right: { color: "#8b8d8f" },
+        }}
+      />
     );
-
-    // Uncomment
-    // return (
-    //   <Bubble
-    //     {...props}
-    //     textStyle={{
-    //       left: {
-    //         color: "#4a4b4c",
-    //       },
-    //       right: {
-    //         color: "white",
-    //       },
-    //     }}
-    //     wrapperStyle={{
-    //       left: {
-    //         backgroundColor: "#d6d6d6",
-    //         borderRadius: 0,
-    //         borderColor: "#c9c9c9",
-    //       },
-    //       right: {
-    //         backgroundColor: "#631255",
-    //         borderBottomRightRadius: 0,
-    //         borderTopRightRadius: 0,
-    //       },
-    //     }}
-    //     tickStyle={{
-    //       color: "white",
-    //       height: 20,
-    //     }}
-    //     timeTextStyle={{
-    //       left: { color: "#8b8d8f", alignSelf: "flex-end" },
-    //       right: { color: "#8b8d8f" },
-    //     }}
-    //   />
-    // );
   };
 
   function renderLoading() {
@@ -995,7 +894,6 @@ const Chat = (props) => {
             source={require("../assets/Add-min.png")}
           />
         </TouchableOpacity>
-        {/* Uncomment */}
         <View>
           <TouchableOpacity
             style={{ justifyContent: "flex-start" }}
@@ -1191,7 +1089,7 @@ const Chat = (props) => {
           backgroundColor: "white",
           // borderRadius: 10
         }}
-        // renderTicks={renderTicks} // Issue infinite scroll
+        renderTicks={renderTicks}
         // isTyping={isTyping}
         listViewProps={{
           style: {
@@ -1209,7 +1107,7 @@ const Chat = (props) => {
         scrollToBottom
         // scrollToBottomComponent={scrollToBottomComponent}
         renderLoading={renderLoading}
-        isAnimated={true}
+        isAnimaated={true}
         renderSend={renderSend}
         renderActions={renderActions}
         // onPressActionButton={() => onPressActionButton()}

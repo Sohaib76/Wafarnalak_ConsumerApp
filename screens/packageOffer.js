@@ -4,7 +4,7 @@ import {
   Image,
   AsyncStorage,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import {
   Container,
@@ -15,7 +15,7 @@ import {
   Text,
   Left,
   Right,
-  Footer
+  Footer,
 } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
@@ -36,7 +36,7 @@ export default class PackageOfferScreen extends React.Component {
       totalOfferThreePrice: 0,
       selectedServices: [],
       lan: "en",
-      loading: false
+      loading: false,
     };
   }
   getPackage = (offerid, lan) => {
@@ -46,28 +46,28 @@ export default class PackageOfferScreen extends React.Component {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          offerid: offerid
-        })
+          offerid: offerid,
+        }),
       }
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         if (responseJson.error == false) {
           this.setState({
             services: responseJson.offer.services,
             deal: responseJson.offer,
             lan: lan,
-            loading: false
+            loading: false,
           });
           this.clearSelectedServices(responseJson.offer.services);
         } else {
           this.setState({ loading: false });
         }
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({ loading: false });
       });
   };
@@ -80,12 +80,19 @@ export default class PackageOfferScreen extends React.Component {
     }
     return 0;
   };
-  sortServices = services => {
-    services.forEach(service => {
+  sortServices = (services) => {
+    services.forEach((service) => {
       service.products.sort(this.compare);
     });
     this.setState({ services: services });
   };
+
+  componentDidUpdate = () => {
+    // state.product
+    console.log("services", this.state.services);
+    console.log("Deal", this.state.deal);
+  };
+
   componentDidMount = () => {
     const { navigation } = this.props;
     if (navigation.getParam("isOffer")) {
@@ -98,25 +105,25 @@ export default class PackageOfferScreen extends React.Component {
       this.sortServices(navigation.getParam("deal").services);
       this.setState({
         lan: navigation.getParam("lan"),
-        deal: navigation.getParam("deal")
+        deal: navigation.getParam("deal"),
       });
       this.clearSelectedServices(navigation.getParam("deal").services);
     }
 
     this.logPackageEvent();
   };
-  clearSelectedServices = services => {
-    services.forEach(service => {
+  clearSelectedServices = (services) => {
+    services.forEach((service) => {
       if (service.products) {
-        service.products.forEach(product => {
-          product.jobs.forEach(job => {
+        service.products.forEach((product) => {
+          product.jobs.forEach((job) => {
             if (job.selected && job.selected == true) {
               (job.selected = false), (job.items = 0);
             }
           });
         });
       } else {
-        service.jobs.forEach(job => {
+        service.jobs.forEach((job) => {
           if (job.selected && job.selected == true) {
             (job.selected = false), (job.items = 0);
           }
@@ -128,46 +135,46 @@ export default class PackageOfferScreen extends React.Component {
     await Analytics.logEvent("PackagesIcon", {
       name: "PackagesIcon",
       screen: "landingScreen",
-      purpose: "package open"
+      purpose: "package open",
     });
   };
-  calculateTotalOfferPrice = allServices => {
+  calculateTotalOfferPrice = (allServices) => {
     let totaloffer1 = 0;
     let totaloffer2 = 0;
     let totaloffer3 = 0;
-    this.state.services.forEach(function(service, index) {
+    this.state.services.forEach(function (service, index) {
       if (index == 0) {
         let firstOffers = allServices.filter(
-          ser => ser.serviceid == service.serviceid
+          (ser) => ser.serviceid == service.serviceid
         );
         if (service.is_same_price) {
           totaloffer1 = firstOffers[0] ? firstOffers[0].price : 0;
         } else {
-          firstOffers.forEach(offer => {
+          firstOffers.forEach((offer) => {
             totaloffer1 = totaloffer1 + offer.t_price;
           });
         }
       }
       if (index == 1) {
         let firstOffers = allServices.filter(
-          ser => ser.serviceid == service.serviceid
+          (ser) => ser.serviceid == service.serviceid
         );
         if (service.is_same_price) {
           totaloffer2 = firstOffers[0] ? firstOffers[0].price : 0;
         } else {
-          firstOffers.forEach(offer => {
+          firstOffers.forEach((offer) => {
             totaloffer2 = totaloffer2 + offer.t_price;
           });
         }
       }
       if (index == 2) {
         let firstOffers = allServices.filter(
-          ser => ser.serviceid == service.serviceid
+          (ser) => ser.serviceid == service.serviceid
         );
         if (service.is_same_price) {
           totaloffer3 = firstOffers[0] ? firstOffers[0].price : 0;
         } else {
-          firstOffers.forEach(offer => {
+          firstOffers.forEach((offer) => {
             totaloffer3 = totaloffer3 + offer.t_price;
           });
         }
@@ -176,14 +183,14 @@ export default class PackageOfferScreen extends React.Component {
     this.setState({
       totalOfferOnePrice: totaloffer1,
       totalOfferTwoPrice: totaloffer2,
-      totalOfferThreePrice: totaloffer3
+      totalOfferThreePrice: totaloffer3,
     });
   };
   addRemoveIntoSelectedServices = async (job, add) => {
     job.offerId = this.state.deal.offerid;
 
     let allServices = this.state.selectedServices;
-    let index = allServices.findIndex(service => service.id === job.id);
+    let index = allServices.findIndex((service) => service.id === job.id);
 
     if (add === false && job.items > 0) {
       allServices.splice(index, 1);
@@ -195,7 +202,7 @@ export default class PackageOfferScreen extends React.Component {
         allServices.splice(index, 1);
 
         this.setState({
-          selectedServices: allServices
+          selectedServices: allServices,
         });
       } else {
         if (index > -1) {
@@ -204,7 +211,7 @@ export default class PackageOfferScreen extends React.Component {
           allServices.push(job);
         }
         this.setState({
-          selectedServices: allServices
+          selectedServices: allServices,
         });
       }
       this.calculateTotalOfferPrice(allServices);
@@ -213,12 +220,12 @@ export default class PackageOfferScreen extends React.Component {
         jobserviceNameAr: this.state.deal.offername_ar,
         jobServiceIcon: this.state.deal.offerimage,
 
-        jobs: allServices
+        jobs: allServices,
       };
       await AsyncStorage.setItem("packgaeJobs", JSON.stringify(obj));
     }
   };
-  minus = job => {
+  minus = (job) => {
     if (job.items && job.items >= 1) {
       job.items--;
       if (job.choose_type == 3) {
@@ -243,7 +250,7 @@ export default class PackageOfferScreen extends React.Component {
       this.addRemoveIntoSelectedServices(job, false);
     }
   };
-  plus = job => {
+  plus = (job) => {
     if (job.items) job.items++;
     else job.items = 1;
     if (job.choose_type == 3) {
@@ -276,16 +283,16 @@ export default class PackageOfferScreen extends React.Component {
       this.state.deal.offerid !== 1 &&
       this.state.selectedServices.length > 0
     ) {
-      this.state.services.forEach(service => {
+      this.state.services.forEach((service) => {
         if (service.products) {
-          service.products.forEach(product => {
+          service.products.forEach((product) => {
             index = index + 1;
             if (index == 1) {
               if (product.choose_type == 1) {
                 secOne = true;
               }
               pruductsCatOneChooseType1 = product.jobs.filter(
-                p => p.selected == true && p.choose_type == 1
+                (p) => p.selected == true && p.choose_type == 1
               );
             }
             if (index == 2) {
@@ -293,7 +300,7 @@ export default class PackageOfferScreen extends React.Component {
                 secTwo = true;
               }
               pruductsCatTwoChooseType1 = product.jobs.filter(
-                p => p.selected == true && p.choose_type == 1
+                (p) => p.selected == true && p.choose_type == 1
               );
             }
             if (index == 3) {
@@ -301,7 +308,7 @@ export default class PackageOfferScreen extends React.Component {
                 secThree = true;
               }
               pruductsCatThreeChooseType1 = product.jobs.filter(
-                p => p.selected == true && p.choose_type == 1
+                (p) => p.selected == true && p.choose_type == 1
               );
             }
             if (index == 4) {
@@ -309,7 +316,7 @@ export default class PackageOfferScreen extends React.Component {
                 secFour = true;
               }
               pruductsCatFourChooseType1 = product.jobs.filter(
-                p => p.selected == true && p.choose_type == 1
+                (p) => p.selected == true && p.choose_type == 1
               );
             }
             if (index == 5) {
@@ -317,7 +324,7 @@ export default class PackageOfferScreen extends React.Component {
                 secFive = true;
               }
               pruductsCatFiveChooseType1 = product.jobs.filter(
-                p => p.selected == true && p.choose_type == 1
+                (p) => p.selected == true && p.choose_type == 1
               );
             }
           });
@@ -347,7 +354,7 @@ export default class PackageOfferScreen extends React.Component {
               ) {
                 this.props.navigation.navigate("MyCart", {
                   lan: this.state.lan,
-                  isPackage: true
+                  isPackage: true,
                 });
               } else {
                 Toast.show({
@@ -355,7 +362,7 @@ export default class PackageOfferScreen extends React.Component {
                     this.state.lan == "en"
                       ? "Select Atleast 1 of the required services"
                       : "اختر خدمة واحدة على الأقل من الخدمات المطلوبة",
-                  position: "bottom"
+                  position: "bottom",
                 });
               }
             } else {
@@ -364,7 +371,7 @@ export default class PackageOfferScreen extends React.Component {
                   this.state.lan == "en"
                     ? "Select Atleast 1 of the required services"
                     : "اختر خدمة واحدة على الأقل من الخدمات المطلوبة",
-                position: "bottom"
+                position: "bottom",
               });
             }
           } else {
@@ -373,7 +380,7 @@ export default class PackageOfferScreen extends React.Component {
                 this.state.lan == "en"
                   ? "Select Atleast 1 of the required services"
                   : "اختر خدمة واحدة على الأقل من الخدمات المطلوبة",
-              position: "bottom"
+              position: "bottom",
             });
           }
         } else {
@@ -382,7 +389,7 @@ export default class PackageOfferScreen extends React.Component {
               this.state.lan == "en"
                 ? "Select Atleast 1 of the required services"
                 : "اختر خدمة واحدة على الأقل من الخدمات المطلوبة",
-            position: "bottom"
+            position: "bottom",
           });
         }
       } else {
@@ -391,14 +398,14 @@ export default class PackageOfferScreen extends React.Component {
             this.state.lan == "en"
               ? "Select Atleast 1 of the required services"
               : "اختر خدمة واحدة على الأقل من الخدمات المطلوبة",
-          position: "bottom"
+          position: "bottom",
         });
       }
     } else {
       if (this.state.selectedServices.length > 0) {
         this.props.navigation.navigate("MyCart", {
           lan: this.state.lan,
-          isPackage: true
+          isPackage: true,
         });
       } else {
         Toast.show({
@@ -406,7 +413,7 @@ export default class PackageOfferScreen extends React.Component {
             this.state.lan == "en"
               ? "Select Atleast 1 of the required services"
               : "اختر خدمة واحدة على الأقل من الخدمات المطلوبة",
-          position: "bottom"
+          position: "bottom",
         });
       }
     }
@@ -414,7 +421,7 @@ export default class PackageOfferScreen extends React.Component {
     await Analytics.logEvent("PackagesCheckout", {
       name: "PackagesCheckout",
       screen: "packageScreen",
-      purpose: "package checkout"
+      purpose: "package checkout",
     });
   };
   render() {
@@ -430,7 +437,7 @@ export default class PackageOfferScreen extends React.Component {
             borderBottomColor: "#0866b0",
             backgroundColor: "#ffffff",
             height: 60,
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <Left style={{ marginLeft: 10 }}>
@@ -449,14 +456,14 @@ export default class PackageOfferScreen extends React.Component {
               justifyContent: "center",
               alignItems: "center",
               position: Platform.OS === "android" ? "absolute" : "relative",
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           >
             <Title
               style={{
                 fontFamily: "montserrat_semi_blod",
                 color: "#0866b0",
-                fontSize: 18
+                fontSize: 18,
               }}
             >
               {this.state.lan == "en"
@@ -469,7 +476,7 @@ export default class PackageOfferScreen extends React.Component {
 
         <View
           style={{
-            height: Dimensions.get("screen").height - 137
+            height: Dimensions.get("screen").height - 137,
           }}
         >
           <LinearGradient
@@ -483,13 +490,13 @@ export default class PackageOfferScreen extends React.Component {
                 source={{
                   uri:
                     "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/" +
-                    this.state.deal.offerbanner
+                    this.state.deal.offerbanner,
                 }}
                 style={{
                   width: Dimensions.get("screen").width - 10,
                   marginTop: -28,
                   height: 199,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
                 resizeMode="contain"
               />
@@ -499,7 +506,7 @@ export default class PackageOfferScreen extends React.Component {
                 alignSelf: "center",
                 marginLeft: 12,
                 marginRight: 12,
-                marginBottom: 16
+                marginBottom: 16,
               }}
             >
               <Text
@@ -512,14 +519,15 @@ export default class PackageOfferScreen extends React.Component {
             </View>
             <View
               style={{
-                height: Dimensions.get("screen").height - 470,
+                // height: Dimensions.get("screen").height - 495, //470
+                height: Dimensions.get("screen").height - 490,
                 // borderTopWidth: 1,
                 // borderTopLeftRadius: 20,
                 // borderTopRightRadius: 20,
                 borderTopColor: "lightgray",
                 marginLeft: 8,
                 marginRight: 8,
-                marginBottom: 90
+                marginBottom: 90,
               }}
             >
               <ScrollView
@@ -529,13 +537,16 @@ export default class PackageOfferScreen extends React.Component {
                   borderTopWidth: 1,
                   borderTopLeftRadius: 10,
                   borderTopRightRadius: 10,
+                  // borderBottomWidth: 1,
+                  borderBottomLeftRadius: 10,
+                  borderBottomRightRadius: 10,
                   borderTopColor: "lightgray",
-                  marginBottom: 90
+                  paddingBottom: 20, //marginBottom: 90,
                 }}
               >
                 {this.state.services &&
                   this.state.services.map(
-                    function(service, index) {
+                    function (service, index) {
                       return (
                         <View>
                           <View
@@ -543,7 +554,7 @@ export default class PackageOfferScreen extends React.Component {
                               flexDirection: "row",
                               justifyContent: "space-between",
                               margin: 8,
-                              alignItems: "center"
+                              alignItems: "center",
                             }}
                           >
                             <View>
@@ -551,7 +562,7 @@ export default class PackageOfferScreen extends React.Component {
                                 style={{
                                   fontSize: 14,
                                   fontWeight: "bold",
-                                  color: "4a4b4c"
+                                  color: "4a4b4c",
                                 }}
                               >
                                 {this.state.lan == "en"
@@ -562,14 +573,14 @@ export default class PackageOfferScreen extends React.Component {
                             <View
                               style={{
                                 flexDirection:
-                                  lan == "en" ? "row" : "row-reverse"
+                                  lan == "en" ? "row" : "row-reverse",
                               }}
                             >
                               <Text
                                 style={{
                                   fontSize: 10,
                                   color: "#0764af",
-                                  fontWeight: "bold"
+                                  fontWeight: "bold",
                                 }}
                               >
                                 Total SAR{" "}
@@ -587,7 +598,7 @@ export default class PackageOfferScreen extends React.Component {
                           </View>
                           {service.jobs &&
                             service.jobs.map(
-                              function(job, index) {
+                              function (job, index) {
                                 return (
                                   <DealJob
                                     job={job}
@@ -600,7 +611,7 @@ export default class PackageOfferScreen extends React.Component {
                             )}
                           {service.products &&
                             service.products.map(
-                              function(product, index) {
+                              function (product, index) {
                                 return (
                                   <View style={{ flex: 1 }}>
                                     <View
@@ -611,12 +622,12 @@ export default class PackageOfferScreen extends React.Component {
                                         width:
                                           Dimensions.get("screen").width - 30,
                                         height: 1,
-                                        backgroundColor: "lightgray"
+                                        backgroundColor: "lightgray",
                                       }}
                                     ></View>
                                     <View
                                       style={{
-                                        alignSelf: "center"
+                                        alignSelf: "center",
                                       }}
                                     >
                                       <Text
@@ -625,7 +636,7 @@ export default class PackageOfferScreen extends React.Component {
                                           color: "#0764af",
                                           flexWrap: "wrap",
                                           fontWeight: "bold",
-                                          textAlign: "center"
+                                          textAlign: "center",
                                         }}
                                       >
                                         {this.state.lan == "en"
@@ -635,7 +646,7 @@ export default class PackageOfferScreen extends React.Component {
                                     </View>
                                     <View>
                                       {product.jobs.map(
-                                        function(job, index) {
+                                        function (job, index) {
                                           return (
                                             <DealJob
                                               job={job}
@@ -662,25 +673,27 @@ export default class PackageOfferScreen extends React.Component {
         </View>
         <View
           style={{
-            backgroundColor: "white",
+            backgroundColor: "white", // white
             borderWidth: 0,
             height: 90,
             position: "absolute",
             bottom: 0,
             alignSelf: "center",
             width: "100%",
-            marginBottom: 0
+            marginBottom: 0,
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <TouchableOpacity onPress={this.checkOutOrder}>
             <View
               style={{
-                backgroundColor: "#0764af",
+                backgroundColor: "#0764af", // backgroundColor: "#0764af",
                 borderRadius: 12,
                 width: Dimensions.get("screen").width - 120,
                 alignSelf: "center",
                 justifyContent: "center",
-                marginBottom: 0
+                marginBottom: 0,
               }}
             >
               <LinearGradient

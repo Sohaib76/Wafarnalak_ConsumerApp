@@ -1164,7 +1164,7 @@ import {
   Platform,
   Share,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import {
   Button,
@@ -1179,7 +1179,7 @@ import {
   Text,
   Thumbnail,
   Title,
-  Toast
+  Toast,
 } from "native-base";
 
 import Dash from "react-native-dash";
@@ -1199,7 +1199,7 @@ export default class Promotion extends React.Component {
       totalPrice: 0,
       user: null,
       url: "",
-      toolTipVisible: false
+      toolTipVisible: false,
     };
   }
   cahngeToolTip = () => {
@@ -1219,7 +1219,7 @@ export default class Promotion extends React.Component {
       selectedServices: jobs !== null ? JSON.parse(jobs) : [],
       job: newJob,
       user: user !== null ? JSON.parse(user) : null,
-      lan: navigation.getParam("lan")
+      lan: navigation.getParam("lan"),
     });
   };
   addRemoveIntoSelectedServices = async (job, add) => {
@@ -1229,11 +1229,11 @@ export default class Promotion extends React.Component {
 
     let totalPrice = 0;
     let allServices = this.state.selectedServices;
-    let index = allServices.findIndex(service => service.id == job.id);
+    let index = allServices.findIndex((service) => service.id == job.id);
 
     if (add === false && job.items > 0) {
       allServices.splice(index, 1);
-      allServices.forEach(element => {
+      allServices.forEach((element) => {
         totalPrice = parseInt(totalPrice) + parseInt(element.t_price);
       });
       this.setState({ selectedServices: allServices, totalPrice: totalPrice });
@@ -1241,12 +1241,12 @@ export default class Promotion extends React.Component {
     if (add === true) {
       if (job.items < 1) {
         allServices.splice(index, 1);
-        allServices.forEach(element => {
+        allServices.forEach((element) => {
           totalPrice = parseInt(totalPrice) + parseInt(element.t_price);
         });
         this.setState({
           selectedServices: allServices,
-          totalPrice: totalPrice
+          totalPrice: totalPrice,
         });
       } else {
         if (index > -1) {
@@ -1254,18 +1254,18 @@ export default class Promotion extends React.Component {
         } else {
           allServices.push(job);
         }
-        allServices.forEach(element => {
+        allServices.forEach((element) => {
           totalPrice = parseInt(totalPrice) + parseInt(element.t_price);
         });
         this.setState({
           selectedServices: allServices,
-          totalPrice: totalPrice
+          totalPrice: totalPrice,
         });
       }
     }
     await AsyncStorage.setItem("jobs", JSON.stringify(allServices));
   };
-  plus = job => {
+  plus = (job) => {
     if (job.items) job.items++;
     else job.items = 1;
     if (
@@ -1313,7 +1313,7 @@ export default class Promotion extends React.Component {
     this.addRemoveIntoSelectedServices(job, true);
   };
 
-  minus = job => {
+  minus = (job) => {
     if (job.items && job.items >= 1) {
       job.items--;
       if (
@@ -1365,13 +1365,13 @@ export default class Promotion extends React.Component {
             ? "Order home repair and maintenance services 💇🏻‍♀ 🏡 and Get SAR 15 on your first order from Wafarnalak 🤩🥳 !Download the app📲 https://onelink.to/p56krz and use my referral code " +
               this.state.user.referralcode
             : "اطلب خدمات اصلاح وصيانة المنزل 💇🏻‍♀ 🏡 واحصل على 15 ريال في طلبك الأول من وفرنالك 🤩🥳 عند تنزيل التطبيق https://onelink.to/wg5k82 📲 واستخدم رمز الدعوة الخاص بي " +
-              this.state.user.referralcode
+              this.state.user.referralcode,
       });
     } catch (error) {
       alert(error.message);
     }
   };
-  selectIt = job => {
+  selectIt = (job) => {
     job.selected = !job.selected;
     job.items = 1;
     if (job.selected) job.t_price = job.saleprice ? job.saleprice : job.price;
@@ -1388,12 +1388,12 @@ export default class Promotion extends React.Component {
     await Analytics.logEvent("PromotionalCheckout", {
       name: "PromotionalCheckout",
       screen: "promotionScreen",
-      purpose: "promotion checkout"
+      purpose: "promotion checkout",
     });
     this.props.navigation.navigate("MyCart", {
       lan: this.state.lan,
       isPackage: false,
-      manualy: true
+      manualy: true,
     });
   };
   render() {
@@ -1406,7 +1406,7 @@ export default class Promotion extends React.Component {
             borderBottomWidth: 1,
             backgroundColor: "white",
             height: 60,
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <Left style={{ marginLeft: 10 }}>
@@ -1436,7 +1436,7 @@ export default class Promotion extends React.Component {
               justifyContent: "center",
               alignItems: "center",
               position: Platform.OS === "android" ? "absolute" : "relative",
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           >
             {this.state.lan === "en" ? (
@@ -1448,7 +1448,7 @@ export default class Promotion extends React.Component {
                 style={{
                   fontFamily: "montserrat_semi_blod",
                   color: "#0866b0",
-                  fontSize: 18
+                  fontSize: 18,
                 }}
               >
                 عروض وتخفيضات
@@ -1464,12 +1464,12 @@ export default class Promotion extends React.Component {
                 source={{
                   uri:
                     //   "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/" +
-                    this.state.url
+                    this.state.url,
                 }}
                 style={{
                   width: Dimensions.get("screen").width,
                   height: 150,
-                  borderRadius: 6
+                  borderRadius: 6,
                 }}
                 resizeMode="contain"
               />
@@ -1483,13 +1483,13 @@ export default class Promotion extends React.Component {
               style={{
                 width: Dimensions.get("screen").width,
                 height: 48,
-                backgroundColor: "#d8d8d8"
+                backgroundColor: "#d8d8d8",
               }}
             >
               <View
                 style={{
                   flexDirection: "row",
-                  justifyContent: "space-between"
+                  justifyContent: "space-between",
                 }}
               >
                 <View style={{ flexDirection: "row" }}>
@@ -1500,7 +1500,7 @@ export default class Promotion extends React.Component {
                         marginLeft: 10,
                         marginTop: 1.3,
                         width: 45,
-                        height: 45
+                        height: 45,
                       }}
                       resizeMode="contain"
                     />
@@ -1519,7 +1519,7 @@ export default class Promotion extends React.Component {
                       textAlign: "left",
                       marginLeft: 5,
                       width: Dimensions.get("screen").width - 30,
-                      color: "#4a4b4c"
+                      color: "#4a4b4c",
                     }}
                   >
                     {" "}
@@ -1534,7 +1534,7 @@ export default class Promotion extends React.Component {
                     backgroundColor: "white",
                     position: "absolute",
                     right: 5,
-                    top: 12
+                    top: 12,
                   }}
                 >
                   <Image
@@ -1550,7 +1550,7 @@ export default class Promotion extends React.Component {
                           : "Roboto",
                       fontSize: 12,
                       color: "#ff9c00",
-                      margin: 5
+                      margin: 5,
                     }}
                   >
                     {this.state.lan == "en" ? "Promoted" : "عليها عروض"}
@@ -1566,7 +1566,7 @@ export default class Promotion extends React.Component {
                   backgroundColor: "white",
                   borderWidth: 1,
                   borderTopWidth: 1,
-                  borderColor: "#283a97"
+                  borderColor: "#283a97",
                 }}
               >
                 <View
@@ -1574,7 +1574,7 @@ export default class Promotion extends React.Component {
                     flexDirection: "row",
                     justifyContent: "space-between",
                     marginLeft: 8,
-                    marginRight: 6
+                    marginRight: 6,
                   }}
                 >
                   <View style={{ marginTop: 4 }}>
@@ -1584,7 +1584,7 @@ export default class Promotion extends React.Component {
                         fontFamily: "montserrat_semi_blod",
                         fontSize: 12,
                         textAlign: "left",
-                        width: Dimensions.get("screen").width - 140
+                        width: Dimensions.get("screen").width - 140,
                       }}
                       numberOfLines={2}
                     >
@@ -1597,14 +1597,14 @@ export default class Promotion extends React.Component {
                     <View
                       style={{
                         flexDirection:
-                          this.state.lan == "en" ? "row" : "row-reverse"
+                          this.state.lan == "en" ? "row" : "row-reverse",
                       }}
                     >
                       <Text
                         style={{
                           fontSize: 10,
                           color: "#0764af",
-                          fontWeight: "bold"
+                          fontWeight: "bold",
                         }}
                       >
                         Total SAR{" "}
@@ -1621,7 +1621,7 @@ export default class Promotion extends React.Component {
                     flexDirection: "row",
                     justifyContent: "space-between",
                     marginTop: 15,
-                    marginBottom: 15
+                    marginBottom: 15,
                   }}
                 >
                   <View style={{ marginLeft: 12, marginTop: 12 }}>
@@ -1630,7 +1630,7 @@ export default class Promotion extends React.Component {
                         backgroundColor: "#0764af",
                         width: 90,
                         paddingVertical: 4,
-                        marginTop: 4
+                        marginTop: 4,
                       }}
                     >
                       <View
@@ -1638,7 +1638,7 @@ export default class Promotion extends React.Component {
                           flexDirection:
                             this.state.lan == "en" ? "row" : "row-reverse",
                           justifyContent: "center",
-                          alignItems: "center"
+                          alignItems: "center",
                         }}
                       >
                         <Text style={{ color: "white", fontSize: 12 }}>
@@ -1647,7 +1647,7 @@ export default class Promotion extends React.Component {
                         <Text
                           style={{
                             color: "#ff9c00",
-                            fontSize: 12
+                            fontSize: 12,
                           }}
                         >
                           {this.state.job.items > 1
@@ -1697,7 +1697,7 @@ export default class Promotion extends React.Component {
                         style={{
                           alignSelf: "center",
                           marginTop: 0,
-                          marginLeft: 12
+                          marginLeft: 12,
                         }}
                       >
                         {this.state.lan == "en" ? (
@@ -1724,7 +1724,7 @@ export default class Promotion extends React.Component {
                         alignSelf: "flex-start",
                         flex: 1,
                         marginLeft: 10,
-                        marginTop: 9
+                        marginTop: 9,
                       }}
                     >
                       <TouchableOpacity onPress={this.cahngeToolTip}>
@@ -1745,13 +1745,13 @@ export default class Promotion extends React.Component {
                                 borderColor: "#0764af",
                                 alignSelf: "flex-start",
                                 borderTopLeftRadius: 0,
-                                zIndex: 0
+                                zIndex: 0,
                               }}
                             >
                               <Text
                                 style={{
                                   textAlign: "center",
-                                  fontSize: 7
+                                  fontSize: 7,
                                 }}
                               >
                                 {this.state.lan == "en"
@@ -1784,7 +1784,7 @@ export default class Promotion extends React.Component {
                         style={{
                           textAlign: "center",
                           fontSize: 12,
-                          color: "#4a4b4c"
+                          color: "#4a4b4c",
                         }}
                       >
                         {this.state.lan == "en"
@@ -1801,7 +1801,7 @@ export default class Promotion extends React.Component {
                         width: 95,
                         height: 25,
                         borderRadius: 12,
-                        alignSelf: "flex-end"
+                        alignSelf: "flex-end",
                       }}
                     >
                       <View
@@ -1811,7 +1811,7 @@ export default class Promotion extends React.Component {
                           borderRadius: 12.5,
                           backgroundColor: "#0764af",
                           alignSelf: "center",
-                          marginTop: -1
+                          marginTop: -1,
                         }}
                       >
                         <TouchableOpacity
@@ -1831,7 +1831,7 @@ export default class Promotion extends React.Component {
                           style={{
                             color: "white",
                             fontSize: 13,
-                            paddingTop: 4
+                            paddingTop: 4,
                           }}
                         >
                           {this.state.job.items ? this.state.job.items : 0}
@@ -1843,7 +1843,7 @@ export default class Promotion extends React.Component {
                           height: 25,
                           borderRadius: 12.5,
                           backgroundColor: "#0764af",
-                          marginTop: 0
+                          marginTop: 0,
                         }}
                       >
                         <TouchableOpacity
@@ -1873,7 +1873,7 @@ export default class Promotion extends React.Component {
                     <View
                       style={{
                         marginLeft: 10,
-                        width: Dimensions.get("screen").width / 2 + 80
+                        width: Dimensions.get("screen").width / 2 + 80,
                       }}
                     >
                       <View>
@@ -1886,7 +1886,7 @@ export default class Promotion extends React.Component {
                             color: "#0764af",
                             textAlign: "left",
                             fontSize: 12,
-                            flexWrap: "wrap"
+                            flexWrap: "wrap",
                           }}
                         >
                           {this.state.lan === "en"
@@ -1899,7 +1899,7 @@ export default class Promotion extends React.Component {
                           style={{
                             marginTop: 5,
                             width: Dimensions.get("screen").width - 120,
-                            height: 1
+                            height: 1,
                           }}
                         />
                       </View>
@@ -1913,7 +1913,7 @@ export default class Promotion extends React.Component {
                             fontSize: 10,
                             flex: 1,
                             flexWrap: "wrap",
-                            textAlign: "left"
+                            textAlign: "left",
                           }}
                         >
                           {this.state.lan === "en"
@@ -1926,7 +1926,7 @@ export default class Promotion extends React.Component {
                           style={{
                             marginTop: 5,
                             width: Dimensions.get("screen").width - 120,
-                            height: 1
+                            height: 1,
                           }}
                         />
                       </View>
@@ -1940,7 +1940,7 @@ export default class Promotion extends React.Component {
                             fontSize: 10,
                             flex: 1,
                             flexWrap: "wrap",
-                            textAlign: "left"
+                            textAlign: "left",
                           }}
                         >
                           {this.state.lan === "en"
@@ -1953,7 +1953,7 @@ export default class Promotion extends React.Component {
                           style={{
                             marginTop: 5,
                             width: Dimensions.get("screen").width - 120,
-                            height: 1
+                            height: 1,
                           }}
                         />
                       </View>
@@ -1970,7 +1970,7 @@ export default class Promotion extends React.Component {
                             fontFamily:
                               this.state.lan === "ar"
                                 ? "montserrat_semi_blod"
-                                : "Roboto"
+                                : "Roboto",
                           }}
                         >
                           {this.state.lan === "en" ? "Discount" : "خصم"}{" "}
@@ -1996,7 +1996,7 @@ export default class Promotion extends React.Component {
                             top: 20,
                             right: 10,
                             backgroundColor: "#283a97",
-                            width: 60
+                            width: 60,
                           }}
                         >
                           <View
@@ -2006,7 +2006,7 @@ export default class Promotion extends React.Component {
                               top: 7,
                               backgroundColor: "red",
                               width: 58,
-                              height: 2.3
+                              height: 2.3,
                             }}
                           />
                           <View
@@ -2015,7 +2015,7 @@ export default class Promotion extends React.Component {
                               alignItems: "center",
                               justifyContent: "center",
                               flex: 1,
-                              alignSelf: "center"
+                              alignSelf: "center",
                             }}
                           >
                             <Text
@@ -2026,7 +2026,7 @@ export default class Promotion extends React.Component {
                                   this.state.lan === "ar"
                                     ? "montserrat_semi_blod"
                                     : "Roboto",
-                                color: "white"
+                                color: "white",
                               }}
                             >
                               SAR
@@ -2037,7 +2037,7 @@ export default class Promotion extends React.Component {
                                   style={{
                                     textAlign: "center",
                                     fontSize: 13,
-                                    color: "#ff9c00"
+                                    color: "#ff9c00",
                                   }}
                                 >
                                   {this.state.job.price}{" "}
@@ -2048,7 +2048,7 @@ export default class Promotion extends React.Component {
                                 style={{
                                   textAlign: "center",
                                   fontSize: 10,
-                                  color: "#ff9c00"
+                                  color: "#ff9c00",
                                 }}
                               >
                                 {" "}
@@ -2064,7 +2064,7 @@ export default class Promotion extends React.Component {
                             top: 40,
                             right: 10,
                             backgroundColor: "#283a97",
-                            width: 60
+                            width: 60,
                           }}
                         >
                           <View
@@ -2073,7 +2073,7 @@ export default class Promotion extends React.Component {
                               alignItems: "center",
                               justifyContent: "center",
                               flex: 1,
-                              alignSelf: "center"
+                              alignSelf: "center",
                             }}
                           >
                             <Text
@@ -2084,7 +2084,7 @@ export default class Promotion extends React.Component {
                                   this.state.lan === "ar"
                                     ? "montserrat_semi_blod"
                                     : "Roboto",
-                                color: "white"
+                                color: "white",
                               }}
                             >
                               SAR
@@ -2094,7 +2094,7 @@ export default class Promotion extends React.Component {
                                 style={{
                                   textAlign: "center",
                                   fontSize: 13,
-                                  color: "#ff9c00"
+                                  color: "#ff9c00",
                                 }}
                               >
                                 {this.state.job.saleprice}{" "}
@@ -2104,7 +2104,7 @@ export default class Promotion extends React.Component {
                                 style={{
                                   textAlign: "center",
                                   fontSize: 10,
-                                  color: "#ff9c00"
+                                  color: "#ff9c00",
                                 }}
                               >
                                 {" "}
@@ -2122,7 +2122,7 @@ export default class Promotion extends React.Component {
                           top: 10,
                           right: 10,
                           backgroundColor: "#283a97",
-                          width: 60
+                          width: 60,
                         }}
                       >
                         <View
@@ -2131,7 +2131,7 @@ export default class Promotion extends React.Component {
                             alignItems: "center",
                             justifyContent: "center",
                             flex: 1,
-                            alignSelf: "center"
+                            alignSelf: "center",
                           }}
                         >
                           <Text
@@ -2142,7 +2142,7 @@ export default class Promotion extends React.Component {
                                 this.state.lan === "ar"
                                   ? "montserrat_semi_blod"
                                   : "Roboto",
-                              color: "white"
+                              color: "white",
                             }}
                           >
                             SAR
@@ -2152,7 +2152,7 @@ export default class Promotion extends React.Component {
                               style={{
                                 textAlign: "center",
                                 fontSize: 13,
-                                color: "#ff9c00"
+                                color: "#ff9c00",
                               }}
                             >
                               {this.state.job.price}{" "}
@@ -2162,7 +2162,7 @@ export default class Promotion extends React.Component {
                               style={{
                                 textAlign: "center",
                                 fontSize: 10,
-                                color: "#ff9c00"
+                                color: "#ff9c00",
                               }}
                             >
                               {" "}
@@ -2181,7 +2181,7 @@ export default class Promotion extends React.Component {
                           this.state.job.saleprice &&
                           this.state.job.saleprice > 0
                             ? 60
-                            : 40
+                            : 40,
                       }}
                     >
                       {this.state.job &&
@@ -2207,7 +2207,7 @@ export default class Promotion extends React.Component {
                     style={{
                       marginTop: 10,
                       width: Dimensions.get("screen").width,
-                      height: 1.5
+                      height: 1.5,
                     }}
                   />
                 </View>
@@ -2223,7 +2223,7 @@ export default class Promotion extends React.Component {
                   backgroundColor: "#F5F5F5",
                   width: Dimensions.get("screen").width - 30,
                   marginBottom: 5,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
               >
                 <View style={{ marginTop: 10, alignSelf: "center" }}>
@@ -2235,7 +2235,7 @@ export default class Promotion extends React.Component {
                     <Text
                       style={{
                         color: "#0865b0",
-                        fontSize: 18
+                        fontSize: 18,
                       }}
                     >
                       كود الإحالة الخاص بك
@@ -2249,7 +2249,7 @@ export default class Promotion extends React.Component {
                       backgroundColor: "white",
                       width: Dimensions.get("screen").width - 70,
                       height: 40,
-                      marginTop: 12
+                      marginTop: 12,
                     }}
                   >
                     <View
@@ -2258,14 +2258,14 @@ export default class Promotion extends React.Component {
                         alignItems: "center",
                         justifyContent: "center",
                         flex: 1,
-                        flexDirection: "row"
+                        flexDirection: "row",
                       }}
                     >
                       <Text
                         style={{
                           color: "#0865b0",
                           fontWeight: "bold",
-                          fontSize: 18
+                          fontSize: 18,
                         }}
                       >
                         {this.state.user && this.state.user.referralcode}
@@ -2282,7 +2282,7 @@ export default class Promotion extends React.Component {
                   style={{
                     alignSelf: "center",
                     marginTop: 20,
-                    marginBottom: 10
+                    marginBottom: 10,
                   }}
                 >
                   {this.state.lan === "en" ? (
@@ -2292,7 +2292,7 @@ export default class Promotion extends React.Component {
                         paddingLeft: 20,
                         paddingRight: 20,
                         fontSize: 14,
-                        color: "#4a4b4c"
+                        color: "#4a4b4c",
                       }}
                     >
                       Share your code with your friends, after their first order
@@ -2306,7 +2306,7 @@ export default class Promotion extends React.Component {
                         fontSize: 14,
                         lineHeight: 18,
                         marginLeft: 6,
-                        marginRight: 6
+                        marginRight: 6,
                       }}
                     >
                       شارك الرمز الخاص بك مع أصدقائك ، بمجرد إجرائهم اول طلب
@@ -2331,7 +2331,9 @@ export default class Promotion extends React.Component {
               position: "absolute",
               bottom: 0,
               width: "100%",
-              alignSelf: "center"
+              alignSelf: "center",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <TouchableOpacity onPress={this.proceedOrder}>
@@ -2340,7 +2342,7 @@ export default class Promotion extends React.Component {
                   backgroundColor: "#0764af",
                   borderRadius: 10,
                   width: Dimensions.get("screen").width - 120,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
               >
                 <LinearGradient
@@ -2353,7 +2355,7 @@ export default class Promotion extends React.Component {
                     style={{
                       color: "white",
                       margin: 12,
-                      alignSelf: "center"
+                      alignSelf: "center",
                     }}
                   >
                     {this.state.lan == "en" ? "Checkout" : "تقديم الطلب"} {"\t"}{" "}

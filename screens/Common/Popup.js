@@ -14,19 +14,19 @@ import {
   Text,
   FlatList,
   Animated,
-  Modal
+  Modal,
 } from "react-native";
 import { IMAGES } from "../../assets/Images";
 import {
   heightPercentageToDP as hp,
-  widthPercentageToDP as wp
+  widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 const { width, height } = Dimensions.get("screen");
 const SPACING = (height / width) * 9;
 const AVATAR_SIZE = (height / width) * 40;
 const ITEM_SIZE = AVATAR_SIZE + SPACING * 3;
 
-const Popup = props => {
+const Popup = (props) => {
   return (
     <Modal
       animationType="slide"
@@ -44,7 +44,7 @@ const Popup = props => {
           backgroundColor: "white",
           paddingHorizontal: 10,
           paddingVertical: 10,
-          borderRadius: 20
+          borderRadius: 20,
           // alignItems: "flex-start"
         }}
       >
@@ -58,10 +58,10 @@ const Popup = props => {
             justifyContent: "space-between",
             height: "70%",
             width: "100%",
-            marginTop: 10
+            marginTop: 10,
           }}
         >
-          <View
+          {/* <View
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
@@ -79,22 +79,22 @@ const Popup = props => {
                 source={IMAGES.DOCUMENT}
               />
             </TouchableOpacity>
-          </View>
+          </View> */}
           <View
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
               alignSelf: "center",
-              width: "60%"
+              width: "30%",
             }}
           >
-            <TouchableOpacity onPress={() => props.sendLocation()}>
+            {/* <TouchableOpacity onPress={() => props.sendLocation()}>
               <Image
                 style={{ height: 40, width: 40 }}
                 source={IMAGES.LOCATION}
               />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TouchableOpacity onPress={() => props.uploadPicture()}>
               <Image style={{ height: 40, width: 40 }} source={IMAGES.IMAGES} />
             </TouchableOpacity>
@@ -113,11 +113,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: wp(1),
-    flexDirection: "row"
+    flexDirection: "row",
   },
   locationTextStyle: {
     fontSize: SPACING,
-    color: "#fff"
+    color: "#fff",
     //  fontFamily: "montserrat_arabic_regular"
   },
   controlBar: {
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-end",
     justifyContent: "space-between",
-    backgroundColor: "rgba(0, 0, 0, 0.5)"
-  }
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+  },
 });
 export default Popup;

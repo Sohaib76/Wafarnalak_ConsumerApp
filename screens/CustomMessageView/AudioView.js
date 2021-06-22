@@ -3,7 +3,7 @@ import {
   GiftedChat,
   InputToolbar,
   Bubble,
-  Send
+  Send,
 } from "react-native-gifted-chat";
 import {
   View,
@@ -16,13 +16,13 @@ import {
   TouchableOpacity,
   Dimensions,
   StatusBar,
-  Alert
+  Alert,
 } from "react-native";
 import { IMAGES } from "../../assets/Images";
 import { Audio } from "expo-av";
 import * as FileSystem from "expo-file-system";
-const AudioView = props => {
-  const onStartPlay = async path => {
+const AudioView = (props) => {
+  const onStartPlay = async (path) => {
     // const soundObject = new Audio.Sound();
     // try {
     //   await soundObject.loadAsync({ path });
@@ -37,14 +37,16 @@ const AudioView = props => {
     );
     await Audio.setIsEnabledAsync(true);
     try {
+      await sound.unloadAsync();
       await sound.loadAsync({
-        uri: path
+        uri: path,
         // "https://raw.githubusercontent.com/zmxv/react-native-sound-demo/master/advertising.mp3"
       });
       await sound.setPositionAsync(0);
-      await sound.playAsync().finally(async response => {
+      await sound.playAsync().finally(async (response) => {
         console.log("finally");
         // await sound.unloadAsync();
+        console.log(response);
       });
       console.log("playing ...........");
       // Your sound is playing!
@@ -55,7 +57,7 @@ const AudioView = props => {
       sound.setOnPlaybackStatusUpdate(null);
       // await sound.unloadAsync();
     } catch (error) {
-      console.log("error occured playing sound", error);
+      console.log("error occured playing the sound", error);
       // An error occurred!
     }
   };
@@ -71,7 +73,7 @@ const AudioView = props => {
         justifyContent: "space-between",
         alignItems: "center",
         paddingHorizontal: 5,
-        paddingTop: 7
+        paddingTop: 7,
       }}
     >
       <TouchableOpacity

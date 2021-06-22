@@ -9,7 +9,7 @@ import {
   ScrollView,
   TouchableOpacity,
   View,
-  TextInput
+  TextInput,
 } from "react-native";
 import {
   Container,
@@ -24,7 +24,7 @@ import {
   Thumbnail,
   Title,
   Toast,
-  Button
+  Button,
 } from "native-base";
 
 import CalendarPicker from "react-native-calendar-picker";
@@ -64,7 +64,7 @@ let persianNumbers = [
   /۶/g,
   /۷/g,
   /۸/g,
-  /۹/g
+  /۹/g,
 ];
 let arabicNumbers = [
   /٠/g,
@@ -76,7 +76,7 @@ let arabicNumbers = [
   /٦/g,
   /٧/g,
   /٨/g,
-  /٩/g
+  /٩/g,
 ];
 export default class OrderSummaryScreen extends React.Component {
   constructor(props) {
@@ -118,187 +118,189 @@ export default class OrderSummaryScreen extends React.Component {
       promoCode: "",
       promoSuccess: false,
       actualTimeInterval: [
-        // {
-        //   txt: "9:00AM",
-        //   id: 0,
-        //   ceil: 9
-        // },
-        // {
-        //   txt: "9:30AM",
-        //   id: 1,
-        //   ceil: 9.5
-        // },
-        // {
-        //   txt: "10:00AM",
-        //   id: 2,
-        //   ceil: 10
-        // },
-        // {
-        //   txt: "10:30AM",
-        //   id: 3,
-        //   ceil: 10.5
-        // },
-        // {
-        //   txt: "11:00AM",
-        //   id: 4,
-        //   ceil: 11
-        // },
-        // {
-        //   txt: "11:30AM",
-        //   id: 5,
-        //   ceil: 11.5
-        // },
-        // {
-        //   txt: "12:00PM",
-        //   id: 6,
-        //   ceil: 12
-        // },
+        {
+          txt: "9:00AM",
+          id: 0,
+          ceil: 9,
+        },
+        {
+          txt: "9:30AM",
+          id: 1,
+          ceil: 9.5,
+        },
+        {
+          txt: "10:00AM",
+          id: 2,
+          ceil: 10,
+        },
+        {
+          txt: "10:30AM",
+          id: 3,
+          ceil: 10.5,
+        },
+        {
+          txt: "11:00AM",
+          id: 4,
+          ceil: 11,
+        },
+        {
+          txt: "11:30AM",
+          id: 5,
+          ceil: 11.5,
+        },
+        {
+          txt: "12:00PM",
+          id: 6,
+          ceil: 12,
+        },
+
+        // Was Commented Above
         {
           txt: "12:30PM",
           id: 7,
-          ceil: 12.5
+          ceil: 12.5,
         },
         {
           txt: "1:00PM",
           id: 8,
-          ceil: 13
+          ceil: 13,
         },
         {
           txt: "1:30PM",
           id: 9,
-          ceil: 13.5
+          ceil: 13.5,
         },
         {
           txt: "2:00PM",
           id: 10,
-          ceil: 14
+          ceil: 14,
         },
         {
           txt: "2:30PM",
           id: 11,
-          ceil: 14.5
+          ceil: 14.5,
         },
         {
           txt: "3:00PM",
           id: 12,
-          ceil: 15
+          ceil: 15,
         },
         {
           txt: "3:30PM",
           id: 13,
-          ceil: 15.5
+          ceil: 15.5,
         },
         {
           txt: "4:00PM",
           id: 14,
-          ceil: 16
+          ceil: 16,
         },
         {
           txt: "4:30PM",
           id: 15,
-          ceil: 16.5
+          ceil: 16.5,
         },
         {
           txt: "5:00PM",
           id: 16,
-          ceil: 17
+          ceil: 17,
         },
         {
           txt: "5:30PM",
           id: 17,
-          ceil: 17.5
+          ceil: 17.5,
         },
         {
           txt: "6:00PM",
           id: 18,
-          ceil: 18
+          ceil: 18,
         },
         {
           txt: "6:30PM",
           id: 19,
-          ceil: 18.5
+          ceil: 18.5,
         },
         {
           txt: "7:00PM",
           id: 20,
-          ceil: 19
+          ceil: 19,
         },
         {
           txt: "7:30PM",
           id: 21,
-          ceil: 19.5
+          ceil: 19.5,
         },
         {
           txt: "8:00PM",
           id: 22,
-          ceil: 20
+          ceil: 20,
         },
         {
           txt: "8:30PM",
           id: 23,
-          ceil: 20.5
+          ceil: 20.5,
         },
         {
           txt: "9:00PM",
           id: 24,
-          ceil: 21
+          ceil: 21,
         },
         {
           txt: "9:30PM",
           id: 25,
-          ceil: 21.5
+          ceil: 21.5,
         },
         {
           txt: "10:00PM",
           id: 26,
-          ceil: 22
+          ceil: 22,
         },
-        {
-          txt: "10:30PM",
-          id: 27,
-          ceil: 22.5
-        },
-        {
-          txt: "11:00PM",
-          id: 28,
-          ceil: 23
-        },
-        {
-          txt: "11:30PM",
-          id: 28,
-          ceil: 23
-        },
-        {
-          txt: "12:00AM",
-          id: 28,
-          ceil: 23
-        },
-        {
-          txt: "12:30AM",
-          id: 28,
-          ceil: 23
-        },
-        {
-          txt: "01:00AM",
-          id: 28,
-          ceil: 23
-        },
-        {
-          txt: "01:30AM",
-          id: 28,
-          ceil: 23
-        }
-      ]
+        // {
+        //   txt: "10:30PM",
+        //   id: 27,
+        //   ceil: 22.5,
+        // },
+        // {
+        //   txt: "11:00PM",
+        //   id: 28,
+        //   ceil: 23,
+        // },
+        // {
+        //   txt: "11:30PM",
+        //   id: 28,
+        //   ceil: 23,
+        // },
+        // {
+        //   txt: "12:00AM",
+        //   id: 28,
+        //   ceil: 23,
+        // },
+        // {
+        //   txt: "12:30AM",
+        //   id: 28,
+        //   ceil: 23,
+        // },
+        // {
+        //   txt: "01:00AM",
+        //   id: 28,
+        //   ceil: 23,
+        // },
+        // {
+        //   txt: "01:30AM",
+        //   id: 28,
+        //   ceil: 23,
+        // },
+      ],
     };
   }
-  setUserPoints = points => {
+  setUserPoints = (points) => {
     this.setState({
       points: points,
       disocunt:
         parseInt(this.state.userForensePoints) >= parseInt(points) &&
         parseInt(this.state.userForensePoints) >= 500
           ? parseInt(points) * 0.05
-          : 0
+          : 0,
     });
   };
   setModalVisible = () => {
@@ -326,13 +328,13 @@ export default class OrderSummaryScreen extends React.Component {
 
       let cconsultationFind =
         isPackage == true
-          ? packgaeJobs.jobs.findIndex(j => j.pricetype == 2)
-          : jobs.findIndex(j => j.pricetype == 2);
+          ? packgaeJobs.jobs.findIndex((j) => j.pricetype == 2)
+          : jobs.findIndex((j) => j.pricetype == 2);
       let time = new Date().getHours() + "." + new Date().getMinutes();
       let t = parseFloat(time) + 1.25;
       let copyIntervals = ([] = []);
 
-      this.state.actualTimeInterval.forEach(slot => {
+      this.state.actualTimeInterval.forEach((slot) => {
         if (parseFloat(slot.ceil) > t) {
           copyIntervals.push(slot);
         }
@@ -361,7 +363,7 @@ export default class OrderSummaryScreen extends React.Component {
             ? new Date().getHours() + 3
             : 9,
         minute: "00",
-        user: user !== null ? JSON.parse(user) : null
+        user: user !== null ? JSON.parse(user) : null,
       });
 
       this.calculateTotalPrice(isPackage == true ? packgaeJobs.jobs : jobs);
@@ -373,25 +375,25 @@ export default class OrderSummaryScreen extends React.Component {
     if (user !== null) {
       this.getUserPoints(JSON.parse(user));
     }
-    var found = this.state.jobs.map(value => {
+    var found = this.state.jobs.map((value) => {
       return value.serviceid;
       // if (value.serviceid !== 53) {
       //   return false;
       // } else return true;
     });
     console.log("found", found);
-    const temp = found.find(element => element === 53);
+    const temp = found.find((element) => element === 53);
     console.log("temp", temp);
     console.log("jobsssss", this.state.jobs);
     if (temp !== undefined && temp !== null) {
       this.setState({
         cartNotesAdds: withPaint,
-        cartNotesAdds_ar: withPaint_ar
+        cartNotesAdds_ar: withPaint_ar,
       });
     } else {
       this.setState({
         cartNotesAdds: withOutPaint,
-        cartNotesAdds_ar: withOutPaint_ar
+        cartNotesAdds_ar: withOutPaint_ar,
       });
     }
     // let unique = this.state.jobs.filter(
@@ -409,34 +411,34 @@ export default class OrderSummaryScreen extends React.Component {
     // this.unique(this.state.jobs, it => it.carttype);
   };
   unique(data, key) {
-    return [...new Map(data.map(x => [key[x], x])).values()];
+    return [...new Map(data.map((x) => [key[x], x])).values()];
   }
-  getUserPoints = user => {
+  getUserPoints = (user) => {
     fetch(
       "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/V1.2/get_forense_points",
       {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          customerid: user.customerid
-        })
+          customerid: user.customerid,
+        }),
       }
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         if (responseJson.error === false) {
           this.setState({
             userForensePoints: responseJson.forensepoints,
-            loading: false
+            loading: false,
           });
         } else {
           this.setState({ loading: false });
         }
       })
-      .catch(error => {});
+      .catch((error) => {});
   };
   registerForPushNotificationAsync = async () => {
     const { status: existingStatus } = await Permissions.getAsync(
@@ -455,9 +457,9 @@ export default class OrderSummaryScreen extends React.Component {
     let token = await Notifications.getExpoPushTokenAsync();
     this.setState({ token: token });
   };
-  calculateTotalPrice = jobs => {
+  calculateTotalPrice = (jobs) => {
     let total = 0;
-    jobs.forEach(job => {
+    jobs.forEach((job) => {
       console.log("calculateTotalPrice ", job);
       if (job.offerId == 1) {
         total = 25;
@@ -485,7 +487,7 @@ export default class OrderSummaryScreen extends React.Component {
     ) {
       this.setState({
         discount: parseInt(this.state.points) * 0.05,
-        modalVisible: false
+        modalVisible: false,
       });
     } else {
       Toast.show({
@@ -493,7 +495,7 @@ export default class OrderSummaryScreen extends React.Component {
           this.state.lan == "en"
             ? "You Don't Have Enough Points to Avail Discount!"
             : "ليس لديك نقاط كافية للإستفادة من الخصم",
-        position: "top"
+        position: "top",
       });
     }
   };
@@ -517,16 +519,16 @@ export default class OrderSummaryScreen extends React.Component {
           method: "POST",
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             otpid: this.state.otpid,
-            otpentered: this.state.referralCode
-          })
+            otpentered: this.state.referralCode,
+          }),
         }
       )
-        .then(response => response.json())
-        .then(responseJson => {
+        .then((response) => response.json())
+        .then((responseJson) => {
           if (responseJson.error == false) {
             this.saveUser(responseJson);
             this.setState({ referralModalVisible: false, user: responseJson });
@@ -539,24 +541,24 @@ export default class OrderSummaryScreen extends React.Component {
             Toast.show({
               text: responseJson.message,
               position: "bottom",
-              duration: 3000
+              duration: 3000,
             });
           }
 
           this.setState({ loading: false });
         })
-        .catch(error => {});
+        .catch((error) => {});
     } else {
       Toast.show({
         text:
           this.state.lan === "en"
             ? "Please enter referral code, if any?"
             : "يرجى ادخال رمز الدعوة، اذا موجود؟",
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
-  loginUser = mobile => {
+  loginUser = (mobile) => {
     this.setState({ loading: true });
     if (
       mobile !== "" &&
@@ -570,23 +572,23 @@ export default class OrderSummaryScreen extends React.Component {
           method: "POST",
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             mobile: mobile,
-            customerdeviceid: this.state.token
-          })
+            customerdeviceid: this.state.token,
+          }),
         }
       )
-        .then(response => response.json())
-        .then(responseJson => {
+        .then((response) => response.json())
+        .then((responseJson) => {
           if (responseJson.error == false) {
             this.setState({ otpid: responseJson.otpid });
 
             this.setState({ referralModalVisible: true, loading: false });
           }
         })
-        .catch(error => {
+        .catch((error) => {
           this.setState({ loading: false });
         });
     } else {
@@ -596,20 +598,20 @@ export default class OrderSummaryScreen extends React.Component {
           this.state.lan === "en"
             ? "Please enter your valid mobile number!"
             : "يرجى إدخال رقم الجوال بشكل صحيح",
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
-  saveUser = async user => {
+  saveUser = async (user) => {
     await AsyncStorage.setItem("user", JSON.stringify(user));
     await Analytics.logEvent("PhoneNoSelection", {
       name: "PhoneNoSelection",
       screen: "orderDetailScreen",
-      purpose: "user signed in from order summary screen"
+      purpose: "user signed in from order summary screen",
     });
   };
-  removeSelectedJob = async selectedJob => {
-    let index = this.state.jobs.findIndex(job => job.id == selectedJob.id);
+  removeSelectedJob = async (selectedJob) => {
+    let index = this.state.jobs.findIndex((job) => job.id == selectedJob.id);
     let newJobs = this.state.jobs;
     if (index > -1) {
       newJobs.splice(index, 1);
@@ -617,29 +619,29 @@ export default class OrderSummaryScreen extends React.Component {
       await AsyncStorage.setItem("jobs", JSON.stringify(newJobs));
       this.calculateTotalPrice(newJobs);
     }
-    var found = this.state.jobs.map(value => {
+    var found = this.state.jobs.map((value) => {
       return value.serviceid;
       // if (value.serviceid !== 53) {
       //   return false;
       // } else return true;
     });
     console.log("found", found);
-    const temp = found.find(element => element === 53);
+    const temp = found.find((element) => element === 53);
     console.log("temp", temp);
     console.log("jobsssss", this.state.jobs);
     if (temp !== undefined && temp !== null) {
       this.setState({
         cartNotesAdds: withPaint,
-        cartNotesAdds_ar: withPaint_ar
+        cartNotesAdds_ar: withPaint_ar,
       });
     } else {
       this.setState({
         cartNotesAdds: withOutPaint,
-        cartNotesAdds_ar: withOutPaint_ar
+        cartNotesAdds_ar: withOutPaint_ar,
       });
     }
   };
-  onDateChange = async date => {
+  onDateChange = async (date) => {
     this.setState({ selectTime: true });
     let slotArray = [];
     var today = new Date();
@@ -656,7 +658,7 @@ export default class OrderSummaryScreen extends React.Component {
       let time = new Date().getHours() + "." + new Date().getMinutes();
       let t = parseFloat(time) + 1.25;
       console.log("t", t);
-      this.state.actualTimeInterval.forEach(slot => {
+      this.state.actualTimeInterval.forEach((slot) => {
         console.log("parseFloat(slot.ceil -----", parseFloat(slot.ceil));
         console.log("t-----", t);
         if (parseFloat(slot.ceil) > t) {
@@ -682,7 +684,7 @@ export default class OrderSummaryScreen extends React.Component {
       new Date(date).getFullYear();
     this.setState({
       orderdate: finalDate,
-      actualSelectedDate: date
+      actualSelectedDate: date,
     });
   };
   plusHours = () => {
@@ -721,21 +723,23 @@ export default class OrderSummaryScreen extends React.Component {
     let total = 0;
     let limit = 0;
     let isConsultation = false;
-    let electricianJobs = this.state.jobs.filter(job => job.serviceid == 1);
-    let actechnicianJobs = this.state.jobs.filter(job => job.serviceid == 29);
-    let plumbingJobs = this.state.jobs.filter(job => job.serviceid == 3);
-    let carpentarJobs = this.state.jobs.filter(job => job.serviceid == 4);
-    let actectronicsJobs = this.state.jobs.filter(job => job.serviceid == 48);
-    let packersMoversJobs = this.state.jobs.filter(job => job.serviceid == 17);
-    let sanitizationJobs = this.state.jobs.filter(job => job.serviceid == 45);
-    let pestControlJobs = this.state.jobs.filter(job => job.serviceid == 47);
-    let gardningServices = this.state.jobs.filter(job => job.serviceid == 29);
+    let electricianJobs = this.state.jobs.filter((job) => job.serviceid == 1);
+    let actechnicianJobs = this.state.jobs.filter((job) => job.serviceid == 29);
+    let plumbingJobs = this.state.jobs.filter((job) => job.serviceid == 3);
+    let carpentarJobs = this.state.jobs.filter((job) => job.serviceid == 4);
+    let actectronicsJobs = this.state.jobs.filter((job) => job.serviceid == 48);
+    let packersMoversJobs = this.state.jobs.filter(
+      (job) => job.serviceid == 17
+    );
+    let sanitizationJobs = this.state.jobs.filter((job) => job.serviceid == 45);
+    let pestControlJobs = this.state.jobs.filter((job) => job.serviceid == 47);
+    let gardningServices = this.state.jobs.filter((job) => job.serviceid == 29);
     if (electricianJobs.length > 0) {
-      electricianJobs.forEach(electrician => {
+      electricianJobs.forEach((electrician) => {
         if (electrician.variants) {
-          electrician.variants.forEach(variant => {
-            variant.variants_attr.forEach(var_atr => {
-              var_atr.attr.forEach(attr => {
+          electrician.variants.forEach((variant) => {
+            variant.variants_attr.forEach((var_atr) => {
+              var_atr.attr.forEach((attr) => {
                 if (attr.selected) {
                   total = total + attr.attr_price * variant.items;
                 }
@@ -755,7 +759,7 @@ export default class OrderSummaryScreen extends React.Component {
               ? "Order Limit for this category is SAR " +
                 limit +
                 ". Select any other service or schedule a consultation visit"
-              : "الحد الأدنى لهذه الخدمة 49 ر.س. يرجى اضافة خدمة اخرى او ترتيب زيارة إستشارات"
+              : "الحد الأدنى لهذه الخدمة 49 ر.س. يرجى اضافة خدمة اخرى او ترتيب زيارة إستشارات",
         });
       }
       total = 0;
@@ -763,7 +767,7 @@ export default class OrderSummaryScreen extends React.Component {
       isConsultation = false;
     }
     if (actechnicianJobs.length > 0) {
-      actechnicianJobs.forEach(technician => {
+      actechnicianJobs.forEach((technician) => {
         total = total + technician.t_price;
         limit = technician.pricelimit;
         isConsultation = technician.pricetype == 2 ? true : false;
@@ -771,7 +775,7 @@ export default class OrderSummaryScreen extends React.Component {
       if (total < 49 && isConsultation == false) {
         this.setState({
           limitMessage:
-            "Order Limit for this category is SAR 49. Select any other service or schedule a consultation visit"
+            "Order Limit for this category is SAR 49. Select any other service or schedule a consultation visit",
         });
       }
       total = 0;
@@ -779,7 +783,7 @@ export default class OrderSummaryScreen extends React.Component {
       isConsultation = false;
     }
     if (plumbingJobs.length > 0) {
-      plumbingJobs.forEach(plumber => {
+      plumbingJobs.forEach((plumber) => {
         total = total + plumber.t_price;
         limit = plumber.pricelimit;
         isConsultation = plumber.pricetype == 2 ? true : false;
@@ -789,7 +793,7 @@ export default class OrderSummaryScreen extends React.Component {
           limitMessage:
             "Order Limit for this category is SAR " +
             limit +
-            ". Select any other service or schedule a consultation visit"
+            ". Select any other service or schedule a consultation visit",
         });
       }
       total = 0;
@@ -797,7 +801,7 @@ export default class OrderSummaryScreen extends React.Component {
       isConsultation = false;
     }
     if (carpentarJobs.length > 0) {
-      carpentarJobs.forEach(carpanter => {
+      carpentarJobs.forEach((carpanter) => {
         total = total + carpanter.t_price;
         limit = carpanter.pricelimit;
         isConsultation = carpanter.pricetype == 2 ? true : false;
@@ -807,7 +811,7 @@ export default class OrderSummaryScreen extends React.Component {
           limitMessage:
             "Order Limit for this category is SAR " +
             limit +
-            ". Select any other service or schedule a consultation visit"
+            ". Select any other service or schedule a consultation visit",
         });
       }
       total = 0;
@@ -815,7 +819,7 @@ export default class OrderSummaryScreen extends React.Component {
       isConsultation = false;
     }
     if (actectronicsJobs.length > 0) {
-      actectronicsJobs.forEach(electronics => {
+      actectronicsJobs.forEach((electronics) => {
         total = total + electronics.t_price;
         limit = electronics.pricelimit;
         isConsultation = electronics.pricetype == 2 ? true : false;
@@ -825,7 +829,7 @@ export default class OrderSummaryScreen extends React.Component {
           limitMessage:
             "Order Limit for this category is SAR " +
             limit +
-            ". Select any other service or schedule a consultation visit"
+            ". Select any other service or schedule a consultation visit",
         });
       }
       total = 0;
@@ -833,7 +837,7 @@ export default class OrderSummaryScreen extends React.Component {
       isConsultation = false;
     }
     if (packersMoversJobs.length > 0) {
-      packersMoversJobs.forEach(packer => {
+      packersMoversJobs.forEach((packer) => {
         total = total + packer.t_price;
         limit = packer.pricelimit;
         isConsultation = packer.pricetype == 2 ? true : false;
@@ -843,7 +847,7 @@ export default class OrderSummaryScreen extends React.Component {
           limitMessage:
             "Order Limit for this category is SAR " +
             limit +
-            ". Select any other service or schedule a consultation visit"
+            ". Select any other service or schedule a consultation visit",
         });
       }
       total = 0;
@@ -851,7 +855,7 @@ export default class OrderSummaryScreen extends React.Component {
       isConsultation = false;
     }
     if (sanitizationJobs.length > 0) {
-      sanitizationJobs.forEach(sanitization => {
+      sanitizationJobs.forEach((sanitization) => {
         total = total + sanitization.t_price;
         limit = sanitization.pricelimit;
         isConsultation = sanitization.pricetype == 2 ? true : false;
@@ -862,7 +866,7 @@ export default class OrderSummaryScreen extends React.Component {
           limitMessage:
             "Order Limit for this category is SAR " +
             limit +
-            ". Select any other service or schedule a consultation visit"
+            ". Select any other service or schedule a consultation visit",
         });
       }
       total = 0;
@@ -870,7 +874,7 @@ export default class OrderSummaryScreen extends React.Component {
       isConsultation = false;
     }
     if (pestControlJobs.length > 0) {
-      pestControlJobs.forEach(pest => {
+      pestControlJobs.forEach((pest) => {
         total = total + pest.t_price;
         limit = pest.pricelimit;
         isConsultation = pest.pricetype == 2 ? true : false;
@@ -880,7 +884,7 @@ export default class OrderSummaryScreen extends React.Component {
           limitMessage:
             "Order Limit for this category is SAR " +
             limit +
-            ". Select any other service or schedule a consultation visit"
+            ". Select any other service or schedule a consultation visit",
         });
       }
       total = 0;
@@ -889,7 +893,7 @@ export default class OrderSummaryScreen extends React.Component {
     }
     // ----------------------
     if (gardningServices.length > 0) {
-      pestControlJobs.forEach(pest => {
+      pestControlJobs.forEach((pest) => {
         total = total + pest.t_price;
         limit = pest.pricelimit;
         isConsultation = pest.pricetype == 2 ? true : false;
@@ -899,7 +903,7 @@ export default class OrderSummaryScreen extends React.Component {
           limitMessage:
             "Order Limit for this category is SAR " +
             limit +
-            ". Select any other service or schedule a consultation visit"
+            ". Select any other service or schedule a consultation visit",
         });
       }
       total = 0;
@@ -911,11 +915,11 @@ export default class OrderSummaryScreen extends React.Component {
     await Analytics.logEvent("PlaceOrder", {
       name: "PlaceOrder",
       screen: "orderDetailScreen",
-      purpose: "placing order"
+      purpose: "placing order",
     });
     this.setState({ loading: false });
   };
-  finder = jobs => {
+  finder = (jobs) => {
     for (var i = 0; i < jobs.length; i++) {
       if (
         jobs[i].jobserviceName == "Garden Maintenance" ||
@@ -957,17 +961,17 @@ export default class OrderSummaryScreen extends React.Component {
     let vid = "";
     let svobj = {};
     let vobj = {};
-    this.state.jobs.forEach(job => {
+    this.state.jobs.forEach((job) => {
       let obj = {
         jobid: job.id,
         price: job.t_price,
         quantity: job.items,
-        meters: job.meter ? job.meter : 0
+        meters: job.meter ? job.meter : 0,
       };
       if (job.variants) {
-        job.variants.forEach(varient => {
-          varient.variants_attr.forEach(var_atr => {
-            var_atr.attr.forEach(element_atr => {
+        job.variants.forEach((varient) => {
+          varient.variants_attr.forEach((var_atr) => {
+            var_atr.attr.forEach((element_atr) => {
               if (element_atr.selected) {
                 attr.push({ id: element_atr.attr_id });
                 vitems = varient.items;
@@ -976,10 +980,10 @@ export default class OrderSummaryScreen extends React.Component {
             });
           });
           if (varient.subvariants) {
-            varient.subvariants.forEach(subvariant => {
+            varient.subvariants.forEach((subvariant) => {
               subvariant.subvariants_attr &&
-                subvariant.subvariants_attr.forEach(sub_var_atr => {
-                  sub_var_atr.attr.forEach(attr => {
+                subvariant.subvariants_attr.forEach((sub_var_atr) => {
+                  sub_var_atr.attr.forEach((attr) => {
                     if (attr.selected) {
                       subattr.push({ id: attr.attr_id });
                       subid = subvariant.subvariantid;
@@ -992,13 +996,13 @@ export default class OrderSummaryScreen extends React.Component {
 
         let svobj = {
           id: subid,
-          attr: subattr
+          attr: subattr,
         };
         let vobj = {
           id: vid,
           quantity: vitems,
           attr: attr,
-          subvariants: [svobj]
+          subvariants: [svobj],
         };
         varients.push(vobj);
       }
@@ -1015,7 +1019,7 @@ export default class OrderSummaryScreen extends React.Component {
             if (this.state.limitMessage == "") {
               this.setState({ loading: true });
               let index2 = this.state.timeInterval.findIndex(
-                t => t.txt === this.state.time
+                (t) => t.txt === this.state.time
               );
               let order = {
                 customerid: this.state.user.customerid,
@@ -1030,77 +1034,76 @@ export default class OrderSummaryScreen extends React.Component {
                 grandtotalprice: this.state.orderTotal,
                 servicetimeid: this.state.timeInterval[index2].id,
                 paymenttype: "1",
-                orderdetails: orderDetails
+                orderdetails: orderDetails,
               };
-              console.log("order  ", order);
+              console.log("order  ", order); // Problem
               fetch(
                 "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/V1.2/add_order",
                 {
                   method: "POST",
                   headers: {
                     Accept: "application/json",
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                   },
-                  body: JSON.stringify(order)
+                  body: JSON.stringify(order),
                 }
               )
-                .then(response => response.json())
-                .then(responseJson => {
+                .then((response) => response.json())
+                .then((responseJson) => {
                   console.log("add order response", responseJson);
                   if (responseJson.errorcode === 1010) {
                     this.setState({ loading: false });
                     this.state.lan === "en"
                       ? Toast.show({
-                          text:
-                            "Order are only allowed from Riyadh and Al Kharj!",
-                          position: "bottom"
+                          text: "Order are only allowed from Riyadh and Al Kharj!",
+                          position: "bottom",
                         })
                       : Toast.show({
                           text: "الطلب مسموح فقط من الرياض والخرج",
-                          position: "bottom"
+                          position: "bottom",
                         });
                   } else if (responseJson.errorcode === 1012) {
                     this.setState({ loading: false });
                     this.state.lan === "en"
                       ? Toast.show({
                           text: responseJson.message,
-                          position: "bottom"
+                          position: "bottom",
                         })
                       : Toast.show({
                           text: "الطلب مسموح فقط من الرياض والخرج",
-                          position: "bottom"
+                          position: "bottom",
                         });
                   } else {
                     this.setState({ loading: false });
                     this.state.lan === "en"
                       ? Toast.show({
                           text: "Order placed successfully!",
-                          position: "bottom"
+                          position: "bottom",
                         })
                       : Toast.show({
                           text: "تم ارسال الطلب بنجاح",
-                          position: "bottom"
+                          position: "bottom",
                         });
                     this.cleanOrder();
                     let order = {
-                      orderid: responseJson.orderid
+                      orderid: responseJson.orderid,
                     };
                     this.props.navigation.navigate("OrderDetails", {
                       order: order,
                       isHistory: false,
                       lan: this.state.lan,
-                      user: this.state.user
+                      user: this.state.user,
                     });
                   }
                   this.logEventOrderPlaced();
                 })
-                .catch(error => {
+                .catch((error) => {
                   console.log("erroorr in placing order ", error);
                 });
             } else {
               Toast.show({
                 text: this.state.limitMessage,
-                position: "bottom"
+                position: "bottom",
               });
             }
           } else {
@@ -1109,7 +1112,7 @@ export default class OrderSummaryScreen extends React.Component {
                 this.state.lan == "en"
                   ? "Please select the start time of your order!"
                   : "يرجى تحديد وقت بدء طلبك!",
-              position: "bottom"
+              position: "bottom",
             });
           }
         } else {
@@ -1118,7 +1121,7 @@ export default class OrderSummaryScreen extends React.Component {
               this.state.lan == "en"
                 ? "Please select the start date of your order!"
                 : "يرجى تحديد تاريخ بدء طلبك!",
-            position: "bottom"
+            position: "bottom",
           });
         }
       } else {
@@ -1127,7 +1130,7 @@ export default class OrderSummaryScreen extends React.Component {
             this.state.lan == "en"
               ? "Please select your address first!"
               : "يرجى تحديد عنوانك اولاً",
-          position: "bottom"
+          position: "bottom",
         });
       }
     } else {
@@ -1136,7 +1139,7 @@ export default class OrderSummaryScreen extends React.Component {
           this.state.lan == "en"
             ? "Please login with your valid mobile number!"
             : "يرجى تسجيل الدخول برقم جوالك الصحيح!",
-        position: "bottom"
+        position: "bottom",
       });
     }
     // }
@@ -1174,12 +1177,12 @@ export default class OrderSummaryScreen extends React.Component {
   };
   moveToSelectAddress = async () => {
     this.props.navigation.navigate("GoogleMapScreen", {
-      lan: this.state.lan
+      lan: this.state.lan,
     });
     await Analytics.logEvent("AddressSelection", {
       name: "AddressSelection",
       screen: "orderDetailScreen",
-      purpose: "selecting address"
+      purpose: "selecting address",
     });
   };
   removePackage = async () => {
@@ -1191,17 +1194,17 @@ export default class OrderSummaryScreen extends React.Component {
     this.state.selectTime
       ? this.setState({ timeModalVisible: true })
       : Toast.show({
-          text: "Please select date first"
+          text: "Please select date first",
         });
   };
   closeTimeModal = () => {
     this.setState({ timeModalVisible: false });
   };
-  selectThisSlot = slot => {
+  selectThisSlot = (slot) => {
     console.log("slottttttttt-----", slot);
-    let index = this.state.timeInterval.findIndex(t => t.id === slot.id);
+    let index = this.state.timeInterval.findIndex((t) => t.id === slot.id);
     let selectedIndex = this.state.timeInterval.findIndex(
-      s => s.isSelected === true
+      (s) => s.isSelected === true
     );
     let copyIntervals = this.state.timeInterval.slice();
     if (selectedIndex > -1) {
@@ -1217,17 +1220,17 @@ export default class OrderSummaryScreen extends React.Component {
     this.setState({ timeInterval: copyIntervals });
   };
   saveTimeSlot = async () => {
-    let index = this.state.timeInterval.findIndex(t => t.isSelected === true);
+    let index = this.state.timeInterval.findIndex((t) => t.isSelected === true);
     if (index > -1) {
       this.setState({
         time: this.state.timeInterval[index].txt,
-        timeModalVisible: false
+        timeModalVisible: false,
       });
     }
     await Analytics.logEvent("TimeSelection", {
       name: "TimeSelection",
       screen: "orderDetailScreen",
-      purpose: "selecting time"
+      purpose: "selecting time",
     });
   };
   render() {
@@ -1260,7 +1263,7 @@ export default class OrderSummaryScreen extends React.Component {
             borderBottomColor: "#0866b0",
             backgroundColor: "#ffffff",
             height: 55,
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <Left style={{ marginLeft: 10 }}>
@@ -1281,14 +1284,14 @@ export default class OrderSummaryScreen extends React.Component {
               justifyContent: "center",
               alignItems: "center",
               position: Platform.OS === "android" ? "absolute" : "relative",
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           >
             <Title
               style={{
                 fontFamily: "montserrat_semi_blod",
                 color: "#0866b0",
-                fontSize: 18
+                fontSize: 18,
               }}
             >
               {lanConfirm == "en" ? "Order Summary" : "ملخص الطلب"}
@@ -1308,14 +1311,14 @@ export default class OrderSummaryScreen extends React.Component {
               height: 235,
               borderRadius: 20,
               width: 330,
-              backgroundColor: "#283a97"
+              backgroundColor: "#283a97",
             }}
           >
             <View
               style={{
                 flex: 1,
                 alignSelf: "center",
-                marginTop: -24
+                marginTop: -24,
               }}
             >
               <Thumbnail source={require("../assets/Icon2.png")} />
@@ -1332,7 +1335,7 @@ export default class OrderSummaryScreen extends React.Component {
               style={{
                 alignSelf: "center",
                 position: "absolute",
-                top: 70
+                top: 70,
               }}
             >
               {this.state.lan === "en" ? (
@@ -1340,7 +1343,7 @@ export default class OrderSummaryScreen extends React.Component {
                   style={{
                     color: "white",
                     fontSize: 12,
-                    alignSelf: "center"
+                    alignSelf: "center",
                   }}
                 >
                   Please enter the 4 digit OTP code.
@@ -1351,7 +1354,7 @@ export default class OrderSummaryScreen extends React.Component {
                     fontFamily: "montserrat_arabic_regular",
                     color: "white",
                     fontSize: 12,
-                    alignSelf: "center"
+                    alignSelf: "center",
                   }}
                 >
                   أدخل الرمز 4 أرقام المرسل لجوالك
@@ -1366,12 +1369,12 @@ export default class OrderSummaryScreen extends React.Component {
                   backgroundColor: "white",
                   borderRadius: 2,
                   marginTop: 10,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
                 keyboardType="default"
                 maxLength={4}
                 returnKeyType="done"
-                onChangeText={ref => {
+                onChangeText={(ref) => {
                   if (typeof ref === "string") {
                     for (var i = 0; i < 10; i++) {
                       ref = ref.replace(arabicNumbers[i], i);
@@ -1389,7 +1392,7 @@ export default class OrderSummaryScreen extends React.Component {
                   height: 32,
                   backgroundColor: "#6ea8cd",
                   top: 15,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
               >
                 <View>
@@ -1397,7 +1400,7 @@ export default class OrderSummaryScreen extends React.Component {
                     <Text
                       style={{
                         color: "white",
-                        textAlign: "center"
+                        textAlign: "center",
                       }}
                     >
                       Login
@@ -1407,7 +1410,7 @@ export default class OrderSummaryScreen extends React.Component {
                       style={{
                         fontFamily: "montserrat_arabic_regular",
                         color: "white",
-                        textAlign: "center"
+                        textAlign: "center",
                       }}
                     >
                       تسليم
@@ -1423,7 +1426,7 @@ export default class OrderSummaryScreen extends React.Component {
                     marginTop: 25,
                     flexWrap: "wrap",
                     flex: 1,
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   {/* To proceed without a referral code, close the pop-up */}
@@ -1437,7 +1440,7 @@ export default class OrderSummaryScreen extends React.Component {
                     flexWrap: "wrap",
                     flex: 1,
                     fontFamily: "montserrat_arabic_regular",
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   {/* للإستمرار بدون رمز الدعوة، اغلق الشاشه المنبثقة */}
@@ -1462,7 +1465,7 @@ export default class OrderSummaryScreen extends React.Component {
                 style={{
                   marginLeft: 20,
                   backgroundColor: "#f1f1f1",
-                  marginRight: 20
+                  marginRight: 20,
                 }}
               >
                 <View>
@@ -1472,7 +1475,7 @@ export default class OrderSummaryScreen extends React.Component {
                       fontWeight: "bold",
                       padding: 10,
                       color: "#0866b0",
-                      textAlign: "left"
+                      textAlign: "left",
                     }}
                   >
                     {this.state.lan == "en" ? "ORDER DETAILS" : "تفاصيل الطلب"}
@@ -1484,7 +1487,7 @@ export default class OrderSummaryScreen extends React.Component {
                           flexDirection: "row",
                           justifyContent: "space-between",
                           marginLeft: 30,
-                          marginRight: 20
+                          marginRight: 20,
                         }}
                       >
                         <View style={{ flexDirection: "row" }}>
@@ -1494,18 +1497,18 @@ export default class OrderSummaryScreen extends React.Component {
                               height: 30,
                               borderRadius: 15,
                               borderWidth: 1,
-                              borderColor: "#0764af"
+                              borderColor: "#0764af",
                             }}
                           >
                             <Image
                               source={{
-                                uri: this.state.package.jobServiceIcon
+                                uri: this.state.package.jobServiceIcon,
                               }}
                               style={{
                                 width: 20,
                                 height: 20,
                                 alignSelf: "center",
-                                marginTop: 5
+                                marginTop: 5,
                               }}
                               resizeMode="contain"
                             />
@@ -1515,7 +1518,7 @@ export default class OrderSummaryScreen extends React.Component {
                               fontFamily: "montserrat_semi_blod",
                               paddingTop: 4,
                               paddingLeft: 6,
-                              fontSize: 12
+                              fontSize: 12,
                             }}
                           >
                             {this.state.lan == "en"
@@ -1539,7 +1542,7 @@ export default class OrderSummaryScreen extends React.Component {
                       <View>
                         {this.state.jobs &&
                           this.state.jobs.map(
-                            function(job, index) {
+                            function (job, index) {
                               return (
                                 <View
                                   style={{
@@ -1547,14 +1550,14 @@ export default class OrderSummaryScreen extends React.Component {
                                     flexDirection: "row",
                                     justifyContent: "space-between",
                                     marginLeft: 30,
-                                    marginRight: 20
+                                    marginRight: 20,
                                   }}
                                   key={index}
                                 >
                                   <View
                                     style={{
                                       width:
-                                        Dimensions.get("screen").width - 184
+                                        Dimensions.get("screen").width - 184,
                                     }}
                                   >
                                     <Text
@@ -1562,7 +1565,7 @@ export default class OrderSummaryScreen extends React.Component {
                                       style={{
                                         color: "#4a4b4c",
                                         fontSize: 10,
-                                        textAlign: "left"
+                                        textAlign: "left",
                                       }}
                                     >
                                       ({job.items}x)
@@ -1575,7 +1578,7 @@ export default class OrderSummaryScreen extends React.Component {
                                     <Text
                                       style={{
                                         color: "#4a4b4c",
-                                        fontSize: 12
+                                        fontSize: 12,
                                       }}
                                     >
                                       SAR
@@ -1601,7 +1604,7 @@ export default class OrderSummaryScreen extends React.Component {
                     <View>
                       {this.state.jobs &&
                         this.state.jobs.map(
-                          function(job, index) {
+                          function (job, index) {
                             return (
                               <View>
                                 <View
@@ -1609,7 +1612,7 @@ export default class OrderSummaryScreen extends React.Component {
                                     flexDirection: "row",
                                     justifyContent: "space-between",
                                     marginLeft: 30,
-                                    marginRight: 20
+                                    marginRight: 20,
                                   }}
                                   key={index}
                                 >
@@ -1621,7 +1624,7 @@ export default class OrderSummaryScreen extends React.Component {
                                           height: 30,
                                           borderRadius: 15,
                                           borderWidth: 1,
-                                          borderColor: "#0764af"
+                                          borderColor: "#0764af",
                                         }}
                                       >
                                         <Image
@@ -1630,7 +1633,7 @@ export default class OrderSummaryScreen extends React.Component {
                                             width: 20,
                                             height: 20,
                                             alignSelf: "center",
-                                            marginTop: 5
+                                            marginTop: 5,
                                           }}
                                           resizeMode="contain"
                                         />
@@ -1640,7 +1643,7 @@ export default class OrderSummaryScreen extends React.Component {
                                           fontFamily: "montserrat_semi_blod",
                                           paddingTop: 4,
                                           paddingLeft: 6,
-                                          fontSize: 12
+                                          fontSize: 12,
                                         }}
                                       >
                                         {this.state.lan == "en"
@@ -1669,20 +1672,20 @@ export default class OrderSummaryScreen extends React.Component {
                                     flexDirection: "row",
                                     justifyContent: "space-between",
                                     marginLeft: 30,
-                                    marginRight: 20
+                                    marginRight: 20,
                                   }}
                                 >
                                   <View
                                     style={{
                                       width:
-                                        Dimensions.get("screen").width - 184
+                                        Dimensions.get("screen").width - 184,
                                     }}
                                   >
                                     <Text
                                       style={{
                                         color: "#4a4b4c",
                                         fontSize: 10,
-                                        textAlign: "left"
+                                        textAlign: "left",
                                       }}
                                     >
                                       ({job.items}x)
@@ -1695,7 +1698,7 @@ export default class OrderSummaryScreen extends React.Component {
                                     <Text
                                       style={{
                                         color: "#4a4b4c",
-                                        fontSize: 12
+                                        fontSize: 12,
                                       }}
                                     >
                                       SAR {job.t_price}
@@ -1755,7 +1758,7 @@ export default class OrderSummaryScreen extends React.Component {
                         color: "gray",
                         textAlign: "left",
                         fontFamily: "montserrat_semi_blod",
-                        marginVertical: 5
+                        marginVertical: 5,
                       }}
                     >
                       {this.state.lan == "en"
@@ -1768,7 +1771,7 @@ export default class OrderSummaryScreen extends React.Component {
                       flexDirection: "row",
                       justifyContent: "space-between",
                       marginLeft: 10,
-                      marginRight: 10
+                      marginRight: 10,
                     }}
                   >
                     <Text
@@ -1777,7 +1780,7 @@ export default class OrderSummaryScreen extends React.Component {
                         color: "#0866b0",
                         fontFamily: "montserrat_semi_blod",
                         paddingTop: 8,
-                        textAlign: "left"
+                        textAlign: "left",
                       }}
                     >
                       {this.state.lan == "en" ? "PAYMENT MODE" : "طريقة الدفع"}
@@ -1792,7 +1795,7 @@ export default class OrderSummaryScreen extends React.Component {
                         style={{
                           flexDirection: "row",
                           margin: 0,
-                          borderRadius: 4
+                          borderRadius: 4,
                         }}
                       >
                         <View style={{ alignSelf: "center", paddingLeft: 2 }}>
@@ -1801,7 +1804,7 @@ export default class OrderSummaryScreen extends React.Component {
                               color: "white",
                               justifyContent: "center",
                               fontSize: 12,
-                              paddingTop: 0
+                              paddingTop: 0,
                             }}
                           >
                             {this.state.lan == "en" ? "CASH" : "نقد"}
@@ -1811,7 +1814,7 @@ export default class OrderSummaryScreen extends React.Component {
                           style={{
                             marginLeft: 5,
                             marginTop: 2,
-                            paddingRight: 2
+                            paddingRight: 2,
                           }}
                         >
                           <Ionicons
@@ -1873,7 +1876,7 @@ export default class OrderSummaryScreen extends React.Component {
                     width: Dimensions.get("screen").width - 40,
                     height: 1,
                     marginTop: 10,
-                    backgroundColor: "lightgray"
+                    backgroundColor: "lightgray",
                   }}
                 ></View>
                 {this.state.user == null ? (
@@ -1883,7 +1886,7 @@ export default class OrderSummaryScreen extends React.Component {
                         flexDirection: "row",
                         justifyContent: "space-between",
                         marginLeft: 10,
-                        marginRight: 10
+                        marginRight: 10,
                       }}
                     >
                       <View>
@@ -1892,7 +1895,7 @@ export default class OrderSummaryScreen extends React.Component {
                             fontFamily: "montserrat_semi_blod",
                             fontWeight: "bold",
                             marginTop: 10,
-                            color: "#0866b0"
+                            color: "#0866b0",
                           }}
                         >
                           {this.state.lan == "en" ? "MOBILE#" : "الجوال#"}
@@ -1910,9 +1913,9 @@ export default class OrderSummaryScreen extends React.Component {
                             borderWidth: 1,
                             borderColor: "lightgray",
                             width: 160,
-                            height: 25
+                            height: 25,
                           }}
-                          onChangeText={phone => {
+                          onChangeText={(phone) => {
                             this.setInputField("phone", phone);
                           }}
                         />
@@ -1923,7 +1926,7 @@ export default class OrderSummaryScreen extends React.Component {
                         width: Dimensions.get("screen").width - 40,
                         height: 1,
                         marginTop: 10,
-                        backgroundColor: "lightgray"
+                        backgroundColor: "lightgray",
                       }}
                     ></View>
                   </View>
@@ -1937,7 +1940,7 @@ export default class OrderSummaryScreen extends React.Component {
                       fontFamily: "montserrat_semi_blod",
                       fontWeight: "bold",
                       padding: 10,
-                      color: "#0866b0"
+                      color: "#0866b0",
                     }}
                   >
                     {this.state.lan == "en" ? "ADDRESS" : ""}
@@ -1951,7 +1954,7 @@ export default class OrderSummaryScreen extends React.Component {
                       borderRadius: 6,
                       marginLeft: 20,
                       marginRight: 20,
-                      width: Dimensions.get("screen").width - 90
+                      width: Dimensions.get("screen").width - 90,
                     }}
                   >
                     <Text style={{ color: "lightgray", margin: 8 }}>
@@ -1965,7 +1968,7 @@ export default class OrderSummaryScreen extends React.Component {
                         borderRadius: 12,
                         marginTop: 12,
                         marginRight: 40,
-                        marginLeft: 40
+                        marginLeft: 40,
                       }}
                     >
                       <LinearGradient
@@ -1979,7 +1982,7 @@ export default class OrderSummaryScreen extends React.Component {
                             fontFamily: "montserrat_semi_blod",
                             color: "white",
                             margin: 12,
-                            alignSelf: "center"
+                            alignSelf: "center",
                           }}
                         >
                           {this.state.lan == "en"
@@ -1995,7 +1998,7 @@ export default class OrderSummaryScreen extends React.Component {
                     width: Dimensions.get("screen").width - 40,
                     height: 1,
                     marginTop: 10,
-                    backgroundColor: "lightgray"
+                    backgroundColor: "lightgray",
                   }}
                 ></View>
                 <View>
@@ -2005,7 +2008,7 @@ export default class OrderSummaryScreen extends React.Component {
                       margin: 10,
                       fontWeight: "bold",
                       color: "#0866b0",
-                      textAlign: "left"
+                      textAlign: "left",
                     }}
                   >
                     {this.state.lan == "en" ? "DATE & TIME" : "التاريخ و الوقت"}
@@ -2021,7 +2024,7 @@ export default class OrderSummaryScreen extends React.Component {
                         nextTitleStyle={{ marginRight: 15, color: "#4a4b4c" }}
                         previousTitleStyle={{
                           marginLeft: 12,
-                          color: "#4a4b4c"
+                          color: "#4a4b4c",
                         }}
                         minDate={minDate}
                         initialDate={minDate}
@@ -2042,7 +2045,7 @@ export default class OrderSummaryScreen extends React.Component {
                             borderRadius: 12,
                             marginTop: 12,
                             marginRight: 40,
-                            marginLeft: 40
+                            marginLeft: 40,
                           }}
                         >
                           <LinearGradient
@@ -2056,7 +2059,7 @@ export default class OrderSummaryScreen extends React.Component {
                                 fontFamily: "montserrat_semi_blod",
                                 color: "white",
                                 margin: 12,
-                                alignSelf: "center"
+                                alignSelf: "center",
                               }}
                             >
                               {this.state.time == "" ? (
@@ -2081,14 +2084,14 @@ export default class OrderSummaryScreen extends React.Component {
                       width: Dimensions.get("screen").width - 40,
                       height: 1,
                       marginTop: 10,
-                      backgroundColor: "lightgray"
+                      backgroundColor: "lightgray",
                     }}
                   ></View>
                   <View
                     style={{
                       margin: 10,
                       flexDirection: "row",
-                      justifyContent: "space-between"
+                      justifyContent: "space-between",
                     }}
                   >
                     <View style={{ flexDirection: "row", marginLeft: 4 }}>
@@ -2098,7 +2101,7 @@ export default class OrderSummaryScreen extends React.Component {
                           fontWeight: "bold",
                           color: "#0866b0",
                           marginRight: 4,
-                          marginTop: 5
+                          marginTop: 5,
                         }}
                       >
                         {this.state.lan == "en"
@@ -2118,7 +2121,7 @@ export default class OrderSummaryScreen extends React.Component {
                           fontFamily: "montserrat_semi_blod",
                           color: "#4a4b4c",
                           fontSize: 14,
-                          marginTop: 7
+                          marginTop: 7,
                         }}
                       >
                         {this.state.lan == "en"
@@ -2132,7 +2135,7 @@ export default class OrderSummaryScreen extends React.Component {
                       width: Dimensions.get("screen").width - 40,
                       height: 1,
                       marginTop: 5,
-                      backgroundColor: "lightgray"
+                      backgroundColor: "lightgray",
                     }}
                   ></View>
                   <View style={{ margin: 10 }}>
@@ -2141,7 +2144,7 @@ export default class OrderSummaryScreen extends React.Component {
                         style={{
                           fontFamily: "montserrat_semi_blod",
                           fontWeight: "bold",
-                          color: "#0866b0"
+                          color: "#0866b0",
                         }}
                       >
                         {this.state.lan == "en" ? "PAYMENT DETAILS" : ""}
@@ -2151,7 +2154,7 @@ export default class OrderSummaryScreen extends React.Component {
                       style={{
                         flexDirection: "row",
                         justifyContent: "space-between",
-                        marginTop: 6
+                        marginTop: 6,
                       }}
                     >
                       <View>
@@ -2171,7 +2174,7 @@ export default class OrderSummaryScreen extends React.Component {
                       style={{
                         flexDirection: "row",
                         justifyContent: "space-between",
-                        marginTop: 4
+                        marginTop: 4,
                       }}
                     >
                       <View>
@@ -2189,7 +2192,7 @@ export default class OrderSummaryScreen extends React.Component {
                       style={{
                         flexDirection: "row",
                         justifyContent: "space-between",
-                        marginTop: 4
+                        marginTop: 4,
                       }}
                     >
                       <View>
@@ -2223,7 +2226,7 @@ export default class OrderSummaryScreen extends React.Component {
                   alignItems: "center",
                   justifyContent: "center",
                   alignSelf: "center",
-                  marginTop: Dimensions.get("screen").height / 3
+                  marginTop: Dimensions.get("screen").height / 3,
                 }}
               >
                 <Text
@@ -2231,7 +2234,7 @@ export default class OrderSummaryScreen extends React.Component {
                     fontSize: 16,
                     color: "#4a4b4c",
                     fontWeight: "bold",
-                    marginBottom: 10
+                    marginBottom: 10,
                   }}
                 >
                   {lanConfirm == "en" ? "Your Cart" : "سلة الطلب خاصتي"}
@@ -2248,7 +2251,7 @@ export default class OrderSummaryScreen extends React.Component {
                         backgroundColor: "#0764af",
                         borderRadius: 12,
                         width: Dimensions.get("screen").width - 120,
-                        alignSelf: "center"
+                        alignSelf: "center",
                       }}
                     >
                       <LinearGradient
@@ -2261,7 +2264,7 @@ export default class OrderSummaryScreen extends React.Component {
                           style={{
                             color: "white",
                             margin: 12,
-                            alignSelf: "center"
+                            alignSelf: "center",
                           }}
                         >
                           {lanConfirm == "en"
@@ -2289,7 +2292,7 @@ export default class OrderSummaryScreen extends React.Component {
                 borderRadius: 20,
                 width: 330,
                 backgroundColor: "#0764af",
-                alignSelf: "center"
+                alignSelf: "center",
               }}
             >
               <View style={{ flex: 1, alignSelf: "center", marginTop: -24 }}>
@@ -2322,7 +2325,7 @@ export default class OrderSummaryScreen extends React.Component {
                     style={{
                       color: "white",
                       fontSize: 16,
-                      textAlign: "center"
+                      textAlign: "center",
                     }}
                   >
                     {this.state.lan == "en"
@@ -2345,7 +2348,7 @@ export default class OrderSummaryScreen extends React.Component {
                     flexDirection: "row",
                     justifyContent: "space-between",
                     alignSelf: "center",
-                    marginTop: 6
+                    marginTop: 6,
                   }}
                 >
                   <Text style={{ color: "white", fontSize: 16 }}>
@@ -2372,7 +2375,7 @@ export default class OrderSummaryScreen extends React.Component {
                 style={{
                   alignSelf: "center",
                   position: "absolute",
-                  top: 140
+                  top: 140,
                 }}
               >
                 <Item
@@ -2390,7 +2393,7 @@ export default class OrderSummaryScreen extends React.Component {
                     value={this.state.points}
                     keyboardType="decimal-pad"
                     returnKeyType="done"
-                    onChangeText={text => {
+                    onChangeText={(text) => {
                       this.setUserPoints(text);
                     }}
                   />
@@ -2422,21 +2425,21 @@ export default class OrderSummaryScreen extends React.Component {
                       alignSelf: "center",
                       width: 160,
                       height: 35,
-                      borderRadius: 16
+                      borderRadius: 16,
                     }}
                   >
                     <View
                       style={{
                         alignSelf: "center",
                         flex: 1,
-                        justifyContent: "center"
+                        justifyContent: "center",
                       }}
                     >
                       <Text
                         style={{
                           color: "white",
 
-                          fontWeight: "bold"
+                          fontWeight: "bold",
                         }}
                       >
                         {this.state.lan == "en" ? "Submit" : "تسليم"}
@@ -2459,13 +2462,13 @@ export default class OrderSummaryScreen extends React.Component {
                 height: 290,
                 borderRadius: 20,
                 width: 200,
-                backgroundColor: "white"
+                backgroundColor: "white",
               }}
             >
               <View style={{ alignSelf: "center", marginTop: 18 }}>
                 <ScrollView showsVerticalScrollIndicator={false}>
                   {this.state.timeInterval.map(
-                    function(slot, index) {
+                    function (slot, index) {
                       return (
                         <TouchableOpacity
                           key={index}
@@ -2477,14 +2480,14 @@ export default class OrderSummaryScreen extends React.Component {
                                 flex: 2,
                                 flexDirection: "row",
                                 alignSelf: "center",
-                                margin: 8
+                                margin: 8,
                               }}
                             >
                               <Text
                                 style={{
                                   marginLeft: slot.isSelected ? 26.5 : 0,
                                   fontSize: 20,
-                                  color: slot.isSelected ? "#283a97" : "black"
+                                  color: slot.isSelected ? "#283a97" : "black",
                                 }}
                               >
                                 {slot.txt}
@@ -2507,7 +2510,7 @@ export default class OrderSummaryScreen extends React.Component {
                                 height: 1,
                                 backgroundColor: "black",
                                 alignSelf: "center",
-                                marginTop: 4
+                                marginTop: 4,
                               }}
                             ></View>
                           </View>
@@ -2521,7 +2524,7 @@ export default class OrderSummaryScreen extends React.Component {
                     backgroundColor: "white",
                     flexDirection: "row",
                     alignSelf: "center",
-                    marginBottom: 12
+                    marginBottom: 12,
                   }}
                 >
                   <TouchableOpacity onPress={this.closeTimeModal}>
@@ -2534,7 +2537,7 @@ export default class OrderSummaryScreen extends React.Component {
                             textAlign: "center",
                             color: "#4a4b4c",
                             fontWeight: "bold",
-                            fontSize: 16
+                            fontSize: 16,
                           }}
                         >
                           Cancel
@@ -2548,7 +2551,7 @@ export default class OrderSummaryScreen extends React.Component {
                             textAlign: "center",
                             color: "#4a4b4c",
                             fontWeight: "bold",
-                            fontSize: 16
+                            fontSize: 16,
                           }}
                         >
                           إلغاء
@@ -2565,7 +2568,7 @@ export default class OrderSummaryScreen extends React.Component {
                             textAlign: "center",
                             color: "#4a4b4c",
                             fontWeight: "bold",
-                            fontSize: 16
+                            fontSize: 16,
                           }}
                         >
                           Ok
@@ -2578,7 +2581,7 @@ export default class OrderSummaryScreen extends React.Component {
                             textAlign: "center",
                             color: "#4a4b4c",
                             fontWeight: "bold",
-                            fontSize: 16
+                            fontSize: 16,
                           }}
                         >
                           اوك
@@ -2602,7 +2605,7 @@ export default class OrderSummaryScreen extends React.Component {
                   backgroundColor: "#0764af",
                   borderRadius: 10,
                   width: Dimensions.get("screen").width - 120,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
               >
                 <LinearGradient
@@ -2615,7 +2618,7 @@ export default class OrderSummaryScreen extends React.Component {
                     style={{
                       color: "white",
                       margin: 12,
-                      alignSelf: "center"
+                      alignSelf: "center",
                     }}
                   >
                     {this.state.lan == "en" ? "Place Order" : "قدم الطلب"}

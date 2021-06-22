@@ -136,7 +136,7 @@ class Fire {
 
     this.observeAuth();
     this.state = {
-      user: null
+      user: null,
     };
   }
 
@@ -149,7 +149,7 @@ class Fire {
       storageBucket: "foren-se-customers.appspot.com",
       messagingSenderId: "200064457252",
       appId: "1:200064457252:web:7ec8aa4d569aac16b156b1",
-      measurementId: "G-VFK8LKML45"
+      measurementId: "G-VFK8LKML45",
     });
 
   checkRoom = async (message, id) => {
@@ -157,15 +157,17 @@ class Fire {
     await this.db
       .collection("inbox")
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
           console.log("inbox", doc.data()); // For data inside doc
           // For doc name
           temp.push(doc.id);
+
+          console.log("checkroom_docfind");
         });
         if (temp !== []) {
-          const value = temp.find(element => element === id);
+          const value = temp.find((element) => element === id);
           if (value === undefined) {
             this.addNewRoom(message, id);
           } else {
@@ -175,7 +177,7 @@ class Fire {
           this.addNewRoom(message, id);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("Error getting documents: ", error);
       });
   };
@@ -188,7 +190,7 @@ class Fire {
       .then(() => {
         console.log("Document successfully written! for inbox screen ");
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Error writing document: ", error);
       });
   };
@@ -200,14 +202,14 @@ class Fire {
       .then(() => {
         console.log("Document successfully updated! for inbox screen ");
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Error writing document: ", error);
       });
   };
   observeAuth = () =>
     firebase.auth().onAuthStateChanged(this.onAuthStateChanged);
 
-  onAuthStateChanged = user => {
+  onAuthStateChanged = (user) => {
     if (!user) {
       try {
         firebase.auth().signInAnonymously();
@@ -234,14 +236,14 @@ class Fire {
     return firebase.firestore();
   }
 
-  parse = snapshot => {
+  parse = (snapshot) => {
     const {
       timestamp: numberStamp,
       text,
       user,
       senderId,
       receiverId,
-      senderMobile
+      senderMobile,
     } = snapshot.val();
     const { key: _id } = snapshot;
     const timestamp = new Date(numberStamp);
@@ -251,12 +253,12 @@ class Fire {
       user,
       senderId,
       receiverId,
-      senderMobile
+      senderMobile,
     };
     return message;
   };
 
-  on = callback =>
+  on = (callback) =>
     // Create a query against the collection
     // this.db.collection('-1211').onSnapshot(snapshot => {
     //   snapshot.docChanges().forEach(change => {
@@ -275,13 +277,13 @@ class Fire {
     // });
     this.ref
       // .limitToLast(1000)
-      .on("child_added", snapshot => callback(this.parse(snapshot)));
+      .on("child_added", (snapshot) => callback(this.parse(snapshot)));
 
   get timestamp() {
     return firebase.database.ServerValue.TIMESTAMP;
   }
   // send the message to the Backend
-  send = messages => {
+  send = (messages) => {
     console.log("messages to be send ", messages);
     for (let i = 0; i < messages.length; i++) {
       const {
@@ -295,7 +297,7 @@ class Fire {
         image,
         type,
         uri,
-        location
+        location,
       } = messages[i];
       let d = new Date();
       let created = d.toISOString();
@@ -310,7 +312,7 @@ class Fire {
           receiverId,
           senderMobile,
           createdAt: created,
-          type
+          type,
         };
         const id = receiverId.concat(senderId);
         this.append(message, id);
@@ -325,7 +327,7 @@ class Fire {
           senderMobile,
           createdAt: created,
           type,
-          image
+          image,
         };
         const id = receiverId.concat(senderId);
         this.append(message, id);
@@ -340,7 +342,7 @@ class Fire {
           senderMobile,
           createdAt: created,
           type,
-          uri
+          uri,
         };
         const id = receiverId.concat(senderId);
         this.append(message, id);
@@ -355,7 +357,7 @@ class Fire {
           senderMobile,
           createdAt: created,
           type,
-          location
+          location,
         };
         const id = receiverId.concat(senderId);
         this.append(message, id);
@@ -373,7 +375,7 @@ class Fire {
       .then(() => {
         console.log("Document successfully written!");
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Error writing document: ", error);
       });
   };
@@ -383,7 +385,7 @@ class Fire {
   }
   get messageIdGenerator() {
     // generates uuid.
-    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, c => {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
       let r = (Math.random() * 16) | 0,
         v = c == "x" ? r : (r & 0x3) | 0x8;
       return v.toString(16);
