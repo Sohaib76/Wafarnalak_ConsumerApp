@@ -3,7 +3,7 @@ import {
   GiftedChat,
   InputToolbar,
   Bubble,
-  Send
+  Send,
 } from "react-native-gifted-chat";
 import {
   View,
@@ -15,31 +15,32 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Dimensions,
-  StatusBar
+  StatusBar,
 } from "react-native";
 import { IMAGES } from "../../assets/Images";
 import LocationView from "./LocationView";
 import AudioView from "./AudioView";
-const MessageView = props => {
-  const openDocument = async path => {
+const MessageView = (props) => {
+  const openDocument = async (path) => {
     // await FileViewer.open(path);
   };
-  const onStartPlay = async path => {};
+  const onStartPlay = async (path) => {};
   if (props.currentMessage.type == "document") {
     return (
       <TouchableOpacity onPress={() => openDocument(props.currentMessage.uri)}>
         <View
           style={{
             backgroundColor: "#631255",
-            borderBottomRightRadius: 0,
-            borderTopRightRadius: 0,
+            // borderBottomRightRadius: 0,
+            // borderTopRightRadius: 0,
+            borderRadius: 20,
             width: 170,
             height: 40,
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
             paddingHorizontal: 5,
-            paddingTop: 7
+            paddingTop: 7,
           }}
         >
           <Image

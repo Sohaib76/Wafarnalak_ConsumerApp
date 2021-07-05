@@ -5,12 +5,15 @@ import {
   View,
   Image,
   Text,
-  SafeAreaView
+  SafeAreaView,
+  StatusBar,
 } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { IMAGES } from "../../assets/Images";
 import { Entypo } from "@expo/vector-icons";
+import BookingDetailHeader from "./BookingDetailHeader";
+
 const { width, height } = Dimensions.get("window");
 const ASPECT_RATIO = width / height;
 const LATITUDE = 37.771707;
@@ -19,11 +22,11 @@ const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 const origin = {
   latitude: LATITUDE,
-  longitude: LONGITUDE
+  longitude: LONGITUDE,
 };
 import {
   heightPercentageToDP as hp,
-  widthPercentageToDP as wp
+  widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 const GOOGLE_MAPS_APIKEY = "AIzaSyCZenxJupQXwOicw8u9pBnFiniI8w03Vus";
 const mapStyle = [
@@ -31,186 +34,186 @@ const mapStyle = [
     elementType: "geometry",
     stylers: [
       {
-        color: "#212121"
-      }
-    ]
+        color: "#212121",
+      },
+    ],
   },
   {
     elementType: "labels.icon",
     stylers: [
       {
-        visibility: "off"
-      }
-    ]
+        visibility: "off",
+      },
+    ],
   },
   {
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#757575"
-      }
-    ]
+        color: "#757575",
+      },
+    ],
   },
   {
     elementType: "labels.text.stroke",
     stylers: [
       {
-        color: "#212121"
-      }
-    ]
+        color: "#212121",
+      },
+    ],
   },
   {
     featureType: "administrative",
     elementType: "geometry",
     stylers: [
       {
-        color: "#757575"
-      }
-    ]
+        color: "#757575",
+      },
+    ],
   },
   {
     featureType: "administrative.country",
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#9e9e9e"
-      }
-    ]
+        color: "#9e9e9e",
+      },
+    ],
   },
   {
     featureType: "administrative.land_parcel",
     stylers: [
       {
-        visibility: "off"
-      }
-    ]
+        visibility: "off",
+      },
+    ],
   },
   {
     featureType: "administrative.locality",
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#bdbdbd"
-      }
-    ]
+        color: "#bdbdbd",
+      },
+    ],
   },
   {
     featureType: "poi",
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#757575"
-      }
-    ]
+        color: "#757575",
+      },
+    ],
   },
   {
     featureType: "poi.park",
     elementType: "geometry",
     stylers: [
       {
-        color: "#181818"
-      }
-    ]
+        color: "#181818",
+      },
+    ],
   },
   {
     featureType: "poi.park",
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#616161"
-      }
-    ]
+        color: "#616161",
+      },
+    ],
   },
   {
     featureType: "poi.park",
     elementType: "labels.text.stroke",
     stylers: [
       {
-        color: "#1b1b1b"
-      }
-    ]
+        color: "#1b1b1b",
+      },
+    ],
   },
   {
     featureType: "road",
     elementType: "geometry.fill",
     stylers: [
       {
-        color: "#2c2c2c"
-      }
-    ]
+        color: "#2c2c2c",
+      },
+    ],
   },
   {
     featureType: "road",
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#8a8a8a"
-      }
-    ]
+        color: "#8a8a8a",
+      },
+    ],
   },
   {
     featureType: "road.arterial",
     elementType: "geometry",
     stylers: [
       {
-        color: "#373737"
-      }
-    ]
+        color: "#373737",
+      },
+    ],
   },
   {
     featureType: "road.highway",
     elementType: "geometry",
     stylers: [
       {
-        color: "#3c3c3c"
-      }
-    ]
+        color: "#3c3c3c",
+      },
+    ],
   },
   {
     featureType: "road.highway.controlled_access",
     elementType: "geometry",
     stylers: [
       {
-        color: "#4e4e4e"
-      }
-    ]
+        color: "#4e4e4e",
+      },
+    ],
   },
   {
     featureType: "road.local",
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#616161"
-      }
-    ]
+        color: "#616161",
+      },
+    ],
   },
   {
     featureType: "transit",
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#757575"
-      }
-    ]
+        color: "#757575",
+      },
+    ],
   },
   {
     featureType: "water",
     elementType: "geometry",
     stylers: [
       {
-        color: "#000000"
-      }
-    ]
+        color: "#000000",
+      },
+    ],
   },
   {
     featureType: "water",
     elementType: "labels.text.fill",
     stylers: [
       {
-        color: "#3d3d3d"
-      }
-    ]
-  }
+        color: "#3d3d3d",
+      },
+    ],
+  },
 ];
 class MapDirections extends PureComponent {
   constructor(props) {
@@ -218,7 +221,7 @@ class MapDirections extends PureComponent {
 
     // AirBnB's Office, and Apple Park
     this.state = {
-      coordinates: []
+      coordinates: [],
     };
 
     this.mapView = null;
@@ -231,12 +234,12 @@ class MapDirections extends PureComponent {
     const coordinates = [
       {
         latitude: this.props.navigation.state.params.origin.latitude,
-        longitude: this.props.navigation.state.params.origin.longitude
+        longitude: this.props.navigation.state.params.origin.longitude,
       },
       {
         latitude: this.props.navigation.state.params.destination.latitude,
-        longitude: this.props.navigation.state.params.destination.longitude
-      }
+        longitude: this.props.navigation.state.params.destination.longitude,
+      },
     ];
     // const coordinates = [
     //   {
@@ -254,9 +257,9 @@ class MapDirections extends PureComponent {
     );
   }
 
-  onMapPress = e => {
+  onMapPress = (e) => {
     this.setState({
-      coordinates: [...this.state.coordinates, e.nativeEvent.coordinate]
+      coordinates: [...this.state.coordinates, e.nativeEvent.coordinate],
     });
   };
 
@@ -265,9 +268,24 @@ class MapDirections extends PureComponent {
       <SafeAreaView
         style={{
           height: hp("100%"),
-          wp: wp("100%")
+          wp: wp("100%"),
+          marginTop: StatusBar.statusBarHeight,
         }}
       >
+        <BookingDetailHeader
+          HeaderText={"en" == "en" ? "Location" : "Ø¯Ø±Ø¯Ø´Ø©"}
+          onBackPress={() => this.props.navigation.goBack()}
+          lan={"en"}
+          lineWidth={hp(0.2)}
+        />
+        {/* 
+<SafeAreaView
+      style={{
+        flex: 1,
+        backgroundColor: "white",
+        marginTop: StatusBar.statusBarHeight,
+      }}
+    > */}
         {/* <Header
           title={""}
           backButton={true}
@@ -281,11 +299,11 @@ class MapDirections extends PureComponent {
             latitude: this.props.navigation.state.params.origin.latitude,
             longitude: this.props.navigation.state.params.origin.longitude,
             latitudeDelta: LATITUDE_DELTA,
-            longitudeDelta: LONGITUDE_DELTA
+            longitudeDelta: LONGITUDE_DELTA,
           }}
           customMapStyle={mapStyle}
           style={{ height: hp(80), width: wp(100) }}
-          ref={c => (this.mapView = c)}
+          ref={(c) => (this.mapView = c)}
         >
           {this.state.coordinates.map((coordinate, index) => (
             <Marker key={`coordinate_${index}`} coordinate={coordinate}>
@@ -303,7 +321,7 @@ class MapDirections extends PureComponent {
                     alignItems: "center",
                     borderRadius: 10,
                     position: "absolute",
-                    top: 4
+                    top: 4,
                   }}
                 >
                   <Text style={{ color: "white", fontSize: 12 }}>
@@ -329,12 +347,12 @@ class MapDirections extends PureComponent {
               strokeColor="orange"
               mode="DRIVING"
               optimizeWaypoints={false}
-              onStart={params => {
+              onStart={(params) => {
                 console.log(
                   `Started routing between "${params.origin}" and "${params.destination}"`
                 );
               }}
-              onReady={result => {
+              onReady={(result) => {
                 console.log(`Distance: ${result.distance} km`);
                 console.log(`Duration: ${result.duration} min.`);
 
@@ -343,11 +361,11 @@ class MapDirections extends PureComponent {
                     right: width / 20,
                     bottom: height / 20,
                     left: width / 20,
-                    top: height / 20
-                  }
+                    top: height / 20,
+                  },
                 });
               }}
-              onError={errorMessage => {
+              onError={(errorMessage) => {
                 // console.log('GOT AN ERROR');
               }}
             />
@@ -362,7 +380,7 @@ class MapDirections extends PureComponent {
             borderRadius: 25,
             position: "absolute",
             bottom: 20,
-            height: 40
+            height: 40,
           }}
         >
           <Entypo

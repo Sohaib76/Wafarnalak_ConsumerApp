@@ -23,6 +23,7 @@ import { Audio } from "expo-av";
 import * as FileSystem from "expo-file-system";
 const AudioView = (props) => {
   const onStartPlay = async (path) => {
+    console.log(typeof path, path, ".............");
     // const soundObject = new Audio.Sound();
     // try {
     //   await soundObject.loadAsync({ path });
@@ -30,14 +31,20 @@ const AudioView = (props) => {
     // } catch (error) {
     //   console.log("error:", error);
     // }
-    const { sound } = await Audio.Sound.createAsync(
-      { uri: path },
-      null,
-      props.soundCallback
-    );
+
+    // const { sound } = await Audio.Sound.createAsync(
+    //   { uri: path }
+    //   // null,
+    //   // props.soundCallback
+    // );
+
+    const sound = new Audio.Sound();
+
+    console.log("sound variable created");
     await Audio.setIsEnabledAsync(true);
     try {
       await sound.unloadAsync();
+      console.log(path, "Path Just Before Load");
       await sound.loadAsync({
         uri: path,
         // "https://raw.githubusercontent.com/zmxv/react-native-sound-demo/master/advertising.mp3"
@@ -65,8 +72,9 @@ const AudioView = (props) => {
     <View
       style={{
         backgroundColor: "#631255",
-        borderBottomRightRadius: 0,
-        borderTopRightRadius: 0,
+        // borderBottomRightRadius: 0,
+        // borderTopRightRadius: 0,
+        borderRadius: 10,
         width: 170,
         height: 40,
         flexDirection: "row",

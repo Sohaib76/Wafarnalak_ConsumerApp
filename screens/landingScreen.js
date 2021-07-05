@@ -1503,6 +1503,7 @@ export default class LandingSecreen extends React.Component {
   };
   openChat = () => {
     if (this.state.user !== null) {
+      // Linking.openURL("https://wa.me/+966577311430");
       this.props.navigation.navigate("Chat", { user: this.state.user });
     } else {
       Toast.show({
@@ -2543,6 +2544,8 @@ export default class LandingSecreen extends React.Component {
                       carttype: 1,
                     },
                     {
+                      // Change Can Be Here Of Schedule Visit (Window Unit)
+                      // pricetype
                       id: 62,
                       serviceid: 29,
                       pricelimit: 49,

@@ -119,6 +119,7 @@ import * as DocumentPicker from "expo-document-picker";
 import * as Location from "expo-location";
 import { Camera } from "expo-camera";
 import * as FileSystem from "expo-file-system";
+import { AntDesign } from "@expo/vector-icons";
 const Chat = (props) => {
   const [messages, setMessages] = useState([]);
   const [lan, setlan] = useState("en");
@@ -137,6 +138,8 @@ const Chat = (props) => {
       "user ",
       props.navigation.state.params.user.customerid.toString()
     );
+
+    // props.navigation.state.params.noGoBackLogin
     getLan();
     getGalleryPermissions();
     let temp = [];
@@ -356,12 +359,71 @@ const Chat = (props) => {
     //   system: true,
     // };
 
-    // setMessages((previousMessages) =>
-    //   GiftedChat.append(previousMessages, help)
-    // );
+    // setWelcome();
+
+    //setMessages((oldArray) => console.log(oldArray));
+
+    var newArr2 = {
+      _id: 1,
+      text: "Welcome to Wafarnalak Help care. How can we help you?",
+      createdAt: new Date(),
+      user: {
+        _id: -1,
+        name: "Wafarnalak",
+        avatar: require("../assets/Profile2-min.png"),
+      },
+    };
+
+    var delayInMilliseconds = 2000; //1 second
+
+    setTimeout(function () {
+      //your code to be executed after 1 second
+      setMessages((oldArray) => [newArr2, ...oldArray]);
+
+      console.log(messages, "End");
+    }, delayInMilliseconds);
+
+    // var delayInMillisecond = 1000; //1 second
+
+    // setTimeout(function () {
+    //   //your code to be executed after 1 second
+
+    //   console.log(messages, "End");
+    // }, delayInMillisecond);
 
     console.log(new Date().getTime().toString());
   }, [props.navigation]);
+
+  //useEffect(() => {
+  //   const setWelcome = async () => {
+  //     var newArr2 = {
+  //       _id: 1,
+  //       text: "Hello developer",
+  //       createdAt: new Date(),
+  //       user: {
+  //         _id: -1,
+  //         name: "Wafarnalak",
+  //         avatar: "https://placeimg.com/140/140/any",
+  //       },
+  //     };
+  //     console.log("on send call ", newArr2);
+  //     //Fire.shared.send(newArr2);
+
+  //     // await setMessages((prev) => GiftedChat.append(prev, newArr2));
+
+  //     // await setMessages(newArr2);
+
+  //     setMessages((oldArray) => [...oldArray, newArr2]);
+
+  //     //alert(messages);
+  //     console.log("Messages", messages);
+
+  //     // alert(GiftedChat);
+  //   };
+
+  //   setWelcome();
+  // }, [messages]);
+
   const getGalleryPermissions = async () => {
     // const { stat } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
     if (Platform.OS !== "web") {
@@ -453,28 +515,31 @@ const Chat = (props) => {
     console.log("new msg ", msg);
     Fire.shared.send(msg);
   });
-  const onSend = useCallback((messages = []) => {
-    // setisTyping(true);
+  const onSend = useCallback(
+    (messages = []) => {
+      // setisTyping(true);
 
-    var newArr2 = messages.map((v) => ({
-      ...v,
-      senderId: props.navigation.state.params.user.customerid.toString(),
-      receiverId: "-1",
-      senderMobile: props.navigation.state.params.user.mobile,
-      type: "text",
-    }));
-    console.log("on send call ", newArr2);
-    Fire.shared.send(newArr2);
-    // var newArr2 = messages.map(v => ({
-    //   ...v,
-    //   sent: true,
-    //   received: true,
-    //   pending: false
-    // }));
-    // setMessages(previousMessages =>
-    //   GiftedChat.append(previousMessages, newArr2)
-    // );
-  }, []);
+      var newArr2 = messages.map((v) => ({
+        ...v,
+        senderId: props.navigation.state.params.user.customerid.toString(),
+        receiverId: "-1",
+        senderMobile: props.navigation.state.params.user.mobile,
+        type: "text",
+      }));
+      console.log("on send call ", newArr2);
+      Fire.shared.send(newArr2);
+      // var newArr2 = messages.map(v => ({
+      //   ...v,
+      //   sent: true,
+      //   received: true,
+      //   pending: false
+      // }));
+      // setMessages(previousMessages =>
+      //   GiftedChat.append(previousMessages, newArr2)
+      // );
+    },
+    [props.navigation]
+  );
   async function startRecording() {
     if (sound !== null) {
       await sound.unloadAsync();
@@ -828,23 +893,26 @@ const Chat = (props) => {
   const sendLocationMessage = async (location) => {
     let id = await messageIdGenerator();
     // console.log("id > ", id);
-    let msg = {
-      _id: id,
-      createdAt: new Date().getTime().toString(),
-      receiverId: "-1",
-      senderId: props.navigation.state.params.user.customerid.toString(),
-      senderMobile: props.navigation.state.params.user.mobile,
-      text: "",
-      name: "location",
-      timestamp: new Date().getTime().toString(),
-      location: location,
-      type: "location",
-      user: {
-        _id: props.navigation.state.params.user.customerid,
-        name: props.navigation.state.params.user.name,
-        avatar: require("../assets/Profile1-min.png"),
+    let msg = [
+      {
+        _id: id,
+        createdAt: new Date().getTime().toString(),
+        receiverId: "-1",
+        senderId: props.navigation.state.params.user.customerid.toString(),
+        senderMobile: props.navigation.state.params.user.mobile,
+        text: "",
+        name: "location",
+        timestamp: new Date().getTime().toString(),
+        location: location,
+        type: "location",
+        user: {
+          _id: props.navigation.state.params.user.customerid,
+          name: props.navigation.state.params.user.name,
+          avatar: require("../assets/Profile1-min.png"),
+        },
+        isDeleted: false,
       },
-    };
+    ];
     Fire.shared.send(msg);
     // console.log("new msg ", msg);
     // setMessages(previousMessages => GiftedChat.append(previousMessages, msg));
@@ -924,48 +992,49 @@ const Chat = (props) => {
     console.log("renderBubble");
     // {this.renderAudio(props)}
 
-    return (
-      <View>
-        {/* {renderAudio(props)} */}
+    // return (
+    //   <View>
+    //     {/* {renderAudio(props)} */}
 
-        <Bubble {...props} />
-      </View>
-    );
+    //     <Bubble {...props} style={{ borderRadius: 10 }} />
+    //   </View>
+    // );
 
     // Uncomment
-    // return (
-    //   <Bubble
-    //     {...props}
-    //     textStyle={{
-    //       left: {
-    //         color: "#4a4b4c",
-    //       },
-    //       right: {
-    //         color: "white",
-    //       },
-    //     }}
-    //     wrapperStyle={{
-    //       left: {
-    //         backgroundColor: "#d6d6d6",
-    //         borderRadius: 0,
-    //         borderColor: "#c9c9c9",
-    //       },
-    //       right: {
-    //         backgroundColor: "#631255",
-    //         borderBottomRightRadius: 0,
-    //         borderTopRightRadius: 0,
-    //       },
-    //     }}
-    //     tickStyle={{
-    //       color: "white",
-    //       height: 20,
-    //     }}
-    //     timeTextStyle={{
-    //       left: { color: "#8b8d8f", alignSelf: "flex-end" },
-    //       right: { color: "#8b8d8f" },
-    //     }}
-    //   />
-    // );
+    return (
+      <Bubble
+        {...props}
+        textStyle={{
+          left: {
+            color: "#4a4b4c",
+          },
+          right: {
+            color: "white",
+          },
+        }}
+        wrapperStyle={{
+          left: {
+            backgroundColor: "#d6d6d6",
+            borderRadius: 10,
+            borderColor: "#c9c9c9",
+          },
+          right: {
+            backgroundColor: "#631255",
+            borderBottomRightRadius: 10,
+            borderTopRightRadius: 10,
+            borderRadius: 10,
+          },
+        }}
+        tickStyle={{
+          color: "white",
+          height: 20,
+        }}
+        timeTextStyle={{
+          left: { color: "#8b8d8f", alignSelf: "flex-end" },
+          right: { color: "#8b8d8f" },
+        }}
+      />
+    );
   };
 
   function renderLoading() {
@@ -1136,6 +1205,30 @@ const Chat = (props) => {
   const renderCustomView = (props) => {
     return <MessageView {...props} />;
   };
+
+  const scrollToBottomComponent = (props) => {
+    console.log(props, "pp");
+    return (
+      <View>
+        <TouchableOpacity
+          {...props}
+          // onPress={props}
+          // hitSlop={{ top: 5, left: 5, right: 5, bottom: 5 }}
+        >
+          {/* <Text>VV</Text> */}
+          <AntDesign name="down" size={24} color="black" />
+        </TouchableOpacity>
+      </View>
+    );
+  };
+
+  // const scrollToBottomComponent = (
+  //   <View>
+  //     <TouchableOpacity hitSlop={{ top: 5, left: 5, right: 5, bottom: 5 }}>
+  //       <Text>V</Text>
+  //     </TouchableOpacity>
+  //   </View>
+  // );
   return (
     <SafeAreaView
       style={{
@@ -1166,7 +1259,11 @@ const Chat = (props) => {
       />
       <BookingDetailHeader
         HeaderText={lan == "en" ? "Chat" : "Ø¯Ø±Ø¯Ø´Ø©"}
-        onBackPress={() => props.navigation.goBack()}
+        onBackPress={() =>
+          props.navigation.state.params.noGoBackLogin
+            ? props.navigation.navigate("LandingSecreen")
+            : props.navigation.goBack()
+        }
         lan={lan}
         lineWidth={hp(0.2)}
       />
@@ -1207,7 +1304,7 @@ const Chat = (props) => {
         alwaysShowSend
         // inverted={true} //Commented false
         scrollToBottom
-        // scrollToBottomComponent={scrollToBottomComponent}
+        scrollToBottomComponent={scrollToBottomComponent}
         renderLoading={renderLoading}
         isAnimated={true}
         renderSend={renderSend}
@@ -1241,3 +1338,23 @@ const styles = StyleSheet.create({
   },
 });
 export default Chat;
+
+// onDelete(messageIdToDelete) {
+//   this.setState(previousState =>
+//     ({ messages: previousState.messages.filter(message => message.id !== messageIdToDelete) }))
+// }
+
+// https://stackoverflow.com/questions/59284331/delete-and-copy-mesage-in-gifted-chat
+
+// renderMessage (props) {
+//   if(!props.currentMessage.isDeleted) {
+//   return (
+//     <Message
+//       {...props}
+//     />
+//   )
+// }
+// else return null;
+// }
+// But if message on firebase marked as isDeleted=true then the chat view NOT update itself automatically.
+// Do you know about this ?

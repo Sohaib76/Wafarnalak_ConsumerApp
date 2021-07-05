@@ -759,6 +759,7 @@ export default class LoginScreen extends React.Component {
     if (this.props.navigation.getParam("goToHelp") == true) {
       this.props.navigation.navigate("Chat", {
         user,
+        noGoBackLogin: true,
       });
       console.log("True");
     } else {

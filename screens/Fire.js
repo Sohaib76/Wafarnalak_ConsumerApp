@@ -284,7 +284,7 @@ class Fire {
   }
   // send the message to the Backend
   send = (messages) => {
-    console.log("messages to be send ", messages);
+    console.log("messages to be send now", messages);
     for (let i = 0; i < messages.length; i++) {
       const {
         text,
@@ -299,9 +299,13 @@ class Fire {
         uri,
         location,
       } = messages[i];
+      console.log("Before if");
+
       let d = new Date();
       let created = d.toISOString();
       // let created = firebase.database.ServerValue.TIMESTAMP;
+      console.log("Before if");
+
       if (type == "text") {
         const message = {
           _id: _id,
@@ -314,6 +318,7 @@ class Fire {
           createdAt: created,
           type,
         };
+        console.log("PPP");
         const id = receiverId.concat(senderId);
         this.append(message, id);
       } else if (type == "image") {
@@ -360,6 +365,7 @@ class Fire {
           location,
         };
         const id = receiverId.concat(senderId);
+        console.log("Before append");
         this.append(message, id);
       }
     }
@@ -395,3 +401,5 @@ class Fire {
 
 Fire.shared = new Fire();
 export default Fire;
+
+// await this.db.collection("inbox").doc('DC').delete();

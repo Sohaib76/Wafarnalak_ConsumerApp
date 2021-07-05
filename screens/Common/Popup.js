@@ -37,20 +37,26 @@ const Popup = (props) => {
       <View
         style={{
           alignSelf: "center",
-          height: 150,
-          width: wp(70),
+          // height: 150,
+          height: 100,
+          // width: wp(70),
+          width: wp(40),
           position: "absolute",
           bottom: 100,
           backgroundColor: "white",
-          paddingHorizontal: 10,
+          // paddingHorizontal: 10,
           paddingVertical: 10,
           borderRadius: 20,
-          // alignItems: "flex-start"
+          alignItems: "flex-start",
+          justifyContent: "space-between",
         }}
       >
         <View style={{ alignSelf: "flex-end" }}>
           <TouchableOpacity onPress={() => props.setPopupFalse()}>
-            <Image style={{ height: 20, width: 20 }} source={IMAGES.CROSS} />
+            <Image
+              style={{ height: 20, width: 20, marginRight: 10 }}
+              source={IMAGES.CROSS}
+            />
           </TouchableOpacity>
         </View>
         <View
@@ -85,18 +91,21 @@ const Popup = (props) => {
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
-              alignSelf: "center",
+              // alignSelf: "center",
               width: "30%",
             }}
           >
-            {/* <TouchableOpacity onPress={() => props.sendLocation()}>
+            <TouchableOpacity onPress={() => props.sendLocation()}>
               <Image
-                style={{ height: 40, width: 40 }}
+                style={{ height: 40, width: 40, marginLeft: 35 }}
                 source={IMAGES.LOCATION}
               />
-            </TouchableOpacity> */}
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => props.uploadPicture()}>
-              <Image style={{ height: 40, width: 40 }} source={IMAGES.IMAGES} />
+              <Image
+                style={{ height: 40, width: 40, marginLeft: 20 }}
+                source={IMAGES.IMAGES}
+              />
             </TouchableOpacity>
           </View>
         </View>
@@ -124,7 +133,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     width: wp(84),
     top: hp(17.8) + height / 10,
-    left: wp(8),
+    // left: wp(8),
     alignSelf: "center",
     paddingHorizontal: SPACING / 2,
     flexDirection: "row",
