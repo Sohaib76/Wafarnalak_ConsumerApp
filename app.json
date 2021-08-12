@@ -48,8 +48,12 @@
         "NOTIFICATIONS",
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE",
-        "INTERNET"
+        "INTERNET",
+        "RECORD_AUDIO",
+        "ACCESS_BACKGROUND_LOCATION"
       ],
+
+     
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyCZenxJupQXwOicw8u9pBnFiniI8w03Vus"

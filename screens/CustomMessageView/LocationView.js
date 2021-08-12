@@ -56,6 +56,10 @@ const LocationView = (props) => {
     }
   };
 
+  // props.navigation.navigate("GoogleMapScreen", {
+  //   lan: "en",
+  // });
+
   const handleGetDirection = async (lat, long) => {
     // const data = {
     //   source: {

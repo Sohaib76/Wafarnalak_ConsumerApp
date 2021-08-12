@@ -82,6 +82,7 @@ export default class OrderSummaryScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      disableOrder: false,
       userForensePoints: 0,
       lan: "en",
       points: 0,
@@ -117,6 +118,7 @@ export default class OrderSummaryScreen extends React.Component {
       cartNotesAdds_ar: "",
       promoCode: "",
       promoSuccess: false,
+      alertVisible: true,
       actualTimeInterval: [
         {
           txt: "9:00AM",
@@ -255,6 +257,7 @@ export default class OrderSummaryScreen extends React.Component {
           id: 26,
           ceil: 22,
         },
+
         // {
         //   txt: "10:30PM",
         //   id: 27,
@@ -304,6 +307,7 @@ export default class OrderSummaryScreen extends React.Component {
     });
   };
   setModalVisible = () => {
+    // this.setState({ modalVisible: true });
     this.setState({ modalVisible: true });
   };
   hideModal = () => {
@@ -311,6 +315,7 @@ export default class OrderSummaryScreen extends React.Component {
   };
 
   componentDidMount = async () => {
+    this.setState({ alertVisible: true });
     const { navigation } = this.props;
     let getJobs = await AsyncStorage.getItem("jobs");
     console.log("getJobs", getJobs);
@@ -331,7 +336,9 @@ export default class OrderSummaryScreen extends React.Component {
           ? packgaeJobs.jobs.findIndex((j) => j.pricetype == 2)
           : jobs.findIndex((j) => j.pricetype == 2);
       let time = new Date().getHours() + "." + new Date().getMinutes();
-      let t = parseFloat(time) + 1.25;
+      let t = parseFloat(time) + 1.25; //changed 1.25 , 2.5
+      console.log("ttt", t);
+      console.log("time", time);
       let copyIntervals = ([] = []);
 
       var today = new Date();
@@ -345,7 +352,7 @@ export default class OrderSummaryScreen extends React.Component {
       if (copyIntervals.length === 0) {
         const today = new Date();
         const tomorrow = new Date(today);
-        tomorrow.setDate(tomorrow.getDate() + 1);
+        tomorrow.setDate(tomorrow.getDate() + 1); //tried 2 here, was 1 here
         this.setState({ currentTime: tomorrow });
       }
 
@@ -645,6 +652,9 @@ export default class OrderSummaryScreen extends React.Component {
     }
   };
   onDateChange = async (date) => {
+    this.setState({
+      disableOrder: false,
+    });
     this.setState({ selectTime: true });
     let slotArray = [];
     var today = new Date();
@@ -655,6 +665,25 @@ export default class OrderSummaryScreen extends React.Component {
     console.log(date, "date");
     var datee = new Date(date);
     console.log(datee.getDay(), "Day");
+
+    // alert(datee.getDate());
+
+    // if (
+    //   datee.getDate() == "20" ||
+    //   datee.getDate() == "21" ||
+    //   datee.getDate() == "22" ||
+    //   datee.getDate() == "23" ||
+    //   datee.getDate() == "24" ||
+    //   datee.getDate() == "25" ||
+    //   datee.getDate() == "26"
+    // ) {
+    //   this.setState((prev) => {
+    //     return { disableOrder: true };
+    //   });
+    //   alert(
+    //     "You can't place order during 20th July to 26th July due to Eid Vacations!"
+    //   );
+    // }
 
     if (datee.getDay() == 5) {
       console.log("Change Timings");
@@ -879,7 +908,7 @@ export default class OrderSummaryScreen extends React.Component {
         (today.getTime() / (1000 * 60 * 60)).toFixed(1)
       );
       let time = new Date().getHours() + "." + new Date().getMinutes();
-      let t = parseFloat(time) + 1.25;
+      let t = parseFloat(time) + 2; //1.25, 2.5
       console.log("t", t);
       this.state.actualTimeInterval.forEach((slot) => {
         console.log("parseFloat(slot.ceil -----", parseFloat(slot.ceil));
@@ -912,9 +941,9 @@ export default class OrderSummaryScreen extends React.Component {
   };
   plusHours = () => {
     let currentHour = this.state.hour;
-    let hourMaxLimit = 0.723;
+    let hourMaxLimit = 0.723; //0.723
     if (this.state.hour < hourMaxLimit) {
-      let h = currentHour + 1;
+      let h = currentHour + 1; //here 1
       this.setState({ hour: h });
     }
   };
@@ -1460,6 +1489,8 @@ export default class OrderSummaryScreen extends React.Component {
     const today = new Date();
     const tomorrow = new Date(today);
     var minDate = new Date();
+    // For Eid
+    // minDate = new Date().getDate() + 7;
     tomorrow.setDate(tomorrow.getDate() + 1);
     if (new Date().getHours() + 3 > 23) {
       minDate = tomorrow;
@@ -1522,6 +1553,188 @@ export default class OrderSummaryScreen extends React.Component {
           </View>
           <Right />
         </Header>
+
+        {/* CUSTOM ALERT MODAL */}
+
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={this.state.alertVisible}
+        >
+          <View
+            style={{
+              marginTop: 290, //215
+              height: 240, //225
+              borderRadius: 20,
+              width: 330,
+              backgroundColor: "#0764af",
+              alignSelf: "center",
+            }}
+          >
+            <View style={{ flex: 1, alignSelf: "center", marginTop: -24 }}>
+              {/* marginTop:24 */}
+              <Thumbnail
+                style={{ width: 43, height: 43 }}
+                source={require("../assets/Alert-Icon.png")}
+              />
+            </View>
+            {/* 
+              <View style={{ position: "absolute", right: 6, top: 10 }}>
+                <Ionicons
+                  onPress={this.hideModal}
+                  name="ios-close-circle-outline"
+                  size={35}
+                  color="red"
+                />
+              </View> */}
+
+            {/* <View
+                style={{ alignSelf: "center", position: "absolute", top: 50 }}
+              >
+                <Text
+                  style={{ color: "white", fontSize: 20, fontWeight: "bold" }}
+                >
+                  {this.state.lan == "en" ? "Get Discount" : "احصل على تخفيض"}
+                </Text>
+              </View> */}
+            <View
+              style={{ position: "absolute", top: 80, alignSelf: "center" }}
+            >
+              <View style={{ flexDirection: "row" }}>
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: 16,
+                    // textAlign: "center",
+                    margin: 20,
+                    marginTop: -40,
+                  }}
+                >
+                  {this.state.lan == "en"
+                    ? "Dear Customer, \nTo continue providing you with the best experience, we will be undergoing maintenance that may cause service interruption till 18th August 2021. We apologize for the inconvenience."
+                    : "Dear Customer, \nTo continue providing you with the best experience, we will be undergoing maintenance that may cause service interruption till 18th August 2021. We apologize for the inconvenience."}
+                </Text>
+                {/* <Image
+                    source={require("../assets/Forense-Points-Icon.png")}
+                    style={{ width: 20, height: 20, marginLeft: 5 }}
+                    resizeMode="contain"
+                  />
+                  <Text style={{ color: "white", fontSize: 16 }}>
+                    {this.state.userForensePoints - this.state.points > 0
+                      ? this.state.userForensePoints - this.state.points
+                      : this.state.userForensePoints}
+                  </Text> */}
+              </View>
+              {/* <View
+                  style={{
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    alignSelf: "center",
+                    marginTop: 6,
+                  }}
+                >
+                  <Text style={{ color: "white", fontSize: 16 }}>
+                    {this.state.lan == "en" ? "Cash Equals to" : "نقداً يساوي"}
+                  </Text> */}
+              {/* <Image
+                    source={require("../assets/Riyal.png")}
+                    style={{ width: 20, height: 20 }}
+                    resizeMode="contain"
+                  />
+                  <Text style={{ color: "white", fontSize: 16 }}>
+                    SAR
+                    {this.state.userForensePoints - this.state.points > 0
+                      ? (
+                          (this.state.userForensePoints - this.state.points) *
+                          0.05
+                        ).toFixed(2)
+                      : this.state.userForensePoints * 0.05}
+                  </Text> */}
+              {/* </View> */}
+            </View>
+
+            <View
+              style={{
+                alignSelf: "center",
+                position: "absolute",
+                top: 140,
+              }}
+            >
+              {/* <Item
+                  regular
+                  style={{ height: 30, width: 230, backgroundColor: "white" }}
+                >
+                  <Input
+                    placeholder={
+                      this.state.lan == "en"
+                        ? "Enter Points"
+                        : "ادخل رقم النقاط"
+                    }
+                    placeholderTextColor="lightgray"
+                    style={{ textAlign: "center" }}
+                    value={this.state.points}
+                    keyboardType="decimal-pad"
+                    returnKeyType="done"
+                    onChangeText={(text) => {
+                      this.setUserPoints(text);
+                    }}
+                  />
+                </Item> */}
+
+              {this.state.disocunt > 0 ? (
+                <View style={{ alignSelf: "center", paddingTop: 6 }}>
+                  <View style={{ flexDirection: "row" }}>
+                    <Text style={{ color: "#ff9c00", fontSize: 16 }}>
+                      {this.state.lan == "en"
+                        ? "Amount Redeemed:"
+                        : " المبلغ بالريال:"}
+                    </Text>
+                    <Text style={{ color: "#ff9c00", fontSize: 16 }}>
+                      SAR {this.state.disocunt.toFixed(2)}
+                    </Text>
+                  </View>
+                </View>
+              ) : (
+                <View></View>
+              )}
+              <TouchableOpacity
+                onPress={() => this.setState({ alertVisible: false })}
+              >
+                <View
+                  small
+                  rounded
+                  style={{
+                    marginTop: 40, //15
+                    backgroundColor: "#6ea8cd",
+                    alignSelf: "center",
+                    width: 160,
+                    height: 35,
+                    borderRadius: 16,
+                  }}
+                >
+                  <View
+                    style={{
+                      alignSelf: "center",
+                      flex: 1,
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Text
+                      style={{
+                        color: "white",
+
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {this.state.lan == "en" ? "OK" : "تسليم"}
+                    </Text>
+                  </View>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+
         <Modal
           animationType="slide"
           transparent={true}
@@ -2251,6 +2464,8 @@ export default class OrderSummaryScreen extends React.Component {
                         }}
                         minDate={minDate}
                         initialDate={minDate}
+                        // For Eid
+                        //initialDate={new Date()}
                         selectedStartDate={this.state.currentTime}
                         selectedDayStyle={{ backgroundColor: "#0764af" }}
                         selectedDayTextColor="white"
@@ -2258,10 +2473,27 @@ export default class OrderSummaryScreen extends React.Component {
                         width={275}
                         height={230}
                         onDateChange={this.onDateChange}
+                        disabledDates={[
+                          new Date(2021, 6, 20),
+
+                          new Date(2021, 7, 10),
+                          new Date(2021, 7, 11),
+                          new Date(2021, 7, 12),
+                          new Date(2021, 7, 13),
+                          new Date(2021, 7, 14),
+                          new Date(2021, 7, 15),
+                          new Date(2021, 7, 16),
+                          new Date(2021, 7, 17),
+                          new Date(2021, 7, 18),
+                        ]}
+                        // disabledDatesTextStyle={{ color: "red" }}
                       />
                     </View>
                     <View>
-                      <TouchableOpacity onPress={this.showTimeModalVisible}>
+                      <TouchableOpacity
+                        disabled={this.state.disableOrder}
+                        onPress={this.showTimeModalVisible}
+                      >
                         <View
                           style={{
                             backgroundColor: "#0764af",
@@ -2816,13 +3048,18 @@ export default class OrderSummaryScreen extends React.Component {
               </View>
             </View>
           </Modal>
+
+          {/* CUSTOM ALERT MODAL END */}
         </ScrollView>
 
         {this.state.jobs.length > 0 ? (
           <Footer
             style={{ backgroundColor: "white", borderWidth: 0, height: 90 }}
           >
-            <TouchableOpacity onPress={this.submitOrder}>
+            <TouchableOpacity
+              disabled={this.state.disableOrder}
+              onPress={this.submitOrder}
+            >
               <View
                 style={{
                   backgroundColor: "#0764af",

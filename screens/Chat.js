@@ -53,6 +53,7 @@ import {
   InputToolbar,
   Bubble,
   Send,
+  Message,
 } from "react-native-gifted-chat";
 import {
   View,
@@ -67,6 +68,8 @@ import {
   Dimensions,
   StatusBar,
 } from "react-native";
+import { Toast } from "native-base";
+// import Toast from "react-native-simple-toast";
 import Fire from "./Fire";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -120,6 +123,8 @@ import * as Location from "expo-location";
 import { Camera } from "expo-camera";
 import * as FileSystem from "expo-file-system";
 import { AntDesign } from "@expo/vector-icons";
+import { add } from "react-native-reanimated";
+// import { GoogleMapScreen } from "./address/mapScreen.js";
 const Chat = (props) => {
   const [messages, setMessages] = useState([]);
   const [lan, setlan] = useState("en");
@@ -133,7 +138,36 @@ const Chat = (props) => {
   const [videoSource, setvideoSource] = useState("");
   const [VideoPopup, setVideoPopup] = useState(false);
   const [query, setQuery] = useState("desc");
+
+  const [theaddress, settheaddress] = useState("");
+
+  const updateData = (data) => {
+    console.log(data);
+    alert("come back status: " + data);
+    // some other stuff
+  };
+
   useEffect(() => {
+    if (props.navigation.state.params.obj) {
+      let obj = props.navigation.state.params.obj;
+      console.log(props.navigation.state.params.obj);
+      let val = {
+        latitude: obj.latitude,
+        longitude: obj.longitude,
+      };
+      sendLocationMessage(val);
+    }
+    // GoogleMapScreen.printer();
+
+    const fun = async () => {
+      let address = await AsyncStorage.getItem("tempAddress");
+      var locate = address ? JSON.parse(address) : "";
+      settheaddress(locate);
+      console.log("Fun Called");
+    };
+
+    fun();
+
     console.log(
       "user ",
       props.navigation.state.params.user.customerid.toString()
@@ -156,7 +190,7 @@ const Chat = (props) => {
         (snapshot) => {
           // setQuery('asc')
           snapshot.docChanges().forEach((change) => {
-            console.log("message recieved real time ", change.doc.data());
+            // console.log("message recieved real time ", change.doc.data());
             const { key: _id } = change;
             if (change.doc.data().type == "text") {
               const msg = {
@@ -169,6 +203,7 @@ const Chat = (props) => {
                 senderMobile: change.doc.data().senderMobile,
                 createdAt: change.doc.data().createdAt,
                 type: change.doc.data().type,
+                isDeleted: change.doc.data().isDeleted,
               };
               if (msg.user._id == -1) {
                 msg.user.avatar = require("../assets/Profile2-min.png");
@@ -190,6 +225,7 @@ const Chat = (props) => {
                 createdAt: change.doc.data().createdAt,
                 image: change.doc.data().image,
                 type: change.doc.data().type,
+                isDeleted: change.doc.data().isDeleted,
               };
               if (msg.user._id == -1) {
                 msg.user.avatar = require("../assets/Profile2-min.png");
@@ -211,6 +247,7 @@ const Chat = (props) => {
                 createdAt: change.doc.data().createdAt,
                 uri: change.doc.data().uri,
                 type: change.doc.data().type,
+                isDeleted: change.doc.data().isDeleted,
               };
               if (msg.user._id == -1) {
                 msg.user.avatar = require("../assets/Profile2-min.png");
@@ -232,6 +269,7 @@ const Chat = (props) => {
                 createdAt: change.doc.data().createdAt,
                 location: change.doc.data().location,
                 type: change.doc.data().type,
+                isDeleted: change.doc.data().isDeleted,
               };
               if (msg.user._id == -1) {
                 msg.user.avatar = require("../assets/Profile2-min.png");
@@ -363,25 +401,34 @@ const Chat = (props) => {
 
     //setMessages((oldArray) => console.log(oldArray));
 
-    var newArr2 = {
-      _id: 1,
-      text: "Welcome to Wafarnalak Help care. How can we help you?",
-      createdAt: new Date(),
-      user: {
-        _id: -1,
-        name: "Wafarnalak",
-        avatar: require("../assets/Profile2-min.png"),
-      },
-    };
+    AsyncStorage.getItem("lan", (err, result) => {
+      if (result) {
+        var newArr2 = {
+          _id: 1,
+          text:
+            result == "en"
+              ? "Welcome to Wafarnalak Help care. How can we help you?"
+              : "مرحبا بك في مركز خدمة وفرنالك . كيف يمكننا مساعدتك؟",
+          // "مرحبا بك في مركز خدمة وفرنالك . كيف يمكننا مساعدتك؟"
+          createdAt: new Date(),
+          isDeleted: false,
+          user: {
+            _id: -1,
+            name: "Wafarnalak",
+            avatar: require("../assets/Profile2-min.png"),
+          },
+        };
 
-    var delayInMilliseconds = 2000; //1 second
+        var delayInMilliseconds = 2000; //1 second - 2000
 
-    setTimeout(function () {
-      //your code to be executed after 1 second
-      setMessages((oldArray) => [newArr2, ...oldArray]);
+        setTimeout(function () {
+          //your code to be executed after 1 second
+          setMessages((oldArray) => [newArr2, ...oldArray]);
 
-      console.log(messages, "End");
-    }, delayInMilliseconds);
+          // console.log(messages, "End");
+        }, delayInMilliseconds);
+      }
+    });
 
     // var delayInMillisecond = 1000; //1 second
 
@@ -510,9 +557,10 @@ const Chat = (props) => {
           name: props.navigation.state.params.user.name,
           avatar: require("../assets/Profile1-min.png"),
         },
+        isDeleted: false,
       },
     ];
-    console.log("new msg ", msg);
+    // console.log("new msg ", msg);
     Fire.shared.send(msg);
   });
   const onSend = useCallback(
@@ -524,9 +572,10 @@ const Chat = (props) => {
         senderId: props.navigation.state.params.user.customerid.toString(),
         receiverId: "-1",
         senderMobile: props.navigation.state.params.user.mobile,
+        isDeleted: false,
         type: "text",
       }));
-      console.log("on send call ", newArr2);
+      // console.log("on send call ", newArr2);
       Fire.shared.send(newArr2);
       // var newArr2 = messages.map(v => ({
       //   ...v,
@@ -549,6 +598,32 @@ const Chat = (props) => {
 
     console.log("Requesting permissions..");
     await Audio.requestPermissionsAsync();
+
+    // let { audio_status } = await Permissions.askAsync(Permissions.RECORD_AUDIO);
+    // if (audio_status !== "granted") {
+    //   Toast.show({
+    //     text:
+    //       this.state.lan == "en"
+    //         ? "Please grant audio permissions"
+    //         : "Please grant audio permissions",
+    //     position: "bottom",
+    //   });
+    //   await Permissions.askAsync(Permissions.AUDIO_RECORDING);
+    // }
+
+    let { audio_status } = await Permissions.askAsync(
+      Permissions.AUDIO_RECORDING
+    );
+    if (audio_status !== "granted") {
+      Toast.show({
+        text:
+          lan == "en"
+            ? "Please grant audio permissions"
+            : "الرجاء منح أذونات الصوت",
+        position: "bottom",
+      });
+      await Permissions.askAsync(Permissions.AUDIO_RECORDING);
+    }
 
     await Audio.setAudioModeAsync({
       allowsRecordingIOS: true,
@@ -741,10 +816,13 @@ const Chat = (props) => {
           name: props.navigation.state.params.user.name,
           avatar: require("../assets/Profile1-min.png"),
         },
+        isDeleted: false,
       },
     ];
-    Fire.shared.send(msg);
+
     // console.log("new msg ", msg);
+
+    Fire.shared.send(msg);
     // setMessages(previousMessages => GiftedChat.append(previousMessages, msg));
   });
 
@@ -841,7 +919,7 @@ const Chat = (props) => {
         avatar: require("../assets/Profile1-min.png"),
       },
     };
-    console.log("new msg ", msg);
+    // console.log("new msg ", msg);
     setMessages((previousMessages) => GiftedChat.append(previousMessages, msg));
   });
   const getLan = async () => {
@@ -874,20 +952,38 @@ const Chat = (props) => {
     if (status !== "granted") {
       Toast.show({
         text:
-          this.state.lan == "en"
+          lan == "en"
             ? "Please allow location permission"
-            : "ÙŠØ±Ø¬Ù‰ Ø§Ù„Ø³Ù…Ø§Ø­ Ù„ØªØ­Ø¯ÙŠØ¯ Ø§Ù„Ù…ÙˆÙ‚Ø¹",
+            : "يرجى السماح بإذن الموقع",
         position: "bottom",
       });
     } else {
       // console.log("else ");
-      const mylocation = await Location.getCurrentPositionAsync({});
-      console.log("mylocation", mylocation);
+      props.navigation.navigate("GoogleMapScreen", {
+        lan: "en",
+        // updateData: updateData(),
+        chat: "true",
+      });
+      console.log("after navigate");
+      //await AsyncStorage.removeItem("tempAddress");
+      // let address = await AsyncStorage.getItem("tempAddress");
+      // // alert("Got Address");
+      // let locate = address ? JSON.parse(address) : "No";
+      // console.log("location", locate);
+
+      // const mylocation = await Location.getCurrentPositionAsync({});
+      // console.log("mylocation", mylocation);
+      // if (theaddress != null && theaddress != "") {
       let val = {
-        latitude: mylocation.coords.latitude,
-        longitude: mylocation.coords.longitude,
+        // latitude: mylocation.coords.latitude,
+        // longitude: mylocation.coords.longitude,
+        latitude: theaddress.latitude,
+        longitude: theaddress.longitude,
       };
-      sendLocationMessage(val);
+      //await AsyncStorage.removeItem("tempAddress");
+      console.log("If", theaddress);
+
+      // sendLocationMessage(val);
     }
   };
   const sendLocationMessage = async (location) => {
@@ -989,7 +1085,7 @@ const Chat = (props) => {
   // };
 
   const renderBubble = (props) => {
-    console.log("renderBubble");
+    // console.log("renderBubble");
     // {this.renderAudio(props)}
 
     // return (
@@ -1207,17 +1303,19 @@ const Chat = (props) => {
   };
 
   const scrollToBottomComponent = (props) => {
-    console.log(props, "pp");
+    // console.log(props, "pp");
+
     return (
       <View>
-        <TouchableOpacity
+        {/* <TouchableOpacity
+          style={{ backgroundColor: "red" }}
           {...props}
           // onPress={props}
           // hitSlop={{ top: 5, left: 5, right: 5, bottom: 5 }}
-        >
-          {/* <Text>VV</Text> */}
-          <AntDesign name="down" size={24} color="black" />
-        </TouchableOpacity>
+        > */}
+        {/* <Text>VV</Text> */}
+        <AntDesign name="down" size={24} color="black" />
+        {/* </TouchableOpacity> */}
       </View>
     );
   };
@@ -1229,6 +1327,21 @@ const Chat = (props) => {
   //     </TouchableOpacity>
   //   </View>
   // );
+
+  const renderMessage = (props) => {
+    if (
+      //!props.currentMessage.isDeleted
+
+      // !props.currentMessage.isDeleted ||
+      props.currentMessage.isDeleted == false
+    ) {
+      // console.log("Props", props, "Pops");
+      return <Message {...props} />;
+    } else {
+      // console.log(",,,,,");
+      return null;
+    }
+  };
   return (
     <SafeAreaView
       style={{
@@ -1258,7 +1371,7 @@ const Chat = (props) => {
         }}
       />
       <BookingDetailHeader
-        HeaderText={lan == "en" ? "Chat" : "Ø¯Ø±Ø¯Ø´Ø©"}
+        HeaderText={lan == "en" ? "Chat" : "محادثة"}
         onBackPress={() =>
           props.navigation.state.params.noGoBackLogin
             ? props.navigation.navigate("LandingSecreen")
@@ -1282,7 +1395,11 @@ const Chat = (props) => {
           avatar: require("../assets/Profile1-min.png"),
         }}
         // renderInputToolbar={renderInputToolbar}
-        placeholder={" Write a new message..."}
+        placeholder={
+          lan == "en"
+            ? " Write a new message..."
+            : "        اكتب رسالة جديدة...       "
+        }
         textInputStyle={{
           justifyContent: "center",
           backgroundColor: "white",
@@ -1298,6 +1415,7 @@ const Chat = (props) => {
         renderMessageVideo={renderMessageVideo}
         renderCustomView={renderCustomView}
         renderBubble={renderBubble}
+        renderMessage={renderMessage}
         showUserAvatar={true}
         showAvatarForEveryMessage={true}
         renderUsernameOnMessage={true}

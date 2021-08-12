@@ -7,7 +7,7 @@ import {
   Image,
   Platform,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import {
   Button,
@@ -22,7 +22,7 @@ import {
   Text,
   Thumbnail,
   Title,
-  Toast
+  Toast,
 } from "native-base";
 
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
@@ -37,13 +37,13 @@ export default class GoogleMapScreen extends React.Component {
     this.state = {
       x: {
         latitude: 23.8859,
-        longitude: 45.0792
+        longitude: 45.0792,
       },
       region: {
         latitude: 23.8859,
         longitude: 45.0792,
         latitudeDelta: 0.005,
-        longitudeDelta: 0.005
+        longitudeDelta: 0.005,
       },
       modalVisible: false,
       isMapLoaded: false,
@@ -55,15 +55,16 @@ export default class GoogleMapScreen extends React.Component {
       order: {},
       categorySelected: "",
       categories: [],
-      currentUserLocation: {}
+      currentUserLocation: {},
     };
   }
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
-      lan: navigation.getParam("lan")
+      lan: navigation.getParam("lan"),
     });
     this._getLocationAsync();
+    console.log("Location");
   }
   hideModal = () => {
     this.setState({ modalVisible: false });
@@ -79,28 +80,37 @@ export default class GoogleMapScreen extends React.Component {
           this.state.lan == "en"
             ? "Please allow location permission"
             : "يرجى السماح لتحديد الموقع",
-        position: "bottom"
+        position: "bottom",
       });
       this.setState({ isMapLoaded: true });
+      // console.log("status", status);
     } else {
+      console.log("status", status);
+      // console.log("location l", Location);
+      // let location = await Location.getForegroundPermissionsAsync();
+      // console.log("location out", location);
       if (Location.hasServicesEnabledAsync()) {
-        let location = await Location.getCurrentPositionAsync();
+        let location = await Location.getCurrentPositionAsync({
+          accuracy: Location.Accuracy.High,
+        });
+        // console.log("location if", location);
         let obj = {
           longitude: location.coords.longitude,
           latitude: location.coords.latitude,
           latitudeDelta: 0.005,
-          longitudeDelta: 0.005
+          longitudeDelta: 0.005,
         };
         let obj2 = {
           longitude: location.coords.longitude,
-          latitude: location.coords.latitude
+          latitude: location.coords.latitude,
         };
-        this.fetchAddress(obj2);
+        // this.fetchAddress(obj2);
+        this.fetchAddress(obj);
         this.setState({
           region: obj,
           currentUserLocation: obj,
           x: obj2,
-          isMapLoaded: true
+          isMapLoaded: true,
         });
       } else {
         Toast.show({
@@ -108,15 +118,15 @@ export default class GoogleMapScreen extends React.Component {
             this.state.lan == "en"
               ? "Please enable Location service of your mobile setting"
               : "يرجى تمكين خدمة الموقع في إعدادات هاتفك",
-          position: "bottom"
+          position: "bottom",
         });
       }
     }
   };
-  onRegionChange = region => {
+  onRegionChange = (region) => {
     this.setState({ region: region });
   };
-  fetchAddress = lotlng => {
+  fetchAddress = (lotlng) => {
     fetch(
       "https://maps.googleapis.com/maps/api/geocode/json?address=" +
         lotlng.latitude +
@@ -125,63 +135,76 @@ export default class GoogleMapScreen extends React.Component {
         "&key=" +
         "AIzaSyA4be4vwXO-Zn5IYcxA-trViY3j6LtODjg"
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         this.setState({ address: responseJson.results[0].formatted_address });
       });
   };
-  saveLocation = e => {
+  saveLocation = (e) => {
     this.fetchAddress(e.nativeEvent.coordinate);
     this.setState({ x: e.nativeEvent.coordinate });
   };
   navigateToCurrentLocation = () => {};
+  printer = () => {
+    console.log("I Prints");
+  };
   saveAddress = async () => {
     if (this.state.address !== "") {
       let obj = {
         latitude: this.state.x.latitude,
         longitude: this.state.x.longitude,
         addressheader: this.state.title,
-        addressdetail: this.state.address
+        addressdetail: this.state.address,
       };
+
+      console.log("Coordincates ..", obj);
+      console.log("Deal", this.props.navigation.state.params);
+
       await AsyncStorage.setItem("address", JSON.stringify(obj));
+      await AsyncStorage.setItem("tempAddress", JSON.stringify(obj));
+
+      if (this.props.navigation.state.params.chat) {
+        // alert("chat");
+        this.props.navigation.navigate("Chat", { obj });
+      }
       this.props.navigation.goBack();
     } else {
       Toast.show({
         text: "Google Location is not correctely indentified please try again!",
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
-  notifyChange = loc => {
+  notifyChange = (loc) => {
     this.getCordsForName(loc);
   };
-  getAddress = region => {
+  getAddress = (region) => {
     let obj = {
       latitude: region.latitude,
-      longitude: region.longitude
+      longitude: region.longitude,
     };
     this.fetchAddress(obj);
   };
-  getCordsForName = loc => {
+  getCordsForName = (loc) => {
     let obj = {
       latitude: loc.geometry.location.lat,
       longitude: loc.geometry.location.lng,
       latitudeDelta: 0.005,
-      longitudeDelta: 0.005
+      longitudeDelta: 0.005,
     };
     this.mapView.animateToRegion(obj, 2000);
     this.setState({ x: obj, address: loc.formatted_address });
     this.updateState(obj);
   };
-  updateState = location => {
+  updateState = (location) => {
     this.GooglePlacesRef.setAddressText("");
     this.setState({
       region: {
         latitude: location.latitude,
         longitude: location.longitude,
         latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421
-      }
+        longitudeDelta: 0.0421,
+      },
     });
   };
   backScreenSetup = () => {
@@ -190,7 +213,7 @@ export default class GoogleMapScreen extends React.Component {
         order: this.state.order,
         lan: this.state.lan,
         categories: this.state.categories,
-        categorySelected: this.state.categorySelected
+        categorySelected: this.state.categorySelected,
       });
     } else {
       this.props.navigation.navigate("AddressesScreen");
@@ -208,7 +231,7 @@ export default class GoogleMapScreen extends React.Component {
             borderBottomColor: "#0866b0",
             backgroundColor: "#ffffff",
             height: 65,
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <Left style={{ marginLeft: 10 }}>
@@ -229,14 +252,14 @@ export default class GoogleMapScreen extends React.Component {
               justifyContent: "center",
               alignItems: "center",
               position: Platform.OS === "android" ? "absolute" : "relative",
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           >
             <Title
               style={{
                 fontFamily: "montserrat_semi_blod",
                 color: "#0866b0",
-                fontSize: 18
+                fontSize: 18,
               }}
             >
               {lanConfirm == "en" ? "Select Location" : "حدد العنوان"}
@@ -250,14 +273,14 @@ export default class GoogleMapScreen extends React.Component {
               <MapView
                 showsUserLocation={true}
                 zoomEnabled={true}
-                ref={ref => (this.mapView = ref)}
+                ref={(ref) => (this.mapView = ref)}
                 initialRegion={this.state.region}
-                onRegionChangeComplete={r => {
+                onRegionChangeComplete={(r) => {
                   this.getAddress(r);
                 }}
                 style={{
                   height: Dimensions.get("window").height - 100,
-                  width: Dimensions.get("window").width
+                  width: Dimensions.get("window").width,
                 }}
               >
                 {Platform.OS === "ios" ? (
@@ -268,7 +291,7 @@ export default class GoogleMapScreen extends React.Component {
                       alignSelf: "center",
                       justifyContent: "center",
                       alignItems: "center",
-                      flex: 1
+                      flex: 1,
                     }}
                     source={require("../../assets/drop-pin.png")}
                     resizeMode="contain"
@@ -287,7 +310,7 @@ export default class GoogleMapScreen extends React.Component {
                     left: 0,
                     right: 0,
                     top: 0,
-                    bottom: 0
+                    bottom: 0,
                   }}
                 >
                   <Image
@@ -307,7 +330,7 @@ export default class GoogleMapScreen extends React.Component {
                   backgroundColor: "white",
                   width: 290,
                   position: "absolute",
-                  top: 20
+                  top: 20,
                 }}
               >
                 <GooglePlacesAutocomplete
@@ -318,7 +341,7 @@ export default class GoogleMapScreen extends React.Component {
                       backgroundColor: "rgba(0,0,0,0)",
                       borderTopWidth: 0,
                       borderBottomWidth: 0,
-                      borderRadius: 12
+                      borderRadius: 12,
                     },
                     textInput: {
                       marginLeft: 0,
@@ -328,8 +351,8 @@ export default class GoogleMapScreen extends React.Component {
                       fontSize: 16,
                       borderWidth: 1.4,
                       marginTop: 0,
-                      borderColor: "lightgray"
-                    }
+                      borderColor: "lightgray",
+                    },
                   }}
                   autoFocus={false}
                   returnKeyType={"search"}
@@ -341,12 +364,12 @@ export default class GoogleMapScreen extends React.Component {
                   }}
                   query={{
                     key: "AIzaSyA4be4vwXO-Zn5IYcxA-trViY3j6LtODjg",
-                    Language: "en"
+                    Language: "en",
                   }}
                   nearbyPlacesAPI="GooglePlacesSearch"
                   debounce={200}
                   GooglePlacesAutocomplete
-                  ref={instance => {
+                  ref={(instance) => {
                     this.GooglePlacesRef = instance;
                   }}
                 />
@@ -356,7 +379,7 @@ export default class GoogleMapScreen extends React.Component {
             <View
               style={{
                 height: Dimensions.get("window").height - 100,
-                width: Dimensions.get("window").width
+                width: Dimensions.get("window").width,
               }}
             >
               <Spinner size="large" color="blue" />
@@ -369,7 +392,7 @@ export default class GoogleMapScreen extends React.Component {
             backgroundColor: "transparent",
             position: "absolute",
             bottom: 10,
-            width: "100%"
+            width: "100%",
           }}
         >
           <TouchableOpacity onPress={this.saveAddress}>
@@ -379,7 +402,7 @@ export default class GoogleMapScreen extends React.Component {
                 borderRadius: 10,
                 width: Dimensions.get("screen").width - 160,
                 alignSelf: "center",
-                justifyContent: "center"
+                justifyContent: "center",
               }}
             >
               <LinearGradient

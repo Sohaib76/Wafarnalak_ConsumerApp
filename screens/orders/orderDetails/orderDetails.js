@@ -14,7 +14,7 @@ import {
   Text,
   Thumbnail,
   Title,
-  Toast
+  Toast,
 } from "native-base";
 import {
   BackHandler,
@@ -27,7 +27,7 @@ import {
   TouchableOpacity,
   View,
   TouchableNativeFeedback,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
 } from "react-native";
 
 import DateTimePicker from "react-native-modal-datetime-picker";
@@ -56,359 +56,359 @@ export default class OrderDetailsSecreen extends React.Component {
         "I submitted the request by mistake",
         "I didn't like the responses",
         "I've changed my plans",
-        "Professional asked me to cancel"
+        "Professional asked me to cancel",
       ],
       timeInterval: [
         {
           txt: "09:00AM",
           id: 0,
-          ceil: 9
+          ceil: 9,
         },
         {
           txt: "09:30AM",
           id: 1,
-          ceil: 9.5
+          ceil: 9.5,
         },
         {
           txt: "10:00AM",
           id: 2,
-          ceil: 10
+          ceil: 10,
         },
         {
           txt: "10:30AM",
           id: 3,
-          ceil: 10.5
+          ceil: 10.5,
         },
         {
           txt: "11:00AM",
           id: 4,
-          ceil: 11
+          ceil: 11,
         },
         {
           txt: "11:30AM",
           id: 5,
-          ceil: 11.5
+          ceil: 11.5,
         },
         {
           txt: "12:00PM",
           id: 6,
-          ceil: 12
+          ceil: 12,
         },
         {
           txt: "12:30PM",
           id: 7,
-          ceil: 12.5
+          ceil: 12.5,
         },
         {
           txt: "01:00PM",
           id: 8,
-          ceil: 13
+          ceil: 13,
         },
         {
           txt: "01:30PM",
           id: 9,
-          ceil: 13.5
+          ceil: 13.5,
         },
         {
           txt: "02:00PM",
           id: 10,
-          ceil: 14
+          ceil: 14,
         },
         {
           txt: "02:30PM",
           id: 11,
-          ceil: 14.5
+          ceil: 14.5,
         },
         {
           txt: "03:00PM",
           id: 12,
-          ceil: 15
+          ceil: 15,
         },
         {
           txt: "03:30PM",
           id: 13,
-          ceil: 15.5
+          ceil: 15.5,
         },
         {
           txt: "04:00PM",
           id: 14,
-          ceil: 16
+          ceil: 16,
         },
         {
           txt: "04:30PM",
           id: 15,
-          ceil: 16.5
+          ceil: 16.5,
         },
         {
           txt: "05:00PM",
           id: 16,
-          ceil: 17
+          ceil: 17,
         },
         {
           txt: "05:30PM",
           id: 17,
-          ceil: 17.5
+          ceil: 17.5,
         },
         {
           txt: "06:00PM",
           id: 18,
-          ceil: 18
+          ceil: 18,
         },
         {
           txt: "06:30PM",
           id: 19,
-          ceil: 18.5
+          ceil: 18.5,
         },
         {
           txt: "07:00PM",
           id: 20,
-          ceil: 19
+          ceil: 19,
         },
         {
           txt: "07:30PM",
           id: 21,
-          ceil: 19.5
+          ceil: 19.5,
         },
         {
           txt: "08:00PM",
           id: 22,
-          ceil: 20
+          ceil: 20,
         },
         {
           txt: "08:30PM",
           id: 23,
-          ceil: 20.5
+          ceil: 20.5,
         },
         {
           txt: "09:00PM",
           id: 24,
-          ceil: 21
+          ceil: 21,
         },
         {
           txt: "09:30PM",
           id: 25,
-          ceil: 21.5
+          ceil: 21.5,
         },
         {
           txt: "10:00PM",
           id: 26,
-          ceil: 22
+          ceil: 22,
         },
         {
           txt: "10:30PM",
           id: 27,
-          ceil: 22.5
+          ceil: 22.5,
         },
         {
           txt: "11:00PM",
           id: 28,
-          ceil: 23
+          ceil: 23,
         },
         {
           txt: "11:30PM",
           id: 29,
-          ceil: 23.5
+          ceil: 23.5,
         },
         {
           txt: "12:00AM",
           id: 30,
-          ceil: 24
+          ceil: 24,
         },
         {
           txt: "12:30AM",
           id: 31,
-          ceil: 24.5
+          ceil: 24.5,
         },
         {
           txt: "01:00AM",
           id: 32,
-          ceil: 25
+          ceil: 25,
         },
         {
           txt: "01:30AM",
           id: 33,
-          ceil: 25.5
-        }
+          ceil: 25.5,
+        },
       ],
       modalVisible: false,
       timeModalVisible: false,
       showdatePicker: false,
       currentTime: new Date(),
       actualTimeInterval: [
-        // {
-        //   txt: "09:00AM",
-        //   id: 0,
-        //   ceil: 9
-        // },
-        // {
-        //   txt: "09:30AM",
-        //   id: 1,
-        //   ceil: 9.5
-        // },
-        // {
-        //   txt: "10:00AM",
-        //   id: 2,
-        //   ceil: 10
-        // },
-        // {
-        //   txt: "10:30AM",
-        //   id: 3,
-        //   ceil: 10.5
-        // },
-        // {
-        //   txt: "11:00AM",
-        //   id: 4,
-        //   ceil: 11
-        // },
-        // {
-        //   txt: "11:30AM",
-        //   id: 5,
-        //   ceil: 11.5
-        // },
-        // {
-        //   txt: "12:00PM",
-        //   id: 6,
-        //   ceil: 12
-        // },
+        {
+          txt: "09:00AM",
+          id: 0,
+          ceil: 9,
+        },
+        {
+          txt: "09:30AM",
+          id: 1,
+          ceil: 9.5,
+        },
+        {
+          txt: "10:00AM",
+          id: 2,
+          ceil: 10,
+        },
+        {
+          txt: "10:30AM",
+          id: 3,
+          ceil: 10.5,
+        },
+        {
+          txt: "11:00AM",
+          id: 4,
+          ceil: 11,
+        },
+        {
+          txt: "11:30AM",
+          id: 5,
+          ceil: 11.5,
+        },
+        {
+          txt: "12:00PM",
+          id: 6,
+          ceil: 12,
+        },
         {
           txt: "12:30PM",
           id: 7,
-          ceil: 12.5
+          ceil: 12.5,
         },
         {
           txt: "01:00PM",
           id: 8,
-          ceil: 13
+          ceil: 13,
         },
         {
           txt: "01:30PM",
           id: 9,
-          ceil: 13.5
+          ceil: 13.5,
         },
         {
           txt: "02:00PM",
           id: 10,
-          ceil: 14
+          ceil: 14,
         },
         {
           txt: "02:30PM",
           id: 11,
-          ceil: 14.5
+          ceil: 14.5,
         },
         {
           txt: "03:00PM",
           id: 12,
-          ceil: 15
+          ceil: 15,
         },
         {
           txt: "03:30PM",
           id: 13,
-          ceil: 15.5
+          ceil: 15.5,
         },
         {
           txt: "04:00PM",
           id: 14,
-          ceil: 16
+          ceil: 16,
         },
         {
           txt: "04:30PM",
           id: 15,
-          ceil: 16.5
+          ceil: 16.5,
         },
         {
           txt: "05:00PM",
           id: 16,
-          ceil: 17
+          ceil: 17,
         },
         {
           txt: "05:30PM",
           id: 17,
-          ceil: 17.5
+          ceil: 17.5,
         },
         {
           txt: "06:00PM",
           id: 18,
-          ceil: 18
+          ceil: 18,
         },
         {
           txt: "06:30PM",
           id: 19,
-          ceil: 18.5
+          ceil: 18.5,
         },
         {
           txt: "07:00PM",
           id: 20,
-          ceil: 19
+          ceil: 19,
         },
         {
           txt: "07:30PM",
           id: 21,
-          ceil: 19.5
+          ceil: 19.5,
         },
         {
           txt: "08:00PM",
           id: 22,
-          ceil: 20
+          ceil: 20,
         },
         {
           txt: "08:30PM",
           id: 23,
-          ceil: 20.5
+          ceil: 20.5,
         },
         {
           txt: "09:00PM",
           id: 24,
-          ceil: 21
+          ceil: 21,
         },
         {
           txt: "09:30PM",
           id: 25,
-          ceil: 21.5
+          ceil: 21.5,
         },
         {
           txt: "10:00PM",
           id: 26,
-          ceil: 22
+          ceil: 22,
         },
-        {
-          txt: "10:30PM",
-          id: 27,
-          ceil: 22.5
-        },
-        {
-          txt: "11:00PM",
-          id: 28,
-          ceil: 23
-        },
-        {
-          txt: "11:30PM",
-          id: 29,
-          ceil: 23.5
-        },
-        {
-          txt: "12:00AM",
-          id: 30,
-          ceil: 24
-        },
-        {
-          txt: "12:30AM",
-          id: 31,
-          ceil: 24.5
-        },
-        {
-          txt: "01:00AM",
-          id: 32,
-          ceil: 25
-        },
-        {
-          txt: "01:30AM",
-          id: 33,
-          ceil: 25.5
-        }
+        // {
+        //   txt: "10:30PM",
+        //   id: 27,
+        //   ceil: 22.5,
+        // },
+        // {
+        //   txt: "11:00PM",
+        //   id: 28,
+        //   ceil: 23,
+        // },
+        // {
+        //   txt: "11:30PM",
+        //   id: 29,
+        //   ceil: 23.5,
+        // },
+        // {
+        //   txt: "12:00AM",
+        //   id: 30,
+        //   ceil: 24,
+        // },
+        // {
+        //   txt: "12:30AM",
+        //   id: 31,
+        //   ceil: 24.5,
+        // },
+        // {
+        //   txt: "01:00AM",
+        //   id: 32,
+        //   ceil: 25,
+        // },
+        // {
+        //   txt: "01:30AM",
+        //   id: 33,
+        //   ceil: 25.5,
+        // },
       ],
       time: null,
       date: null,
-      cancelOrderModalVisible: false
+      cancelOrderModalVisible: false,
     };
   }
   componentDidMount = () => {
@@ -424,13 +424,13 @@ export default class OrderDetailsSecreen extends React.Component {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ orderid: order.orderid })
+        body: JSON.stringify({ orderid: order.orderid }),
       }
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         if (responseJson.error === false) {
           this.setState({
             orderDetail: responseJson,
@@ -439,18 +439,18 @@ export default class OrderDetailsSecreen extends React.Component {
             order: order,
             lan: lan,
             user: user,
-            loading: false
+            loading: false,
           });
         } else {
           this.setState({ loading: false });
         }
       })
-      .catch(error => {});
+      .catch((error) => {});
     let time = new Date().getHours() + "." + new Date().getMinutes();
     let t = parseFloat(time) + 0.72;
     let copyIntervals = ([] = []);
 
-    this.state.actualTimeInterval.forEach(slot => {
+    this.state.actualTimeInterval.forEach((slot) => {
       if (parseFloat(slot.ceil) > t) {
         copyIntervals.push(slot);
       }
@@ -493,17 +493,17 @@ export default class OrderDetailsSecreen extends React.Component {
       );
     }
   };
-  selectComponent = activePage => {
+  selectComponent = (activePage) => {
     this.setState({ activePage: activePage });
   };
-  componentWillReceiveProps = newProps => {
+  componentWillReceiveProps = (newProps) => {
     this.componentDidMount();
     // this.setState({
     //   isHistory: newProps.navigation.getParam("isHistory"),
     //   orderDetail: newProps.navigation.getParam("order")
     // });
   };
-  selectReason = index => {
+  selectReason = (index) => {
     if (index === this.state.reason) {
       this.setState({ reason: 0 });
     } else {
@@ -520,13 +520,13 @@ export default class OrderDetailsSecreen extends React.Component {
           lan: this.state.lan,
           support: this.state.orderDetail.support,
           complaintType: this.state.orderDetail.supporttype,
-          orderId: this.state.orderDetail.orderid
+          orderId: this.state.orderDetail.orderid,
         });
       } else {
         this.props.navigation.navigate("ComplaintTypes", {
           lan: this.state.lan,
           orderId: this.state.orderDetail.orderid,
-          support: this.state.orderDetail.support
+          support: this.state.orderDetail.support,
         });
       }
     } else {
@@ -535,7 +535,7 @@ export default class OrderDetailsSecreen extends React.Component {
           this.state.lan === "en"
             ? "You can open a ticket for any order in 1 week from the date when the service has been delivered"
             : "تستطيع فتح شكوى لأي طلب خدمة خلال إسبوع واحد من تاريخ تسلٌم الخدمة",
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
@@ -543,7 +543,7 @@ export default class OrderDetailsSecreen extends React.Component {
     if (this.state.reason > 0) {
       let obj = {
         orderid: this.state.order.orderid,
-        reason: this.state.cancelReason[this.state.reason - 1]
+        reason: this.state.cancelReason[this.state.reason - 1],
       };
 
       if (this.state.reason !== 0) {
@@ -554,20 +554,20 @@ export default class OrderDetailsSecreen extends React.Component {
             method: "POST",
             headers: {
               Accept: "application/json",
-              "Content-Type": "application/json"
+              "Content-Type": "application/json",
             },
-            body: JSON.stringify(obj)
+            body: JSON.stringify(obj),
           }
         )
-          .then(response => response.json())
-          .then(responseJson => {
+          .then((response) => response.json())
+          .then((responseJson) => {
             if (responseJson.error === false) {
               Toast.show({
                 text:
                   this.state.lan === "en"
                     ? "Your Order has been Canceled!"
                     : "تم إلغاء طلبك",
-                position: "bottom"
+                position: "bottom",
               });
               this.props.navigation.goBack();
             } else {
@@ -576,12 +576,12 @@ export default class OrderDetailsSecreen extends React.Component {
                   this.state.lan === "en"
                     ? "Try again later!"
                     : "حاول مره اخرى لاحقاً",
-                position: "bottom"
+                position: "bottom",
               });
             }
             this.setState({ cancelOrderModalVisible: false, loading: false });
           })
-          .catch(error => {});
+          .catch((error) => {});
       }
     } else {
       Toast.show({
@@ -589,7 +589,7 @@ export default class OrderDetailsSecreen extends React.Component {
           this.state.lan === "en"
             ? "Please select any reason first!"
             : "يرجى تحديد اي سبب اولاً",
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
@@ -599,10 +599,10 @@ export default class OrderDetailsSecreen extends React.Component {
   hideModal = () => {
     this.setState({ modalVisible: false, showdatePicker: false });
   };
-  selectThisSlot = slot => {
-    let index = this.state.timeInterval.findIndex(t => t.id === slot.id);
+  selectThisSlot = (slot) => {
+    let index = this.state.timeInterval.findIndex((t) => t.id === slot.id);
     let selectedIndex = this.state.timeInterval.findIndex(
-      s => s.isSelected === true
+      (s) => s.isSelected === true
     );
     let copyIntervals = this.state.timeInterval.slice();
     if (selectedIndex > -1) {
@@ -624,26 +624,248 @@ export default class OrderDetailsSecreen extends React.Component {
     this.setState({ cancelOrderModalVisible: false });
   };
   saveTimeSlot = () => {
-    let index = this.state.timeInterval.findIndex(t => t.isSelected === true);
+    let index = this.state.timeInterval.findIndex((t) => t.isSelected === true);
     this.setState({
       time: this.state.timeInterval[index].txt,
-      timeModalVisible: false
+      timeModalVisible: false,
     });
   };
   showScheduleModal = () => {
     this.setState({ modalVisible: true });
   };
-  handleDatePicked = date => {
+
+  handleDatePicked = async (date) => {
+    console.log("Handle Date Picked");
+    this.hideDatePicker();
+    if (date.getDay() == 5) {
+      console.log("Change Timings");
+      await this.setState({
+        actualTimeInterval: [
+          {
+            txt: "4:00PM",
+            id: 14,
+            ceil: 16,
+          },
+          {
+            txt: "4:30PM",
+            id: 15,
+            ceil: 16.5,
+          },
+          {
+            txt: "5:00PM",
+            id: 16,
+            ceil: 17,
+          },
+          {
+            txt: "5:30PM",
+            id: 17,
+            ceil: 17.5,
+          },
+          {
+            txt: "6:00PM",
+            id: 18,
+            ceil: 18,
+          },
+          {
+            txt: "6:30PM",
+            id: 19,
+            ceil: 18.5,
+          },
+          {
+            txt: "7:00PM",
+            id: 20,
+            ceil: 19,
+          },
+          {
+            txt: "7:30PM",
+            id: 21,
+            ceil: 19.5,
+          },
+          {
+            txt: "8:00PM",
+            id: 22,
+            ceil: 20,
+          },
+          {
+            txt: "8:30PM",
+            id: 23,
+            ceil: 20.5,
+          },
+          {
+            txt: "9:00PM",
+            id: 24,
+            ceil: 21,
+          },
+          {
+            txt: "9:30PM",
+            id: 25,
+            ceil: 21.5,
+          },
+          {
+            txt: "10:00PM",
+            id: 26,
+            ceil: 22,
+          },
+        ],
+      });
+
+      console.log(this.state.actualTimeInterval);
+    } else {
+      await this.setState({
+        actualTimeInterval: [
+          {
+            txt: "9:00AM",
+            id: 0,
+            ceil: 9,
+          },
+          {
+            txt: "9:30AM",
+            id: 1,
+            ceil: 9.5,
+          },
+          {
+            txt: "10:00AM",
+            id: 2,
+            ceil: 10,
+          },
+          {
+            txt: "10:30AM",
+            id: 3,
+            ceil: 10.5,
+          },
+          {
+            txt: "11:00AM",
+            id: 4,
+            ceil: 11,
+          },
+          {
+            txt: "11:30AM",
+            id: 5,
+            ceil: 11.5,
+          },
+          {
+            txt: "12:00PM",
+            id: 6,
+            ceil: 12,
+          },
+
+          // Was Commented Above
+          {
+            txt: "12:30PM",
+            id: 7,
+            ceil: 12.5,
+          },
+          {
+            txt: "1:00PM",
+            id: 8,
+            ceil: 13,
+          },
+          {
+            txt: "1:30PM",
+            id: 9,
+            ceil: 13.5,
+          },
+          {
+            txt: "2:00PM",
+            id: 10,
+            ceil: 14,
+          },
+          {
+            txt: "2:30PM",
+            id: 11,
+            ceil: 14.5,
+          },
+          {
+            txt: "3:00PM",
+            id: 12,
+            ceil: 15,
+          },
+          {
+            txt: "3:30PM",
+            id: 13,
+            ceil: 15.5,
+          },
+          {
+            txt: "4:00PM",
+            id: 14,
+            ceil: 16,
+          },
+          {
+            txt: "4:30PM",
+            id: 15,
+            ceil: 16.5,
+          },
+          {
+            txt: "5:00PM",
+            id: 16,
+            ceil: 17,
+          },
+          {
+            txt: "5:30PM",
+            id: 17,
+            ceil: 17.5,
+          },
+          {
+            txt: "6:00PM",
+            id: 18,
+            ceil: 18,
+          },
+          {
+            txt: "6:30PM",
+            id: 19,
+            ceil: 18.5,
+          },
+          {
+            txt: "7:00PM",
+            id: 20,
+            ceil: 19,
+          },
+          {
+            txt: "7:30PM",
+            id: 21,
+            ceil: 19.5,
+          },
+          {
+            txt: "8:00PM",
+            id: 22,
+            ceil: 20,
+          },
+          {
+            txt: "8:30PM",
+            id: 23,
+            ceil: 20.5,
+          },
+          {
+            txt: "9:00PM",
+            id: 24,
+            ceil: 21,
+          },
+          {
+            txt: "9:30PM",
+            id: 25,
+            ceil: 21.5,
+          },
+          {
+            txt: "10:00PM",
+            id: 26,
+            ceil: 22,
+          },
+        ],
+      });
+    }
+
     if (date > new Date()) {
+      console.log("inside if");
+
       this.setState({
         time: null,
-        timeInterval: this.state.actualTimeInterval
+        timeInterval: this.state.actualTimeInterval,
       });
     } else {
       let copyIntervals = ([] = []);
       let time = new Date().getHours() + "." + new Date().getMinutes();
       let t = parseFloat(time) + 0.72;
-      this.state.actualTimeInterval.forEach(slot => {
+      this.state.actualTimeInterval.forEach((slot) => {
         if (parseFloat(slot.ceil) > t) {
           copyIntervals.push(slot);
         }
@@ -655,24 +877,27 @@ export default class OrderDetailsSecreen extends React.Component {
         this.setState({ currentTime: tomorrow });
       }
       this.setState({ time: null, timeInterval: copyIntervals });
+      // console.log("Before", this.state.showdatePicker);
     }
     let month = date.getMonth() + 1;
     if (month < 10) {
       month = "0" + month;
     }
     let finalDate = date.getDate() + "/" + month + "/" + date.getFullYear();
+    console.log(this.state.showdatePicker);
     this.setState({ date: finalDate, showdatePicker: false });
+    console.log(this.state.showdatePicker);
   };
   submitRescheduleRequest = () => {
     this.setState({ loading: true, modalVisible: false });
     let index = this.state.timeInterval.findIndex(
-      t => t.txt === this.state.time
+      (t) => t.txt === this.state.time
     );
     if (this.state.time && this.state.date !== null) {
       let obj = {
         orderid: this.state.order.orderid,
         servicedate: this.state.date,
-        servicetimeid: this.state.timeInterval[index].id
+        servicetimeid: this.state.timeInterval[index].id,
       };
       fetch(
         "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/V1.2/reschedule_order",
@@ -680,13 +905,13 @@ export default class OrderDetailsSecreen extends React.Component {
           method: "POST",
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(obj)
+          body: JSON.stringify(obj),
         }
       )
-        .then(response => response.json())
-        .then(responseJson => {
+        .then((response) => response.json())
+        .then((responseJson) => {
           this.setState({ modalVisible: false, loading: false });
           if (responseJson.error === false) {
             Toast.show({
@@ -694,11 +919,11 @@ export default class OrderDetailsSecreen extends React.Component {
                 this.state.lan === "en"
                   ? "Your Order has been ReScheduled!"
                   : "تم إعادة جدولة طلبك",
-              position: "bottom"
+              position: "bottom",
             });
             this.props.navigation.navigate("MyOrders", {
               lan: this.state.lan,
-              cartItem: 0
+              cartItem: 0,
             });
           } else {
             Toast.show({
@@ -706,18 +931,18 @@ export default class OrderDetailsSecreen extends React.Component {
                 this.state.lan === "en"
                   ? "Try again later!"
                   : "حاول مره اخرى لاحقاً",
-              position: "bottom"
+              position: "bottom",
             });
           }
         })
-        .catch(error => {});
+        .catch((error) => {});
     } else {
       Toast.show({
         text:
           this.state.lan === "en"
             ? "Select Date and Time First!"
             : "اختر التاريخ والوقت اولاًاً",
-        position: "bottom"
+        position: "bottom",
       });
     }
   };
@@ -725,9 +950,11 @@ export default class OrderDetailsSecreen extends React.Component {
     this.setState({ timeModalVisible: true });
   };
   showThisDatePicker = () => {
+    console.log("show this date picker");
     this.setState({ showdatePicker: true });
   };
   hideDatePicker = () => {
+    console.log("hideDatePicker");
     this.setState({ showdatePicker: false });
   };
   onShare = async () => {
@@ -738,7 +965,7 @@ export default class OrderDetailsSecreen extends React.Component {
             ? "Order home repair and maintenance services 💇🏻‍♀ 🏡 and Get SAR 15 on your first order from Wafarnalak 🤩🥳 !Download the app📲 https://onelink.to/p56krz and use my referral code " +
               this.state.user.referralcode
             : "اطلب خدمات اصلاح وصيانة المنزل 💇🏻‍♀ 🏡 واحصل على 15 ريال في طلبك الأول من وفرنالك 🤩🥳 عند تنزيل التطبيق https://onelink.to/wg5k82 📲 واستخدم رمز الدعوة الخاص بي " +
-              this.state.user.referralcode
+              this.state.user.referralcode,
       });
     } catch (error) {
       alert(error.message);
@@ -758,7 +985,7 @@ export default class OrderDetailsSecreen extends React.Component {
             backgroundColor: "#ffffff",
             height: 60,
             justifyContent: "center",
-            borderBottomWidth: 1
+            borderBottomWidth: 1,
           }}
         >
           <Left style={{ marginLeft: 10 }}>
@@ -779,14 +1006,14 @@ export default class OrderDetailsSecreen extends React.Component {
               justifyContent: "center",
               alignItems: "center",
               position: Platform.OS === "android" ? "absolute" : "relative",
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           >
             <Title
               style={{
                 fontFamily: "montserrat_semi_blod",
                 color: "#0866b0",
-                fontSize: 18
+                fontSize: 18,
               }}
             >
               {this.state.lan == "en" ? "My Orders" : "طلباتي"}
@@ -799,7 +1026,7 @@ export default class OrderDetailsSecreen extends React.Component {
             backgroundColor: "white",
             marginLeft: 8,
             marginRight: 8,
-            borderBottomWidth: 0
+            borderBottomWidth: 0,
           }}
         >
           <Spinner visible={this.state.activePage == 0} textContent={""} />
@@ -808,7 +1035,7 @@ export default class OrderDetailsSecreen extends React.Component {
               backgroundColor: "#F5F5F5",
               alignSelf: "center",
               height: "100%",
-              width: Dimensions.get("screen").width - 30
+              width: Dimensions.get("screen").width - 30,
             }}
           >
             <View>
@@ -816,7 +1043,7 @@ export default class OrderDetailsSecreen extends React.Component {
                 style={{
                   flexDirection: "row",
                   justifyContent: "flex-start",
-                  margin: 16
+                  margin: 16,
                 }}
               >
                 <View>
@@ -825,7 +1052,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     style={{
                       width: 55,
                       height: 55,
-                      borderRadius: 10
+                      borderRadius: 10,
                     }}
                     resizeMode="contain"
                   />
@@ -834,14 +1061,14 @@ export default class OrderDetailsSecreen extends React.Component {
                   style={{
                     alignContent: "center",
                     justifyContent: "center",
-                    marginLeft: 8
+                    marginLeft: 8,
                   }}
                 >
                   <Text
                     style={{
                       color: "#4a4b4c",
                       fontSize: 12,
-                      textAlign: "left"
+                      textAlign: "left",
                     }}
                   >
                     {this.state.lan === "en" ? "Order#:" : "طلب#"}{" "}
@@ -851,7 +1078,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     style={{
                       color: "#4a4b4c",
                       fontSize: 10,
-                      textAlign: "left"
+                      textAlign: "left",
                     }}
                   >
                     {this.state.lan == "en" ? "Date:" : "الطلبات السابقة"}{" "}
@@ -862,7 +1089,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     style={{
                       color: "#4a4b4c",
                       fontSize: 12,
-                      textAlign: "left"
+                      textAlign: "left",
                     }}
                   >
                     {this.state.lan == "en" ? "Status:" : "الحالة:"}{" "}
@@ -899,7 +1126,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         <Text
                           style={{
                             color: "#4a4b4c",
-                            fontSize: 12
+                            fontSize: 12,
                           }}
                         >
                           Complaint Status:{" "}
@@ -918,7 +1145,7 @@ export default class OrderDetailsSecreen extends React.Component {
                             color: "#4a4b4c",
                             fontSize: 12,
                             marginTop: 4,
-                            textAlign: "left"
+                            textAlign: "left",
                           }}
                         >
                           حالة الشكوى:{" "}
@@ -958,7 +1185,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         <Text
                           style={{
                             fontFamily: "montserrat_arabic_regular",
-                            alignItems: "center"
+                            alignItems: "center",
                           }}
                         >
                           الدعم الفني
@@ -979,7 +1206,7 @@ export default class OrderDetailsSecreen extends React.Component {
               style={{
                 marginTop: 25,
                 flexDirection: "row",
-                alignSelf: "center"
+                alignSelf: "center",
               }}
             >
               {this.state.isHistory == false ? (
@@ -993,7 +1220,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     width: 150,
                     height: 40,
                     marginRight: 6,
-                    borderColor: "transparent"
+                    borderColor: "transparent",
                   }}
                 >
                   <TouchableOpacity onPress={() => this.selectComponent(1)}>
@@ -1004,14 +1231,14 @@ export default class OrderDetailsSecreen extends React.Component {
                         borderRadius: 6,
                         width: 150,
                         height: 40,
-                        borderWidth: 0
+                        borderWidth: 0,
                       }}
                     >
                       <View
                         style={{
                           flex: 1,
                           alignItems: "center",
-                          justifyContent: "center"
+                          justifyContent: "center",
                         }}
                       >
                         <Text
@@ -1021,7 +1248,7 @@ export default class OrderDetailsSecreen extends React.Component {
 
                             fontSize: 14,
 
-                            fontWeight: "bold"
+                            fontWeight: "bold",
                           }}
                         >
                           {this.state.lan == "en"
@@ -1045,7 +1272,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   height: 40,
                   width: 150,
                   marginLeft: 6,
-                  marginRight: 6
+                  marginRight: 6,
                 }}
               >
                 <TouchableOpacity onPress={() => this.selectComponent(2)}>
@@ -1056,14 +1283,14 @@ export default class OrderDetailsSecreen extends React.Component {
                       borderWidth: 0,
                       height: 40,
                       width: 150,
-                      borderRadius: 6
+                      borderRadius: 6,
                     }}
                   >
                     <View
                       style={{
                         flex: 1,
                         alignItems: "center",
-                        justifyContent: "center"
+                        justifyContent: "center",
                       }}
                     >
                       <Text
@@ -1071,7 +1298,7 @@ export default class OrderDetailsSecreen extends React.Component {
                           color:
                             this.state.activePage === 2 ? "white" : "#6ea8cd",
                           fontSize: 14,
-                          fontWeight: "bold"
+                          fontWeight: "bold",
                         }}
                       >
                         {this.state.lan == "en"
@@ -1091,7 +1318,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     borderRadius: 6,
                     height: 40,
                     width: 150,
-                    marginLeft: 6
+                    marginLeft: 6,
                   }}
                 >
                   <TouchableOpacity onPress={() => this.selectComponent(3)}>
@@ -1102,14 +1329,14 @@ export default class OrderDetailsSecreen extends React.Component {
                         borderWidth: 0,
                         height: 40,
                         width: 150,
-                        borderRadius: 6
+                        borderRadius: 6,
                       }}
                     >
                       <View
                         style={{
                           flex: 1,
                           alignItems: "center",
-                          justifyContent: "center"
+                          justifyContent: "center",
                         }}
                       >
                         <Text
@@ -1117,7 +1344,7 @@ export default class OrderDetailsSecreen extends React.Component {
                             color:
                               this.state.activePage === 3 ? "white" : "#6ea8cd",
                             fontSize: 14,
-                            fontWeight: "bold"
+                            fontWeight: "bold",
                           }}
                         >
                           {this.state.lan == "en" ? "Invoice" : "فاتورة"}
@@ -1144,18 +1371,23 @@ export default class OrderDetailsSecreen extends React.Component {
                   flex: 1,
                   backgroundColor: "#F5F5F5",
                   // width: "100%",
-                  width: Dimensions.get("screen").width - 30
+                  width: Dimensions.get("screen").width - 30,
                 }}
               >
                 {this.state.orderDetail &&
                 this.state.orderDetail.statusid !== 6 ? (
-                  <TouchableWithoutFeedback onPress={this.showScheduleModal}>
+                  <TouchableWithoutFeedback
+                    onPress={this.showScheduleModal}
+                    // disabled={true}
+                    // style={{ opacity: 0 }}
+                  >
                     <View
                       style={{
                         alignItems: "center",
                         justifyContent: "center",
                         alignSelf: "center",
-                        flex: 1
+                        flex: 1,
+                        // opacity: 0,
                       }}
                     >
                       <Image
@@ -1182,7 +1414,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         alignItems: "center",
                         justifyContent: "center",
                         alignSelf: "center",
-                        flex: 1
+                        flex: 1,
                       }}
                     >
                       <Image
@@ -1213,7 +1445,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     marginBottom: 10,
                     flex: 1,
                     backgroundColor: "#F5F5F5",
-                    width: Dimensions.get("screen").width - 30
+                    width: Dimensions.get("screen").width - 30,
                   }}
                 >
                   <Image
@@ -1233,7 +1465,7 @@ export default class OrderDetailsSecreen extends React.Component {
                 style={{
                   backgroundColor: "#F5F5F5",
                   width: Dimensions.get("screen").width - 30,
-                  marginBottom: 5
+                  marginBottom: 5,
                 }}
               >
                 <View style={{ marginTop: 10, alignSelf: "center" }}>
@@ -1245,7 +1477,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     <Text
                       style={{
                         color: "#0865b0",
-                        fontSize: 18
+                        fontSize: 18,
                       }}
                     >
                       كود الإحالة الخاص بك
@@ -1259,7 +1491,7 @@ export default class OrderDetailsSecreen extends React.Component {
                       backgroundColor: "white",
                       width: Dimensions.get("screen").width - 70,
                       height: 40,
-                      marginTop: 12
+                      marginTop: 12,
                     }}
                   >
                     <View
@@ -1268,14 +1500,14 @@ export default class OrderDetailsSecreen extends React.Component {
                         alignItems: "center",
                         justifyContent: "center",
                         flex: 1,
-                        flexDirection: "row"
+                        flexDirection: "row",
                       }}
                     >
                       <Text
                         style={{
                           color: "#0865b0",
                           fontWeight: "bold",
-                          fontSize: 18
+                          fontSize: 18,
                         }}
                       >
                         {this.state.user.referralcode}
@@ -1292,7 +1524,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   style={{
                     alignSelf: "center",
                     marginTop: 20,
-                    marginBottom: 10
+                    marginBottom: 10,
                   }}
                 >
                   {this.state.lan === "en" ? (
@@ -1302,7 +1534,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         paddingLeft: 20,
                         paddingRight: 20,
                         fontSize: 14,
-                        color: "#4a4b4c"
+                        color: "#4a4b4c",
                       }}
                     >
                       Share your code with your friends, after their first order
@@ -1316,7 +1548,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         fontSize: 14,
                         lineHeight: 18,
                         marginLeft: 6,
-                        marginRight: 6
+                        marginRight: 6,
                       }}
                     >
                       شارك الرمز الخاص بك مع أصدقائك ، بمجرد إجرائهم اول طلب
@@ -1343,7 +1575,7 @@ export default class OrderDetailsSecreen extends React.Component {
               height: 340,
               borderRadius: 20,
               width: 330,
-              backgroundColor: "#0764af"
+              backgroundColor: "#0764af",
             }}
           >
             <View style={{ flex: 1, alignSelf: "center", marginTop: -24 }}>
@@ -1371,7 +1603,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   style={{
                     fontFamily: "montserrat_arabic_regular",
                     color: "white",
-                    fontSize: 25
+                    fontSize: 25,
                   }}
                 >
                   الغاء الطلب
@@ -1386,7 +1618,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   style={{
                     color: "white",
                     fontSize: 13,
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   Please tell us why you want to cancel this project?
@@ -1397,7 +1629,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     fontFamily: "montserrat_arabic_regular",
                     color: "white",
                     fontSize: 13,
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   الرجاء إخبارنا لماذا تريد إلغاء هذا المشروع
@@ -1436,7 +1668,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         fontFamily: "montserrat_arabic_regular",
                         color: "white",
                         fontSize: 13,
-                        marginTop: 3.5
+                        marginTop: 3.5,
                       }}
                     >
                       لقد استأجرت شخص ما خارج وفرنا لك
@@ -1473,7 +1705,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         fontFamily: "montserrat_arabic_regular",
                         color: "white",
                         fontSize: 13,
-                        marginTop: 3.5
+                        marginTop: 3.5,
                       }}
                     >
                       قدمت الطلب عن طريق الخطأ
@@ -1510,7 +1742,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         fontFamily: "montserrat_arabic_regular",
                         color: "white",
                         fontSize: 13,
-                        marginTop: 3.5
+                        marginTop: 3.5,
                       }}
                     >
                       لم يعجبني الردود
@@ -1547,7 +1779,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         fontFamily: "montserrat_arabic_regular",
                         color: "white",
                         fontSize: 13,
-                        marginTop: 3.5
+                        marginTop: 3.5,
                       }}
                     >
                       لقد غيرت خططي
@@ -1584,7 +1816,7 @@ export default class OrderDetailsSecreen extends React.Component {
                         fontFamily: "montserrat_arabic_regular",
                         color: "white",
                         fontSize: 13,
-                        marginTop: 3.5
+                        marginTop: 3.5,
                       }}
                     >
                       طلب مني المهنية للإلغاء
@@ -1601,7 +1833,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   height: 30,
                   backgroundColor: "#6ea8cd",
                   marginTop: 20,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
               >
                 {this.state.lan === "en" ? (
@@ -1615,7 +1847,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     style={{
                       fontFamily: "montserrat_arabic_regular",
                       color: "white",
-                      marginLeft: 15
+                      marginLeft: 15,
                     }}
                   >
                     تسليم
@@ -1637,7 +1869,7 @@ export default class OrderDetailsSecreen extends React.Component {
               height: 300,
               borderRadius: 20,
               width: 330,
-              backgroundColor: "#0764af"
+              backgroundColor: "#0764af",
             }}
           >
             <View style={{ flex: 1, alignSelf: "center", marginTop: -24 }}>
@@ -1665,7 +1897,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   style={{
                     fontFamily: "montserrat_arabic_regular",
                     color: "white",
-                    fontSize: 25
+                    fontSize: 25,
                   }}
                 >
                   إعادة جدولة الطلب
@@ -1684,14 +1916,17 @@ export default class OrderDetailsSecreen extends React.Component {
                   style={{
                     fontFamily: "montserrat_arabic_regular",
                     fontSize: 12,
-                    color: "white"
+                    color: "white",
                   }}
                 >
                   يرجى اختر التاريخ والوقت اولاً
                 </Text>
               )}
             </View>
-            <TouchableWithoutFeedback onPress={this.showThisDatePicker}>
+            <TouchableWithoutFeedback
+              onPress={this.showThisDatePicker}
+              // disabled={true}
+            >
               <View
                 style={{
                   alignSelf: "center",
@@ -1700,7 +1935,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   width: 230,
                   height: 35,
                   backgroundColor: "white",
-                  borderRadius: 15
+                  borderRadius: 15,
                 }}
               >
                 {this.state.date === null ? (
@@ -1708,7 +1943,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     style={{
                       textAlign: "center",
                       color: "#4a4b4c",
-                      marginTop: 8
+                      marginTop: 8,
                     }}
                   >
                     MM/DD/YYYY
@@ -1718,7 +1953,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     style={{
                       textAlign: "center",
                       color: "#4a4b4c",
-                      marginTop: 8
+                      marginTop: 8,
                     }}
                   >
                     {this.state.date}
@@ -1736,7 +1971,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   width: 230,
                   height: 35,
                   backgroundColor: "white",
-                  borderRadius: 15
+                  borderRadius: 15,
                 }}
               >
                 {this.state.time !== null ? (
@@ -1744,7 +1979,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     style={{
                       color: "#4a4b4c",
                       textAlign: "center",
-                      marginTop: 8
+                      marginTop: 8,
                     }}
                   >
                     {this.state.time}
@@ -1754,7 +1989,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     style={{
                       color: "#4a4b4c",
                       textAlign: "center",
-                      marginTop: 8
+                      marginTop: 8,
                     }}
                   >
                     00:00 AM - 00-00 PM
@@ -1774,7 +2009,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   height: 290,
                   borderRadius: 20,
                   width: 200,
-                  backgroundColor: "white"
+                  backgroundColor: "white",
                 }}
               >
                 <View style={{ alignSelf: "center", marginTop: 18 }}>
@@ -1791,13 +2026,13 @@ export default class OrderDetailsSecreen extends React.Component {
                                 flex: 2,
                                 flexDirection: "row",
                                 alignSelf: "center",
-                                margin: 8
+                                margin: 8,
                               }}
                             >
                               <Text
                                 style={{
                                   marginLeft: slot.isSelected ? 26.5 : 0,
-                                  fontSize: 20
+                                  fontSize: 20,
                                 }}
                               >
                                 {slot.txt}
@@ -1820,7 +2055,7 @@ export default class OrderDetailsSecreen extends React.Component {
                                 height: 1,
                                 backgroundColor: "black",
                                 alignSelf: "center",
-                                marginTop: 4
+                                marginTop: 4,
                               }}
                             ></View>
                           </View>
@@ -1833,7 +2068,7 @@ export default class OrderDetailsSecreen extends React.Component {
                       backgroundColor: "white",
                       flexDirection: "row",
                       alignSelf: "center",
-                      marginBottom: 12
+                      marginBottom: 12,
                     }}
                   >
                     <TouchableOpacity onPress={this.closeTimeModal}>
@@ -1844,7 +2079,7 @@ export default class OrderDetailsSecreen extends React.Component {
                             marginRight: 55,
                             textAlign: "center",
                             color: "#4a4b4c",
-                            fontWeight: "bold"
+                            fontWeight: "bold",
                           }}
                         >
                           Cancel
@@ -1856,7 +2091,7 @@ export default class OrderDetailsSecreen extends React.Component {
                             marginTop: 6,
                             marginRight: 55,
                             textAlign: "center",
-                            color: "#4a4b4c"
+                            color: "#4a4b4c",
                           }}
                         >
                           إلغاء
@@ -1870,7 +2105,7 @@ export default class OrderDetailsSecreen extends React.Component {
                             marginTop: 6,
                             textAlign: "center",
                             color: "#4a4b4c",
-                            fontWeight: "bold"
+                            fontWeight: "bold",
                           }}
                         >
                           Ok
@@ -1882,7 +2117,7 @@ export default class OrderDetailsSecreen extends React.Component {
                             marginTop: 6,
                             textAlign: "center",
                             color: "#4a4b4c",
-                            fontWeight: "bold"
+                            fontWeight: "bold",
                           }}
                         >
                           اوك
@@ -1904,7 +2139,7 @@ export default class OrderDetailsSecreen extends React.Component {
                   borderRadius: 12,
                   height: 30,
                   backgroundColor: "#6ea8cd",
-                  top: 10
+                  top: 10,
                 }}
               >
                 {this.state.lan === "en" ? (
@@ -1918,7 +2153,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     style={{
                       fontFamily: "montserrat_arabic_regular",
                       color: "white",
-                      marginLeft: 15
+                      marginLeft: 15,
                     }}
                   >
                     تسليم
@@ -1930,7 +2165,7 @@ export default class OrderDetailsSecreen extends React.Component {
           <DateTimePicker
             isVisible={this.state.showdatePicker}
             onConfirm={this.handleDatePicked}
-            minimumDate={this.state.currentTime}
+            minimumDate={new Date(2021, 7, 19)}
             mode="date"
             confirmTextIOS="Ok"
             date={this.state.currentTime}

@@ -160,11 +160,11 @@ class Fire {
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
-          console.log("inbox", doc.data()); // For data inside doc
+          //  console.log("inbox", doc.data()); // For data inside doc
           // For doc name
           temp.push(doc.id);
 
-          console.log("checkroom_docfind");
+          // console.log("checkroom_docfind");
         });
         if (temp !== []) {
           const value = temp.find((element) => element === id);
@@ -244,6 +244,7 @@ class Fire {
       senderId,
       receiverId,
       senderMobile,
+      isDeleted,
     } = snapshot.val();
     const { key: _id } = snapshot;
     const timestamp = new Date(numberStamp);
@@ -254,6 +255,7 @@ class Fire {
       senderId,
       receiverId,
       senderMobile,
+      isDeleted,
     };
     return message;
   };
@@ -298,6 +300,7 @@ class Fire {
         type,
         uri,
         location,
+        isDeleted,
       } = messages[i];
       console.log("Before if");
 
@@ -317,8 +320,9 @@ class Fire {
           senderMobile,
           createdAt: created,
           type,
+          isDeleted,
         };
-        console.log("PPP");
+        // console.log("PPP");
         const id = receiverId.concat(senderId);
         this.append(message, id);
       } else if (type == "image") {
@@ -333,6 +337,7 @@ class Fire {
           createdAt: created,
           type,
           image,
+          isDeleted,
         };
         const id = receiverId.concat(senderId);
         this.append(message, id);
@@ -348,6 +353,7 @@ class Fire {
           createdAt: created,
           type,
           uri,
+          isDeleted,
         };
         const id = receiverId.concat(senderId);
         this.append(message, id);
@@ -363,6 +369,7 @@ class Fire {
           createdAt: created,
           type,
           location,
+          isDeleted,
         };
         const id = receiverId.concat(senderId);
         console.log("Before append");
@@ -372,7 +379,7 @@ class Fire {
   };
 
   append = (message, id) => {
-    console.log("append", id);
+    // console.log("append", id);
     this.checkRoom(message, id);
     this.db
       .collection(id)

@@ -854,6 +854,20 @@ export default class LandingSecreen extends React.Component {
       );
   };
   checkUserLocation = async () => {
+    // let { audio_status } = await Permissions.askAsync(
+    //   Permissions.AUDIO_RECORDING
+    // );
+    // if (audio_status !== "granted") {
+    //   Toast.show({
+    //     text:
+    //       this.state.lan == "en"
+    //         ? "Please grant audio permissions"
+    //         : "Please grant audio permissions",
+    //     position: "bottom",
+    //   });
+    //   await Permissions.askAsync(Permissions.AUDIO_RECORDING);
+    // }
+
     //  console.log("location function ");
     let { status } = await Permissions.askAsync(Permissions.LOCATION);
     //  console.log("status ", status);
@@ -1519,7 +1533,7 @@ export default class LandingSecreen extends React.Component {
       });
     }
 
-    //  Linking.openURL("https://wa.me/+966577311430"); (Uncomment)
+    // Linking.openURL("https://wa.me/+966577311430");
   };
   getOffers = () => {
     axios
@@ -6523,6 +6537,9 @@ export default class LandingSecreen extends React.Component {
     }
     if (option == 3) {
       if (this.state.selectedServices.length > 0) {
+        // alert(
+        //   "Dear Customer, To continue providing you with the best experience, we will be undergoing maintenance that may cause service interruption till 10th August 2021. We apologize for the inconvenience."
+        // );
         this.props.navigation.navigate("MyCart", {
           lan: this.state.lan,
           isPackage: false,
