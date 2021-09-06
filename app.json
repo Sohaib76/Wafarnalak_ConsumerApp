@@ -16,6 +16,8 @@
     },
     "updates": {
       "fallbackToCacheTimeout": 290000
+      
+
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {

@@ -1559,7 +1559,8 @@ export default class OrderSummaryScreen extends React.Component {
         <Modal
           animationType="slide"
           transparent={true}
-          visible={this.state.alertVisible}
+          visible={false}
+          // this.state.alertVisible
         >
           <View
             style={{
@@ -1611,8 +1612,8 @@ export default class OrderSummaryScreen extends React.Component {
                   }}
                 >
                   {this.state.lan == "en"
-                    ? "Dear Customer, \nTo continue providing you with the best experience, we will be undergoing maintenance that may cause service interruption till 18th August 2021. We apologize for the inconvenience."
-                    : "Dear Customer, \nTo continue providing you with the best experience, we will be undergoing maintenance that may cause service interruption till 18th August 2021. We apologize for the inconvenience."}
+                    ? "Dear Customer, \nTo continue providing you with the best experience, we will be undergoing maintenance that may cause service interruption till 23th August 2021. We apologize for the inconvenience."
+                    : "Dear Customer, \nTo continue providing you with the best experience, we will be undergoing maintenance that may cause service interruption till 23th August 2021. We apologize for the inconvenience."}
                 </Text>
                 {/* <Image
                     source={require("../assets/Forense-Points-Icon.png")}
@@ -2475,16 +2476,12 @@ export default class OrderSummaryScreen extends React.Component {
                         onDateChange={this.onDateChange}
                         disabledDates={[
                           new Date(2021, 6, 20),
-
-                          new Date(2021, 7, 10),
-                          new Date(2021, 7, 11),
-                          new Date(2021, 7, 12),
-                          new Date(2021, 7, 13),
-                          new Date(2021, 7, 14),
-                          new Date(2021, 7, 15),
-                          new Date(2021, 7, 16),
                           new Date(2021, 7, 17),
-                          new Date(2021, 7, 18),
+                          new Date(2021, 7, 21),
+                          new Date(2021, 7, 22),
+                          new Date(2021, 7, 23),
+
+                          // new Date(2021, 7, 18),
                         ]}
                         // disabledDatesTextStyle={{ color: "red" }}
                       />

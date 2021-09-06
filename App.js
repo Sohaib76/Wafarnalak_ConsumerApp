@@ -1,4 +1,8 @@
 // import { AppLoading, SplashScreen } from "expo";
+// "enabled":false
+// https://fnd.io/#/pk/search?mediaType=all&term=Google
+// https://theappstore.org/
+
 import {
   AsyncStorage,
   Dimensions,
@@ -8,7 +12,7 @@ import {
   StyleSheet,
   View,
   StatusBar,
-  SafeAreaView
+  SafeAreaView,
 } from "react-native";
 import * as Updates from "expo-updates";
 import * as Notifications from "expo-notifications";
@@ -31,7 +35,7 @@ export default class App extends React.Component {
       isSplashReady: false,
       isAppReady: false,
       lan: "en",
-      isUpdateAvailable: false
+      isUpdateAvailable: false,
     };
     this.checkLangugae();
   }
@@ -71,7 +75,7 @@ export default class App extends React.Component {
       storageBucket: "foren-se-customers.appspot.com",
       messagingSenderId: "200064457252",
       appId: "1:200064457252:web:7ec8aa4d569aac16b156b1",
-      measurementId: "G-VFK8LKML45"
+      measurementId: "G-VFK8LKML45",
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
@@ -83,21 +87,21 @@ export default class App extends React.Component {
       require("./assets/icon.png"),
       require("./assets/Profile-Image.png"),
       require("./assets/Help-min.png"),
-      require("./assets/Job-Icon-min.png")
+      require("./assets/Job-Icon-min.png"),
     ]),
       await Expo.Font.loadAsync({
         Roboto: require("native-base/Fonts/Roboto.ttf"),
         Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
         montserrat_semi_blod: require("./assets/Fonts/English/Montserrat-SemiBold.otf"),
         montserrat_medium: require("./assets/Fonts/English/Montserrat-Medium.otf"),
-        montserrat_arabic_regular: require("./assets/Fonts/Arabic/ArbFONTS-Montserrat-Arabic-Regular.ttf")
+        montserrat_arabic_regular: require("./assets/Fonts/Arabic/ArbFONTS-Montserrat-Arabic-Regular.ttf"),
       });
 
     loadApp = () => {
       this.setState({ isAppReady: true });
     };
     setTimeout(
-      function() {
+      function () {
         this.loadApp();
       },
       Platform.OS === "android" ? 1800 : 2500
@@ -107,13 +111,13 @@ export default class App extends React.Component {
   componentDidMount = async () => {
     //Prevent native splash screen from autohiding
     // this.requestPermission();
-    Updates.checkForUpdateAsync().then(update => {
+    Updates.checkForUpdateAsync().then((update) => {
       if (update.isAvailable) {
         this.setState({ isUpdateAvailable: true });
         updateDownload = () => {
           Updates.reload();
         };
-        setTimeout(function() {
+        setTimeout(function () {
           this.updateDownload();
         }, 5000);
       }
@@ -130,7 +134,7 @@ export default class App extends React.Component {
     if (Platform.OS === "android") {
       await Notifications.createChannelAndroidAsync("order-status", {
         name: "order",
-        sound: true
+        sound: true,
       });
     }
 
@@ -152,7 +156,7 @@ export default class App extends React.Component {
         <Image
           style={{
             height: Dimensions.get("window").height,
-            width: Dimensions.get("window").width
+            width: Dimensions.get("window").width,
           }}
           source={require("./assets/updating.gif")}
           resizeMode="contain"
@@ -167,7 +171,7 @@ export default class App extends React.Component {
           <Image
             style={{
               height: Dimensions.get("window").height,
-              width: Dimensions.get("window").width
+              width: Dimensions.get("window").width,
             }}
             source={require("./assets/splash1.gif")}
             resizeMode="contain"
@@ -179,7 +183,7 @@ export default class App extends React.Component {
           <Image
             style={{
               height: Dimensions.get("window").height,
-              width: Dimensions.get("window").width
+              width: Dimensions.get("window").width,
             }}
             source={require("./assets/splash-ar1.gif")}
             resizeMode="contain"

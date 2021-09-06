@@ -62,19 +62,22 @@ const HEADER_HEIGHT = Platform.OS === "ios" ? 64 : 50;
 const SCROLL_HEIGHT = IMAGE_HEIGHT - HEADER_HEIGHT;
 const AcBanners_ar = [
   "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png", //window  Ac
-  "https://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png", //window ac
-  "https://i.ibb.co/DQ6tMXq/Split-Ac-30-Per-Off-Arabic-min.png", //split Ac
-  "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png", //split ac
+  "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png", //window ac
+  "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png", //split Ac
+  //[url=https://ibb.co/CPK4xjK][img]https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png[/img][/url]
+  "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png", //split ac
   // "https://i.ibb.co/Y8fghB0/Tower-AC-Refill-Cleaning-Banner-Ar-min.png" //Tower  Ac
   "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
 ];
 const AcBanners = [
   "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png", //window ac
-  "https://i.ibb.co/XZngvwL/Window-ac-installation-english.png", //window ac
-  "https://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png", //split ac
-  "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png", // split ac installation
+  "https://i.ibb.co/y4GL1HY/AC-installation-2.png", //window ac
+  "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png", //split ac
+  "https://i.ibb.co/DVx43S1/AC-installation-1.png", // split ac installation
   // "https://i.ibb.co/8x8cvqp/Tower-AC-Refill-Cleaning-Banner-Eng-min.png" //tower ac
   "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
+
+  //https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png
 
   // "https://i.ibb.co/61nTkWV/Desert-Cooler-Cleaning-1.png", //dessert cooler
   // "https://i.ibb.co/61nTkWV/Desert-Cooler-Cleaning-1.png", //dessert cooler
@@ -125,6 +128,7 @@ const AcOffersDataEng = [
     banner: {
       url: "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
     },
+    //--htttps://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png
   },
   {
     job: {
@@ -135,8 +139,7 @@ const AcOffersDataEng = [
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
         " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
-      jobServiceIcon:
-        "https://i.ibb.co/XZngvwL/Window-ac-installation-english.png",
+      jobServiceIcon: "https://i.ibb.co/y4GL1HY/AC-installation-2.png",
       jobserviceName: "Window Unit",
       jobserviceNameAr: "مكيف ويندو (شباك)  ",
       id: 60,
@@ -155,10 +158,12 @@ const AcOffersDataEng = [
       productseoname:
         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
     },
-    webbanner: "https://i.ibb.co/XZngvwL/Window-ac-installation-english.png",
+    webbanner: "https://i.ibb.co/y4GL1HY/AC-installation-2.png",
     banner: {
-      url: "https://i.ibb.co/XZngvwL/Window-ac-installation-english.png",
+      url: "https://i.ibb.co/y4GL1HY/AC-installation-2.png",
     },
+
+    //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
   },
 
   {
@@ -174,8 +179,7 @@ const AcOffersDataEng = [
       i_notes_ar: "(لعدد وحدتين او أكثر، السعر 105 ريال للوحدة (مكيف",
       id: 223,
       is_promoted: true,
-      jobServiceIcon:
-        "https://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png",
+      jobServiceIcon: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
       jobserviceName: "Split Unit",
       jobserviceNameAr: "مكيف اسبليت",
       name: "Freon Refill + Cleaning",
@@ -190,10 +194,13 @@ const AcOffersDataEng = [
       productseoname:
         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de",
     },
-    webbanner: "https://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png",
+    webbanner: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
     banner: {
-      url: "https://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png",
+      url: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
     },
+    //??
+
+    // htttps://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png
   },
   {
     job: {
@@ -204,7 +211,7 @@ const AcOffersDataEng = [
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
         " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
-      jobServiceIcon: "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png",
+      jobServiceIcon: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
       jobserviceName: "Split Unit",
       jobserviceNameAr: "مكيف اسبليت",
       id: 65,
@@ -220,12 +227,14 @@ const AcOffersDataEng = [
       i_notes: "2 or more = SAR 150 / Unit",
       i_notes_ar: "(لعدد وحدتين او أكثر، السعر 150 ريال للوحدة (مكيف)",
 
-      productseoname: "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png",
+      productseoname: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
     },
-    webbanner: "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png",
+    webbanner: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
     banner: {
-      url: "https://i.ibb.co/17MmDg0/Split-ac-installation-eng.png",
+      url: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
     },
+
+    //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
   },
   {
     job: {
@@ -260,6 +269,7 @@ const AcOffersDataEng = [
     banner: {
       url: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
     },
+    // htttps://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png
   },
 ];
 const AcOffersData_ar = [
@@ -276,7 +286,8 @@ const AcOffersData_ar = [
       i_notes_ar: "( لعدد وحدتين او أكثر، السعر 84 ريال للوحدة (مكيف",
       id: 230,
       is_promoted: true,
-      jobServiceIcon: "https://i.ibb.co/sPqjBGJ/Tower-AC-banner-arabic.png",
+      jobServiceIcon:
+        "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png",
       jobserviceName: "Window Unit",
       jobserviceNameAr: "مكيف ويندو (شباك)  ",
       name: "Freon Refill + Cleaning",
@@ -291,10 +302,13 @@ const AcOffersData_ar = [
       productseoname:
         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
     },
-    webbanner: "https://i.ibb.co/sPqjBGJ/Tower-AC-banner-arabic.png",
+    webbanner:
+      "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png",
     banner: {
-      url: "https://i.ibb.co/sPqjBGJ/Tower-AC-banner-arabic.png",
+      url: "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png",
     },
+
+    // htttps://i.ibb.co/sPqjBGJ/Tower-AC-banner-arabic.png
   },
   {
     job: {
@@ -305,8 +319,7 @@ const AcOffersData_ar = [
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
         " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
-      jobServiceIcon:
-        "https://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png",
+      jobServiceIcon: "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png",
       jobserviceName: "Window Unit",
       jobserviceNameAr: "مكيف ويندو (شباك)  ",
       id: 60,
@@ -325,10 +338,11 @@ const AcOffersData_ar = [
       productseoname:
         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
     },
-    webbanner: "https://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png",
+    webbanner: "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png",
     banner: {
-      url: "https://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png",
+      url: "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png",
     },
+    // htttps://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png
   },
 
   {
@@ -344,8 +358,7 @@ const AcOffersData_ar = [
       i_notes_ar: "(لعدد وحدتين او أكثر، السعر 105 ريال للوحدة (مكيف",
       id: 223,
       is_promoted: true,
-      jobServiceIcon:
-        "https://i.ibb.co/DQ6tMXq/Split-Ac-30-Per-Off-Arabic-min.png",
+      jobServiceIcon: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
       jobserviceName: "Split Unit",
       jobserviceNameAr: "مكيف اسبليت",
       name: "Freon Refill + Cleaning",
@@ -360,9 +373,9 @@ const AcOffersData_ar = [
       productseoname:
         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de",
     },
-    webbanner: "https://i.ibb.co/DQ6tMXq/Split-Ac-30-Per-Off-Arabic-min.png",
+    webbanner: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
     banner: {
-      url: "https://i.ibb.co/DQ6tMXq/Split-Ac-30-Per-Off-Arabic-min.png",
+      url: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
     },
   },
   {
@@ -374,8 +387,7 @@ const AcOffersData_ar = [
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
         " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
-      jobServiceIcon:
-        "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png",
+      jobServiceIcon: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
       jobserviceName: "Split Unit",
       jobserviceNameAr: "مكيف اسبليت",
       id: 65,
@@ -391,14 +403,13 @@ const AcOffersData_ar = [
       i_notes: "2 or more = SAR 150 / Unit",
       i_notes_ar: "(لعدد وحدتين او أكثر، السعر 150 ريال للوحدة (مكيف)",
 
-      productseoname:
-        "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png",
+      productseoname: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
     },
-    webbanner: "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png",
+    webbanner: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
     banner: {
-      url: "https://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png",
+      url: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
     },
-  },
+  }, //htttps://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png
   {
     job: {
       cartnotes:
@@ -1516,24 +1527,24 @@ export default class LandingSecreen extends React.Component {
     }
   };
   openChat = () => {
-    if (this.state.user !== null) {
-      // Linking.openURL("https://wa.me/+966577311430");
-      this.props.navigation.navigate("Chat", { user: this.state.user });
-    } else {
-      Toast.show({
-        text:
-          this.state.lan == "en"
-            ? "Please Login First to Start Chat"
-            : "سلة الطلبات فارغة",
-        position: "bottom",
-      });
-      this.props.navigation.navigate("Login", {
-        goToHelp: true,
-        user: this.state.user,
-      });
-    }
+    // if (this.state.user !== null) {
+    //   // Linking.openURL("https://wa.me/+966577311430");
+    //   this.props.navigation.navigate("Chat", { user: this.state.user });
+    // } else {
+    //   Toast.show({
+    //     text:
+    //       this.state.lan == "en"
+    //         ? "Please Login First to Start Chat"
+    //         : "سلة الطلبات فارغة",
+    //     position: "bottom",
+    //   });
+    //   this.props.navigation.navigate("Login", {
+    //     goToHelp: true,
+    //     user: this.state.user,
+    //   });
+    // }
 
-    // Linking.openURL("https://wa.me/+966577311430");
+    Linking.openURL("https://wa.me/+966577311430");
   };
   getOffers = () => {
     axios
