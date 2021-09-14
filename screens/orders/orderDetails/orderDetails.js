@@ -2166,7 +2166,7 @@ export default class OrderDetailsSecreen extends React.Component {
             isVisible={this.state.showdatePicker}
             onConfirm={this.handleDatePicked}
             // minimumDate={new Date(2021, 7, 19)}
-            minimumDate={new Date(2021, 7, 24)}
+            minimumDate={new Date(2021, 8, 21)}
             mode="date"
             confirmTextIOS="Ok"
             date={this.state.currentTime}

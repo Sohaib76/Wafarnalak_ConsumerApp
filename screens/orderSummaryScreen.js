@@ -302,7 +302,7 @@ export default class OrderSummaryScreen extends React.Component {
       disocunt:
         parseInt(this.state.userForensePoints) >= parseInt(points) &&
         parseInt(this.state.userForensePoints) >= 500
-          ? parseInt(points) * 0.05
+          ? parseInt(points) * 0.01
           : 0,
     });
   };
@@ -336,7 +336,7 @@ export default class OrderSummaryScreen extends React.Component {
           ? packgaeJobs.jobs.findIndex((j) => j.pricetype == 2)
           : jobs.findIndex((j) => j.pricetype == 2);
       let time = new Date().getHours() + "." + new Date().getMinutes();
-      let t = parseFloat(time) + 1.25; //changed 1.25 , 2.5
+      let t = parseFloat(time) + 2.75; //changed Prev->1.25->(for 2 hours later) , 2.5
       console.log("ttt", t);
       console.log("time", time);
       let copyIntervals = ([] = []);
@@ -496,7 +496,7 @@ export default class OrderSummaryScreen extends React.Component {
       parseInt(this.state.userForensePoints) >= 500
     ) {
       this.setState({
-        discount: parseInt(this.state.points) * 0.05,
+        discount: parseInt(this.state.points) * 0.01,
         modalVisible: false,
       });
     } else {
@@ -908,7 +908,7 @@ export default class OrderSummaryScreen extends React.Component {
         (today.getTime() / (1000 * 60 * 60)).toFixed(1)
       );
       let time = new Date().getHours() + "." + new Date().getMinutes();
-      let t = parseFloat(time) + 2; //1.25, 2.5
+      let t = parseFloat(time) + 3; //1.25, 2.5  prev->2(for 2 hours)
       console.log("t", t);
       this.state.actualTimeInterval.forEach((slot) => {
         console.log("parseFloat(slot.ceil -----", parseFloat(slot.ceil));
@@ -2480,6 +2480,18 @@ export default class OrderSummaryScreen extends React.Component {
                           new Date(2021, 7, 21),
                           new Date(2021, 7, 22),
                           new Date(2021, 7, 23),
+                          new Date(2021, 8, 9),
+                          new Date(2021, 8, 10),
+                          new Date(2021, 8, 11),
+                          new Date(2021, 8, 12),
+                          new Date(2021, 8, 13),
+                          new Date(2021, 8, 14),
+                          new Date(2021, 8, 15),
+                          new Date(2021, 8, 16),
+                          new Date(2021, 8, 17),
+                          new Date(2021, 8, 18),
+                          new Date(2021, 8, 19),
+                          new Date(2021, 8, 20),
 
                           // new Date(2021, 7, 18),
                         ]}
@@ -2816,9 +2828,10 @@ export default class OrderSummaryScreen extends React.Component {
                     {this.state.userForensePoints - this.state.points > 0
                       ? (
                           (this.state.userForensePoints - this.state.points) *
-                          0.05
-                        ).toFixed(2)
-                      : this.state.userForensePoints * 0.05}
+                          0.01
+                        ) //0.05 (For 5Sar = 100 points)
+                          .toFixed(2)
+                      : this.state.userForensePoints * 0.01}
                   </Text>
                 </View>
               </View>

@@ -1544,7 +1544,7 @@ export default class LandingSecreen extends React.Component {
     //   });
     // }
 
-    Linking.openURL("https://wa.me/+966577311430");
+    Linking.openURL("https://wa.me/+966530576063"); //966577311430
   };
   getOffers = () => {
     axios
