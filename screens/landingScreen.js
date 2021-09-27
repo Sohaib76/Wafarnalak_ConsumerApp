@@ -63,17 +63,17 @@ const SCROLL_HEIGHT = IMAGE_HEIGHT - HEADER_HEIGHT;
 const AcBanners_ar = [
   "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png", //window  Ac
   "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png", //window ac
-  "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png", //split Ac
+  "https://i.ibb.co/Vp9QFWw/Ac-app-banner-Arabic-Text-Change.png", //split Ac
   //[url=https://ibb.co/CPK4xjK][img]https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png[/img][/url]
-  "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png", //split ac
+  "https://i.ibb.co/qWdmQMQ/banner-images-01.png", //split ac
   // "https://i.ibb.co/Y8fghB0/Tower-AC-Refill-Cleaning-Banner-Ar-min.png" //Tower  Ac
   "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
 ];
 const AcBanners = [
   "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png", //window ac
   "https://i.ibb.co/y4GL1HY/AC-installation-2.png", //window ac
-  "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png", //split ac
-  "https://i.ibb.co/DVx43S1/AC-installation-1.png", // split ac installation
+  "https://i.ibb.co/0hKJ02H/Ac-app-banner-2-Text-Change.png", //split ac
+  "https://i.ibb.co/kG2HGGV/banner-images-02.png", // split ac installation
   // "https://i.ibb.co/8x8cvqp/Tower-AC-Refill-Cleaning-Banner-Eng-min.png" //tower ac
   "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
 
@@ -175,20 +175,20 @@ const AcOffersDataEng = [
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
         " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
-      i_notes: "2 or more = SAR  105 / Unit",
-      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 105 ريال للوحدة (مكيف",
+      i_notes: "2 or more = SAR  199 / Unit",
+      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 199 ريال للوحدة (مكيف",
       id: 223,
       is_promoted: true,
       jobServiceIcon: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
       jobserviceName: "Split Unit",
       jobserviceNameAr: "مكيف اسبليت",
-      name: "Freon Refill + Cleaning",
+      name: "Deep Cleaning + Gas Top up", //Freon Refill + Cleaning
       name_ar: "تعبئة فريون + تنظيف",
-      price: 150,
+      price: 229, //150
       pricelimit: 49,
       pricetype: 1,
       serviceid: 29,
-      saleprice: 105,
+      saleprice: 199, //105
       t_price: 0,
 
       productseoname:
@@ -196,7 +196,7 @@ const AcOffersDataEng = [
     },
     webbanner: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
     banner: {
-      url: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
+      url: "https://i.ibb.co/0hKJ02H/Ac-app-banner-2-Text-Change.png",
     },
     //??
 
@@ -219,19 +219,19 @@ const AcOffersDataEng = [
       pricelimit: 49,
       name: "Installation",
       name_ar: "تركيب",
-      price: 200,
+      price: 249, //200
       pricetype: 1,
       is_promoted: true,
       t_price: 0,
-      saleprice: 150,
-      i_notes: "2 or more = SAR 150 / Unit",
-      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 150 ريال للوحدة (مكيف)",
+      saleprice: 200, //150
+      i_notes: "2 or more = SAR 200 / Unit",
+      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 200 ريال للوحدة (مكيف)",
 
       productseoname: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
     },
     webbanner: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
     banner: {
-      url: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
+      url: "https://i.ibb.co/kG2HGGV/banner-images-02.png",
     },
 
     //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
@@ -363,11 +363,11 @@ const AcOffersData_ar = [
       jobserviceNameAr: "مكيف اسبليت",
       name: "Freon Refill + Cleaning",
       name_ar: "تعبئة فريون + تنظيف",
-      price: 150,
+      price: 229,
       pricelimit: 49,
       pricetype: 1,
       serviceid: 29,
-      saleprice: 105,
+      saleprice: 199,
       t_price: 0,
 
       productseoname:
@@ -375,7 +375,7 @@ const AcOffersData_ar = [
     },
     webbanner: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
     banner: {
-      url: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
+      url: "https://i.ibb.co/Vp9QFWw/Ac-app-banner-Arabic-Text-Change.png",
     },
   },
   {
@@ -395,11 +395,11 @@ const AcOffersData_ar = [
       pricelimit: 49,
       name: "Installation",
       name_ar: "تركيب",
-      price: 200,
+      price: 249, //Change > 249
       pricetype: 1,
       is_promoted: true,
       t_price: 0,
-      saleprice: 150,
+      saleprice: 200,
       i_notes: "2 or more = SAR 150 / Unit",
       i_notes_ar: "(لعدد وحدتين او أكثر، السعر 150 ريال للوحدة (مكيف)",
 
@@ -407,7 +407,7 @@ const AcOffersData_ar = [
     },
     webbanner: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
     banner: {
-      url: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
+      url: "https://i.ibb.co/qWdmQMQ/banner-images-01.png",
     },
   }, //htttps://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png
   {
@@ -790,6 +790,7 @@ const AcOffersData_ar = [
 //     }
 //   }
 // ];
+
 export default class LandingSecreen extends React.Component {
   nScroll = new Animated.Value(0);
   scroll = new Animated.Value(0);
@@ -1544,7 +1545,7 @@ export default class LandingSecreen extends React.Component {
     //   });
     // }
 
-    Linking.openURL("https://wa.me/+966530576063"); //966577311430
+    Linking.openURL("https://wa.me/+966578434985"); //966577311430 +966 57 843 4985 +966530576063
   };
   getOffers = () => {
     axios
@@ -2494,12 +2495,12 @@ export default class LandingSecreen extends React.Component {
                   is_promoted: true,
                   jobs: [
                     {
-                      id: 231,
+                      id: 69,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Freon Refill",
-                      name_ar: "تعبئة فريون",
-                      price: 90,
+                      name: "Partial or Gas topup",
+                      name_ar: "تعبئة الغاز جزئي او كامل",
+                      price: 100,
                       pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2507,6 +2508,20 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    // {
+                    //   id: 231,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Freon Refill",
+                    //   name_ar: "تعبئة فريون",
+                    //   price: 90,
+                    //   pricetype: 1,
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
                     {
                       id: 230,
                       serviceid: 29,
@@ -2533,15 +2548,15 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Cleaning",
                       name_ar: "تنظيف",
-                      price: 100,
+                      price: 89,
                       pricetype: 1,
                       is_promoted: true,
-                      saleprice: 55,
+                      saleprice: 79,
                       t_price: 0,
                       i_notes:
-                        "Get 2 or more window unit cleaned in SAR 55 Each",
+                        "Get 2 or more window unit cleaned in SAR 79 Each",
                       i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 55 ريال للوحدة (مكيف",
+                        "(لعدد وحدتين او أكثر، السعر 79 ريال للوحدة (مكيف",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2641,16 +2656,16 @@ export default class LandingSecreen extends React.Component {
                       id: 223,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Freon Refill + Cleaning",
+                      name: "Deep Cleaning + Gas top-up",
                       name_ar: "تعبئة فريون + تنظيف",
-                      price: 150,
+                      price: 229,
                       pricetype: 1,
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 105,
-                      i_notes: "2 or more = SAR  105 / Unit",
+                      saleprice: 199,
+                      i_notes: "2 or more = SAR  199 / Unit",
                       i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 105 ريال للوحدة (مكيف",
+                        "(لعدد وحدتين او أكثر، السعر 199 ريال للوحدة (مكيف",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2661,17 +2676,17 @@ export default class LandingSecreen extends React.Component {
                       id: 70,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Cleaning",
+                      name: "Deep Cleaning",
                       name_ar: "تنظيف",
-                      price: 120,
+                      price: 130,
                       pricetype: 1,
                       pricetype: 1,
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 84,
-                      i_notes: "Get 2 or more split cleaned in SAR 84 Each",
+                      saleprice: 110,
+                      i_notes: "Get 2 or more split cleaned in SAR 110 Each",
                       i_notes_ar:
-                        "لعدد وحدتين او أكثر، السعر 84 ريال للوحدة (مكيف)",
+                        "لعدد وحدتين او أكثر، السعر 110 ريال للوحدة (مكيف)",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2684,14 +2699,14 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation",
                       name_ar: "تركيب",
-                      price: 200,
+                      price: 249,
                       pricetype: 1,
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 150,
-                      i_notes: "2 or more = SAR 150 / Unit",
+                      saleprice: 200,
+                      i_notes: "2 or more = SAR 200 / Unit",
                       i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 150 ريال للوحدة (مكيف)",
+                        "(لعدد وحدتين او أكثر، السعر 200 ريال للوحدة (مكيف)",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2718,7 +2733,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Removal of a split unit",
                       name_ar: "إزالة مكيف اسبليت",
-                      price: 80,
+                      price: 109,
                       pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2726,13 +2741,27 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    // {
+                    //   id: 69,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Removal and installation",
+                    //   name_ar: "إزالة وتركيب ",
+                    //   price: 300,
+                    //   pricetype: 1,
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
                     {
                       id: 69,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Removal and installation",
-                      name_ar: "إزالة وتركيب ",
-                      price: 300,
+                      name: "Relocation",
+                      name_ar: "تحويل",
+                      price: 349,
                       pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2740,6 +2769,20 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    // {
+                    //   id: 69,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Partial or Gas topup",
+                    //   name_ar: "تعبئة الغاز جزئي او كامل",
+                    //   price: 100,
+                    //   pricetype: 1,
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
                   ],
                 },
                 {
@@ -2924,6 +2967,20 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    {
+                      id: 69,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Partial or Gas topup",
+                      name_ar: "تعبئة الغاز جزئي او كامل",
+                      price: 100,
+                      pricetype: 1,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
                   ],
                 },
                 {
@@ -2963,6 +3020,20 @@ export default class LandingSecreen extends React.Component {
                       name_ar: "إستشارة إصلاح",
                       price: 25,
                       pricetype: 2,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
+                    {
+                      id: 69,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Partial or Gas topup",
+                      name_ar: "تعبئة الغاز جزئي او كامل",
+                      price: 100,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3055,6 +3126,20 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    {
+                      id: 69,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Partial or Gas topup",
+                      name_ar: "تعبئة الغاز جزئي او كامل",
+                      price: 100,
+                      pricetype: 1,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
                   ],
                 },
                 {
@@ -3078,6 +3163,19 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    // {
+                    //   id: 69,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Change of Miscellanoues AC Parts",
+                    //   name_ar: "تغيير قطع المكيفات(استبدال او تغير)",
+                    //   price: 99,
+                    //   pricetype: 1,
+                    //   cartnotes:
+                    //     "This will include change of capacitors and other miscellaneous parts but with out the material ",
+                    //   cartnotes_ar: "ملاحظات: يشمل هذا تغير المكثفات والقطع",
+                    //   carttype: 1,
+                    // },
                   ],
                 },
               ],
@@ -3770,7 +3868,7 @@ export default class LandingSecreen extends React.Component {
                       id: 1,
                       serviceid: 1,
                       pricelimit: 49,
-                      name: "Replacing chandeliers & other light bulbs",
+                      name: "Replacing Chandeliers",
                       name_ar: "تبديل الثريات وغيرها من المصابيح ",
                       price: 10,
                       pricetype: 1,
@@ -3790,6 +3888,24 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of chandeliers",
                       name_ar: "تركيب الثريات",
+                      price: 25,
+                      pricetype: 2,
+                      description:
+                        "The price of bulb, fixture or starter has been\r\n mentioned as an estimate, it might be changed depending upon the brand.",
+                      description_ar:
+                        "سعر المصباح والتيوب لايت او الفيوز (المشغل) محدد بشكل تقريبي، ربما يتغير على حسب الماركة",
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
+                    {
+                      id: 2,
+                      serviceid: 1,
+                      pricelimit: 49,
+                      name: "Removal of chandeliers",
+                      name_ar: "إزالة الثريات",
                       price: 25,
                       pricetype: 2,
                       description:
@@ -4237,1707 +4353,1708 @@ export default class LandingSecreen extends React.Component {
                 },
               ],
             },
-            {
-              id: 4,
-              name: "Carpenter",
-              name_ar: "خدمات النجارة",
-              pricelimit: 49,
-              seo_name:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCarpentry-B.png?alt=media&token=5f6904c9-f2fe-4da2-9ea5-6edc1eaaea40",
-              banner: null,
-              white_icon:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCarpentry-Icon-W.png?alt=media&token=cfa0b713-b37b-4275-9c9e-5e4d9ed7f5d5",
-              products: [
-                {
-                  id: 85,
-                  name: "Furniture",
-                  name_ar: "أثاث المنزل",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FFurniture.png?alt=media&token=8f53811b-20e2-4225-bc7b-9ce8828a6c54",
-                  jobs: [
-                    {
-                      id: 245,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Making of furniture",
-                      name_ar: "أعمال الأثاث",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 246,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Wooden furniture repair",
-                      name_ar: "إصلاح الأثاث الخشبي",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 247,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "General Furniture assembly",
-                      name_ar: "تجميع الأثاث (عام)",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 248,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "IKEA or similar furniture assembly & installation",
-                      name_ar: "تجميع وتركيب على طريقة ايكيا او غيرها",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 249,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Furniture repair",
-                      name_ar: "إصلاح الأثاث",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 86,
-                  name: "Beds",
-                  name_ar: "سرير (أسرة)",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FBed-min.png?alt=media&token=9898e9df-6541-40da-b7fa-8bc5a7e77859",
-                  jobs: [
-                    {
-                      id: 250,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Remove or install bed",
-                      name_ar: "إزالة أو تثبيت السرير",
-                      price: 110,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 251,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Balance bed",
-                      name_ar: "موازنة السرير ",
-                      price: 69,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 252,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Bed Repair",
-                      name_ar: "إصلاح السرير",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 87,
-                  name: "Tables",
-                  name_ar: "طاولات",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTables-min.png?alt=media&token=85dcd301-f083-40d1-9e03-2dca2dd08a9f",
-                  jobs: [
-                    {
-                      id: 253,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Remove or install tables ",
-                      name_ar: "إزالة أو تثبيت الطاولات",
-                      price: 79,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 254,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Repair table",
-                      name_ar: "تصليح الطاولات",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 88,
-                  name: "Cabinets",
-                  name_ar: "خزانات",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCabnet-min.png?alt=media&token=3e4aecc5-5829-46f8-8740-81c9af2ce5fa",
-                  jobs: [
-                    {
-                      id: 256,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Remove or install the 4 door\r\ncabinet",
-                      name_ar: "إزالة أو تركيب خزانة ابو 4 أبواب",
-                      price: 129,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 257,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Remove or install the 5 door cabinet rack",
-                      name_ar: "إزالة أو تركيب خزانة ابو 5 أبواب ورف",
-                      price: 149,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 258,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Remove or install a zipper door\r\ncabinet",
-                      name_ar: "إزالة أو تركيب خزانة ابو باب سحاب",
-                      price: 139,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 259,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Cabinet Repair",
-                      name_ar: "إصلاح الخزانة",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 255,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Remove or install 3 door\r\ncabinet",
-                      name_ar: "إزالة أو تركيب خزانة ابو 3 أبواب",
-                      price: 110,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 89,
-                  name: "Curtains",
-                  name_ar: "ستائر",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCurtains-min.png?alt=media&token=d80d5a29-eceb-422f-a243-fc656311873d",
-                  jobs: [
-                    {
-                      id: 260,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Rolls curtain installation",
-                      name_ar: "تركيب ستائر (رولز)",
-                      price: 69,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 261,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Single Layer curtain installation\r\nLess than 2.5m",
-                      name_ar:
-                        "تركيب ستارة (طبقات) | طبقة واحدة | اصغر من 2.5 م",
-                      price: 69,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 262,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Single Layer curtain installation\r\nEqual or more than 2.5m",
-                      name_ar:
-                        "تركيب ستارة (طبقات) | طبقة واحدة | 2.5 م او اكثر  ",
-                      price: 89,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 263,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Double Layer curtain installation\r\nLess than 2.5m",
-                      name_ar:
-                        "تركيب ستارة (طبقات) | طبقة مزدوجة | اصغر من 2.5 م",
-                      price: 119,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 264,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Double Layer curtain installation\r\nEqual or more than 2.5m",
-                      name_ar:
-                        "تركيب ستارة (طبقات) | طبقة مزدوجة | 2.5 م او اكثر  ",
-                      price: 129,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 265,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Roman curtain installation",
-                      name_ar: "تركيب ستارة رومانية",
-                      price: 109,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 266,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Have an issue/problem",
-                      name_ar: "هل لديك اي مشكلة؟",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 90,
-                  name: "Doors",
-                  name_ar: "أبواب",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FDoors-min.png?alt=media&token=5c93e67a-bee4-49d1-a69a-68fd5513b4f8",
-                  jobs: [
-                    {
-                      id: 267,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Open locked door",
-                      name_ar: "فتح باب مغلق",
-                      price: 79,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 268,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Change door lock",
-                      name_ar: "تغيير قفل الباب",
-                      price: 40,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 269,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Install new door",
-                      name_ar: "تركيب باب جديد",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 270,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Wooden doors balancing",
-                      name_ar: "موازنة الأبواب الخشبية",
-                      price: 89,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 271,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Remove and install self door",
-                      name_ar: "إزالة وتركيب الباب الاوتوماتيك (الألي)",
-                      price: 49,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 272,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Rubber installation",
-                      name_ar: "تركيب المطاط",
-                      price: 50,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 273,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Door Abrasion",
-                      name_ar: "كشط الباب",
-                      price: 89,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 274,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Have an issue/problem",
-                      name_ar: "هل لديك اي مشكلة؟",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 91,
-                  name: "Hanging Items",
-                  name_ar: "تعليق أغراض",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FHanging-Items-Icon.png?alt=media&token=a55ac2ea-bbd4-454a-9421-4f3d46e6678e",
-                  jobs: [
-                    {
-                      id: 275,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Install or remove shelves",
-                      name_ar: "تركيب او إزالة الرفوف",
-                      price: 49,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 276,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Install or remove paintings and pictures",
-                      name_ar: "تركيب او إزالة اللوحات والصور",
-                      price: 29,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 277,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Remove or install a mirror",
-                      name_ar: "إزالة أو تثبيت مرآة",
-                      price: 29,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 279,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Have an issue/problem",
-                      name_ar: "هل لديك اي مشكلة؟",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 92,
-                  name: "Carpenter Visit",
-                  name_ar: "زيارة نجار",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCarpenter-Visit-min.png?alt=media&token=e0343fb3-3da0-45f4-9adf-703fc6adda70",
-                  jobs: [
-                    {
-                      id: 280,
-                      serviceid: 4,
-                      pricelimit: 49,
-                      name: "Carpenter Consultation",
-                      name_ar: "زيارة نجار",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              id: 53,
-              name: "Paint",
-              name_ar: " الدهان",
-              pricelimit: 49,
-              seo_name:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPaint-Black-min.png?alt=media&token=d6c02ed5-1a7c-45e9-8234-f34860afacbf",
-              banner: null,
-              white_icon:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPaint-min.png?alt=media&token=1ffb6f79-af8f-4e93-86f2-7d66af046146",
-              products: [
-                {
-                  id: 102,
-                  name: "Apartment",
-                  name_ar: "الشقة",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FApartment-min.png?alt=media&token=0a61353d-951d-4d16-b29a-698dc7c3c710",
-                  jobs: [
-                    {
-                      id: 297,
-                      serviceid: 53,
-                      pricelimit: 49,
-                      name: "Enter number of rooms",
-                      name_ar: "أدخل عدد الغرف",
-                      price: 199,
-                      pricetype: 5,
-                      description:
-                        "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
-                      description_ar:
-                        "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
-                      cartnotes:
-                        "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
-                      cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
-                      carttype: 2,
-                      note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
-                      note_ar:
-                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
-                    },
-                  ],
-                },
-                {
-                  id: 103,
-                  name: "Villa",
-                  name_ar: "الفيلا",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FVilla-min.png?alt=media&token=0357bab1-4116-40c6-9978-dc91b63fe92b",
-                  jobs: [
-                    {
-                      id: 298,
-                      serviceid: 53,
-                      pricelimit: 49,
-                      name: "Enter number of rooms",
-                      name_ar: "أدخل عدد الغرف",
-                      price: 250,
-                      pricetype: 5,
-                      description:
-                        "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
-                      description_ar:
-                        "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
-                      cartnotes:
-                        "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
-                      cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
-                      carttype: 2,
-                      note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
-                      note_ar:
-                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
-                    },
-                  ],
-                },
-                {
-                  id: 104,
-                  name: "Commercial Building",
-                  name_ar: "المباني التجارية",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCommercial-Buiding-min.png?alt=media&token=cbe60a88-33a7-463b-a3bc-5d8acaae0e6b",
-                  jobs: [
-                    {
-                      id: 299,
-                      serviceid: 53,
-                      pricelimit: 49,
-                      name: "Schedule Visit",
-                      name_ar: "أدخل عدد الغرف",
-                      price: 25,
-                      pricetype: 2,
-                      description:
-                        "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
-                      description_ar:
-                        "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
-                      cartnotes:
-                        "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
-                      cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
-                      carttype: 2,
-                      note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
-                      note_ar:
-                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
-                    },
-                  ],
-                },
-                {
-                  id: 105,
-                  name: "Painter Visit",
-                  name_ar: " زيارة فني دهان",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPaiter-Visit-min.png?alt=media&token=81fa1894-9056-4981-a9c3-d7ffce7e2686",
-                  jobs: [
-                    {
-                      id: 300,
-                      serviceid: 53,
-                      pricelimit: 49,
-                      name: "Schedule Visit",
-                      name_ar: "أدخل عدد الغرف",
-                      price: 25,
-                      pricetype: 2,
-                      description:
-                        "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
-                      description_ar:
-                        "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
-                      cartnotes:
-                        "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
-                      cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
-                      carttype: 2,
-                      note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
-                      note_ar:
-                        "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              id: 48,
-              name: "Electronics",
-              name_ar: "تصليح الكتروني",
-              pricelimit: 49,
-              seo_name:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Felectronic%20b.png?alt=media&token=5310a215-a609-49c5-9aac-b1e971ca108f",
-              banner: null,
-              white_icon:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Felectronic%20W.png?alt=media&token=44466b84-55b0-4ebe-ae84-bb501812724b",
-              products: [
-                {
-                  id: 33,
-                  name: "Refrigerator Technician",
-                  name_ar: "فني تبريد",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FRefrigerator-min.png?alt=media&token=ec44c2df-bfda-485c-9fdc-879c415cad70",
-                  jobs: [
-                    {
-                      id: 84,
-                      serviceid: 48,
-                      pricelimit: 49,
-                      name: "Cleaning",
-                      name_ar: "تنظيفة",
-                      price: 49,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 85,
-                      serviceid: 48,
-                      pricelimit: 49,
-                      name: "Repair consultation",
-                      name_ar: "استشارة لاصلاح ",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 34,
-                  name: "Microwave Technician",
-                  name_ar: "فني الميكروويف",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FMicrowave-min.png?alt=media&token=cfb24772-3934-4217-8a59-896fbbfb1728",
-                  jobs: [
-                    {
-                      id: 86,
-                      serviceid: 48,
-                      pricelimit: 49,
-                      name: "Repair consultation for microwave",
-                      name_ar: "استشارة لاصلاح الميكرويف",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 35,
-                  name: "Washing Machine Technician",
-                  name_ar: "فنى آلة الغسيل",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWashing-Machine-min.png?alt=media&token=902f12a4-c0df-433e-b0a7-52f543c3d0a7",
-                  jobs: [
-                    {
-                      id: 87,
-                      serviceid: 48,
-                      pricelimit: 49,
-                      name: "Repair of washing machine",
-                      name_ar: "استشارة لاصلاح الغسالة ",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 36,
-                  name: "TV Technician",
-                  name_ar: "فني تلفزيون",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTV-min.png?alt=media&token=f1bb85e8-0b30-4ef8-b453-2833724fb1f7",
-                  jobs: [
-                    {
-                      id: 278,
-                      serviceid: 48,
-                      pricelimit: 49,
-                      name: "Remove or install a TV",
-                      name_ar: "إزالة أو تثبيت  تلفزيون",
-                      price: 69,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 88,
-                      serviceid: 48,
-                      pricelimit: 49,
-                      name: "Repair consultation of TV",
-                      name_ar: "استشارة لاصلاح التليفزيون ",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 95,
-                  name: "Dishwasher",
-                  name_ar: "آلة غسيل الصحون",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FDishwasher-min.png?alt=media&token=e1d78cb1-873c-4e7f-9b18-c936068dd5d1",
-                  jobs: [
-                    {
-                      id: 284,
-                      serviceid: 48,
-                      pricelimit: 49,
-                      name: "Repair consultation of dishwasher",
-                      name_ar: "إستشارة تصليح آلة غسيل الصحون",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              id: 56,
-              name: "Cleaning",
-              name_ar: "تنظيف",
-              pricelimit: 49,
-              seo_name:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FCleaning-min.png?alt=media&token=23ef981d-1da1-47aa-bd89-df08e2640ef1",
-              banner: null,
-              white_icon:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FCleaning-White-min.png?alt=media&token=5617d8d4-35c3-41f7-9f50-ca37cf52a1d5",
-              products: [
-                {
-                  id: 113,
-                  name: "Apartment",
-                  name_ar: "الشقة",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FApartment-min.png?alt=media&token=0a61353d-951d-4d16-b29a-698dc7c3c710",
-                  jobs: [
-                    {
-                      id: 332,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "Unfurnished Dusty Apartment",
-                      name_ar: "تنظيف شقة غير مفروشة من الغبار",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 400,
-                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
-                      note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
-                    },
-                    {
-                      id: 333,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "Unfurnished Dusty Apartment\r\nHave Stains",
-                      name_ar: "تنظيف شقة غير مفروشة من الغبار والبقع المتسخة",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 500,
-                    },
-                    {
-                      id: 334,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "Furnished Dusty Apartment",
-                      name_ar: "تنظيف شقة مفروشة",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 600,
-                    },
-                  ],
-                },
-                {
-                  id: 114,
-                  name: "Villa",
-                  name_ar: "فيلا",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FVilla-min.png?alt=media&token=0357bab1-4116-40c6-9978-dc91b63fe92b",
-                  jobs: [
-                    {
-                      id: 335,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "Unfurnished Dusty Villa\r\n[300 x500 meters]",
-                      name_ar: "غير مفروشة من الغبار بمساحة\r\n[300X500م]",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 1800,
-                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
-                      note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
-                    },
-                    {
-                      id: 336,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "Unfurnished Dusty Villa\r\n[200 x300 meters]",
-                      name_ar:
-                        "تنظيف فيلا غير مفروشة من الغبار بمساحة\r\n[200X300م]",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 1400,
-                    },
-                  ],
-                },
-                {
-                  id: 115,
-                  name: "Sofa Cleaning",
-                  name_ar: "تنظيف الأريكة",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FSofa-min-min.png?alt=media&token=caead5a6-d31e-41c0-ad8e-fb31c096eca7",
-                  jobs: [
-                    {
-                      id: 337,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "6 Seater Sofa",
-                      name_ar: "أريكة [6 مقاعد]",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 400,
-                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
-                      note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
-                    },
-                    {
-                      id: 338,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "8 Seater Sofa",
-                      name_ar: "أريكة [8 مقاعد]",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 400,
-                    },
-                    {
-                      id: 339,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "10 Seater Sofa",
-                      name_ar: "أريكة [10 مقاعد]",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 500,
-                    },
-                  ],
-                },
-                {
-                  id: 116,
-                  name: "Carpet Cleaning",
-                  name_ar: "تنظيف السجاد",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FCarpet-min-min.png?alt=media&token=b1dff645-ef52-474e-99e1-9607f901f97c",
-                  jobs: [
-                    {
-                      id: 340,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "Carpet Cleaning  [4X3m]",
-                      name_ar: "تنظيف السجاد [4x3 م]",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 150,
-                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
-                      note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
-                    },
-                  ],
-                },
-                {
-                  id: 117,
-                  name: "Swimming Pool Cleaning",
-                  name_ar: "تنظيف أحواض السباحة",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FSwimming-Pool-min-min.png?alt=media&token=983279f2-b5f4-4207-8b52-7c84fc8f774d",
-                  jobs: [
-                    {
-                      id: 341,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "Swimming Pool Cleaning  [12 x 20]",
-                      name_ar: "تنظيف حوض المياة بمساحة 12X20 م",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 300,
-                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
-                      note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
-                    },
-                  ],
-                },
-                {
-                  id: 118,
-                  name: "Drawing Room",
-                  name_ar: "غرفة الجلوس",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FDrawing-Room-min-min.png?alt=media&token=1814bf96-93da-4e71-9ae1-6d9f54b70538",
-                  jobs: [
-                    {
-                      id: 342,
-                      serviceid: 56,
-                      pricelimit: 49,
-                      name: "Drawing Room [4X5m] + Curtains + Carpet ",
-                      name_ar: "غرفة الجلوس 4x5 م + ستارة + سجاد",
-                      price: 25,
-                      pricetype: 9,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      approxprice: 500,
-                      note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
-                      note_ar:
-                        "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              id: 17,
-              name: "Packers & Movers",
-              name_ar: "نقل العفش",
-              pricelimit: 49,
-              seo_name:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPackers%20%26%20Movers-B.png?alt=media&token=95d19618-1903-480f-99a8-15240c7a1e4c",
-              banner: null,
-              white_icon:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPackers%20%26%20Movers-W.png?alt=media&token=a6a3c383-6102-443b-b21b-90afcb416556",
-              products: [
-                {
-                  id: 96,
-                  name: "Within City",
-                  name_ar: "داخل المدينة",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWithin-City-min.png?alt=media&token=a869bfcc-7e15-421f-a0e2-6316e95fd985",
-                  jobs: [
-                    {
-                      id: 285,
-                      serviceid: 17,
-                      pricelimit: 49,
-                      name: "Number of Kitchen",
-                      name_ar: "حدد عدد المطابخ",
-                      price: 179,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      note: "1- Service Includes furniture and fixtures, curtains fixing, TV mounting, LCD/LED fixing, kitchen cabinet fixing and AC fixing.\r\n2- Please select how many kitchens, bedrooms, living rooms and halls do you have at your residence",
-                      note_ar:
-                        "1- الخدمة تشمل الآثاث والتجهيزات وتركيب الستائر واصلاح التلفاز بنوعيه LED او LCD وايضاً اصلاح المكيف وخزانات المطبخ. \r\n2- يرجى تحديد عدد المطابخ وغرف النوم والجلوس والصالات في سكنك",
-                    },
-                    {
-                      id: 286,
-                      serviceid: 17,
-                      pricelimit: 49,
-                      name: "Number of Bedroom",
-                      name_ar: "حدد عدد غرف النوم",
-                      price: 149,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 288,
-                      serviceid: 17,
-                      pricelimit: 49,
-                      name: "Number of Living room / Lobby",
-                      name_ar: "حدد عدد صالات الجلوس",
-                      price: 159,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 289,
-                      serviceid: 17,
-                      pricelimit: 49,
-                      name: "Number of Hall / Drawing Room",
-                      name_ar: "حدد عدد الصالات/الإستراحات",
-                      price: 179,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 316,
-                      serviceid: 17,
-                      pricelimit: 49,
-                      name: "Schedule a visit",
-                      name_ar: "جدولة زيارة",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 97,
-                  name: "Outside City",
-                  name_ar: "خارج المدينة",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FOutside-City-min.png?alt=media&token=3899edc4-00c1-4739-993c-fcb1fb0b2f24",
-                  jobs: [
-                    {
-                      id: 287,
-                      serviceid: 17,
-                      pricelimit: 49,
-                      name: "Schedule a visit",
-                      name_ar: "جدولة زيارة",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              id: 52,
-              name: "Gardening Services",
-              name_ar: "تنسيق الحدائق",
-              pricelimit: 49,
-              seo_name:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGardening-Black-min.png?alt=media&token=d435ff61-36a3-4b1d-a488-1d5bf4358fa7",
-              banner: null,
-              white_icon:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGardening-White-min.png?alt=media&token=d7dba748-9b90-4303-ac8b-48071a15fc00",
-              products: [
-                {
-                  id: 99,
-                  name: "Garden Maintenance",
-                  name_ar: "صيانة الحديقة",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGarden-Maintenance-min.png?alt=media&token=4917336d-d742-4ea0-aa3e-6e2c60554f0b",
-                  jobs: [
-                    {
-                      id: 291,
-                      serviceid: 52,
-                      pricelimit: 49,
-                      name: "Garden Caring",
-                      name_ar: "العناية بالحديقة",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 292,
-                      serviceid: 52,
-                      pricelimit: 49,
-                      name: "Garden Trimming",
-                      name_ar: "ترتيب وتقليم الحديقة",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 293,
-                      serviceid: 52,
-                      pricelimit: 49,
-                      name: "Garden Soil Checking",
-                      name_ar: "فحص تربة الحديقة",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 100,
-                  name: "Garden Reconstructions",
-                  name_ar: "بناء الحدائق",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGarden-Reconstruct-min.png?alt=media&token=0bb643d3-b3b3-43c8-b6bb-ea70983709ed",
-                  jobs: [
-                    {
-                      id: 294,
-                      serviceid: 52,
-                      pricelimit: 49,
-                      name: "Recreation of a new area garden",
-                      name_ar: "بناء حديقة جديدة",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 295,
-                      serviceid: 52,
-                      pricelimit: 49,
-                      name: "Changing or updating garden",
-                      name_ar: "تغيير او تحسين الحديقة",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 101,
-                  name: "Garden Irrigation",
-                  name_ar: "ري الحدائق",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGarden-Irrigation-min.png?alt=media&token=f7d2bb5c-987d-4704-8140-1dbcdb0aa4d9",
-                  jobs: [
-                    {
-                      id: 296,
-                      serviceid: 52,
-                      pricelimit: 49,
-                      name: "Water supply over a garden",
-                      name_ar: "توصيل المياة وري الحديقة",
-                      price: 25,
-                      pricetype: 2,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              id: 45,
-              name: "Sanitization",
-              name_ar: "خدمات التعقيم",
-              pricelimit: 49,
-              seo_name:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSanitization-B.png?alt=media&token=9133661e-1aa5-4f68-a05b-155c60bcf948",
-              banner: null,
-              white_icon:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSanitization-W.png?alt=media&token=e2b050d7-46bc-484e-a99c-92c1dd614f4a",
-              products: [
-                {
-                  id: 79,
-                  name: "Apartment Sanitization",
-                  name_ar: "تعقيم الشقة",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FAPartment-min.png?alt=media&token=1fe1e686-ff04-4f65-b117-ba0d76833d63",
-                  jobs: [
-                    {
-                      id: 225,
-                      serviceid: 45,
-                      pricelimit: 49,
-                      name: "1 BHK (Bedroom, Hall, Kitchen) ",
-                      name_ar: " شقة (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      price: 149,
-                      pricetype: 1,
-                      description: "1 Bedroom, 1 Bathroom, 1 Hall, 1 Kitchen",
-                      description_ar: "1 غرفة نوم، 1 حمام، 1 صالة ، 1 مطبخ",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      note: "1- We use EPA approved products.",
-                      note_ar: " نستخدم منتجات EPA المرخصة",
-                    },
-                    {
-                      id: 226,
-                      serviceid: 45,
-                      pricelimit: 49,
-                      name: "2 BHK (Bedroom, Hall, Kitchen)",
-                      name_ar: "شقتين (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      price: 299,
-                      pricetype: 1,
-                      description: "2 Bedroom, 2 Bathroom, 1 Hall, 1 Kitchen",
-                      description_ar: "2 غرفة نوم، 2 حمام، 1 صالة ، 1 مطبخ",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 227,
-                      serviceid: 45,
-                      pricelimit: 49,
-                      name: "3 BHK (Bedroom, Hall, Kitchen) ",
-                      name_ar: "ثلاث شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      price: 449,
-                      pricetype: 1,
-                      description:
-                        "3-4 Bedroom, 2-3 Bathroom, 1-2 Hall, 1-2 Kitchen",
-                      description_ar:
-                        "3-4 غرفة نوم، 2-3 حمام، 1-2 صالة ، 1-2 مطبخ",
-                      i_notes: "Building of any size",
-                      i_notes_ar: "",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 236,
-                      serviceid: 45,
-                      pricelimit: 49,
-                      name: "4-5 BHK (Bedroom, Hall, Kitchen)",
-                      name_ar: "4-5 شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      price: 599,
-                      pricetype: 1,
-                      description:
-                        "4-6 Bedroom, 4-5 Bathroom, 2-3 Hall, 2-3 Kitchen",
-                      description_ar: "4-5 شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      i_notes: "Building of any size",
-                      i_notes_ar: "",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 80,
-                  name: "Villa Sanitization",
-                  name_ar: "تعقيم الفيلا",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FVilla-min.png?alt=media&token=0357bab1-4116-40c6-9978-dc91b63fe92b",
-                  jobs: [
-                    {
-                      id: 237,
-                      serviceid: 45,
-                      pricelimit: 49,
-                      name: "Enter the villa size\r\n",
-                      name_ar: "ادخل مساحة الفيلا",
-                      price: "0.75",
-                      pricetype: 6,
-                      description:
-                        "Based on Villa sizes & no of floors.\r\nThe unit of villa would start from zero and increament in the multiple of 50\r\nThe unit of floor would start with 1 and as the user increases the number of floors, the price would be doubled or tripled accordingly",
-                      description_ar:
-                        "Based on Villa الحجم s & no of floors.\r\nThe وحدة  of villa would start from zero and increament in the multiple of 50\r\nThe وحدة  of floor would start with 1 and as the user increases the number of floors, the price would be ",
-                      title: "What is your villa size (In Meters)",
-                      title_ar: "ما مساحة الفيلا(بالمتر)",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      note: "1- We use EPA approved products. ",
-                      note_ar: " نستخدم منتجات EPA المرخصة",
-                    },
-                  ],
-                },
-                {
-                  id: 81,
-                  name: "Commercial Building Sanitization",
-                  name_ar: "تعقيم المباني",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCommercial-Building-min.png?alt=media&token=5f6bb05d-ef82-4ab7-8bf4-3ecd07308fab",
-                  jobs: [
-                    {
-                      id: 238,
-                      serviceid: 45,
-                      pricelimit: 49,
-                      name: "Sanitization of Commerical\r\nBuilding",
-                      name_ar: "تعقيم المباني التجارية",
-                      price: 449,
-                      pricetype: 1,
-                      description: "Based on no of floors",
-                      description_ar: "Based on no of floors",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      note: "1- We use EPA approved products. ",
-                      note_ar: " نستخدم منتجات EPA المرخصة",
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              id: 47,
-              name: "Pest Control",
-              name_ar: "مكافحة الحشرات",
-              pricelimit: 49,
-              seo_name:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPest%20control%20B.png?alt=media&token=4717fb56-dd6f-4a5a-a9b7-ab633adaa546",
-              banner: null,
-              white_icon:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fpest%20control%20W.png?alt=media&token=0da83613-f064-45ad-81eb-cce00009b8ee",
-              products: [
-                {
-                  id: 82,
-                  name: "Apartment Pest Control",
-                  name_ar: "مكافحة الحشرات بالشقة",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FAPartment-min.png?alt=media&token=1fe1e686-ff04-4f65-b117-ba0d76833d63",
-                  jobs: [
-                    {
-                      id: 239,
-                      serviceid: 47,
-                      pricelimit: 49,
-                      name: "1 BHK (Bedroom, Hall, Kitchen)",
-                      name_ar: " شقة (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      price: 149,
-                      pricetype: 1,
-                      description: "Apartment of any size",
-                      description_ar: "لكل المقاسات",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      note: "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
-                      note_ar:
-                        "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة",
-                    },
-                    {
-                      id: 240,
-                      serviceid: 47,
-                      pricelimit: 49,
-                      name: "2 BHK (Bedroom, Hall, Kitchen)",
-                      name_ar: "شقتين (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      price: 299,
-                      pricetype: 1,
-                      description: "Apartment of any size",
-                      description_ar: "لكل المقاسات",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 241,
-                      serviceid: 47,
-                      pricelimit: 49,
-                      name: "3 BHK (Bedroom, Hall, Kitchen)",
-                      name_ar: "ثلاث شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      price: 449,
-                      pricetype: 1,
-                      description: "Apartment of any size",
-                      description_ar: "لكل المقاسات",
-                      i_notes: "Building of any size",
-                      i_notes_ar: "",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 242,
-                      serviceid: 47,
-                      pricelimit: 49,
-                      name: "4-5 BHK (Bedroom, Hall, Kitchen)",
-                      name_ar: "4-5 شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      price: 599,
-                      pricetype: 1,
-                      description:
-                        "4-6 Bedroom, 4-5 Bathroom, 2-3 Hall, 2-3 Kitchen",
-                      description_ar: "4-5 شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
-                      i_notes: "Building of any size",
-                      i_notes_ar: "",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-                {
-                  id: 83,
-                  name: "Villa Pest Control",
-                  name_ar: "الفيلا",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FVilla-min.png?alt=media&token=0357bab1-4116-40c6-9978-dc91b63fe92b",
-                  jobs: [
-                    {
-                      id: 243,
-                      serviceid: 47,
-                      pricelimit: 49,
-                      name: "Villa size",
-                      name_ar: " مساحة الفيلا",
-                      price: "0.75",
-                      pricetype: 6,
-                      description:
-                        "Based on Villa sizes & no of floors.\r\nThe unit of villa would start from zero and increament in the multiple of 50\r\nThe unit of floor would start with 1 and as the user increases the number of floors, the price would be doubled or tripled accordingly",
-                      description_ar:
-                        "Based on Villa الحجم s & no of floors.\r\nThe وحدة  of villa would start from zero and increament in the multiple of 50\r\nThe وحدة  of floor would start with 1 and as the user increases the number of floors, the price would be ",
-                      title: "What is your villa size (In Meters)",
-                      title_ar: "ما مساحة الفيلا(بالمتر)",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      note: "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
-                      note_ar:
-                        "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة",
-                    },
-                  ],
-                },
-                {
-                  id: 84,
-                  name: "Commercial Building Pest Control",
-                  name_ar: "المباني التجارية",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCommercial-Building-min.png?alt=media&token=5f6bb05d-ef82-4ab7-8bf4-3ecd07308fab",
-                  jobs: [
-                    {
-                      id: 244,
-                      serviceid: 47,
-                      pricelimit: 49,
-                      name: "Pest Control of Commercial\r\nBuilding",
-                      name_ar: "مكافحة الحشرات في المباني التجارية",
-                      price: 449,
-                      pricetype: 1,
-                      description: "Based on no of floors",
-                      description_ar: "Based on no of floors",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      note: "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
-                      note_ar:
-                        "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة",
-                    },
-                  ],
-                },
-              ],
-            },
+            // disabled on 12:09 AM
+            // {
+            //   id: 4,
+            //   name: "Carpenter",
+            //   name_ar: "خدمات النجارة",
+            //   pricelimit: 49,
+            //   seo_name:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCarpentry-B.png?alt=media&token=5f6904c9-f2fe-4da2-9ea5-6edc1eaaea40",
+            //   banner: null,
+            //   white_icon:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCarpentry-Icon-W.png?alt=media&token=cfa0b713-b37b-4275-9c9e-5e4d9ed7f5d5",
+            //   products: [
+            //     {
+            //       id: 85,
+            //       name: "Furniture",
+            //       name_ar: "أثاث المنزل",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FFurniture.png?alt=media&token=8f53811b-20e2-4225-bc7b-9ce8828a6c54",
+            //       jobs: [
+            //         {
+            //           id: 245,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Making of furniture",
+            //           name_ar: "أعمال الأثاث",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 246,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Wooden furniture repair",
+            //           name_ar: "إصلاح الأثاث الخشبي",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 247,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "General Furniture assembly",
+            //           name_ar: "تجميع الأثاث (عام)",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 248,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "IKEA or similar furniture assembly & installation",
+            //           name_ar: "تجميع وتركيب على طريقة ايكيا او غيرها",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 249,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Furniture repair",
+            //           name_ar: "إصلاح الأثاث",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 86,
+            //       name: "Beds",
+            //       name_ar: "سرير (أسرة)",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FBed-min.png?alt=media&token=9898e9df-6541-40da-b7fa-8bc5a7e77859",
+            //       jobs: [
+            //         {
+            //           id: 250,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Remove or install bed",
+            //           name_ar: "إزالة أو تثبيت السرير",
+            //           price: 110,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 251,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Balance bed",
+            //           name_ar: "موازنة السرير ",
+            //           price: 69,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 252,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Bed Repair",
+            //           name_ar: "إصلاح السرير",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 87,
+            //       name: "Tables",
+            //       name_ar: "طاولات",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTables-min.png?alt=media&token=85dcd301-f083-40d1-9e03-2dca2dd08a9f",
+            //       jobs: [
+            //         {
+            //           id: 253,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Remove or install tables ",
+            //           name_ar: "إزالة أو تثبيت الطاولات",
+            //           price: 79,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 254,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Repair table",
+            //           name_ar: "تصليح الطاولات",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 88,
+            //       name: "Cabinets",
+            //       name_ar: "خزانات",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCabnet-min.png?alt=media&token=3e4aecc5-5829-46f8-8740-81c9af2ce5fa",
+            //       jobs: [
+            //         {
+            //           id: 256,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Remove or install the 4 door\r\ncabinet",
+            //           name_ar: "إزالة أو تركيب خزانة ابو 4 أبواب",
+            //           price: 129,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 257,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Remove or install the 5 door cabinet rack",
+            //           name_ar: "إزالة أو تركيب خزانة ابو 5 أبواب ورف",
+            //           price: 149,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 258,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Remove or install a zipper door\r\ncabinet",
+            //           name_ar: "إزالة أو تركيب خزانة ابو باب سحاب",
+            //           price: 139,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 259,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Cabinet Repair",
+            //           name_ar: "إصلاح الخزانة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 255,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Remove or install 3 door\r\ncabinet",
+            //           name_ar: "إزالة أو تركيب خزانة ابو 3 أبواب",
+            //           price: 110,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 89,
+            //       name: "Curtains",
+            //       name_ar: "ستائر",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCurtains-min.png?alt=media&token=d80d5a29-eceb-422f-a243-fc656311873d",
+            //       jobs: [
+            //         {
+            //           id: 260,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Rolls curtain installation",
+            //           name_ar: "تركيب ستائر (رولز)",
+            //           price: 69,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 261,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Single Layer curtain installation\r\nLess than 2.5m",
+            //           name_ar:
+            //             "تركيب ستارة (طبقات) | طبقة واحدة | اصغر من 2.5 م",
+            //           price: 69,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 262,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Single Layer curtain installation\r\nEqual or more than 2.5m",
+            //           name_ar:
+            //             "تركيب ستارة (طبقات) | طبقة واحدة | 2.5 م او اكثر  ",
+            //           price: 89,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 263,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Double Layer curtain installation\r\nLess than 2.5m",
+            //           name_ar:
+            //             "تركيب ستارة (طبقات) | طبقة مزدوجة | اصغر من 2.5 م",
+            //           price: 119,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 264,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Double Layer curtain installation\r\nEqual or more than 2.5m",
+            //           name_ar:
+            //             "تركيب ستارة (طبقات) | طبقة مزدوجة | 2.5 م او اكثر  ",
+            //           price: 129,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 265,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Roman curtain installation",
+            //           name_ar: "تركيب ستارة رومانية",
+            //           price: 109,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 266,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Have an issue/problem",
+            //           name_ar: "هل لديك اي مشكلة؟",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 90,
+            //       name: "Doors",
+            //       name_ar: "أبواب",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FDoors-min.png?alt=media&token=5c93e67a-bee4-49d1-a69a-68fd5513b4f8",
+            //       jobs: [
+            //         {
+            //           id: 267,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Open locked door",
+            //           name_ar: "فتح باب مغلق",
+            //           price: 79,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 268,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Change door lock",
+            //           name_ar: "تغيير قفل الباب",
+            //           price: 40,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 269,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Install new door",
+            //           name_ar: "تركيب باب جديد",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 270,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Wooden doors balancing",
+            //           name_ar: "موازنة الأبواب الخشبية",
+            //           price: 89,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 271,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Remove and install self door",
+            //           name_ar: "إزالة وتركيب الباب الاوتوماتيك (الألي)",
+            //           price: 49,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 272,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Rubber installation",
+            //           name_ar: "تركيب المطاط",
+            //           price: 50,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 273,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Door Abrasion",
+            //           name_ar: "كشط الباب",
+            //           price: 89,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 274,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Have an issue/problem",
+            //           name_ar: "هل لديك اي مشكلة؟",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 91,
+            //       name: "Hanging Items",
+            //       name_ar: "تعليق أغراض",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FHanging-Items-Icon.png?alt=media&token=a55ac2ea-bbd4-454a-9421-4f3d46e6678e",
+            //       jobs: [
+            //         {
+            //           id: 275,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Install or remove shelves",
+            //           name_ar: "تركيب او إزالة الرفوف",
+            //           price: 49,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 276,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Install or remove paintings and pictures",
+            //           name_ar: "تركيب او إزالة اللوحات والصور",
+            //           price: 29,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 277,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Remove or install a mirror",
+            //           name_ar: "إزالة أو تثبيت مرآة",
+            //           price: 29,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 279,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Have an issue/problem",
+            //           name_ar: "هل لديك اي مشكلة؟",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 92,
+            //       name: "Carpenter Visit",
+            //       name_ar: "زيارة نجار",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCarpenter-Visit-min.png?alt=media&token=e0343fb3-3da0-45f4-9adf-703fc6adda70",
+            //       jobs: [
+            //         {
+            //           id: 280,
+            //           serviceid: 4,
+            //           pricelimit: 49,
+            //           name: "Carpenter Consultation",
+            //           name_ar: "زيارة نجار",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //   ],
+            // },
+            // {
+            //   id: 53,
+            //   name: "Paint",
+            //   name_ar: " الدهان",
+            //   pricelimit: 49,
+            //   seo_name:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPaint-Black-min.png?alt=media&token=d6c02ed5-1a7c-45e9-8234-f34860afacbf",
+            //   banner: null,
+            //   white_icon:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPaint-min.png?alt=media&token=1ffb6f79-af8f-4e93-86f2-7d66af046146",
+            //   products: [
+            //     {
+            //       id: 102,
+            //       name: "Apartment",
+            //       name_ar: "الشقة",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FApartment-min.png?alt=media&token=0a61353d-951d-4d16-b29a-698dc7c3c710",
+            //       jobs: [
+            //         {
+            //           id: 297,
+            //           serviceid: 53,
+            //           pricelimit: 49,
+            //           name: "Enter number of rooms",
+            //           name_ar: "أدخل عدد الغرف",
+            //           price: 199,
+            //           pricetype: 5,
+            //           description:
+            //             "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
+            //           description_ar:
+            //             "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
+            //           cartnotes:
+            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+            //           cartnotes_ar:
+            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+            //           carttype: 2,
+            //           note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
+            //           note_ar:
+            //             "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 103,
+            //       name: "Villa",
+            //       name_ar: "الفيلا",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FVilla-min.png?alt=media&token=0357bab1-4116-40c6-9978-dc91b63fe92b",
+            //       jobs: [
+            //         {
+            //           id: 298,
+            //           serviceid: 53,
+            //           pricelimit: 49,
+            //           name: "Enter number of rooms",
+            //           name_ar: "أدخل عدد الغرف",
+            //           price: 250,
+            //           pricetype: 5,
+            //           description:
+            //             "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
+            //           description_ar:
+            //             "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
+            //           cartnotes:
+            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+            //           cartnotes_ar:
+            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+            //           carttype: 2,
+            //           note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
+            //           note_ar:
+            //             "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 104,
+            //       name: "Commercial Building",
+            //       name_ar: "المباني التجارية",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCommercial-Buiding-min.png?alt=media&token=cbe60a88-33a7-463b-a3bc-5d8acaae0e6b",
+            //       jobs: [
+            //         {
+            //           id: 299,
+            //           serviceid: 53,
+            //           pricelimit: 49,
+            //           name: "Schedule Visit",
+            //           name_ar: "أدخل عدد الغرف",
+            //           price: 25,
+            //           pricetype: 2,
+            //           description:
+            //             "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
+            //           description_ar:
+            //             "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
+            //           cartnotes:
+            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+            //           cartnotes_ar:
+            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+            //           carttype: 2,
+            //           note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
+            //           note_ar:
+            //             "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 105,
+            //       name: "Painter Visit",
+            //       name_ar: " زيارة فني دهان",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPaiter-Visit-min.png?alt=media&token=81fa1894-9056-4981-a9c3-d7ffce7e2686",
+            //       jobs: [
+            //         {
+            //           id: 300,
+            //           serviceid: 53,
+            //           pricelimit: 49,
+            //           name: "Schedule Visit",
+            //           name_ar: "أدخل عدد الغرف",
+            //           price: 25,
+            //           pricetype: 2,
+            //           description:
+            //             "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
+            //           description_ar:
+            //             "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
+            //           cartnotes:
+            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+            //           cartnotes_ar:
+            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+            //           carttype: 2,
+            //           note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
+            //           note_ar:
+            //             "سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nلكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً\r\nكل الأسعار مخفضة",
+            //         },
+            //       ],
+            //     },
+            //   ],
+            // },
+            // {
+            //   id: 48,
+            //   name: "Electronics",
+            //   name_ar: "تصليح الكتروني",
+            //   pricelimit: 49,
+            //   seo_name:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Felectronic%20b.png?alt=media&token=5310a215-a609-49c5-9aac-b1e971ca108f",
+            //   banner: null,
+            //   white_icon:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Felectronic%20W.png?alt=media&token=44466b84-55b0-4ebe-ae84-bb501812724b",
+            //   products: [
+            //     {
+            //       id: 33,
+            //       name: "Refrigerator Technician",
+            //       name_ar: "فني تبريد",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FRefrigerator-min.png?alt=media&token=ec44c2df-bfda-485c-9fdc-879c415cad70",
+            //       jobs: [
+            //         {
+            //           id: 84,
+            //           serviceid: 48,
+            //           pricelimit: 49,
+            //           name: "Cleaning",
+            //           name_ar: "تنظيفة",
+            //           price: 49,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 85,
+            //           serviceid: 48,
+            //           pricelimit: 49,
+            //           name: "Repair consultation",
+            //           name_ar: "استشارة لاصلاح ",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 34,
+            //       name: "Microwave Technician",
+            //       name_ar: "فني الميكروويف",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FMicrowave-min.png?alt=media&token=cfb24772-3934-4217-8a59-896fbbfb1728",
+            //       jobs: [
+            //         {
+            //           id: 86,
+            //           serviceid: 48,
+            //           pricelimit: 49,
+            //           name: "Repair consultation for microwave",
+            //           name_ar: "استشارة لاصلاح الميكرويف",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 35,
+            //       name: "Washing Machine Technician",
+            //       name_ar: "فنى آلة الغسيل",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWashing-Machine-min.png?alt=media&token=902f12a4-c0df-433e-b0a7-52f543c3d0a7",
+            //       jobs: [
+            //         {
+            //           id: 87,
+            //           serviceid: 48,
+            //           pricelimit: 49,
+            //           name: "Repair of washing machine",
+            //           name_ar: "استشارة لاصلاح الغسالة ",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 36,
+            //       name: "TV Technician",
+            //       name_ar: "فني تلفزيون",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTV-min.png?alt=media&token=f1bb85e8-0b30-4ef8-b453-2833724fb1f7",
+            //       jobs: [
+            //         {
+            //           id: 278,
+            //           serviceid: 48,
+            //           pricelimit: 49,
+            //           name: "Remove or install a TV",
+            //           name_ar: "إزالة أو تثبيت  تلفزيون",
+            //           price: 69,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 88,
+            //           serviceid: 48,
+            //           pricelimit: 49,
+            //           name: "Repair consultation of TV",
+            //           name_ar: "استشارة لاصلاح التليفزيون ",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 95,
+            //       name: "Dishwasher",
+            //       name_ar: "آلة غسيل الصحون",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FDishwasher-min.png?alt=media&token=e1d78cb1-873c-4e7f-9b18-c936068dd5d1",
+            //       jobs: [
+            //         {
+            //           id: 284,
+            //           serviceid: 48,
+            //           pricelimit: 49,
+            //           name: "Repair consultation of dishwasher",
+            //           name_ar: "إستشارة تصليح آلة غسيل الصحون",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //   ],
+            // },
+            // {
+            //   id: 56,
+            //   name: "Cleaning",
+            //   name_ar: "تنظيف",
+            //   pricelimit: 49,
+            //   seo_name:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FCleaning-min.png?alt=media&token=23ef981d-1da1-47aa-bd89-df08e2640ef1",
+            //   banner: null,
+            //   white_icon:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FCleaning-White-min.png?alt=media&token=5617d8d4-35c3-41f7-9f50-ca37cf52a1d5",
+            //   products: [
+            //     {
+            //       id: 113,
+            //       name: "Apartment",
+            //       name_ar: "الشقة",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FApartment-min.png?alt=media&token=0a61353d-951d-4d16-b29a-698dc7c3c710",
+            //       jobs: [
+            //         {
+            //           id: 332,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "Unfurnished Dusty Apartment",
+            //           name_ar: "تنظيف شقة غير مفروشة من الغبار",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 400,
+            //           note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+            //           note_ar:
+            //             "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
+            //         },
+            //         {
+            //           id: 333,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "Unfurnished Dusty Apartment\r\nHave Stains",
+            //           name_ar: "تنظيف شقة غير مفروشة من الغبار والبقع المتسخة",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 500,
+            //         },
+            //         {
+            //           id: 334,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "Furnished Dusty Apartment",
+            //           name_ar: "تنظيف شقة مفروشة",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 600,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 114,
+            //       name: "Villa",
+            //       name_ar: "فيلا",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FVilla-min.png?alt=media&token=0357bab1-4116-40c6-9978-dc91b63fe92b",
+            //       jobs: [
+            //         {
+            //           id: 335,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "Unfurnished Dusty Villa\r\n[300 x500 meters]",
+            //           name_ar: "غير مفروشة من الغبار بمساحة\r\n[300X500م]",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 1800,
+            //           note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+            //           note_ar:
+            //             "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
+            //         },
+            //         {
+            //           id: 336,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "Unfurnished Dusty Villa\r\n[200 x300 meters]",
+            //           name_ar:
+            //             "تنظيف فيلا غير مفروشة من الغبار بمساحة\r\n[200X300م]",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 1400,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 115,
+            //       name: "Sofa Cleaning",
+            //       name_ar: "تنظيف الأريكة",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FSofa-min-min.png?alt=media&token=caead5a6-d31e-41c0-ad8e-fb31c096eca7",
+            //       jobs: [
+            //         {
+            //           id: 337,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "6 Seater Sofa",
+            //           name_ar: "أريكة [6 مقاعد]",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 400,
+            //           note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+            //           note_ar:
+            //             "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
+            //         },
+            //         {
+            //           id: 338,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "8 Seater Sofa",
+            //           name_ar: "أريكة [8 مقاعد]",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 400,
+            //         },
+            //         {
+            //           id: 339,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "10 Seater Sofa",
+            //           name_ar: "أريكة [10 مقاعد]",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 500,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 116,
+            //       name: "Carpet Cleaning",
+            //       name_ar: "تنظيف السجاد",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FCarpet-min-min.png?alt=media&token=b1dff645-ef52-474e-99e1-9607f901f97c",
+            //       jobs: [
+            //         {
+            //           id: 340,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "Carpet Cleaning  [4X3m]",
+            //           name_ar: "تنظيف السجاد [4x3 م]",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 150,
+            //           note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+            //           note_ar:
+            //             "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 117,
+            //       name: "Swimming Pool Cleaning",
+            //       name_ar: "تنظيف أحواض السباحة",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FSwimming-Pool-min-min.png?alt=media&token=983279f2-b5f4-4207-8b52-7c84fc8f774d",
+            //       jobs: [
+            //         {
+            //           id: 341,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "Swimming Pool Cleaning  [12 x 20]",
+            //           name_ar: "تنظيف حوض المياة بمساحة 12X20 م",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 300,
+            //           note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+            //           note_ar:
+            //             "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 118,
+            //       name: "Drawing Room",
+            //       name_ar: "غرفة الجلوس",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCleaning%2FDrawing-Room-min-min.png?alt=media&token=1814bf96-93da-4e71-9ae1-6d9f54b70538",
+            //       jobs: [
+            //         {
+            //           id: 342,
+            //           serviceid: 56,
+            //           pricelimit: 49,
+            //           name: "Drawing Room [4X5m] + Curtains + Carpet ",
+            //           name_ar: "غرفة الجلوس 4x5 م + ستارة + سجاد",
+            //           price: 25,
+            //           pricetype: 9,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           approxprice: 500,
+            //           note: "1. We use high quality product that cleans all type of dust and dirt with advance cleaning and drying machiary.\r\n2. All prices are subjected to discount",
+            //           note_ar:
+            //             "نستخدم آلات ومنتجًات تنظيف وتجفيف عالية الجودة لجميع أنواع الغبار والأوساخ\r\nالأسعار قابلة للتخفيض",
+            //         },
+            //       ],
+            //     },
+            //   ],
+            // },
+            // {
+            //   id: 17,
+            //   name: "Packers & Movers",
+            //   name_ar: "نقل العفش",
+            //   pricelimit: 49,
+            //   seo_name:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPackers%20%26%20Movers-B.png?alt=media&token=95d19618-1903-480f-99a8-15240c7a1e4c",
+            //   banner: null,
+            //   white_icon:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPackers%20%26%20Movers-W.png?alt=media&token=a6a3c383-6102-443b-b21b-90afcb416556",
+            //   products: [
+            //     {
+            //       id: 96,
+            //       name: "Within City",
+            //       name_ar: "داخل المدينة",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWithin-City-min.png?alt=media&token=a869bfcc-7e15-421f-a0e2-6316e95fd985",
+            //       jobs: [
+            //         {
+            //           id: 285,
+            //           serviceid: 17,
+            //           pricelimit: 49,
+            //           name: "Number of Kitchen",
+            //           name_ar: "حدد عدد المطابخ",
+            //           price: 179,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           note: "1- Service Includes furniture and fixtures, curtains fixing, TV mounting, LCD/LED fixing, kitchen cabinet fixing and AC fixing.\r\n2- Please select how many kitchens, bedrooms, living rooms and halls do you have at your residence",
+            //           note_ar:
+            //             "1- الخدمة تشمل الآثاث والتجهيزات وتركيب الستائر واصلاح التلفاز بنوعيه LED او LCD وايضاً اصلاح المكيف وخزانات المطبخ. \r\n2- يرجى تحديد عدد المطابخ وغرف النوم والجلوس والصالات في سكنك",
+            //         },
+            //         {
+            //           id: 286,
+            //           serviceid: 17,
+            //           pricelimit: 49,
+            //           name: "Number of Bedroom",
+            //           name_ar: "حدد عدد غرف النوم",
+            //           price: 149,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 288,
+            //           serviceid: 17,
+            //           pricelimit: 49,
+            //           name: "Number of Living room / Lobby",
+            //           name_ar: "حدد عدد صالات الجلوس",
+            //           price: 159,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 289,
+            //           serviceid: 17,
+            //           pricelimit: 49,
+            //           name: "Number of Hall / Drawing Room",
+            //           name_ar: "حدد عدد الصالات/الإستراحات",
+            //           price: 179,
+            //           pricetype: 1,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 316,
+            //           serviceid: 17,
+            //           pricelimit: 49,
+            //           name: "Schedule a visit",
+            //           name_ar: "جدولة زيارة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 97,
+            //       name: "Outside City",
+            //       name_ar: "خارج المدينة",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FOutside-City-min.png?alt=media&token=3899edc4-00c1-4739-993c-fcb1fb0b2f24",
+            //       jobs: [
+            //         {
+            //           id: 287,
+            //           serviceid: 17,
+            //           pricelimit: 49,
+            //           name: "Schedule a visit",
+            //           name_ar: "جدولة زيارة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //   ],
+            // },
+            // {
+            //   id: 52,
+            //   name: "Gardening Services",
+            //   name_ar: "تنسيق الحدائق",
+            //   pricelimit: 49,
+            //   seo_name:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGardening-Black-min.png?alt=media&token=d435ff61-36a3-4b1d-a488-1d5bf4358fa7",
+            //   banner: null,
+            //   white_icon:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGardening-White-min.png?alt=media&token=d7dba748-9b90-4303-ac8b-48071a15fc00",
+            //   products: [
+            //     {
+            //       id: 99,
+            //       name: "Garden Maintenance",
+            //       name_ar: "صيانة الحديقة",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGarden-Maintenance-min.png?alt=media&token=4917336d-d742-4ea0-aa3e-6e2c60554f0b",
+            //       jobs: [
+            //         {
+            //           id: 291,
+            //           serviceid: 52,
+            //           pricelimit: 49,
+            //           name: "Garden Caring",
+            //           name_ar: "العناية بالحديقة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 292,
+            //           serviceid: 52,
+            //           pricelimit: 49,
+            //           name: "Garden Trimming",
+            //           name_ar: "ترتيب وتقليم الحديقة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 293,
+            //           serviceid: 52,
+            //           pricelimit: 49,
+            //           name: "Garden Soil Checking",
+            //           name_ar: "فحص تربة الحديقة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 100,
+            //       name: "Garden Reconstructions",
+            //       name_ar: "بناء الحدائق",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGarden-Reconstruct-min.png?alt=media&token=0bb643d3-b3b3-43c8-b6bb-ea70983709ed",
+            //       jobs: [
+            //         {
+            //           id: 294,
+            //           serviceid: 52,
+            //           pricelimit: 49,
+            //           name: "Recreation of a new area garden",
+            //           name_ar: "بناء حديقة جديدة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 295,
+            //           serviceid: 52,
+            //           pricelimit: 49,
+            //           name: "Changing or updating garden",
+            //           name_ar: "تغيير او تحسين الحديقة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 101,
+            //       name: "Garden Irrigation",
+            //       name_ar: "ري الحدائق",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fgardening%2FGarden-Irrigation-min.png?alt=media&token=f7d2bb5c-987d-4704-8140-1dbcdb0aa4d9",
+            //       jobs: [
+            //         {
+            //           id: 296,
+            //           serviceid: 52,
+            //           pricelimit: 49,
+            //           name: "Water supply over a garden",
+            //           name_ar: "توصيل المياة وري الحديقة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //   ],
+            // },
+            // {
+            //   id: 45,
+            //   name: "Sanitization",
+            //   name_ar: "خدمات التعقيم",
+            //   pricelimit: 49,
+            //   seo_name:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSanitization-B.png?alt=media&token=9133661e-1aa5-4f68-a05b-155c60bcf948",
+            //   banner: null,
+            //   white_icon:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSanitization-W.png?alt=media&token=e2b050d7-46bc-484e-a99c-92c1dd614f4a",
+            //   products: [
+            //     {
+            //       id: 79,
+            //       name: "Apartment Sanitization",
+            //       name_ar: "تعقيم الشقة",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FAPartment-min.png?alt=media&token=1fe1e686-ff04-4f65-b117-ba0d76833d63",
+            //       jobs: [
+            //         {
+            //           id: 225,
+            //           serviceid: 45,
+            //           pricelimit: 49,
+            //           name: "1 BHK (Bedroom, Hall, Kitchen) ",
+            //           name_ar: " شقة (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           price: 149,
+            //           pricetype: 1,
+            //           description: "1 Bedroom, 1 Bathroom, 1 Hall, 1 Kitchen",
+            //           description_ar: "1 غرفة نوم، 1 حمام، 1 صالة ، 1 مطبخ",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           note: "1- We use EPA approved products.",
+            //           note_ar: " نستخدم منتجات EPA المرخصة",
+            //         },
+            //         {
+            //           id: 226,
+            //           serviceid: 45,
+            //           pricelimit: 49,
+            //           name: "2 BHK (Bedroom, Hall, Kitchen)",
+            //           name_ar: "شقتين (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           price: 299,
+            //           pricetype: 1,
+            //           description: "2 Bedroom, 2 Bathroom, 1 Hall, 1 Kitchen",
+            //           description_ar: "2 غرفة نوم، 2 حمام، 1 صالة ، 1 مطبخ",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 227,
+            //           serviceid: 45,
+            //           pricelimit: 49,
+            //           name: "3 BHK (Bedroom, Hall, Kitchen) ",
+            //           name_ar: "ثلاث شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           price: 449,
+            //           pricetype: 1,
+            //           description:
+            //             "3-4 Bedroom, 2-3 Bathroom, 1-2 Hall, 1-2 Kitchen",
+            //           description_ar:
+            //             "3-4 غرفة نوم، 2-3 حمام، 1-2 صالة ، 1-2 مطبخ",
+            //           i_notes: "Building of any size",
+            //           i_notes_ar: "",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 236,
+            //           serviceid: 45,
+            //           pricelimit: 49,
+            //           name: "4-5 BHK (Bedroom, Hall, Kitchen)",
+            //           name_ar: "4-5 شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           price: 599,
+            //           pricetype: 1,
+            //           description:
+            //             "4-6 Bedroom, 4-5 Bathroom, 2-3 Hall, 2-3 Kitchen",
+            //           description_ar: "4-5 شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           i_notes: "Building of any size",
+            //           i_notes_ar: "",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 80,
+            //       name: "Villa Sanitization",
+            //       name_ar: "تعقيم الفيلا",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FVilla-min.png?alt=media&token=0357bab1-4116-40c6-9978-dc91b63fe92b",
+            //       jobs: [
+            //         {
+            //           id: 237,
+            //           serviceid: 45,
+            //           pricelimit: 49,
+            //           name: "Enter the villa size\r\n",
+            //           name_ar: "ادخل مساحة الفيلا",
+            //           price: "0.75",
+            //           pricetype: 6,
+            //           description:
+            //             "Based on Villa sizes & no of floors.\r\nThe unit of villa would start from zero and increament in the multiple of 50\r\nThe unit of floor would start with 1 and as the user increases the number of floors, the price would be doubled or tripled accordingly",
+            //           description_ar:
+            //             "Based on Villa الحجم s & no of floors.\r\nThe وحدة  of villa would start from zero and increament in the multiple of 50\r\nThe وحدة  of floor would start with 1 and as the user increases the number of floors, the price would be ",
+            //           title: "What is your villa size (In Meters)",
+            //           title_ar: "ما مساحة الفيلا(بالمتر)",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           note: "1- We use EPA approved products. ",
+            //           note_ar: " نستخدم منتجات EPA المرخصة",
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 81,
+            //       name: "Commercial Building Sanitization",
+            //       name_ar: "تعقيم المباني",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCommercial-Building-min.png?alt=media&token=5f6bb05d-ef82-4ab7-8bf4-3ecd07308fab",
+            //       jobs: [
+            //         {
+            //           id: 238,
+            //           serviceid: 45,
+            //           pricelimit: 49,
+            //           name: "Sanitization of Commerical\r\nBuilding",
+            //           name_ar: "تعقيم المباني التجارية",
+            //           price: 449,
+            //           pricetype: 1,
+            //           description: "Based on no of floors",
+            //           description_ar: "Based on no of floors",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           note: "1- We use EPA approved products. ",
+            //           note_ar: " نستخدم منتجات EPA المرخصة",
+            //         },
+            //       ],
+            //     },
+            //   ],
+            // },
+            // {
+            //   id: 47,
+            //   name: "Pest Control",
+            //   name_ar: "مكافحة الحشرات",
+            //   pricelimit: 49,
+            //   seo_name:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FPest%20control%20B.png?alt=media&token=4717fb56-dd6f-4a5a-a9b7-ab633adaa546",
+            //   banner: null,
+            //   white_icon:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2Fpest%20control%20W.png?alt=media&token=0da83613-f064-45ad-81eb-cce00009b8ee",
+            //   products: [
+            //     {
+            //       id: 82,
+            //       name: "Apartment Pest Control",
+            //       name_ar: "مكافحة الحشرات بالشقة",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FAPartment-min.png?alt=media&token=1fe1e686-ff04-4f65-b117-ba0d76833d63",
+            //       jobs: [
+            //         {
+            //           id: 239,
+            //           serviceid: 47,
+            //           pricelimit: 49,
+            //           name: "1 BHK (Bedroom, Hall, Kitchen)",
+            //           name_ar: " شقة (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           price: 149,
+            //           pricetype: 1,
+            //           description: "Apartment of any size",
+            //           description_ar: "لكل المقاسات",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           note: "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
+            //           note_ar:
+            //             "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة",
+            //         },
+            //         {
+            //           id: 240,
+            //           serviceid: 47,
+            //           pricelimit: 49,
+            //           name: "2 BHK (Bedroom, Hall, Kitchen)",
+            //           name_ar: "شقتين (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           price: 299,
+            //           pricetype: 1,
+            //           description: "Apartment of any size",
+            //           description_ar: "لكل المقاسات",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 241,
+            //           serviceid: 47,
+            //           pricelimit: 49,
+            //           name: "3 BHK (Bedroom, Hall, Kitchen)",
+            //           name_ar: "ثلاث شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           price: 449,
+            //           pricetype: 1,
+            //           description: "Apartment of any size",
+            //           description_ar: "لكل المقاسات",
+            //           i_notes: "Building of any size",
+            //           i_notes_ar: "",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 242,
+            //           serviceid: 47,
+            //           pricelimit: 49,
+            //           name: "4-5 BHK (Bedroom, Hall, Kitchen)",
+            //           name_ar: "4-5 شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           price: 599,
+            //           pricetype: 1,
+            //           description:
+            //             "4-6 Bedroom, 4-5 Bathroom, 2-3 Hall, 2-3 Kitchen",
+            //           description_ar: "4-5 شقق (غرفة نوم ، حمام ، صالة ، مطبخ)",
+            //           i_notes: "Building of any size",
+            //           i_notes_ar: "",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 83,
+            //       name: "Villa Pest Control",
+            //       name_ar: "الفيلا",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FVilla-min.png?alt=media&token=0357bab1-4116-40c6-9978-dc91b63fe92b",
+            //       jobs: [
+            //         {
+            //           id: 243,
+            //           serviceid: 47,
+            //           pricelimit: 49,
+            //           name: "Villa size",
+            //           name_ar: " مساحة الفيلا",
+            //           price: "0.75",
+            //           pricetype: 6,
+            //           description:
+            //             "Based on Villa sizes & no of floors.\r\nThe unit of villa would start from zero and increament in the multiple of 50\r\nThe unit of floor would start with 1 and as the user increases the number of floors, the price would be doubled or tripled accordingly",
+            //           description_ar:
+            //             "Based on Villa الحجم s & no of floors.\r\nThe وحدة  of villa would start from zero and increament in the multiple of 50\r\nThe وحدة  of floor would start with 1 and as the user increases the number of floors, the price would be ",
+            //           title: "What is your villa size (In Meters)",
+            //           title_ar: "ما مساحة الفيلا(بالمتر)",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           note: "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
+            //           note_ar:
+            //             "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة",
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       id: 84,
+            //       name: "Commercial Building Pest Control",
+            //       name_ar: "المباني التجارية",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCommercial-Building-min.png?alt=media&token=5f6bb05d-ef82-4ab7-8bf4-3ecd07308fab",
+            //       jobs: [
+            //         {
+            //           id: 244,
+            //           serviceid: 47,
+            //           pricelimit: 49,
+            //           name: "Pest Control of Commercial\r\nBuilding",
+            //           name_ar: "مكافحة الحشرات في المباني التجارية",
+            //           price: 449,
+            //           pricetype: 1,
+            //           description: "Based on no of floors",
+            //           description_ar: "Based on no of floors",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           note: "1- Leave the house for 4-5 hours until chemicals disappeared.\r\n2- We use EPA approved products. ",
+            //           note_ar:
+            //             "1- اترك المنزل من 4-5 ساعات حتى زوال المواد الكيميائية المستخدمة\r\n2- نستخدم منتجات EPA المرخصة",
+            //         },
+            //       ],
+            //     },
+            //   ],
+            // },
             {
               id: 54,
               name: "Decor",
@@ -6233,154 +6350,154 @@ export default class LandingSecreen extends React.Component {
                 },
               ],
             },
-            {
-              id: 55,
-              name: "Security Camera",
-              name_ar: "كاميرا الأمن",
-              pricelimit: 49,
-              seo_name:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCCTV-Black-min.png?alt=media&token=fd7e3226-3731-4133-a651-ccc6bfd960aa",
-              banner: null,
-              white_icon:
-                "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCCTC-White-min.png?alt=media&token=90a72c9d-b288-409a-ac2b-0ddf08e41a28",
-              products: [
-                {
-                  id: 109,
-                  name: "Indoor / Outdoor",
-                  name_ar: "داخلية/ خارجية",
-                  seo_name:
-                    "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FIndoor-Outdor-min.png?alt=media&token=f1ea282c-eb4e-4cbc-89c6-5c51ab6a533a",
-                  jobs: [
-                    {
-                      id: 309,
-                      serviceid: 55,
-                      pricelimit: 49,
-                      name: "Hikvision camera 8MP",
-                      name_ar: "كاميرا هيك فيجن 8MP",
-                      price: 195,
-                      pricetype: 8,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                      note:
-                        "How would we do: \n" +
-                        "- choose the right position to ensure a wider coverage area.\n" +
-                        "- install the system, connect wires and test the monitoring system.\n" +
-                        "- get your security camera system up and run right away.\n" +
-                        "- guide you in how best to maintain the camera  connection \n\n" +
-                        "What we will use:\n" +
-                        "Each camera includes: Cables, mounting kit and the power adapter and/or receiver.\n" +
-                        "We bring all the necessary tools like drills, screwdrivers, ladder and every thing that is needed for installation of security cameras.",
-                      note_ar:
-                        "كيف نؤدي عملنا؟" +
-                        "\n" +
-                        "- تحديد الموقع الصحيح لضمان تغطية أوسع" +
-                        "\n" +
-                        "- تركيب نظام المراقبة وتوصيل الكابلات ومن ثم التجريب" +
-                        "\n" +
-                        "- تشغيل نظام المراقبة على الفور" +
-                        "\n" +
-                        "- إرشاد العميل كيفية الحفاظ على نظام المراقبة" +
-                        "\n\n" +
-                        "ماذا نستخدم؟" +
-                        "\n" +
-                        " كل كاميرا تشمل: كابلات، مجموعة منتجات المراقبة، محول الطاقة و/او جهاز الاستقبال." +
-                        "\n" +
-                        " نحن نجلب كل أدوات العمل الضرورية مثل الدريل والمفاتيح والسلم واي شيء مطلوب عند تنفيذ العمل.",
-                    },
-                    {
-                      id: 310,
-                      serviceid: 55,
-                      pricelimit: 49,
-                      name: "Hikvision camera 5MP",
-                      name_ar: "كاميرا هيك فيجن 5MP",
-                      price: 145,
-                      pricetype: 8,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 311,
-                      serviceid: 55,
-                      pricelimit: 49,
-                      name: "Hikvision camera 2MP",
-                      name_ar: "كاميرا هيك فيجن 2MP",
-                      price: 65,
-                      pricetype: 8,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 312,
-                      serviceid: 55,
-                      pricelimit: 49,
-                      name: "Hikvision DVR 4CH 5MP (Receiver)",
-                      name_ar: "هيك فيجن دي في ار 4 سي اتش 5 ميجا (ريسيفر)",
-                      price: 350,
-                      pricetype: 8,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 313,
-                      serviceid: 55,
-                      pricelimit: 49,
-                      name: "Hard disk western digital 1 TB",
-                      name_ar: "هارد ديسك ويسترن ديجيتال 1 تيرا",
-                      price: 250,
-                      pricetype: 8,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 314,
-                      serviceid: 55,
-                      pricelimit: 49,
-                      name: "Installation",
-                      name_ar: "تركيب",
-                      price: 150,
-                      pricetype: 8,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                    {
-                      id: 315,
-                      serviceid: 55,
-                      pricelimit: 49,
-                      name: "Schedule Visit",
-                      name_ar: "رتب زيارة",
-                      price: 25,
-                      pricetype: 2,
-                      description:
-                        "1- Our professional will visit you and let you chose the tiles design and size",
-                      description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
-                  ],
-                },
-              ],
-            },
+            // {
+            //   id: 55,
+            //   name: "Security Camera",
+            //   name_ar: "كاميرا الأمن",
+            //   pricelimit: 49,
+            //   seo_name:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCCTV-Black-min.png?alt=media&token=fd7e3226-3731-4133-a651-ccc6bfd960aa",
+            //   banner: null,
+            //   white_icon:
+            //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FCCTC-White-min.png?alt=media&token=90a72c9d-b288-409a-ac2b-0ddf08e41a28",
+            //   products: [
+            //     {
+            //       id: 109,
+            //       name: "Indoor / Outdoor",
+            //       name_ar: "داخلية/ خارجية",
+            //       seo_name:
+            //         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FIndoor-Outdor-min.png?alt=media&token=f1ea282c-eb4e-4cbc-89c6-5c51ab6a533a",
+            //       jobs: [
+            //         {
+            //           id: 309,
+            //           serviceid: 55,
+            //           pricelimit: 49,
+            //           name: "Hikvision camera 8MP",
+            //           name_ar: "كاميرا هيك فيجن 8MP",
+            //           price: 195,
+            //           pricetype: 8,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //           note:
+            //             "How would we do: \n" +
+            //             "- choose the right position to ensure a wider coverage area.\n" +
+            //             "- install the system, connect wires and test the monitoring system.\n" +
+            //             "- get your security camera system up and run right away.\n" +
+            //             "- guide you in how best to maintain the camera  connection \n\n" +
+            //             "What we will use:\n" +
+            //             "Each camera includes: Cables, mounting kit and the power adapter and/or receiver.\n" +
+            //             "We bring all the necessary tools like drills, screwdrivers, ladder and every thing that is needed for installation of security cameras.",
+            //           note_ar:
+            //             "كيف نؤدي عملنا؟" +
+            //             "\n" +
+            //             "- تحديد الموقع الصحيح لضمان تغطية أوسع" +
+            //             "\n" +
+            //             "- تركيب نظام المراقبة وتوصيل الكابلات ومن ثم التجريب" +
+            //             "\n" +
+            //             "- تشغيل نظام المراقبة على الفور" +
+            //             "\n" +
+            //             "- إرشاد العميل كيفية الحفاظ على نظام المراقبة" +
+            //             "\n\n" +
+            //             "ماذا نستخدم؟" +
+            //             "\n" +
+            //             " كل كاميرا تشمل: كابلات، مجموعة منتجات المراقبة، محول الطاقة و/او جهاز الاستقبال." +
+            //             "\n" +
+            //             " نحن نجلب كل أدوات العمل الضرورية مثل الدريل والمفاتيح والسلم واي شيء مطلوب عند تنفيذ العمل.",
+            //         },
+            //         {
+            //           id: 310,
+            //           serviceid: 55,
+            //           pricelimit: 49,
+            //           name: "Hikvision camera 5MP",
+            //           name_ar: "كاميرا هيك فيجن 5MP",
+            //           price: 145,
+            //           pricetype: 8,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 311,
+            //           serviceid: 55,
+            //           pricelimit: 49,
+            //           name: "Hikvision camera 2MP",
+            //           name_ar: "كاميرا هيك فيجن 2MP",
+            //           price: 65,
+            //           pricetype: 8,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 312,
+            //           serviceid: 55,
+            //           pricelimit: 49,
+            //           name: "Hikvision DVR 4CH 5MP (Receiver)",
+            //           name_ar: "هيك فيجن دي في ار 4 سي اتش 5 ميجا (ريسيفر)",
+            //           price: 350,
+            //           pricetype: 8,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 313,
+            //           serviceid: 55,
+            //           pricelimit: 49,
+            //           name: "Hard disk western digital 1 TB",
+            //           name_ar: "هارد ديسك ويسترن ديجيتال 1 تيرا",
+            //           price: 250,
+            //           pricetype: 8,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 314,
+            //           serviceid: 55,
+            //           pricelimit: 49,
+            //           name: "Installation",
+            //           name_ar: "تركيب",
+            //           price: 150,
+            //           pricetype: 8,
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //         {
+            //           id: 315,
+            //           serviceid: 55,
+            //           pricelimit: 49,
+            //           name: "Schedule Visit",
+            //           name_ar: "رتب زيارة",
+            //           price: 25,
+            //           pricetype: 2,
+            //           description:
+            //             "1- Our professional will visit you and let you chose the tiles design and size",
+            //           description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
+            //           cartnotes:
+            //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+            //           cartnotes_ar:
+            //             "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+            //           carttype: 1,
+            //         },
+            //       ],
+            //     },
+            //   ],
+            // },
 
             // {
             //   id: 100,

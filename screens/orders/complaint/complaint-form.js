@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  View,
-  Dimensions,
-  Image,
-  TouchableOpacity
-} from "react-native";
+import { View, Dimensions, Image, TouchableOpacity } from "react-native";
 import {
   Text,
   Content,
@@ -16,7 +11,7 @@ import {
   Button,
   Textarea,
   Toast,
-  Footer
+  Footer,
 } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
@@ -30,7 +25,7 @@ export default class ComplaintFormScreen extends React.Component {
       complaintType: "",
       orderId: "",
       isComplaintSubmitted: false,
-      support: null
+      support: null,
     };
   }
   componentWillMount = () => {
@@ -42,28 +37,30 @@ export default class ComplaintFormScreen extends React.Component {
     this.setState({
       lan: navigation.getParam("lan"),
       orderId: navigation.getParam("orderId"),
-      complaintType: navigation.getParam("complaintType")
+      complaintType: navigation.getParam("complaintType"),
     });
   };
-  getComplaintTicket = orderid => {
+  getComplaintTicket = (orderid) => {
     fetch(
       "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/V1.2/get_ticket",
       {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          orderid: orderid
-        })
+          orderid: orderid,
+        }),
       }
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         this.setState({ support: responseJson });
       })
-      .catch(error => {});
+      .catch((error) => {
+        console.log(error);
+      });
   };
   submitComplaint = () => {
     if (this.state.complaintText !== "") {
@@ -73,34 +70,36 @@ export default class ComplaintFormScreen extends React.Component {
           method: "POST",
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             orderid: this.state.orderId,
             type: this.state.complaintType,
-            message: this.state.complaintText
-          })
+            message: this.state.complaintText,
+          }),
         }
       )
-        .then(response => response.json())
-        .then(responseJson => {
+        .then((response) => response.json())
+        .then((responseJson) => {
           Toast.show({
             text: responseJson.message,
-            position: "bottom"
+            position: "bottom",
           });
           this.setState({ isComplaintSubmitted: true });
         })
-        .catch(error => {});
+        .catch((error) => {});
     } else {
       Toast.show({
-        text: this.state.lan == 'en' ? "Please write the complaint note first" : "يرجى كتابة الشكوى اولاً",
-        position: "bottom"
+        text:
+          this.state.lan == "en"
+            ? "Please write the complaint note first"
+            : "يرجى كتابة الشكوى اولاً",
+        position: "bottom",
       });
     }
   };
 
   render() {
-
     return (
       <Container>
         <Header
@@ -110,7 +109,7 @@ export default class ComplaintFormScreen extends React.Component {
             borderBottomColor: "#0866b0",
             borderBottomWidth: 1,
             height: 60,
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <Left style={{ marginLeft: 10 }}>
@@ -151,7 +150,7 @@ export default class ComplaintFormScreen extends React.Component {
               alignItems: "center",
               alignSelf: "center",
               position: Platform.OS === "android" ? "absolute" : "relative",
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           >
             {this.state.lan === "en" ? (
@@ -165,7 +164,7 @@ export default class ComplaintFormScreen extends React.Component {
                 style={{
                   fontFamily: "montserrat_arabic_regular",
                   fontSize: 18,
-                  color: "#0866b0"
+                  color: "#0866b0",
                 }}
               >
                 شكوى
@@ -174,12 +173,12 @@ export default class ComplaintFormScreen extends React.Component {
           </View>
           <Right></Right>
         </Header>
-        <Content style={{ backgroundColor: "white" }}>
+        <View style={{ backgroundColor: "white" }}>
           <View
             style={{
               width: Dimensions.get("screen").width - 30,
               alignSelf: "center",
-              backgroundColor: "#F5F5F5"
+              backgroundColor: "#F5F5F5",
             }}
           >
             <View
@@ -188,7 +187,7 @@ export default class ComplaintFormScreen extends React.Component {
                 alignSelf: "center",
                 height: 95,
                 marginTop: 40,
-                backgroundColor: "#0764af"
+                backgroundColor: "#0764af",
               }}
             >
               <View style={{ alignSelf: "center", marginTop: -18 }}>
@@ -208,7 +207,7 @@ export default class ComplaintFormScreen extends React.Component {
                         textAlign: "center",
                         marginLeft: 8,
                         marginRight: 8,
-                        fontWeight: "bold"
+                        fontWeight: "bold",
                       }}
                     >
                       Please leave your comment here and {"\n"}we would get back
@@ -224,7 +223,7 @@ export default class ComplaintFormScreen extends React.Component {
                         textAlign: "center",
                         marginLeft: 8,
                         marginRight: 8,
-                        fontSize: 14
+                        fontSize: 14,
                       }}
                     >
                       يرجى ترك ملاحظاتكم هنا وسنرد عليكم
@@ -239,11 +238,11 @@ export default class ComplaintFormScreen extends React.Component {
                       textAlign: "center",
                       marginLeft: 8,
                       marginRight: 8,
-                      fontWeight: "bold"
+                      fontWeight: "bold",
                     }}
                   >
                     Dear Customer, your issue has been resolved. Let us know if
-                    you have any query.{'\n'} Ticket #{" "}
+                    you have any query.{"\n"} Ticket #{" "}
                     {this.state.support && this.state.support.supportticketid}
                   </Text>
                 ) : (
@@ -256,7 +255,7 @@ export default class ComplaintFormScreen extends React.Component {
                       textAlign: "center",
                       marginLeft: 8,
                       marginRight: 8,
-                      fontSize: 12
+                      fontSize: 12,
                     }}
                   >
                     عزيزي العميل، تم حل مشكلتك. اخبرنا اذا كان لديك اي استفسار
@@ -279,7 +278,7 @@ export default class ComplaintFormScreen extends React.Component {
                       textAlign: "left",
                       fontFamily: "montserrat_arabic_regular",
                       fontWeight: "bold",
-                      color: "#283a97"
+                      color: "#283a97",
                     }}
                   >
                     تعليق
@@ -295,7 +294,7 @@ export default class ComplaintFormScreen extends React.Component {
                     textAlign: "left",
                     fontFamily: "montserrat_arabic_regular",
                     fontWeight: "bold",
-                    color: "#283a97"
+                    color: "#283a97",
                   }}
                 >
                   ردك
@@ -316,11 +315,11 @@ export default class ComplaintFormScreen extends React.Component {
                     textAlign: this.state.lan === "en" ? "left" : "right",
                     width: Dimensions.get("screen").width - 76,
                     height: 120,
-                    backgroundColor: "white"
+                    backgroundColor: "white",
                   }}
                   rowSpan={7}
                   bordered
-                  onChangeText={text => {
+                  onChangeText={(text) => {
                     this.setState({ complaintText: text });
                   }}
                   placeholder={this.state.lan === "en" ? "Text" : "نص"}
@@ -332,14 +331,14 @@ export default class ComplaintFormScreen extends React.Component {
                     width: Dimensions.get("screen").width / 2,
                     display: "flex",
                     backgroundColor: "lightgray",
-                    marginLeft: 4
+                    marginLeft: 4,
                   }}
                 >
                   <Text
                     style={{
                       textAlign: "left",
                       color: "black",
-                      paddingLeft: 5
+                      paddingLeft: 5,
                     }}
                   >
                     {this.state.support &&
@@ -361,7 +360,7 @@ export default class ComplaintFormScreen extends React.Component {
                         flexDirection: "row",
                         flex: 1,
                         justifyContent: "flex-end",
-                        marginTop: 6
+                        marginTop: 6,
                       }}
                     >
                       <View
@@ -372,7 +371,7 @@ export default class ComplaintFormScreen extends React.Component {
                           backgroundColor: "lightgray",
                           borderTopLeftRadius: 12,
                           borderBottomLeftRadius: 12,
-                          justifyContent: "center"
+                          justifyContent: "center",
                         }}
                       >
                         {this.state.lan === "en" ? (
@@ -380,7 +379,7 @@ export default class ComplaintFormScreen extends React.Component {
                             style={{
                               color: "white",
                               alignItems: "center",
-                              paddingLeft: 5
+                              paddingLeft: 5,
                             }}
                           >
                             Under Review
@@ -392,7 +391,7 @@ export default class ComplaintFormScreen extends React.Component {
                               fontFamily: "montserrat_arabic_regular",
                               color: "white",
                               alignItems: "center",
-                              paddingLeft: 5
+                              paddingLeft: 5,
                             }}
                           >
                             في إنتظار المراجعة
@@ -419,7 +418,7 @@ export default class ComplaintFormScreen extends React.Component {
                         flexDirection: "row",
                         flex: 1,
                         justifyContent: "flex-end",
-                        marginTop: 20
+                        marginTop: 20,
                       }}
                     >
                       <View
@@ -430,14 +429,14 @@ export default class ComplaintFormScreen extends React.Component {
                           flexDirection: "column",
                           width: Dimensions.get("screen").width / 2,
                           display: "flex",
-                          justifyContent: "center"
+                          justifyContent: "center",
                         }}
                       >
                         <Text
                           style={{
                             color: "white",
                             alignItems: "center",
-                            paddingLeft: 5
+                            paddingLeft: 5,
                           }}
                         >
                           {this.state.support.supportreply}
@@ -458,7 +457,14 @@ export default class ComplaintFormScreen extends React.Component {
               <View></View>
             )}
           </View>
-        </Content>
+        </View>
+        {/* <View
+          style={{
+            position: "absolute",
+            bottom: 0,
+            alignSelf: "center",
+          }}
+        > */}
         <Footer style={{ backgroundColor: "white", borderColor: "white" }}>
           <View
             style={{ width: Dimensions.get("screen").width - 30, marginTop: 3 }}
@@ -472,7 +478,7 @@ export default class ComplaintFormScreen extends React.Component {
                     backgroundColor: "#0764af",
                     borderRadius: 12,
                     width: Dimensions.get("screen").width - 120,
-                    alignSelf: "center"
+                    alignSelf: "center",
                   }}
                 >
                   <LinearGradient
@@ -485,7 +491,7 @@ export default class ComplaintFormScreen extends React.Component {
                       style={{
                         color: "white",
                         margin: 12,
-                        alignSelf: "center"
+                        alignSelf: "center",
                       }}
                     >
                       {this.state.lan == "en" ? "Submit" : "تسليم"}
@@ -498,6 +504,7 @@ export default class ComplaintFormScreen extends React.Component {
             )}
           </View>
         </Footer>
+        {/* Footer */}
       </Container>
     );
   }
