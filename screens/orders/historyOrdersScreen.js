@@ -6,8 +6,10 @@ import {
   Dimensions,
   Modal,
   ImageBackground,
-  TouchableOpacity
+  TouchableOpacity,
+  Button,
 } from "react-native";
+import Signature from "react-native-signature-canvas";
 import {
   Container,
   Accordion,
@@ -16,7 +18,7 @@ import {
   Header,
   Content,
   Thumbnail,
-  Button,
+  // Button,
   Body,
   Input,
   Icon,
@@ -24,7 +26,7 @@ import {
   Item,
   Left,
   Right,
-  Footer
+  Footer,
 } from "native-base";
 import { StatusBar } from "expo-status-bar";
 import { Ionicons } from "@expo/vector-icons";
@@ -36,12 +38,15 @@ import { NavigationEvents } from "react-navigation";
 export default class HistoryOrdersSecreen extends React.Component {
   constructor(props) {
     super(props);
+    this.callRef = React.createRef();
+
     this.state = {
       historyOrders: [],
-      loading: false
+      loading: false,
     };
   }
   componentDidMount = () => {
+    // alert("Loaded");
     this.setState({ loading: true });
     fetch(
       "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/V1.2/customer_completed_order_requests",
@@ -49,27 +54,71 @@ export default class HistoryOrdersSecreen extends React.Component {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ customerid: this.props.user.customerid })
+        body: JSON.stringify({ customerid: this.props.user.customerid }),
       }
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         if (responseJson.error === false) {
           this.setState({
             historyOrders: responseJson.Orders,
-            loading: false
+            loading: false,
           });
         } else {
           this.setState({ loading: false });
         }
       })
-      .catch(error => {});
+      .catch((error) => {});
+  };
+
+  handleClear = () => {
+    this.callRef.current.clearSignature();
+  };
+
+  handleConfirm = () => {
+    console.log("end");
+    this.callRef.current.readSignature();
   };
   render() {
     return (
       <View style={{ marginTop: 18 }}>
+        {/* <View style={{ height: 250 }}>
+          <Signature
+            ref={this.callRef}
+            // handle when you click save button
+            onOK={(img) => console.log(img)}
+            onEmpty={() => console.log("empty")}
+            // description text for signature
+            descriptionText="Sign"
+            // clear button text
+            clearText="Clear"
+            // save button text
+            confirmText="Save"
+            // String, webview style for overwrite default style, all style: https://github.com/YanYuanFE/react-native-signature-canvas/blob/master/h5/css/signature-pad.css
+            webStyle={`.m-signature-pad--footer
+    .button {
+      background-color: red;
+      color: #FFF;
+    }`}
+            autoClear={true}
+            imageType={"image/svg+xml"}
+          />
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              width: "100%",
+              alignItems: "center",
+            }}
+          >
+            <Button title="Clear" onPress={this.handleClear} />
+            <Button title="Confirm" onPress={this.handleConfirm} />
+          </View>
+        </View> */}
+
         <Spinner visible={this.state.loading} textContent={""} />
         {
           <NavigationEvents
@@ -82,21 +131,21 @@ export default class HistoryOrdersSecreen extends React.Component {
           style={{
             width: Dimensions.get("screen").width,
             height: 1,
-            backgroundColor: "lightgray"
+            backgroundColor: "lightgray",
           }}
         ></View>
         {this.state.historyOrders &&
           this.state.historyOrders.map(
-            function(order, index) {
+            function (order, index) {
               return (
-                <View>
+                <View key={index}>
                   <TouchableOpacity
                     onPress={() =>
                       this.props.navigation.navigate("OrderDetails", {
                         order: order,
                         isHistory: true,
                         lan: this.props.lan,
-                        user: this.props.user
+                        user: this.props.user,
                       })
                     }
                   >
@@ -106,7 +155,7 @@ export default class HistoryOrdersSecreen extends React.Component {
                         flexDirection: "row",
                         height: 75,
                         width: Dimensions.get("screen").width,
-                        backgroundColor: "#F5F5F5"
+                        backgroundColor: "#F5F5F5",
                       }}
                     >
                       <Left style={{ position: "absolute", flex: 1, left: 6 }}>
@@ -115,7 +164,7 @@ export default class HistoryOrdersSecreen extends React.Component {
                           style={{
                             width: 55,
                             height: 55,
-                            borderRadius: 10
+                            borderRadius: 10,
                           }}
                           resizeMode="contain"
                         />
@@ -124,7 +173,7 @@ export default class HistoryOrdersSecreen extends React.Component {
                         style={{
                           marginLeft: 75,
                           marginRight: 35,
-                          marginTop: 10
+                          marginTop: 10,
                         }}
                       >
                         <Text
@@ -133,7 +182,7 @@ export default class HistoryOrdersSecreen extends React.Component {
                             fontSize: 12,
                             fontWeight: "bold",
                             marginTop: 4,
-                            textAlign:'left'
+                            textAlign: "left",
                           }}
                         >
                           {this.props.lan == "en" ? "Order#" : "طلب#"}:{" "}
@@ -144,13 +193,19 @@ export default class HistoryOrdersSecreen extends React.Component {
                             color: "#4a4b4c",
                             fontSize: 10,
                             marginTop: 2,
-                            textAlign:'left'
+                            textAlign: "left",
                           }}
                         >
                           {this.props.lan == "en" ? "Date" : "الطلبات السابقة"}
                           {order.appointmentdate}
                         </Text>
-                        <Text style={{ color: "#4a4b4c", fontSize: 10, textAlign:'left' }}>
+                        <Text
+                          style={{
+                            color: "#4a4b4c",
+                            fontSize: 10,
+                            textAlign: "left",
+                          }}
+                        >
                           {this.props.lan == "en" ? "Status:" : "الحالة:"}{" "}
                           {order.statusid === 1
                             ? this.props.lan == "en"
@@ -183,7 +238,11 @@ export default class HistoryOrdersSecreen extends React.Component {
                         style={{ position: "absolute", right: 26, flex: 1 }}
                       >
                         <Ionicons
-                          name={this.props.lan == 'en' ? "chevron-forward-outline" : "chevron-back-outline"}
+                          name={
+                            this.props.lan == "en"
+                              ? "chevron-forward-outline"
+                              : "chevron-back-outline"
+                          }
                           size={24}
                           color={"#6ea8cd"}
                         />
@@ -194,7 +253,7 @@ export default class HistoryOrdersSecreen extends React.Component {
                     style={{
                       width: Dimensions.get("screen").width,
                       height: 1,
-                      backgroundColor: "lightgray"
+                      backgroundColor: "lightgray",
                     }}
                   ></View>
                 </View>

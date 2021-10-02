@@ -28,6 +28,7 @@ import {
   View,
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
+  AsyncStorage,
 } from "react-native";
 
 import DateTimePicker from "react-native-modal-datetime-picker";
@@ -39,11 +40,20 @@ import OrderSummarySecreen from "./orderSummary";
 import React from "react";
 import Spinner from "react-native-loading-spinner-overlay";
 import { StatusBar } from "expo-status-bar";
+import OrderPopup from "../../Common/OrderPopup";
 
 export default class OrderDetailsSecreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      showPopupFeedback: false,
+      showSubmit: false,
+      showSignDialog: false,
+      disablePopupBtn: false,
+      signatureInput: "",
+      feedbackInput: "",
+      realFeedbackInput: "",
+      // feedbackSubmitted: false,
       activePage: 0,
       orderDetail: {},
       isHistory: false,
@@ -411,12 +421,122 @@ export default class OrderDetailsSecreen extends React.Component {
       cancelOrderModalVisible: false,
     };
   }
+
+  handleSignature = (img) => {
+    // console.log(img);
+    this.setState({ signatureInput: img });
+  };
+
+  handleFeedback = (text) => {
+    // console.log("t", text);
+    this.setState({ feedbackInput: text });
+  };
+
+  handleRealFeedback = (text) => {
+    this.setState({ realFeedbackInput: text });
+  };
+
+  handlePopupAccept = () => {
+    console.log("Accept");
+    this.setState({ showSignDialog: true, showSubmit: true });
+  };
+
+  handlePopupReject = () => {
+    console.log("Reject");
+    this.setState({ showPopupFeedback: true, showSubmit: true });
+  };
+
+  handlePopupSubmit = async () => {
+    console.log("sig", this.state.signatureInput);
+
+    let sigInput = this.state.signatureInput;
+    let realfeedInput = this.state.realFeedbackInput;
+    if (this.state.showPopupFeedback) {
+      sigInput = "None";
+    } else if (this.state.showSignDialog) {
+      realfeedInput = "None";
+    }
+    console.log(sigInput, this.state.feedbackInput, realfeedInput);
+    if (
+      sigInput == "" ||
+      this.state.feedbackInput == "" ||
+      realfeedInput == ""
+    ) {
+      // this.setState({ disablePopupBtn: true });
+      console.log("Show Toast");
+      Toast.show({
+        text:
+          this.state.lan === "en"
+            ? "Please Enter Your Sign And Cost"
+            : "تستطيع فتح شكوى لأي طلب خدمة خلال إسبوع واحد من تاريخ تسلٌم الخدمة",
+        position: "bottom",
+      });
+    } else {
+      // let feedbackShow = await AsyncStorage.getItem("PopUp_Feedback");
+      // console.log("test", feedbackShow);
+      // await AsyncStorage.removeItem("PopUp_Feedback");
+      console.log(this.state.order.orderid);
+      fetch(
+        `http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wfportal/api/cu/v.3/app/finish_order/${this.state.order.orderid}`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            user_add_amount: this.state.feedbackInput,
+            user_signature: this.state.signatureInput,
+            user_feedback: this.state.realFeedbackInput,
+            user: this.state.user,
+            date_time: new Date().toLocaleString(),
+          }),
+        }
+      )
+        .then((response) => response.json())
+        .then((responseJson) => {
+          // if (responseJson.error == false) {
+          console.log(responseJson);
+          // }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      this.setState({ orderPopup: false });
+    }
+  };
+
   componentDidMount = () => {
     const { navigation } = this.props;
     let order = navigation.getParam("order");
     let user = navigation.getParam("user");
     let isHistory = navigation.getParam("isHistory");
     let lan = navigation.getParam("lan");
+    let isFeedback = navigation.getParam("isFeedback");
+    this.setState({ orderIdNum: order.orderid.substring(3) });
+    // My Logic     //Enable It After Designing
+    // if (isFeedback == undefined) {
+    //   isFeedback = false;
+    // }
+    // console.log(isFeedback);
+    // if (isHistory && isFeedback) {
+    //   this.setState({ orderPopup: true });
+    // } else {
+    //   this.setState({ orderPopup: false });
+    // }
+
+    //Persistant Storage
+    // await AsyncStorage.setItem("jobs", JSON.stringify(allServices));
+    // let getuser = await AsyncStorage.getItem("user");
+    // user = JSON.parse(getuser);
+    // await AsyncStorage.removeItem("jobs");
+
+    //Enable It For Designing
+    if (isHistory) {
+      this.setState({ orderPopup: true });
+    }
+    // alert(JSON.stringify(order.orderid.substring(3)));
+
     this.setState({ loading: true });
     fetch(
       "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/V1.2/view_order",
@@ -431,6 +551,7 @@ export default class OrderDetailsSecreen extends React.Component {
     )
       .then((response) => response.json())
       .then((responseJson) => {
+        console.log(responseJson);
         if (responseJson.error === false) {
           this.setState({
             orderDetail: responseJson,
@@ -446,6 +567,8 @@ export default class OrderDetailsSecreen extends React.Component {
         }
       })
       .catch((error) => {});
+
+    //   ...
     let time = new Date().getHours() + "." + new Date().getMinutes();
     let t = parseFloat(time) + 0.72;
     let copyIntervals = ([] = []);
@@ -978,6 +1101,40 @@ export default class OrderDetailsSecreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
+        {/* {this.state.isHistory == true && this.state.activePage !== 3 ? (
+          <OrderPopup
+            visible={this.state.orderPopup}
+            lan={this.state.lan}
+            setPopupfalse={() => {
+              this.setState({ orderPopup: false });
+            }}
+          />
+        ) : (
+          <></>
+        )} */}
+
+        {/* Enable It For Real App */}
+        <OrderPopup
+          visible={this.state.orderPopup}
+          lan={this.state.lan}
+          setPopupfalse={() => {
+            this.setState({ orderPopup: false });
+          }}
+          onEnterFeedback={this.handleFeedback}
+          onEnterRealFeedback={this.handleRealFeedback}
+          onEnterSignature={this.handleSignature}
+          popupSubmit={this.handlePopupSubmit}
+          popupAccept={this.handlePopupAccept}
+          popupReject={this.handlePopupReject}
+          orderNo={this.state.orderIdNum}
+          isDisabled={false}
+          showFeedbackBox={this.state.showPopupFeedback}
+          showSignatureBox={this.state.showSignDialog} //false for test
+          showSubmitBtn={this.state.showSubmit} //false for test or for real state.showSignDialog
+
+          //https://stackoverflow.com/questions/38394015/how-to-pass-data-from-child-component-to-its-parent-in-reactjs
+        />
+
         <Header
           style={{
             marginTop: 0,
@@ -1021,6 +1178,7 @@ export default class OrderDetailsSecreen extends React.Component {
           </View>
           <Right />
         </Header>
+
         <View
           style={{
             backgroundColor: "white",

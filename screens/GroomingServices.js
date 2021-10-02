@@ -9,7 +9,7 @@ import {
   Left,
   Right,
   Text,
-  Toast
+  Toast,
 } from "native-base";
 import {
   Animated,
@@ -21,7 +21,7 @@ import {
   Linking,
   Platform,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 import { NavigationEvents, SafeAreaView } from "react-navigation";
 import * as Updates from "expo-updates";
@@ -54,15 +54,15 @@ export default class GroomingServices extends React.Component {
   imgScale = this.nScroll.interpolate({
     inputRange: [-25, 0],
     outputRange: [1.2, 1],
-    extrapolateRight: "clamp"
+    extrapolateRight: "clamp",
   });
   tabY = this.nScroll.interpolate({
     inputRange: [0, SCROLL_HEIGHT, SCROLL_HEIGHT + 1],
-    outputRange: [0, 0, 1]
+    outputRange: [0, 0, 1],
   });
   tabYButton = this.nScroll.interpolate({
     inputRange: [0, 0.5, 1],
-    outputRange: [0, 0.7, 0]
+    outputRange: [0, 0.7, 0],
   });
   constructor(props) {
     super(props);
@@ -88,7 +88,7 @@ export default class GroomingServices extends React.Component {
       location: "",
       user: null,
       jobs: [],
-      womens: false
+      womens: false,
     };
   }
   componentDidMount = async () => {
@@ -99,7 +99,7 @@ export default class GroomingServices extends React.Component {
     let user = await AsyncStorage.getItem("user");
     this.setState({
       lan: lan !== null ? lan : "en",
-      user: user !== null ? JSON.parse(user) : null
+      user: user !== null ? JSON.parse(user) : null,
     });
     this.checkUserLocation();
   };
@@ -111,7 +111,7 @@ export default class GroomingServices extends React.Component {
           this.state.lan == "en"
             ? "Please allow location permission"
             : "يرجى السماح لتحديد الموقع",
-        position: "bottom"
+        position: "bottom",
       });
     } else {
       const mylocation = await Location.getCurrentPositionAsync({});
@@ -121,7 +121,7 @@ export default class GroomingServices extends React.Component {
     }
   };
   _renderHeader = (data, expanded) => {
-    let index = data.jobs.findIndex(job => job.selected == true);
+    let index = data.jobs.findIndex((job) => job.selected == true);
 
     return (
       <View
@@ -134,7 +134,7 @@ export default class GroomingServices extends React.Component {
           borderBottomWidth: 1,
           borderColor: "#bababa",
           width: Dimensions.get("screen").width - 30,
-          height: 70
+          height: 70,
         }}
       >
         <Left style={{ flexDirection: "row" }}>
@@ -143,12 +143,12 @@ export default class GroomingServices extends React.Component {
               uri:
                 data.seo_name !== null
                   ? data.seo_name
-                  : "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/image-placeholder.png?alt=media&token=10ced05a-f905-4951-9298-ff47e771f070"
+                  : "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/image-placeholder.png?alt=media&token=10ced05a-f905-4951-9298-ff47e771f070",
             }}
             style={{
               width: 45,
               height: 45,
-              marginTop: 4
+              marginTop: 4,
             }}
             resizeMode="contain"
           />
@@ -161,7 +161,7 @@ export default class GroomingServices extends React.Component {
 
                 marginLeft: 12,
                 width: Dimensions.get("screen").width - 30,
-                color: this.state.womens ? "#f02fc2" : "#0865b0"
+                color: this.state.womens ? "#f02fc2" : "#0865b0",
               }}
             >
               {this.state.lan == "en" ? data.name : data.name_ar}
@@ -172,7 +172,7 @@ export default class GroomingServices extends React.Component {
                   color: "#4a4b4c",
                   fontSize: 11,
                   marginLeft: 12,
-                  marginRight: 10
+                  marginRight: 10,
                 }}
               >
                 {this.state.lan == "en" ? "Total Services" : "مجموع الخدمات"}
@@ -181,7 +181,7 @@ export default class GroomingServices extends React.Component {
                 style={{
                   backgroundColor: this.state.womens ? "#f02fc2" : "#0865b0",
                   justifyContent: "center",
-                  margin: 2
+                  margin: 2,
                 }}
               >
                 <Text
@@ -191,7 +191,7 @@ export default class GroomingServices extends React.Component {
                     paddingRight: 3,
                     color: "white",
                     fontSize: 7,
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   {data.jobs ? data.jobs.length : 0}
@@ -203,7 +203,7 @@ export default class GroomingServices extends React.Component {
                 textAlign: "left",
                 color: "#4a4b4c",
                 fontSize: 10,
-                marginLeft: 12
+                marginLeft: 12,
               }}
             >
               {this.state.lan == "en" ? "24/7 Booking" : "حجز على مدار الساعة"}
@@ -218,7 +218,7 @@ export default class GroomingServices extends React.Component {
               marginTop: 2,
               height: 15,
               position: "absolute",
-              left: Dimensions.get("screen").width / 2
+              left: Dimensions.get("screen").width / 2,
             }}
           />
         ) : (
@@ -266,7 +266,7 @@ export default class GroomingServices extends React.Component {
       </View>
     );
   };
-  minusMeters = job => {
+  minusMeters = (job) => {
     if (job.meter && job.meter >= 50) {
       job.meter = job.meter - 50;
       job.m_price = job.meter * job.price;
@@ -291,7 +291,7 @@ export default class GroomingServices extends React.Component {
       this.addRemoveIntoSelectedServices(job, true);
     }
   };
-  plusMeters = job => {
+  plusMeters = (job) => {
     if (job.meter) {
       job.meter = job.meter + 50;
       job.m_price = job.meter * job.price;
@@ -308,7 +308,7 @@ export default class GroomingServices extends React.Component {
     job.selected = true;
     this.addRemoveIntoSelectedServices(job, true);
   };
-  plusFloors = job => {
+  plusFloors = (job) => {
     if (job.items) {
       job.items++;
     } else {
@@ -325,7 +325,7 @@ export default class GroomingServices extends React.Component {
     job.selected = true;
     this.addRemoveIntoSelectedServices(job, true);
   };
-  minusFloors = job => {
+  minusFloors = (job) => {
     if (job.items && job.items >= 1) {
       job.items--;
       if (job.items == 0) {
@@ -352,25 +352,25 @@ export default class GroomingServices extends React.Component {
       this.addRemoveIntoSelectedServices(job, false);
     }
   };
-  cahngeToolTip = tIndex => {
+  cahngeToolTip = (tIndex) => {
     if (this.state.toolTipVisible == -1) {
       this.setState({ toolTipVisible: tIndex });
     } else {
       this.setState({ toolTipVisible: -1 });
     }
   };
-  _renderContent = data => {
+  _renderContent = (data) => {
     return (
       <View
         style={{
           width: Dimensions.get("screen").width,
           alignSelf: "center",
-          marginTop: -5
+          marginTop: -5,
         }}
       >
         {data.jobs &&
           data.jobs.map(
-            function(job, index) {
+            function (job, index) {
               job.jobserviceName = data.name;
               job.jobserviceNameAr = data.name_ar;
               job.jobServiceIcon = data.seo_name;
@@ -452,8 +452,8 @@ export default class GroomingServices extends React.Component {
   minusVarient = (varient, job) => {
     if (job.selected && job.selected == true) {
       let total = 0;
-      varient.variants_attr.forEach(var_attr => {
-        var_attr.attr.forEach(attr => {
+      varient.variants_attr.forEach((var_attr) => {
+        var_attr.attr.forEach((attr) => {
           if (attr.selected && attr.t_price) {
             total = total + attr.t_price;
           }
@@ -470,8 +470,8 @@ export default class GroomingServices extends React.Component {
   plusVarient = (varient, job) => {
     if (job.selected && job.selected == true) {
       let total = 0;
-      varient.variants_attr.forEach(var_attr => {
-        var_attr.attr.forEach(attr => {
+      varient.variants_attr.forEach((var_attr) => {
+        var_attr.attr.forEach((attr) => {
           if (attr.selected && attr.t_price) {
             total = total + attr.t_price;
           }
@@ -488,10 +488,10 @@ export default class GroomingServices extends React.Component {
   calculateSubVariant = (attr, varient, job) => {
     if (job.selected && job.selected == true) {
       varient.subvariants &&
-        varient.subvariants.forEach(subvariant => {
+        varient.subvariants.forEach((subvariant) => {
           subvariant.subvariants_attr &&
-            subvariant.subvariants_attr.forEach(sub_atr => {
-              sub_atr.attr.forEach(in_attr => {
+            subvariant.subvariants_attr.forEach((sub_atr) => {
+              sub_atr.attr.forEach((in_attr) => {
                 if (
                   in_attr.selected == true &&
                   in_attr.attr_id == attr.attr_id
@@ -514,8 +514,8 @@ export default class GroomingServices extends React.Component {
   };
   calculateVarient = (attr, varient, job) => {
     if (job.selected && job.selected == true) {
-      varient.variants_attr.forEach(var_attr => {
-        var_attr.attr.forEach(inner_attr => {
+      varient.variants_attr.forEach((var_attr) => {
+        var_attr.attr.forEach((inner_attr) => {
           if (
             inner_attr.selected == true &&
             inner_attr.attr_id == attr.attr_id
@@ -538,7 +538,7 @@ export default class GroomingServices extends React.Component {
       this.setState({ selectedServices: copySelectedJobs });
     }
   };
-  plusQuantity = job => {
+  plusQuantity = (job) => {
     if (job.items) job.items++;
     else job.items = 1;
     if (job.id === 70 || job.id === 61 || job.id === 82) {
@@ -552,24 +552,24 @@ export default class GroomingServices extends React.Component {
     job.selected = true;
     this.addRemoveIntoSelectedServices(job, true);
   };
-  clearVariantsAndSubVariants = job => {
+  clearVariantsAndSubVariants = (job) => {
     if (job.variants) {
-      job.variants.forEach(variant => {
+      job.variants.forEach((variant) => {
         if (variant.items > 0) {
           variant.items = 0;
         }
-        variant.variants_attr.forEach(var_atr => {
-          var_atr.attr.forEach(atr => {
+        variant.variants_attr.forEach((var_atr) => {
+          var_atr.attr.forEach((atr) => {
             if (atr.selected && atr.selected == true) {
               atr.selected = false;
             }
           });
         });
         if (variant.subvariants) {
-          variant.subvariants.forEach(sub_variant => {
+          variant.subvariants.forEach((sub_variant) => {
             sub_variant.subvariants_attr &&
-              sub_variant.subvariants_attr.forEach(sub_var_atr => {
-                sub_var_atr.attr.forEach(atr => {
+              sub_variant.subvariants_attr.forEach((sub_var_atr) => {
+                sub_var_atr.attr.forEach((atr) => {
                   if (atr.selected && atr.selected == true) {
                     atr.selected = false;
                   }
@@ -580,7 +580,7 @@ export default class GroomingServices extends React.Component {
       });
     }
   };
-  minusQuantity = job => {
+  minusQuantity = (job) => {
     if (job.items && job.items >= 1) {
       job.items--;
       if (job.id === 70 || job.id === 61 || job.id === 82) {
@@ -604,7 +604,7 @@ export default class GroomingServices extends React.Component {
       this.addRemoveIntoSelectedServices(job, false);
     }
   };
-  selectJob = job => {
+  selectJob = (job) => {
     job.selected = !job.selected;
     job.items = 1;
     if (job.selected) job.t_price = job.saleprice ? job.saleprice : job.price;
@@ -615,7 +615,7 @@ export default class GroomingServices extends React.Component {
   };
   addRemoveIntoSelectedServices = async (job, add) => {
     let catIndex = this.state.categories.findIndex(
-      cat => cat.id == this.state.selectedCategoryId
+      (cat) => cat.id == this.state.selectedCategoryId
     );
     // let cartIndex = this.state.cartDetails
     //   ? this.state.cartDetails.findIndex(
@@ -645,7 +645,7 @@ export default class GroomingServices extends React.Component {
         : ([] = []);
     let index =
       allServices && allServices.length > 0
-        ? allServices.findIndex(service => service.id === job.id)
+        ? allServices.findIndex((service) => service.id === job.id)
         : -1;
 
     if (add === false && job.items > 0) {
@@ -657,7 +657,7 @@ export default class GroomingServices extends React.Component {
         allServices.splice(index, 1);
 
         this.setState({
-          selectedServices: allServices
+          selectedServices: allServices,
         });
       } else {
         if (index > -1) {
@@ -666,7 +666,7 @@ export default class GroomingServices extends React.Component {
           allServices.push(job);
         }
         this.setState({
-          selectedServices: allServices
+          selectedServices: allServices,
         });
       }
       await AsyncStorage.setItem("jobs", JSON.stringify(allServices));
@@ -682,19 +682,19 @@ export default class GroomingServices extends React.Component {
         method: "GET",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
-        }
+          "Content-Type": "application/json",
+        },
       }
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         let ban = ([] = []);
         let urls = ([] = []);
         ban =
           this.state.lan === "en"
             ? responseJson.banners.enbanners
             : responseJson.banners.arbanners;
-        ban.forEach(ban => {
+        ban.forEach((ban) => {
           let actualUrl =
             "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/" +
             ban.banner.url;
@@ -702,26 +702,26 @@ export default class GroomingServices extends React.Component {
         });
         this.setState({ dataSource: ban, offersUrls: urls });
       })
-      .catch(error => {});
+      .catch((error) => {});
   };
-  toggleSwitch = value => {
+  toggleSwitch = (value) => {
     this.setState({ isEnabled: !this.state.isEnabled });
   };
-  categorySelection = async category => {
+  categorySelection = async (category) => {
     if (category.id == 44) {
       this.setState({
-        womens: true
+        womens: true,
       });
     } else if (category.id == 49) {
       this.setState({
-        womens: false
+        womens: false,
       });
     }
     this._accordion.setSelected(-1);
     this.setState({
       selectedCategoryId: category.id,
       products: category.products,
-      toolTipVisible: false
+      toolTipVisible: false,
     });
   };
 
@@ -737,12 +737,12 @@ export default class GroomingServices extends React.Component {
         method: "GET",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
-        }
+          "Content-Type": "application/json",
+        },
       }
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         if (responseJson.error === false) {
           this.setState(
             {
@@ -752,19 +752,20 @@ export default class GroomingServices extends React.Component {
               freshCategories: responseJson.services,
               products: responseJson.services[0].products,
               jobs: responseJson.services[0].products,
-              selectedCategoryId: responseJson.services[0].id
+              selectedCategoryId: responseJson.services[0].id,
             },
             () => {
-              this._notificationSubscription = Notifications.addNotificationReceivedListener(
-                this._handleNotification
-              );
+              this._notificationSubscription =
+                Notifications.addNotificationReceivedListener(
+                  this._handleNotification
+                );
             }
           );
         } else {
           this.setState({ loading: false });
         }
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({ loading: false });
       });
   };
@@ -774,18 +775,19 @@ export default class GroomingServices extends React.Component {
     if (jobs == null) {
       this.setState({
         selectedServices: [],
-        user: user !== null ? JSON.parse(user) : null
+        user: user !== null ? JSON.parse(user) : null,
       });
       this.getCategories();
     }
     let allJobs = JSON.parse(jobs);
 
     if (allJobs.length > 0) {
-      this.state.categories.forEach(category => {
-        category.products.forEach(product => {
-          product.jobs.forEach(job => {
+      this.state.categories.forEach((category) => {
+        category.products.forEach((product) => {
+          product.jobs.forEach((job) => {
             let index = allJobs.findIndex(
-              j => j.id == job.id && j.selected == true && job.selected == true
+              (j) =>
+                j.id == job.id && j.selected == true && job.selected == true
             );
             if (index == -1) {
               job.selected = false;
@@ -798,30 +800,30 @@ export default class GroomingServices extends React.Component {
     }
     this.setState({ selectedServices: jobs !== null ? JSON.parse(jobs) : [] });
   };
-  navigationSetup = async option => {
+  navigationSetup = async (option) => {
     if (option == 4) {
       this.props.navigation.navigate("ProfileSecreen", {
         cartItem: this.state.selectedServices.length,
         lan: this.state.lan,
-        location: this.state.location
+        location: this.state.location,
       });
     }
     if (option == 3) {
       if (this.state.selectedServices.length > 0) {
         this.props.navigation.navigate("MyCart", {
           lan: this.state.lan,
-          isPackage: false
+          isPackage: false,
         });
         await Analytics.logEvent("Cart", {
           name: "Cart",
           screen: "landingScreen",
-          purpose: "checkout order from landing screen"
+          purpose: "checkout order from landing screen",
         });
       } else {
         Toast.show({
           text:
             this.state.lan == "en" ? "Your cart is empty" : "سلة الطلبات فارغة",
-          position: "bottom"
+          position: "bottom",
         });
       }
     }
@@ -829,7 +831,7 @@ export default class GroomingServices extends React.Component {
       this.props.navigation.navigate("MyOrders", {
         cartItem: this.state.selectedServices.length,
         lan: this.state.lan,
-        location: this.state.location
+        location: this.state.location,
       });
     }
   };
@@ -856,7 +858,7 @@ export default class GroomingServices extends React.Component {
     await Updates.reloadAsync();
     //this.updateLanguage(2);
   };
-  openPromotionScreen = async index => {
+  openPromotionScreen = async (index) => {
     if (
       Platform.OS === "android" &&
       this.state.lan === "ar" &&
@@ -869,12 +871,12 @@ export default class GroomingServices extends React.Component {
       this.props.navigation.navigate("Promotion", {
         job: this.state.dataSource[index].job,
         lan: this.state.lan,
-        url: this.state.dataSource[index].banner.url
+        url: this.state.dataSource[index].banner.url,
       });
       await Analytics.logEvent("PromotionalBanners", {
         name: "PromotionalBanners",
         screen: "landingScreen",
-        purpose: "promotion banner clicked"
+        purpose: "promotion banner clicked",
       });
     }
     if (
@@ -883,11 +885,11 @@ export default class GroomingServices extends React.Component {
     ) {
       this.props.navigation.navigate("PromotionService", {
         serviceid: this.state.dataSource[index].categoryid,
-        lan: this.state.lan
+        lan: this.state.lan,
       });
     }
   };
-  _handleNotification = notification => {
+  _handleNotification = (notification) => {
     if (
       notification.origin === "received" ||
       notification.origin === "selected"
@@ -899,25 +901,7 @@ export default class GroomingServices extends React.Component {
           url:
             this.state.lan == "en"
               ? notification.data.bannerUrl
-              : notification.data.bannerUrl_ar
-        });
-      }
-      if (notification.data.isOffer) {
-        this.props.navigation.navigate("PackageOffer", {
-          lan: this.state.lan,
-          offerid: notification.data.offerId,
-          isOffer: notification.data.isOffer
-        });
-      }
-      if (notification.data.is_point_screen == "true") {
-        this.props.navigation.navigate("PointsScreen", {
-          lan: this.state.lan
-        });
-      }
-      if (notification.data.serviceid) {
-        this.props.navigation.navigate("PromotionService", {
-          serviceid: notification.data.serviceid,
-          lan: this.state.lan
+              : notification.data.bannerUrl_ar,
         });
       }
       if (notification.data.statusid) {
@@ -925,7 +909,25 @@ export default class GroomingServices extends React.Component {
           order: notification.data,
           lan: this.state.lan,
           isHistory: notification.data.statusid == 5 ? true : false,
-          isFeedback: false
+          isFeedback: false,
+        });
+      }
+      if (notification.data.isOffer) {
+        this.props.navigation.navigate("PackageOffer", {
+          lan: this.state.lan,
+          offerid: notification.data.offerId,
+          isOffer: notification.data.isOffer,
+        });
+      }
+      if (notification.data.is_point_screen == "true") {
+        this.props.navigation.navigate("PointsScreen", {
+          lan: this.state.lan,
+        });
+      }
+      if (notification.data.serviceid) {
+        this.props.navigation.navigate("PromotionService", {
+          serviceid: notification.data.serviceid,
+          lan: this.state.lan,
         });
       }
     }
@@ -939,7 +941,7 @@ export default class GroomingServices extends React.Component {
           style={{
             backgroundColor: "white",
             marginTop: Constants.statusBarHeight,
-            marginBottom: 110
+            marginBottom: 110,
           }}
         >
           {
@@ -960,20 +962,20 @@ export default class GroomingServices extends React.Component {
                 borderColor: this.state.womens ? "#f02fc2" : "#0764af",
 
                 flexDirection: "row",
-                justifyContent: "space-between"
+                justifyContent: "space-between",
               }}
             >
               <View
                 style={{
                   width: portion,
-                  height: 50
+                  height: 50,
                 }}
               >
                 <View
                   style={{
                     alignSelf: "flex-start",
                     justifyContent: "center",
-                    flex: 2
+                    flex: 2,
                   }}
                 >
                   {this.state.lan == "en" ? (
@@ -982,7 +984,7 @@ export default class GroomingServices extends React.Component {
                         color: "#0764af",
                         fontSize: 16,
                         fontFamily: "montserrat_semi_blod",
-                        color: this.state.womens ? "#f02fc2" : "#0764af"
+                        color: this.state.womens ? "#f02fc2" : "#0764af",
                       }}
                     >
                       {this.state.location}
@@ -993,7 +995,7 @@ export default class GroomingServices extends React.Component {
                         color: this.state.womens ? "#f02fc2" : "#0764af",
                         fontSize: 16,
 
-                        alignSelf: "flex-end"
+                        alignSelf: "flex-end",
                       }}
                     >
                       {this.state.location}
@@ -1007,14 +1009,14 @@ export default class GroomingServices extends React.Component {
                   style={{
                     width: portion,
                     borderRightWidth: 0,
-                    borderRightColor: "#0764af"
+                    borderRightColor: "#0764af",
                   }}
                 >
                   <View
                     style={{
                       alignSelf: "center",
                       justifyContent: "center",
-                      flex: 1
+                      flex: 1,
                     }}
                   >
                     <View style={{ flexDirection: "row" }}>
@@ -1023,7 +1025,7 @@ export default class GroomingServices extends React.Component {
                         style={{
                           width: 25,
                           height: 25,
-                          tintColor: this.state.womens ? "#f02fc2" : "#0764af"
+                          tintColor: this.state.womens ? "#f02fc2" : "#0764af",
                         }}
                         resizeMode="contain"
                       />
@@ -1037,13 +1039,13 @@ export default class GroomingServices extends React.Component {
                     style={{
                       alignSelf: "flex-end",
                       justifyContent: "center",
-                      flex: 2
+                      flex: 2,
                     }}
                   >
                     <View style={{ width: portion }}>
                       <View
                         style={{
-                          justifyContent: "center"
+                          justifyContent: "center",
                         }}
                       >
                         <Text
@@ -1051,7 +1053,7 @@ export default class GroomingServices extends React.Component {
                             color: this.state.womens ? "#f02fc2" : "#0764af",
                             fontSize: 16,
                             textAlign: "right",
-                            fontFamily: "montserrat_arabic_regular"
+                            fontFamily: "montserrat_arabic_regular",
                           }}
                         >
                           {this.state.lan == "en" ? "العربية" : "English"}
@@ -1065,7 +1067,7 @@ export default class GroomingServices extends React.Component {
           </View>
 
           <Animated.ScrollView
-            ref={s => (this._anScrollView = s)}
+            ref={(s) => (this._anScrollView = s)}
             scrollEventThrottle={16}
             showsVerticalScrollIndicator={false}
             onScroll={Animated.event(
@@ -1088,7 +1090,7 @@ export default class GroomingServices extends React.Component {
                 <SliderBox
                   images={this.state.offersUrls}
                   sliderBoxHeight={153}
-                  onCurrentImagePressed={index =>
+                  onCurrentImagePressed={(index) =>
                     this.openPromotionScreen(index)
                   }
                   dotColor="#ff8a29"
@@ -1102,7 +1104,7 @@ export default class GroomingServices extends React.Component {
               <View
                 style={{
                   width: Dimensions.get("screen").width - 30,
-                  alignSelf: "center"
+                  alignSelf: "center",
                 }}
               >
                 <FlatList
@@ -1115,7 +1117,7 @@ export default class GroomingServices extends React.Component {
                       lan={this.state.lan}
                     />
                   )}
-                  keyExtractor={item => item.id}
+                  keyExtractor={(item) => item.id}
                   showsHorizontalScrollIndicator={false}
                 />
               </View>
@@ -1129,7 +1131,7 @@ export default class GroomingServices extends React.Component {
                   width: Dimensions.get("screen").width - 30,
                   alignSelf: "center",
                   height: 48,
-                  alignItems: "flex-start"
+                  alignItems: "flex-start",
                 }}
               >
                 {/* <LinearGradient
@@ -1159,14 +1161,14 @@ export default class GroomingServices extends React.Component {
                       white
                     />
                   )}
-                  keyExtractor={item => item.id}
+                  keyExtractor={(item) => item.id}
                 />
                 {/* </LinearGradient> */}
               </Animated.View>
               <View style={{ marginTop: 10, marginBottom: 12 }}>
                 <Accordion
                   style={{ borderWidth: 0 }}
-                  ref={c => (this._accordion = c)}
+                  ref={(c) => (this._accordion = c)}
                   dataArray={this.state.products}
                   renderHeader={this._renderHeader}
                   renderContent={this._renderContent}
@@ -1183,14 +1185,14 @@ export default class GroomingServices extends React.Component {
             right: 10,
             bottom: 70,
             position: "absolute",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
             <Image
               style={{
                 height: 100,
-                width: 100
+                width: 100,
               }}
               source={
                 this.state.lan == "en"
@@ -1205,7 +1207,7 @@ export default class GroomingServices extends React.Component {
           style={{
             position: "absolute",
             bottom: 0,
-            alignSelf: "center"
+            alignSelf: "center",
           }}
         >
           <View
@@ -1215,7 +1217,7 @@ export default class GroomingServices extends React.Component {
               alignSelf: "center",
               justifyContent: "space-between",
               margin: 12,
-              width: Dimensions.get("screen").width - 30
+              width: Dimensions.get("screen").width - 30,
             }}
           >
             <View>
@@ -1230,7 +1232,7 @@ export default class GroomingServices extends React.Component {
                 style={{
                   textAlign: "center",
                   fontSize: 12,
-                  color: this.state.womens ? "#f02fc2" : "#0865b0"
+                  color: this.state.womens ? "#f02fc2" : "#0865b0",
                 }}
               >
                 {this.state.lan === "en" ? "Categories" : "فئات الخدمات"}
@@ -1264,14 +1266,14 @@ export default class GroomingServices extends React.Component {
                           right: 0,
                           bottom: 0,
                           top: 0,
-                          position: "absolute"
+                          position: "absolute",
                         }}
                       >
                         <Text
                           style={{
                             fontSize: 10,
 
-                            justifyContent: "center"
+                            justifyContent: "center",
                           }}
                         >
                           {this.state.selectedServices &&
@@ -1312,7 +1314,7 @@ export default class GroomingServices extends React.Component {
                           width: 4,
                           height: 4,
                           borderRadius: 2,
-                          backgroundColor: "red"
+                          backgroundColor: "red",
                         }}
                       ></View>
                     ) : (

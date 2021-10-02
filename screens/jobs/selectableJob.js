@@ -5,7 +5,7 @@ import {
   Image,
   TouchableOpacity,
   Dimensions,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -49,7 +49,7 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
           borderWidth: 1,
           borderTopWidth: index == 0 ? 1 : 0,
           borderColor: "#283a97",
-          borderTopWidth: 1
+          borderTopWidth: 1,
         }}
       >
         <View
@@ -57,12 +57,12 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
             flexDirection: "row",
             justifyContent: "space-between",
             marginLeft: 8,
-            marginRight: 6
+            marginRight: 6,
           }}
         >
           <View
             style={{
-              marginTop: 4
+              marginTop: 4,
             }}
           >
             <Text
@@ -71,7 +71,7 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
                 fontFamily: "montserrat_semi_blod",
                 fontSize: 12,
                 textAlign: "left",
-                width: Dimensions.get("screen").width - 140
+                width: Dimensions.get("screen").width - 140,
               }}
               numberOfLines={2}
             >
@@ -84,7 +84,7 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
               marginRight: 26,
               marginTop: 8,
 
-              marginLeft: 8
+              marginLeft: 8,
             }}
           >
             <View
@@ -106,7 +106,7 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
             flexDirection: "row",
             justifyContent: "space-between",
             marginTop: 15,
-            marginBottom: 15
+            marginBottom: 15,
           }}
         >
           <View style={{ marginLeft: 12, marginTop: 12 }}>
@@ -114,7 +114,7 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
               <View
                 style={{
                   backgroundColor: "#0764af",
-                  width: 90
+                  width: 90,
                 }}
               >
                 <View
@@ -123,13 +123,13 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
                     alignSelf: "center",
                     alignContent: "center",
                     alignItems: "center",
-                    flex: 1
+                    flex: 1,
                   }}
                 >
                   <Text
                     style={{
                       color: "white",
-                      fontSize: 12
+                      fontSize: 12,
                     }}
                   >
                     SAR{" "}
@@ -137,7 +137,7 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
                   <Text
                     style={{
                       color: "#ff9c00",
-                      fontSize: 12
+                      fontSize: 12,
                     }}
                   >
                     {job.price}
@@ -145,7 +145,7 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
                   <Text
                     style={{
                       color: "white",
-                      fontSize: 12
+                      fontSize: 12,
                     }}
                   >
                     {lan == "en" ? "/Visit" : "زيارة/"}
@@ -160,10 +160,10 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
                 textAlign: "center",
                 fontSize: 12,
                 color: "#4a4b4c",
-                marginBottom: 3
+                marginBottom: 3,
               }}
             >
-              {lan == "en" ? "Schedule Visit" : "رتب زيارة"}
+              {lan == "en" ? "Inspection Visit" : "زيارة تفقدية"}
             </Text>
             <TouchableOpacity
               onPress={() => selectJob(job)}
@@ -188,16 +188,17 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
             style={{
               backgroundColor: "white",
               marginLeft: 1,
-              marginRight: 1
+              marginRight: 1,
             }}
           >
             {/* <Text style={{ fontWeight: "bold", textAlign: "left" }}>
               {lan == "en" ? "Notes:" : "ملاحظات:"}
             </Text> */}
-            <Text style={{ textAlign: "left", fontSize: 9 }}>
+            {/* fontSize : 9 */}
+            <Text style={{ textAlign: "left", fontSize: 11 }}>
               {lan == "en"
-                ? "By scheduling the visit, you agree that this is only the visit inspection charge. In case you dont take the service after visit, you are required to pay visit charge (SAR 25) to professional. "
-                : "بإختيارك ترتيب زيارة، فإنك توافق على أن الـ 25 ريال سعودي هي فقط رسوم الزيارة (الفحص)، ويتعين عليك الدفع في حال عدم اخذ الخدمة"}
+                ? "By scheduling the visit, you agree that this is only the inspection visit charge. The technician will quote the price after inspection. In case you don't take the service after inspection, you are required to pay visit charge (SAR 25) to professional."
+                : "من خلال تحديد موعد الزيارة ، فإنك توافق على أن هذه هي رسوم زيارة التفتيش فقط. سيقدم الفني السعر بعد الفحص. في حالة عدم أخذ الخدمة بعد الفحص ، يتعين عليك دفع رسوم الزيارة (25 ريال ) إلى المختص."}
             </Text>
           </View>
         </View>

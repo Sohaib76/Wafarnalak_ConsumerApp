@@ -60,21 +60,24 @@ const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const IMAGE_HEIGHT = Platform.OS == "android" ? 320 : 335;
 const HEADER_HEIGHT = Platform.OS === "ios" ? 64 : 50;
 const SCROLL_HEIGHT = IMAGE_HEIGHT - HEADER_HEIGHT;
+
 const AcBanners_ar = [
   "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png", //window  Ac
   "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png", //window ac
-  "https://i.ibb.co/Vp9QFWw/Ac-app-banner-Arabic-Text-Change.png", //split Ac
+  // "https://i.ibb.co/Vp9QFWw/Ac-app-banner-Arabic-Text-Change.png", //split Ac
   //[url=https://ibb.co/CPK4xjK][img]https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png[/img][/url]
-  "https://i.ibb.co/qWdmQMQ/banner-images-01.png", //split ac
+  "https://i.ibb.co/YchN3YR/Split-ac-Installation-arabic-1.png", //split ac
   // "https://i.ibb.co/Y8fghB0/Tower-AC-Refill-Cleaning-Banner-Ar-min.png" //Tower  Ac
+  "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png", //Split Indoor Cleanin
   "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
 ];
 const AcBanners = [
   "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png", //window ac
   "https://i.ibb.co/y4GL1HY/AC-installation-2.png", //window ac
-  "https://i.ibb.co/0hKJ02H/Ac-app-banner-2-Text-Change.png", //split ac
-  "https://i.ibb.co/kG2HGGV/banner-images-02.png", // split ac installation
+  // "https://i.ibb.co/0hKJ02H/Ac-app-banner-2-Text-Change.png", //split ac
+  "https://i.ibb.co/ys57G29/Split-Installation-eng.png", // split ac installation
   // "https://i.ibb.co/8x8cvqp/Tower-AC-Refill-Cleaning-Banner-Eng-min.png" //tower ac
+  "https://i.ibb.co/PWSc9QP/Ac-app-banner.png", //Split AC Indoor CLeaning
   "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
 
   //https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png
@@ -166,6 +169,42 @@ const AcOffersDataEng = [
     //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
   },
 
+  // {
+  //   job: {
+  //     cartnotes:
+  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+  //     cartnotes_ar:
+  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+  //     carttype: 1,
+  //     i_notes: "2 or more = SAR  199 / Unit",
+  //     i_notes_ar: "(لعدد وحدتين او أكثر، السعر 199 ريال للوحدة (مكيف",
+  //     id: 223,
+  //     is_promoted: true,
+  //     jobServiceIcon: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
+  //     jobserviceName: "Split Unit",
+  //     jobserviceNameAr: "مكيف اسبليت",
+  //     name: "Deep Cleaning + Gas Top up", //Freon Refill + Cleaning
+  //     name_ar: "تعبئة فريون + تنظيف",
+  //     price: 229, //150
+  //     pricelimit: 49,
+  //     pricetype: 1,
+  //     serviceid: 29,
+  //     saleprice: 199, //105
+  //     t_price: 0,
+
+  //     productseoname:
+  //       "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de",
+  //   },
+  //   webbanner: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
+  //   banner: {
+  //     url: "https://i.ibb.co/0hKJ02H/Ac-app-banner-2-Text-Change.png",
+  //   },
+  //   //??
+
+  //   // htttps://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png
+  // },
   {
     job: {
       cartnotes:
@@ -175,43 +214,8 @@ const AcOffersDataEng = [
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
         " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
-      i_notes: "2 or more = SAR  199 / Unit",
-      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 199 ريال للوحدة (مكيف",
-      id: 223,
-      is_promoted: true,
-      jobServiceIcon: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
-      jobserviceName: "Split Unit",
-      jobserviceNameAr: "مكيف اسبليت",
-      name: "Deep Cleaning + Gas Top up", //Freon Refill + Cleaning
-      name_ar: "تعبئة فريون + تنظيف",
-      price: 229, //150
-      pricelimit: 49,
-      pricetype: 1,
-      serviceid: 29,
-      saleprice: 199, //105
-      t_price: 0,
-
-      productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de",
-    },
-    webbanner: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
-    banner: {
-      url: "https://i.ibb.co/0hKJ02H/Ac-app-banner-2-Text-Change.png",
-    },
-    //??
-
-    // htttps://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png
-  },
-  {
-    job: {
-      cartnotes:
-        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-      cartnotes_ar:
-        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-      carttype: 1,
-      jobServiceIcon: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
+      jobServiceIcon:
+        "https://i.ibb.co/DVx43S1/AC-installation-1.pnghttps://i.ibb.co/ys57G29/Split-Installation-eng.png",
       jobserviceName: "Split Unit",
       jobserviceNameAr: "مكيف اسبليت",
       id: 65,
@@ -219,23 +223,59 @@ const AcOffersDataEng = [
       pricelimit: 49,
       name: "Installation",
       name_ar: "تركيب",
-      price: 249, //200
+      price: 200, //200
       pricetype: 1,
       is_promoted: true,
       t_price: 0,
-      saleprice: 200, //150
-      i_notes: "2 or more = SAR 200 / Unit",
-      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 200 ريال للوحدة (مكيف)",
+      saleprice: 150, //150
+      i_notes: "Get 2 or more units installed in SAR 150 each",
+      i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
 
-      productseoname: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
+      productseoname: "https://i.ibb.co/ys57G29/Split-Installation-eng.png",
     },
-    webbanner: "https://i.ibb.co/DVx43S1/AC-installation-1.png",
+    webbanner: "https://i.ibb.co/ys57G29/Split-Installation-eng.png",
     banner: {
-      url: "https://i.ibb.co/kG2HGGV/banner-images-02.png",
+      url: "https://i.ibb.co/ys57G29/Split-Installation-eng.png",
     },
 
     //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
   },
+
+  {
+    job: {
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+      jobServiceIcon: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
+      jobserviceName: "Split Unit",
+      jobserviceNameAr: "مكيف اسبليت",
+      id: 70,
+      serviceid: 29,
+      pricelimit: 49,
+      name: "Cleaning (Indoor)",
+      name_ar: "التنظيف (داخلي)",
+      price: 89, //200
+      pricetype: 1,
+      is_promoted: true,
+      t_price: 0,
+      saleprice: 80, //150
+      i_notes: "Get 2 or more units cleaned in SAR 80 each",
+      i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
+
+      productseoname: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
+    },
+    webbanner: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
+    banner: {
+      url: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
+    },
+
+    //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
+  },
+
   {
     job: {
       cartnotes:
@@ -345,39 +385,39 @@ const AcOffersData_ar = [
     // htttps://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png
   },
 
-  {
-    job: {
-      cartnotes:
-        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-      cartnotes_ar:
-        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-      carttype: 1,
-      i_notes: "2 or more = SAR  105 / Unit",
-      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 105 ريال للوحدة (مكيف",
-      id: 223,
-      is_promoted: true,
-      jobServiceIcon: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
-      jobserviceName: "Split Unit",
-      jobserviceNameAr: "مكيف اسبليت",
-      name: "Freon Refill + Cleaning",
-      name_ar: "تعبئة فريون + تنظيف",
-      price: 229,
-      pricelimit: 49,
-      pricetype: 1,
-      serviceid: 29,
-      saleprice: 199,
-      t_price: 0,
+  // {
+  //   job: {
+  //     cartnotes:
+  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+  //     cartnotes_ar:
+  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+  //     carttype: 1,
+  //     i_notes: "2 or more = SAR  105 / Unit",
+  //     i_notes_ar: "(لعدد وحدتين او أكثر، السعر 105 ريال للوحدة (مكيف",
+  //     id: 223,
+  //     is_promoted: true,
+  //     jobServiceIcon: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
+  //     jobserviceName: "Split Unit",
+  //     jobserviceNameAr: "مكيف اسبليت",
+  //     name: "Freon Refill + Cleaning",
+  //     name_ar: "تعبئة فريون + تنظيف",
+  //     price: 229,
+  //     pricelimit: 49,
+  //     pricetype: 1,
+  //     serviceid: 29,
+  //     saleprice: 199,
+  //     t_price: 0,
 
-      productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de",
-    },
-    webbanner: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
-    banner: {
-      url: "https://i.ibb.co/Vp9QFWw/Ac-app-banner-Arabic-Text-Change.png",
-    },
-  },
+  //     productseoname:
+  //       "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de",
+  //   },
+  //   webbanner: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
+  //   banner: {
+  //     url: "https://i.ibb.co/Vp9QFWw/Ac-app-banner-Arabic-Text-Change.png",
+  //   },
+  // },
   {
     job: {
       cartnotes:
@@ -395,21 +435,54 @@ const AcOffersData_ar = [
       pricelimit: 49,
       name: "Installation",
       name_ar: "تركيب",
-      price: 249, //Change > 249
+      price: 200, //Change > 249
       pricetype: 1,
       is_promoted: true,
       t_price: 0,
-      saleprice: 200,
+      saleprice: 150,
       i_notes: "2 or more = SAR 150 / Unit",
-      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 150 ريال للوحدة (مكيف)",
+      i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
 
       productseoname: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
     },
-    webbanner: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
+    webbanner: "https://i.ibb.co/YchN3YR/Split-ac-Installation-arabic-1.png",
     banner: {
       url: "https://i.ibb.co/qWdmQMQ/banner-images-01.png",
     },
   }, //htttps://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png
+  {
+    job: {
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+      i_notes: "2 or more = SAR 80 / Unit",
+      i_notes_ar: "تنظيف وحدتين أو أكثر ب 80 ريال لكل وحدة",
+      id: 228,
+      is_promoted: true,
+      jobServiceIcon: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
+      // name: "Tower Unit",
+      // name_ar: "مكيف تاور (برج/نقال)",
+      name: "Cleaning (Indoor)",
+      name_ar: "التنظيف (داخلي)",
+      jobserviceName: "Split Unit",
+      jobserviceNameAr: "مكيف تاور (برج/نقال)",
+      price: 89,
+      pricelimit: 49,
+      pricetype: 1,
+      serviceid: 29,
+      saleprice: 80,
+      t_price: 0,
+      productseoname: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
+    },
+    webbanner: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
+    banner: {
+      url: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
+    },
+  },
   {
     job: {
       cartnotes:
@@ -848,6 +921,14 @@ export default class LandingSecreen extends React.Component {
     );
   };
   componentDidMount = async () => {
+    // My Test
+    // let feedbackShow = await AsyncStorage.getItem("PopUp_Feedback");
+    // if (feedbackShow != null) {
+    //   alert("Have Feedback");
+    // } else {
+    //   alert("No Feedback");
+    // }
+    // console.log("test", feedbackShow);
     let lan = await AsyncStorage.getItem("lan");
     await AsyncStorage.removeItem("jobs");
     let user = await AsyncStorage.getItem("user");
@@ -2478,7 +2559,7 @@ export default class LandingSecreen extends React.Component {
             {
               id: 29,
               name: "AC Technician",
-              name_ar: "فني تكييف الهواء",
+              name_ar: "خدمات التكييف",
               pricelimit: 49,
               seo_name:
                 "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FAC-B.png?alt=media&token=7e7905c1-0e11-460d-9a7c-a74d1e3bb121",
@@ -2494,27 +2575,13 @@ export default class LandingSecreen extends React.Component {
                     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
                   is_promoted: true,
                   jobs: [
-                    {
-                      id: 69,
-                      serviceid: 29,
-                      pricelimit: 49,
-                      name: "Partial or Gas topup",
-                      name_ar: "تعبئة الغاز جزئي او كامل",
-                      price: 100,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
                     // {
-                    //   id: 231,
+                    //   id: 69,
                     //   serviceid: 29,
                     //   pricelimit: 49,
-                    //   name: "Freon Refill",
-                    //   name_ar: "تعبئة فريون",
-                    //   price: 90,
+                    //   name: "Partial or Gas topup",
+                    //   name_ar: "تعبئة الغاز جزئي او كامل",
+                    //   price: 100,
                     //   pricetype: 1,
                     //   cartnotes:
                     //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2522,6 +2589,34 @@ export default class LandingSecreen extends React.Component {
                     //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                     //   carttype: 1,
                     // },
+                    {
+                      id: 231,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Freon Refill (Partial)",
+                      name_ar: "تعبئة فريون (جزئي)",
+                      price: 99,
+                      pricetype: 1,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
+                    {
+                      id: 231,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Freon Refill (Full)",
+                      name_ar: " تعبئة فريون (كامل)",
+                      price: 200,
+                      pricetype: 1,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
                     {
                       id: 230,
                       serviceid: 29,
@@ -2533,9 +2628,10 @@ export default class LandingSecreen extends React.Component {
                       is_promoted: true,
                       saleprice: 84,
                       t_price: 0,
-                      i_notes: "2 or more = SAR  84 / Unit",
+                      i_notes:
+                        "Cleaning & Freon refill on 2 or more units in SAR 84 each",
                       i_notes_ar:
-                        "( لعدد وحدتين او أكثر، السعر 84 ريال للوحدة (مكيف",
+                        "التنظيف وإعادة تعبئة الفريون على وحدتين أو أكثر ب 84 ريال  لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2548,15 +2644,13 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Cleaning",
                       name_ar: "تنظيف",
-                      price: 89,
+                      price: 65,
                       pricetype: 1,
                       is_promoted: true,
-                      saleprice: 79,
+                      saleprice: 55,
                       t_price: 0,
-                      i_notes:
-                        "Get 2 or more window unit cleaned in SAR 79 Each",
-                      i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 79 ريال للوحدة (مكيف",
+                      i_notes: "Get 2 or more units cleaned in SAR 55 each",
+                      i_notes_ar: "تنظيف وحدتين أو أكثر ب 55 ريال لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2574,9 +2668,8 @@ export default class LandingSecreen extends React.Component {
                       is_promoted: true,
                       saleprice: 75,
                       t_price: 0,
-                      i_notes: "2 or more = SAR 75 / Unit",
-                      i_notes_ar:
-                        "تنظيف مكيفين ويندو او اكثر بـ75 ريال للمكيف الواحد",
+                      i_notes: "Get 2 or more units installed in SAR 75 each",
+                      i_notes_ar: "تركيب وحدتين أو اكثر بـ 75 ريال  لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2617,8 +2710,8 @@ export default class LandingSecreen extends React.Component {
                       id: 64,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Removal and installation",
-                      name_ar: "إزالة وتركيب",
+                      name: "Relocation",
+                      name_ar: "نقل",
                       price: 149,
                       pricetype: 1,
                       cartnotes:
@@ -2641,9 +2734,25 @@ export default class LandingSecreen extends React.Component {
                       id: 224,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Freon Refill",
-                      name_ar: "تعبئة فريون",
-                      price: 100,
+                      name: "Freon Refill (Partial)",
+                      name_ar: " تعبئة فريون (جزئي)",
+                      price: 99,
+                      pricetype: 1,
+
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
+
+                    {
+                      id: 224,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Freon Refill (Full)",
+                      name_ar: " تعبئة فريون (كامل)",
+                      price: 200,
                       pricetype: 1,
 
                       cartnotes:
@@ -2656,16 +2765,17 @@ export default class LandingSecreen extends React.Component {
                       id: 223,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Deep Cleaning + Gas top-up",
-                      name_ar: "تعبئة فريون + تنظيف",
-                      price: 229,
+                      name: "Indoor Cleaning + Freon Refill (Partial)",
+                      name_ar: "التنظيف الداخلي + إعادة تعبئة الفريون (جزئي)",
+                      price: 150,
                       pricetype: 1,
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 199,
-                      i_notes: "2 or more = SAR  199 / Unit",
+                      saleprice: 105,
+                      i_notes:
+                        "Cleaning & Freon refill on 2 or more units in SAR 105 each",
                       i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 199 ريال للوحدة (مكيف",
+                        "التنظيف وإعادة تعبئة الفريون على وحدتين أو أكثر ب 105 ريال  لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2676,17 +2786,16 @@ export default class LandingSecreen extends React.Component {
                       id: 70,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Deep Cleaning",
-                      name_ar: "تنظيف",
-                      price: 130,
+                      name: "Cleaning (Indoor)",
+                      name_ar: "التنظيف (داخلي)",
+                      price: 89,
                       pricetype: 1,
                       pricetype: 1,
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 110,
-                      i_notes: "Get 2 or more split cleaned in SAR 110 Each",
-                      i_notes_ar:
-                        "لعدد وحدتين او أكثر، السعر 110 ريال للوحدة (مكيف)",
+                      saleprice: 80,
+                      i_notes: "Get 2 or more units cleaned in SAR 80 each",
+                      i_notes_ar: "تنظيف وحدتين أو أكثر ب 80 ريال لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2699,14 +2808,13 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation",
                       name_ar: "تركيب",
-                      price: 249,
+                      price: 200,
                       pricetype: 1,
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 200,
-                      i_notes: "2 or more = SAR 200 / Unit",
-                      i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 200 ريال للوحدة (مكيف)",
+                      saleprice: 150,
+                      i_notes: "Get 2 or more units installed in SAR 150 each",
+                      i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2732,7 +2840,7 @@ export default class LandingSecreen extends React.Component {
                       serviceid: 29,
                       pricelimit: 49,
                       name: "Removal of a split unit",
-                      name_ar: "إزالة مكيف اسبليت",
+                      name_ar: "إزالة",
                       price: 109,
                       pricetype: 1,
                       cartnotes:
@@ -2760,8 +2868,8 @@ export default class LandingSecreen extends React.Component {
                       serviceid: 29,
                       pricelimit: 49,
                       name: "Relocation",
-                      name_ar: "تحويل",
-                      price: 349,
+                      name_ar: "نقل",
+                      price: 299,
                       pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2797,8 +2905,8 @@ export default class LandingSecreen extends React.Component {
                       id: 233,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Freon Refill",
-                      name_ar: "تعبئة فريون ",
+                      name: "Freon Refill (Full)",
+                      name_ar: "(كامل) تعبئة فريون ",
                       price: 180,
                       pricetype: 1,
                       cartnotes:
@@ -2833,8 +2941,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation",
                       name_ar: "تركيبف",
-                      price: 250,
-                      pricetype: 1,
+                      price: 25, //250
+                      pricetype: 2,
                       is_promoted: true,
                       t_price: 0,
                       saleprice: 188,
@@ -2853,8 +2961,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Cleaning",
                       name_ar: "تنظيف",
-                      price: 140,
-                      pricetype: 1,
+                      price: 25, //140
+                      pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2875,6 +2983,20 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    {
+                      id: 73,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Relocation",
+                      name_ar: "نقل",
+                      price: 149,
+                      pricetype: 1,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
                   ],
                 },
                 {
@@ -2889,9 +3011,9 @@ export default class LandingSecreen extends React.Component {
                       id: 229,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Freon Refill",
-                      name_ar: "تعبئة فريون",
-                      price: 300,
+                      name: "Freon Refill (Full)",
+                      name_ar: "تعبئة فريون (جزئي)",
+                      price: 200, //300
                       pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2910,9 +3032,10 @@ export default class LandingSecreen extends React.Component {
                       t_price: 0,
                       saleprice: 168,
                       pricetype: 1,
-                      i_notes: "2 or more = SAR 168 / Unit",
+                      i_notes:
+                        "Cleaning & Freon refill on 2 or more units in SAR 168 each",
                       i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 168 ريال للوحدة (مكيف",
+                        "لتنظيف وإعادة تعبئة الفريون على وحدتين أو أكثر ب 168 ريال لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2927,11 +3050,10 @@ export default class LandingSecreen extends React.Component {
                       name_ar: "تركيب",
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 187,
-                      i_notes: "2 or more = SAR  187 / Unit",
-                      i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 187 ريال للوحدة (مكيف",
-                      price: 249,
+                      saleprice: 179,
+                      i_notes: "Get 2 or more units installed in SAR 179 each",
+                      i_notes_ar: "تركيب وحدتين أو اكثر بـ 179 ريال  لكل وحدة",
+                      price: 199,
                       pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2944,6 +3066,11 @@ export default class LandingSecreen extends React.Component {
                       serviceid: 29,
                       pricelimit: 49,
                       name: "Cleaning",
+                      is_promoted: true,
+                      t_price: 0,
+                      saleprice: 78,
+                      i_notes: "Get 2 or more units cleaned in SAR 78 each",
+                      i_notes_ar: "تنظيف وحدتين أو أكثر ب 78 ريال لكل وحدة",
                       name_ar: "تنظيف",
                       price: 99,
                       pricetype: 1,
@@ -2967,13 +3094,43 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    // {
+                    //   id: 69,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Partial or Gas topup",
+                    //   name_ar: "تعبئة الغاز جزئي او كامل",
+                    //   price: 100,
+                    //   pricetype: 1,
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
+
                     {
                       id: 69,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Partial or Gas topup",
-                      name_ar: "تعبئة الغاز جزئي او كامل",
-                      price: 100,
+                      name: "Relocation to same place/inside home",
+                      name_ar: "نقل الى مكان أخر / داخل المنزل",
+                      price: 169,
+                      pricetype: 1,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
+
+                    {
+                      id: 69,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Relocation to another place",
+                      name_ar: "نقل إلى مكان آخر",
+                      price: 329,
                       pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3026,13 +3183,60 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+
                     {
-                      id: 69,
+                      id: 78,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Partial or Gas topup",
-                      name_ar: "تعبئة الغاز جزئي او كامل",
-                      price: 100,
+                      name: "Installation",
+
+                      name_ar: "تركيب",
+                      price: 25,
+                      pricetype: 2,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
+
+                    {
+                      id: 78,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Relocation",
+
+                      name_ar: "نقل",
+                      price: 149,
+                      pricetype: 1,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
+                    // {
+                    //   id: 69,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Partial or Gas topup",
+                    //   name_ar: "تعبئة الغاز جزئي او كامل",
+                    //   price: 100,
+                    //   pricetype: 1,
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
+
+                    {
+                      id: 78,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Freon Refill (Partial)",
+                      name_ar: " إستشارة إصلاح (جزئي)",
+                      price: 99,
                       pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3126,20 +3330,20 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
-                    {
-                      id: 69,
-                      serviceid: 29,
-                      pricelimit: 49,
-                      name: "Partial or Gas topup",
-                      name_ar: "تعبئة الغاز جزئي او كامل",
-                      price: 100,
-                      pricetype: 1,
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                      carttype: 1,
-                    },
+                    // {
+                    //   id: 69,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Partial or Gas topup",
+                    //   name_ar: "تعبئة الغاز جزئي او كامل",
+                    //   price: 100,
+                    //   pricetype: 1,
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
                   ],
                 },
                 {
@@ -6801,7 +7005,7 @@ export default class LandingSecreen extends React.Component {
     }
   };
 
-  _handleNotification = (notification) => {
+  _handleNotification = async (notification) => {
     console.log("notifications recieved ", notification);
     // console.log("notifications > data  ", notification.request.content.data);
     // console.log("notifications > job  ", notification.request.content.data.job);
@@ -6837,6 +7041,19 @@ export default class LandingSecreen extends React.Component {
           serviceid: notification.request.content.data.serviceid,
           lan: this.state.lan,
         });
+      } else if (notification.request.content.data.statusid == 5) {
+        await AsyncStorage.setItem(
+          "PopUp_Feedback",
+          JSON.stringify(notification.request.content.data)
+        );
+        this.props.navigation.navigate("OrderDetails", {
+          order: notification.request.content.data,
+          lan: this.state.lan,
+          user: this.state.user,
+          isHistory:
+            notification.request.content.data.statusid == 5 ? true : false,
+          isFeedback: true,
+        });
       } else if (notification.request.content.data.statusid) {
         this.props.navigation.navigate("PromotionService", {
           serviceid: notification.request.content.data.serviceid,
@@ -6849,7 +7066,7 @@ export default class LandingSecreen extends React.Component {
           user: this.state.user,
           isHistory:
             notification.request.content.data.statusid == 5 ? true : false,
-          isFeedback: false,
+          isFeedback: true,
         });
       }
     } else {
