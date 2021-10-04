@@ -474,7 +474,7 @@ export default class OrderDetailsSecreen extends React.Component {
     } else {
       // let feedbackShow = await AsyncStorage.getItem("PopUp_Feedback");
       // console.log("test", feedbackShow);
-      // await AsyncStorage.removeItem("PopUp_Feedback");
+      await AsyncStorage.removeItem("PopUp_Feedback");
       console.log(this.state.order.orderid);
       fetch(
         `http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wfportal/api/cu/v.3/app/finish_order/${this.state.order.orderid}`,
@@ -513,17 +513,17 @@ export default class OrderDetailsSecreen extends React.Component {
     let isHistory = navigation.getParam("isHistory");
     let lan = navigation.getParam("lan");
     let isFeedback = navigation.getParam("isFeedback");
-    this.setState({ orderIdNum: order.orderid.substring(3) });
+    this.setState({ orderIdNum: order.order_id }); //.substring(3)
     // My Logic     //Enable It After Designing
-    // if (isFeedback == undefined) {
-    //   isFeedback = false;
-    // }
-    // console.log(isFeedback);
-    // if (isHistory && isFeedback) {
-    //   this.setState({ orderPopup: true });
-    // } else {
-    //   this.setState({ orderPopup: false });
-    // }
+    if (isFeedback == undefined) {
+      isFeedback = false;
+    }
+    console.log(isFeedback);
+    if (isHistory && isFeedback) {
+      this.setState({ orderPopup: true });
+    } else {
+      this.setState({ orderPopup: false });
+    }
 
     //Persistant Storage
     // await AsyncStorage.setItem("jobs", JSON.stringify(allServices));
@@ -532,9 +532,9 @@ export default class OrderDetailsSecreen extends React.Component {
     // await AsyncStorage.removeItem("jobs");
 
     //Enable It For Designing
-    if (isHistory) {
-      this.setState({ orderPopup: true });
-    }
+    // if (isHistory) {
+    //   this.setState({ orderPopup: true });
+    // }
     // alert(JSON.stringify(order.orderid.substring(3)));
 
     this.setState({ loading: true });
@@ -1230,7 +1230,7 @@ export default class OrderDetailsSecreen extends React.Component {
                     }}
                   >
                     {this.state.lan === "en" ? "Order#:" : "طلب#"}{" "}
-                    {this.state.orderDetail && this.state.orderDetail.orderid}
+                    {this.state.orderDetail && this.state.orderDetail.order_id}
                   </Text>
                   <Text
                     style={{

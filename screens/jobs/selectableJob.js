@@ -195,7 +195,7 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
               {lan == "en" ? "Notes:" : "ملاحظات:"}
             </Text> */}
             {/* fontSize : 9 */}
-            <Text style={{ textAlign: "left", fontSize: 11 }}>
+            <Text style={{ textAlign: "justify", fontSize: 11 }}>
               {lan == "en"
                 ? "By scheduling the visit, you agree that this is only the inspection visit charge. The technician will quote the price after inspection. In case you don't take the service after inspection, you are required to pay visit charge (SAR 25) to professional."
                 : "من خلال تحديد موعد الزيارة ، فإنك توافق على أن هذه هي رسوم زيارة التفتيش فقط. سيقدم الفني السعر بعد الفحص. في حالة عدم أخذ الخدمة بعد الفحص ، يتعين عليك دفع رسوم الزيارة (25 ريال ) إلى المختص."}

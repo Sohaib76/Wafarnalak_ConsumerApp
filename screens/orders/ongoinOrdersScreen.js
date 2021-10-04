@@ -6,7 +6,7 @@ import {
   Dimensions,
   Modal,
   AsyncStorage,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import {
   Container,
@@ -24,7 +24,7 @@ import {
   Item,
   Left,
   Right,
-  Footer
+  Footer,
 } from "native-base";
 import { StatusBar } from "expo-status-bar";
 import { Ionicons } from "@expo/vector-icons";
@@ -40,7 +40,7 @@ export default class OngoingOrdersSecreen extends React.Component {
       loading: false,
       onGoingOrders: [],
       lan: "en",
-      user: null
+      user: null,
     };
   }
   componentDidMount = async () => {
@@ -58,25 +58,25 @@ export default class OngoingOrdersSecreen extends React.Component {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ customerid: user.customerid })
+        body: JSON.stringify({ customerid: user.customerid }),
       }
     )
-      .then(response => response.json())
-      .then(responseJson => {
+      .then((response) => response.json())
+      .then((responseJson) => {
         if (responseJson.error === false) {
           this.setState({
             onGoingOrders: responseJson.Orders,
             loading: false,
             lan: navigation.getParam("lan"),
-            user: user
+            user: user,
           });
         } else {
           this.setState({ loading: false });
         }
       })
-      .catch(error => {});
+      .catch((error) => {});
   };
   render() {
     return (
@@ -93,12 +93,12 @@ export default class OngoingOrdersSecreen extends React.Component {
           style={{
             width: Dimensions.get("screen").width,
             height: 1,
-            backgroundColor: "lightgray"
+            backgroundColor: "lightgray",
           }}
         ></View>
         {this.state.onGoingOrders &&
           this.state.onGoingOrders.map(
-            function(order, index) {
+            function (order, index) {
               return (
                 <TouchableOpacity
                   key={index}
@@ -107,7 +107,7 @@ export default class OngoingOrdersSecreen extends React.Component {
                       order: order,
                       isHistory: false,
                       lan: this.state.lan,
-                      user: this.props.user
+                      user: this.props.user,
                     })
                   }
                 >
@@ -118,7 +118,7 @@ export default class OngoingOrdersSecreen extends React.Component {
                         flexDirection: "row",
                         height: 75,
                         width: Dimensions.get("screen").width,
-                        backgroundColor: "#F5F5F5"
+                        backgroundColor: "#F5F5F5",
                       }}
                     >
                       <Left style={{ position: "absolute", flex: 1, left: 6 }}>
@@ -127,7 +127,7 @@ export default class OngoingOrdersSecreen extends React.Component {
                           style={{
                             width: 55,
                             height: 55,
-                            borderRadius: 10
+                            borderRadius: 10,
                           }}
                           resizeMode="contain"
                         />
@@ -136,7 +136,7 @@ export default class OngoingOrdersSecreen extends React.Component {
                         style={{
                           marginLeft: 75,
                           marginRight: 35,
-                          marginTop: 10
+                          marginTop: 10,
                         }}
                       >
                         <Text
@@ -145,18 +145,18 @@ export default class OngoingOrdersSecreen extends React.Component {
                             fontSize: 12,
                             fontWeight: "bold",
                             marginTop: 4,
-                            textAlign: "left"
+                            textAlign: "left",
                           }}
                         >
                           {this.state.lan == "en" ? "Order#" : "طلب#"}:{" "}
-                          {order.orderid}
+                          {order.order_id}
                         </Text>
                         <Text
                           style={{
                             color: "#4a4b4c",
                             fontSize: 10,
                             marginTop: 2,
-                            textAlign: "left"
+                            textAlign: "left",
                           }}
                         >
                           {this.state.lan == "en" ? "Date:" : "الطلبات السابقة"}
@@ -166,7 +166,7 @@ export default class OngoingOrdersSecreen extends React.Component {
                           style={{
                             color: "#4a4b4c",
                             fontSize: 10,
-                            textAlign: "left"
+                            textAlign: "left",
                           }}
                         >
                           {this.state.lan == "en" ? "Status:" : "الحالة:"}{" "}
@@ -215,7 +215,7 @@ export default class OngoingOrdersSecreen extends React.Component {
                       style={{
                         width: Dimensions.get("screen").width,
                         height: 1,
-                        backgroundColor: "lightgray"
+                        backgroundColor: "lightgray",
                       }}
                     ></View>
                   </View>

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  View,
-  Dimensions,
-  Image,
-  TouchableOpacity
-} from "react-native";
+import { View, Dimensions, Image, TouchableOpacity } from "react-native";
 import {
   Text,
   Content,
@@ -12,7 +7,7 @@ import {
   Header,
   Left,
   Right,
-  Title
+  Title,
 } from "native-base";
 
 import { Ionicons } from "@expo/vector-icons";
@@ -22,7 +17,7 @@ export default class ComplaintTypesScreen extends React.Component {
     this.state = {
       lan: "en",
       orderId: {},
-      support: {}
+      support: {},
     };
   }
   componentDidMount = () => {
@@ -30,7 +25,7 @@ export default class ComplaintTypesScreen extends React.Component {
     this.setState({
       lan: navigation.getParam("lan"),
       support: navigation.getParam("support"),
-      orderId: navigation.getParam("orderId")
+      orderId: navigation.getParam("orderId"),
     });
   };
   render() {
@@ -43,7 +38,7 @@ export default class ComplaintTypesScreen extends React.Component {
             borderBottomColor: "#0866b0",
             borderBottomWidth: 1,
             height: 60,
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <Left style={{ marginLeft: 10 }}>
@@ -84,7 +79,7 @@ export default class ComplaintTypesScreen extends React.Component {
               alignItems: "center",
               alignSelf: "center",
               position: Platform.OS === "android" ? "absolute" : "relative",
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           >
             {this.state.lan === "en" ? (
@@ -98,7 +93,7 @@ export default class ComplaintTypesScreen extends React.Component {
                 style={{
                   fontFamily: "montserrat_arabic_regular",
                   fontSize: 18,
-                  color: "#0865b0"
+                  color: "#0865b0",
                 }}
               >
                 شكوى
@@ -107,12 +102,12 @@ export default class ComplaintTypesScreen extends React.Component {
           </View>
           <Right></Right>
         </Header>
-        <Content style={{ backgroundColor: "white" }}>
+        <View style={{ backgroundColor: "white" }}>
           <View
             style={{
               backgroundColor: "#F5F5F5",
               width: Dimensions.get("screen").width - 30,
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           >
             <View style={{ height: Dimensions.get("screen").height - 60 }}>
@@ -121,7 +116,7 @@ export default class ComplaintTypesScreen extends React.Component {
                   width: Dimensions.get("screen").width - 30,
                   height: 95,
                   marginTop: 40,
-                  backgroundColor: "#0764af"
+                  backgroundColor: "#0764af",
                 }}
               >
                 <View style={{ alignSelf: "center", marginTop: -18 }}>
@@ -140,7 +135,7 @@ export default class ComplaintTypesScreen extends React.Component {
                         paddingBottom: 5,
                         textAlign: "center",
                         marginLeft: 8,
-                        marginRight: 8
+                        marginRight: 8,
                       }}
                     >
                       We would love to hear your thoughts, concerns, or problems
@@ -156,7 +151,7 @@ export default class ComplaintTypesScreen extends React.Component {
                         paddingBottom: 5,
                         textAlign: "center",
                         marginLeft: 8,
-                        marginRight: 8
+                        marginRight: 8,
                       }}
                     >
                       يسعدنا سماع أفكاركم ومخاوفكم او المشاكل التي تواجهكم والذي
@@ -176,7 +171,7 @@ export default class ComplaintTypesScreen extends React.Component {
                       textAlign: "left",
                       fontFamily: "montserrat_arabic_regular",
                       fontWeight: "bold",
-                      color: "#283a97"
+                      color: "#283a97",
                     }}
                   >
                     نوع الملاحظات:
@@ -189,7 +184,7 @@ export default class ComplaintTypesScreen extends React.Component {
                     lan: this.state.lan,
                     support: this.state.support,
                     complaintType: 1,
-                    orderId: this.state.orderId
+                    orderId: this.state.orderId,
                   });
                 }}
               >
@@ -202,7 +197,7 @@ export default class ComplaintTypesScreen extends React.Component {
                     width: Dimensions.get("screen").width - 70,
                     alignSelf: "center",
                     height: 60,
-                    backgroundColor: "white"
+                    backgroundColor: "white",
                   }}
                 >
                   <View style={{ marginLeft: 20 }}>
@@ -229,7 +224,7 @@ export default class ComplaintTypesScreen extends React.Component {
                     lan: this.state.lan,
                     support: this.state.support,
                     complaintType: 2,
-                    orderId: this.state.orderId
+                    orderId: this.state.orderId,
                   });
                 }}
               >
@@ -242,7 +237,7 @@ export default class ComplaintTypesScreen extends React.Component {
 
                     width: Dimensions.get("screen").width - 70,
                     height: 60,
-                    backgroundColor: "white"
+                    backgroundColor: "white",
                   }}
                 >
                   <View style={{ marginLeft: 20 }}>
@@ -269,7 +264,7 @@ export default class ComplaintTypesScreen extends React.Component {
                     lan: this.state.lan,
                     support: this.state.support,
                     complaintType: 3,
-                    orderId: this.state.orderId
+                    orderId: this.state.orderId,
                   });
                 }}
               >
@@ -283,7 +278,7 @@ export default class ComplaintTypesScreen extends React.Component {
 
                     width: Dimensions.get("screen").width - 70,
                     height: 60,
-                    backgroundColor: "white"
+                    backgroundColor: "white",
                   }}
                 >
                   <View style={{ marginLeft: 20 }}>
@@ -306,7 +301,7 @@ export default class ComplaintTypesScreen extends React.Component {
               </TouchableOpacity>
             </View>
           </View>
-        </Content>
+        </View>
       </Container>
     );
   }

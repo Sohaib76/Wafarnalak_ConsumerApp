@@ -922,16 +922,26 @@ export default class LandingSecreen extends React.Component {
   };
   componentDidMount = async () => {
     // My Test
-    // let feedbackShow = await AsyncStorage.getItem("PopUp_Feedback");
-    // if (feedbackShow != null) {
-    //   alert("Have Feedback");
-    // } else {
-    //   alert("No Feedback");
-    // }
-    // console.log("test", feedbackShow);
     let lan = await AsyncStorage.getItem("lan");
-    await AsyncStorage.removeItem("jobs");
     let user = await AsyncStorage.getItem("user");
+    let feedbackShow = await AsyncStorage.getItem("PopUp_Feedback");
+    if (feedbackShow != null) {
+      console.log("Please give the Feedbackk");
+      //alert(feedbackShow);
+      this.props.navigation.navigate("OrderDetails", {
+        order: JSON.parse(feedbackShow),
+        lan: lan,
+        user: user,
+        isHistory: true,
+        isFeedback: true,
+      });
+    } else {
+      console.log("No Feedback");
+    }
+    // console.log("test", feedbackShow);
+    // let lan = await AsyncStorage.getItem("lan");
+    await AsyncStorage.removeItem("jobs");
+    // let user = await AsyncStorage.getItem("user");
     this.setState({
       lan: lan !== null ? lan : "en",
       user: user !== null ? JSON.parse(user) : null,
@@ -2556,6 +2566,7 @@ export default class LandingSecreen extends React.Component {
             },
           ],
           services: [
+            //category
             {
               id: 29,
               name: "AC Technician",
@@ -2567,6 +2578,7 @@ export default class LandingSecreen extends React.Component {
               white_icon:
                 "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FAC-W.png?alt=media&token=d60027ef-4d44-4d29-b1b2-de8071b325f8",
               products: [
+                //service
                 {
                   id: 26,
                   name: "Window Unit",
@@ -2926,9 +2938,10 @@ export default class LandingSecreen extends React.Component {
                       is_promoted: true,
                       t_price: 0,
                       saleprice: 105,
-                      i_notes: "2 or more = SAR  105 / Unit",
+                      i_notes:
+                        "Cleaning & Freon refill on 2 or more units in SAR 105 each",
                       i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 105 ريال للوحدة (مكيف",
+                        "تعبئة فريون وتنظيف  2+ وحدة ب 105 ريال لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3159,9 +3172,9 @@ export default class LandingSecreen extends React.Component {
                       t_price: 0,
                       saleprice: 168,
                       is_promoted: true,
-                      i_notes: "2 or more = SAR 168 / Unit",
+                      i_notes: "Get 2 or more units cleaning in SAR 168 each",
                       i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 168 ريال للوحدة (مكيف)",
+                        " خدمة تنظيف وحدتين أو أكثر ب168 ريال  لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3265,9 +3278,9 @@ export default class LandingSecreen extends React.Component {
                       is_promoted: true,
                       t_price: 0,
                       saleprice: 91,
-                      i_notes: "2 or more = SAR  91 / Unit",
-                      i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 91 ريال للوحدة (المبرد",
+                      i_notes:
+                        "Large Desert Cooler Cleaning on 2 or more units in SAR 91 each",
+                      i_notes_ar: "تنظيف حدتين أو أكثر ب91 ريال لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3285,9 +3298,8 @@ export default class LandingSecreen extends React.Component {
                       is_promoted: true,
                       t_price: 0,
                       saleprice: 120,
-                      i_notes: "2 or more = SAR 120 / Unit",
-                      i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 120 ريال للوحدة (المبرد",
+                      i_notes: "Get 2 or more units installed in SAR 120 each",
+                      i_notes_ar: "ركيب وحدتين أو أكثر ب120 ريال لكل وحدة",
                       price: 160,
                       pricetype: 1,
                       cartnotes:
@@ -3321,9 +3333,9 @@ export default class LandingSecreen extends React.Component {
                       is_promoted: true,
                       t_price: 0,
                       saleprice: 70,
-                      i_notes: "2 or more = SAR 70 / Unit",
-                      i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 70 ريال للوحدة (المبرد",
+                      i_notes:
+                        "Small Desert Cooler Cleaning on 2 or more units in SAR 70 each",
+                      i_notes_ar: "تنظيف حدتين أو أكثر ب70 ريال لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:

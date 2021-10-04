@@ -137,6 +137,7 @@ export default class HistoryOrdersSecreen extends React.Component {
         {this.state.historyOrders &&
           this.state.historyOrders.map(
             function (order, index) {
+              console.log("Orderr", order);
               return (
                 <View key={index}>
                   <TouchableOpacity
@@ -186,7 +187,7 @@ export default class HistoryOrdersSecreen extends React.Component {
                           }}
                         >
                           {this.props.lan == "en" ? "Order#" : "طلب#"}:{" "}
-                          {order.orderid}
+                          {order.order_id}
                         </Text>
                         <Text
                           style={{
