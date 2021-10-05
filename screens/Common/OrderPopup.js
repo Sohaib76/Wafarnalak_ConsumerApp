@@ -177,7 +177,7 @@ const OrderPopup = (props) => {
         >
           {props.lan == "en"
             ? "THANKS FOR TAKING THE SERVICE"
-            : "ملاحظاتك ذات قيمة"}
+            : "شكرا لأخذ الخدمة"}
         </Text>
         {/* <Text
           style={{
@@ -211,7 +211,7 @@ const OrderPopup = (props) => {
           >
             {props.lan == "en"
               ? `Please enter the price you paid on order # ${props.orderNo}`
-              : "الرجاء إدخال السعر الذي دفعته بالترتيب" + "#1234"}
+              : `${props.orderNo} الرجاء إدخال السعر الذي دفعته عند الطلب`}
           </Text>
           <TextInput
             keyboardType={"numeric"}
@@ -259,9 +259,7 @@ const OrderPopup = (props) => {
                 fontWeight: "400",
               }}
             >
-              {props.lan == "en"
-                ? "Your Feedback"
-                : "الرجاء إدخال السعر الذي دفعته بالترتيب" + "#1234"}
+              {props.lan == "en" ? "Your Feedback" : "أدخل الملاحظات"}
             </Text>
             <TextInput
               maxLength={50}
@@ -285,7 +283,7 @@ const OrderPopup = (props) => {
                 // marginTop:-10
               }}
               placeholder={
-                props.lan == "en" ? "Comments" : "     " + "أدخل المبلغ "
+                props.lan == "en" ? "Comments" : "     " + "تعليقات "
               }
               onChangeText={(text) => {
                 props.onEnterRealFeedback(text);
@@ -315,7 +313,7 @@ const OrderPopup = (props) => {
             >
               {props.lan == "en"
                 ? "Please Sign to approve the work"
-                : "الرجاء إدخال السعر الذي دفعته بالترتيب" + "#1234"}
+                : "الرجاء التوقيع للموافقة على العمل"}
             </Text>
 
             <View
@@ -511,7 +509,7 @@ const OrderPopup = (props) => {
                       // fontWeight: "bold",
                     }}
                   >
-                    {props.lan == "en" ? "Reject" : "تسليم"}
+                    {props.lan == "en" ? "Reject" : "رفض"}
                   </Text>
                 </View>
               </View>

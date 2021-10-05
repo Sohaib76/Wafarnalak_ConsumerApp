@@ -930,7 +930,7 @@ export default class LandingSecreen extends React.Component {
       //alert(feedbackShow);
       this.props.navigation.navigate("OrderDetails", {
         order: JSON.parse(feedbackShow),
-        lan: lan,
+        lan: lan !== null ? lan : "en",
         user: user,
         isHistory: true,
         isFeedback: true,
@@ -1636,7 +1636,7 @@ export default class LandingSecreen extends React.Component {
     //   });
     // }
 
-    Linking.openURL("https://wa.me/+966578434985"); //966577311430 +966 57 843 4985 +966530576063
+    Linking.openURL("https://wa.me/+966538154420"); //966577311430 +966 57 843 4985 +966530576063
   };
   getOffers = () => {
     axios

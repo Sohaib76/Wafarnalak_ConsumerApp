@@ -467,15 +467,15 @@ export default class OrderDetailsSecreen extends React.Component {
       Toast.show({
         text:
           this.state.lan === "en"
-            ? "Please Enter Your Sign And Cost"
-            : "تستطيع فتح شكوى لأي طلب خدمة خلال إسبوع واحد من تاريخ تسلٌم الخدمة",
+            ? "Please Enter Required Details"
+            : "الرجاء إدخال التفاصيل المطلوبة",
         position: "bottom",
       });
     } else {
       // let feedbackShow = await AsyncStorage.getItem("PopUp_Feedback");
       // console.log("test", feedbackShow);
       await AsyncStorage.removeItem("PopUp_Feedback");
-      console.log(this.state.order.orderid);
+      console.log("Order Tag", this.state.order.orderid);
       fetch(
         `http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wfportal/api/cu/v.3/app/finish_order/${this.state.order.orderid}`,
         {
@@ -496,7 +496,7 @@ export default class OrderDetailsSecreen extends React.Component {
         .then((response) => response.json())
         .then((responseJson) => {
           // if (responseJson.error == false) {
-          console.log(responseJson);
+          console.log("Response", responseJson);
           // }
         })
         .catch((error) => {
@@ -512,6 +512,7 @@ export default class OrderDetailsSecreen extends React.Component {
     let user = navigation.getParam("user");
     let isHistory = navigation.getParam("isHistory");
     let lan = navigation.getParam("lan");
+    console.log("laaan", lan);
     let isFeedback = navigation.getParam("isFeedback");
     this.setState({ orderIdNum: order.order_id }); //.substring(3)
     // My Logic     //Enable It After Designing
@@ -1126,7 +1127,7 @@ export default class OrderDetailsSecreen extends React.Component {
           popupSubmit={this.handlePopupSubmit}
           popupAccept={this.handlePopupAccept}
           popupReject={this.handlePopupReject}
-          orderNo={this.state.orderIdNum}
+          orderNo={this.state.orderDetail.order_id}
           isDisabled={false}
           showFeedbackBox={this.state.showPopupFeedback}
           showSignatureBox={this.state.showSignDialog} //false for test
