@@ -571,7 +571,7 @@ export default class OrderDetailsSecreen extends React.Component {
 
     //   ...
     let time = new Date().getHours() + "." + new Date().getMinutes();
-    let t = parseFloat(time) + 0.72;
+    let t = parseFloat(time) + 2.75; //default - 0.72  (Timings Change)
     let copyIntervals = ([] = []);
 
     this.state.actualTimeInterval.forEach((slot) => {
@@ -988,7 +988,7 @@ export default class OrderDetailsSecreen extends React.Component {
     } else {
       let copyIntervals = ([] = []);
       let time = new Date().getHours() + "." + new Date().getMinutes();
-      let t = parseFloat(time) + 0.72;
+      let t = parseFloat(time) + 3; //default 0.72
       this.state.actualTimeInterval.forEach((slot) => {
         if (parseFloat(slot.ceil) > t) {
           copyIntervals.push(slot);
@@ -2321,11 +2321,12 @@ export default class OrderDetailsSecreen extends React.Component {
               </Button>
             </View>
           </View>
+          {/* Change Date */}
           <DateTimePicker
             isVisible={this.state.showdatePicker}
             onConfirm={this.handleDatePicked}
             // minimumDate={new Date(2021, 7, 19)}
-            minimumDate={new Date(2021, 8, 21)}
+            minimumDate={new Date()}
             mode="date"
             confirmTextIOS="Ok"
             date={this.state.currentTime}

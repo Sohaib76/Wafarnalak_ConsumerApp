@@ -2566,7 +2566,7 @@ export default class LandingSecreen extends React.Component {
             },
           ],
           services: [
-            //category
+            //categories
             {
               id: 29,
               name: "AC Technician",
@@ -2578,7 +2578,7 @@ export default class LandingSecreen extends React.Component {
               white_icon:
                 "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FAC-W.png?alt=media&token=d60027ef-4d44-4d29-b1b2-de8071b325f8",
               products: [
-                //service
+                //services
                 {
                   id: 26,
                   name: "Window Unit",

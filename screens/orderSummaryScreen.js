@@ -1273,6 +1273,7 @@ export default class OrderSummaryScreen extends React.Component {
               let index2 = this.state.timeInterval.findIndex(
                 (t) => t.txt === this.state.time
               );
+
               let order = {
                 customerid: this.state.user.customerid,
                 latitude: this.state.address.latitude,
@@ -1307,7 +1308,7 @@ export default class OrderSummaryScreen extends React.Component {
                     this.setState({ loading: false });
                     this.state.lan === "en"
                       ? Toast.show({
-                          text: "Order are only allowed from Riyadh and Al Kharj!",
+                          text: "Order are only allowed from Riyadh!",
                           position: "bottom",
                         })
                       : Toast.show({
