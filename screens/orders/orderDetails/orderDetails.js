@@ -1041,7 +1041,7 @@ export default class OrderDetailsSecreen extends React.Component {
             Toast.show({
               text:
                 this.state.lan === "en"
-                  ? "Your Order has been ReScheduled!"
+                  ? "Your Order has been rescheduled!"
                   : "تم إعادة جدولة طلبك",
               position: "bottom",
             });

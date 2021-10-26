@@ -925,6 +925,9 @@ export default class LandingSecreen extends React.Component {
     let lan = await AsyncStorage.getItem("lan");
     let user = await AsyncStorage.getItem("user");
     let feedbackShow = await AsyncStorage.getItem("PopUp_Feedback");
+
+    // http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wfportal/api/cu/v.3/app
+
     if (feedbackShow != null) {
       console.log("Please give the Feedbackk");
       //alert(feedbackShow);
@@ -949,6 +952,7 @@ export default class LandingSecreen extends React.Component {
     this.checkUserLocation();
     this.getOffers();
     this.getCategories();
+    this.getbanner();
     this._notificationSubscription =
       Notifications.addNotificationReceivedListener(this._handleNotification);
     this._notificationSubscriptionBackground =
@@ -956,6 +960,31 @@ export default class LandingSecreen extends React.Component {
         this._handleNotificationBackground
       );
   };
+
+  getbanner = () => {
+    let enBannersList = [];
+    let arBannersList = [];
+    axios
+      .get(
+        "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wfportal/api/cu/v.3/app",
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((response) => {
+        console.log("Banners Reponse", response.data.slideshows);
+        response.data.slideshows.map((bn) => {
+          enBannersList.push(bn.image);
+          arBannersList.push(bn.image_ar);
+        });
+        console.log("banners List", enBannersList, arBannersList);
+        this.setState({ enBannersList, arBannersList });
+      });
+  };
+
   checkUserLocation = async () => {
     // let { audio_status } = await Permissions.askAsync(
     //   Permissions.AUDIO_RECORDING
@@ -1742,7 +1771,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Split Unit",
                           name_ar: "إستشارة إصلاح مكيف اسبليت",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1751,7 +1780,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Cassette Unit",
                           name_ar: "إستشارة لإصلاح  مكيف الكاسيت (السقف)",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1760,7 +1789,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Window Unit",
                           name_ar: "إستشارة إصلاح مكيف ويندو (شباك)  ",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1769,7 +1798,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Desert Cooler",
                           name_ar: "إستشارة إصلاح مكيف صحراوي (مبرد)",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1778,7 +1807,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Central AC",
                           name_ar: "إستشارة إصلاح تكييف مركزي",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1787,7 +1816,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Tower Unit",
                           name_ar: "إستشارة إصلاح مكيف تاور (برج/نقال)",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1853,7 +1882,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح السرير",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25,
+                          price: 30,
                         },
                       ],
                     },
@@ -1941,7 +1970,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Cabinet Repair",
                           serviceid: 4,
                           name_ar: "إصلاح الخزانة",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1966,7 +1995,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Split Unit",
                           name_ar: "إستشارة إصلاح مكيف اسبليت",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1975,7 +2004,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Cassette Unit",
                           name_ar: "إستشارة لإصلاح  مكيف الكاسيت (السقف)",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1984,7 +2013,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Window Unit",
                           name_ar: "إستشارة إصلاح مكيف ويندو (شباك)  ",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -1993,7 +2022,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Tower Unit",
                           name_ar: "إستشارة إصلاح مكيف تاور (برج/نقال)",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2002,7 +2031,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Desert Cooler",
                           name_ar: "إستشارة إصلاح مكيف صحراوي (مبرد)",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2011,7 +2040,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Central AC",
                           name_ar: "إستشارة إصلاح تكييف مركزي",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2075,7 +2104,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "محول كهربا ء من 220 الى 110",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25,
+                          price: 30,
                         },
                         {
                           id: 12,
@@ -2084,7 +2113,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "محول كهربا ء من 110 الى 220",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25,
+                          price: 30,
                         },
                       ],
                     },
@@ -2099,7 +2128,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Wiring consultation",
                           name_ar: "إستشارة تسليك كهربائي",
                           choose_type: 3,
-                          price: 25,
+                          price: 30,
                           pricetype: 2,
                         },
                         {
@@ -2108,7 +2137,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Maintenance of distribution panel",
                           name_ar: "صيانة  لوحات التحكم والتوزيع الكهربائي",
                           choose_type: 3,
-                          price: 25,
+                          price: 30,
                           pricetype: 2,
                         },
                       ],
@@ -2230,7 +2259,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح / استبدال مرحاض الحمام",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25,
+                          price: 30,
                         },
                         {
                           id: 29,
@@ -2239,7 +2268,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح رأس الدش",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25,
+                          price: 30,
                         },
                       ],
                     },
@@ -2254,7 +2283,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Drain Blockages",
                           name_ar: "إنسداد المخارج ",
                           choose_type: 3,
-                          price: 25,
+                          price: 30,
                           pricetype: 1,
                         },
                         {
@@ -2263,7 +2292,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Installation of bathroom fans",
                           name_ar: "تركيب مراوح الحمام",
                           choose_type: 3,
-                          price: 25,
+                          price: 30,
                           pricetype: 2,
                         },
                       ],
@@ -2275,7 +2304,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Repair of mixers",
                           serviceid: 3,
                           name_ar: "إصلاح الخلاطات",
-                          price: 25,
+                          price: 30,
                           choose_type: 0,
                           pricetype: 2,
                         },
@@ -2284,7 +2313,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Repair of faucets",
                           serviceid: 3,
                           name_ar: "إصلاح / استبدال الصنابير",
-                          price: 25,
+                          price: 30,
                           choose_type: 0,
                           pricetype: 2,
                         },
@@ -2293,7 +2322,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Repair sinks with drawers",
                           serviceid: 3,
                           name_ar: "تصليح المغاسل مع الأدراج",
-                          price: 25,
+                          price: 30,
                           choose_type: 0,
                           pricetype: 2,
                         },
@@ -2302,7 +2331,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Repair of sinks",
                           serviceid: 3,
                           name_ar: "تصليح المغاسل",
-                          price: 25,
+                          price: 30,
                           choose_type: 0,
                           pricetype: 2,
                         },
@@ -2370,7 +2399,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "إصلاح السرير",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25,
+                          price: 30,
                         },
                       ],
                     },
@@ -2442,7 +2471,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تجميع وتركيب على طريقة ايكيا او غيرها",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25,
+                          price: 30,
                         },
                         {
                           id: 247,
@@ -2451,7 +2480,7 @@ export default class LandingSecreen extends React.Component {
                           name_ar: "تجميع الأثاث (عام)",
                           choose_type: 1,
                           pricetype: 2,
-                          price: 25,
+                          price: 30,
                         },
                       ],
                     },
@@ -2483,7 +2512,7 @@ export default class LandingSecreen extends React.Component {
                           name: "Cabinet Repair",
                           serviceid: 4,
                           name_ar: "إصلاح الخزانة",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2508,7 +2537,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Split Unit",
                           name_ar: "إستشارة إصلاح مكيف اسبليت",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2517,7 +2546,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Cassette Unit",
                           name_ar: "إستشارة لإصلاح  مكيف الكاسيت (السقف)",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2526,7 +2555,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Window Unit",
                           name_ar: "إستشارة إصلاح مكيف ويندو (شباك)  ",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2535,7 +2564,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Tower Unit",
                           name_ar: "إستشارة إصلاح مكيف تاور (برج/نقال)",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2544,7 +2573,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Central AC",
                           name_ar: "إستشارة إصلاح تكييف مركزي",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2553,7 +2582,7 @@ export default class LandingSecreen extends React.Component {
                           serviceid: 29,
                           name: "Repair Consultation of Desert Cooler",
                           name_ar: "إستشارة إصلاح مكيف صحراوي (مبرد)",
-                          price: 25,
+                          price: 30,
                           choose_type: 1,
                           pricetype: 2,
                         },
@@ -2696,7 +2725,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair Consultation",
                       name_ar: "إستشارة إصلاح",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2839,7 +2868,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair Consultation",
                       name_ar: "إستشارة إصلاح",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2954,14 +2983,14 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation",
                       name_ar: "تركيبف",
-                      price: 25, //250
+                      price: 30, //250
                       pricetype: 2,
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 188,
-                      i_notes: "2 or more = SAR 188 / Unit",
+                      saleprice: 30,
+                      i_notes: "2 or more = SAR 30 / Unit",
                       i_notes_ar:
-                        "(لعدد وحدتين او أكثر، السعر 188 ريال للوحدة (مكيف",
+                        "(لعدد وحدتين او أكثر، السعر 30 ريال للوحدة (مكيف",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2974,7 +3003,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Cleaning",
                       name_ar: "تنظيف",
-                      price: 25, //140
+                      price: 30, //140
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -2988,7 +3017,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair Consultation",
                       name_ar: "إستشارة لإصلاح ",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3099,7 +3128,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair Consultation",
                       name_ar: "إستشارة إصلاح",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3188,7 +3217,7 @@ export default class LandingSecreen extends React.Component {
                       name: "Repair Consultation",
 
                       name_ar: "إستشارة إصلاح",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3204,7 +3233,7 @@ export default class LandingSecreen extends React.Component {
                       name: "Installation",
 
                       name_ar: "تركيب",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3314,7 +3343,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair Consultation",
                       name_ar: "إستشارة إصلاح",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3371,7 +3400,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Schedule Visit",
                       name_ar: "ترتيب زيارة",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3461,7 +3490,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair water heater",
                       name_ar: "إصلاح سخان المياه",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3484,7 +3513,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of sinks",
                       name_ar: "تصليح المغاسل",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3526,7 +3555,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair sinks with drawers",
                       name_ar: "تصليح المغاسل مع الأدراج",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3549,7 +3578,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of mixers",
                       name_ar: "إصلاح الخلاطات",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3600,7 +3629,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair / Replacement of\r\njet spray",
                       name_ar: "إصلاح / استبدال مرحاض الحمام",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3614,7 +3643,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair / Replacement of\r\nshower head",
                       name_ar: "إصلاح رأس الدش",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3665,7 +3694,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of faucets",
                       name_ar: "إصلاح / استبدال الصنابير",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3688,7 +3717,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repairing identified leaks",
                       name_ar: "إصلاح التسربات المحددة",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3702,7 +3731,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Finding and repairing concealed leaks",
                       name_ar: "العثور على وإصلاح تسرب غير مرئية",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3716,7 +3745,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Leakage detection - No breaking",
                       name_ar: "كشف التسرب - لا يوجد كسر",
-                      price: 100,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3739,7 +3768,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Drain Blockages",
                       name_ar: "إنسداد المخارج ",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3753,7 +3782,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Sink Drain Blockage",
                       name_ar: "إنسداد حوض المغاسل",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3767,7 +3796,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Mainhole Blockage",
                       name_ar: "إنسداد المرحاض",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3781,7 +3810,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Treatment of Sewer Blockages and Odours",
                       name_ar: "تنظيف المجاري والروائح ",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3804,7 +3833,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of bathtubs",
                       name_ar: "تركيب أحواض الاستحمام",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3818,7 +3847,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of bathtubs",
                       name_ar: "إصلاح البانيو",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3883,7 +3912,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of toilets",
                       name_ar: "إصلاح المراحيض",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3948,7 +3977,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of water pumps",
                       name_ar: "إصلاح مضخات المياه",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3971,7 +4000,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Insulation of Water Tanks (Villa)",
                       name_ar: "عزل خزانات المياه  (فيلا)",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3985,7 +4014,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Insulation of Water Tanks (Building)",
                       name_ar: "عزل خزانات المياه (المبنى)",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -3999,7 +4028,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Cleaning of Water Tank (Villa)",
                       name_ar: "تنظيف خزان المياه (فيلا)",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4013,7 +4042,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Cleaning of Water Tank (Building)",
                       name_ar: "تنظيف خزان المياه (بناء)",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4027,7 +4056,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Cleaning of Water Tank (Fiber)",
                       name_ar: "تنظيف خزان المياه (الألياف)",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4050,7 +4079,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Consultation for general plumbing",
                       name_ar: "إستشارة عامه بشأن اعمال السباكة ",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4104,7 +4133,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of chandeliers",
                       name_ar: "تركيب الثريات",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       description:
                         "The price of bulb, fixture or starter has been\r\n mentioned as an estimate, it might be changed depending upon the brand.",
@@ -4122,7 +4151,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Removal of chandeliers",
                       name_ar: "إزالة الثريات",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       description:
                         "The price of bulb, fixture or starter has been\r\n mentioned as an estimate, it might be changed depending upon the brand.",
@@ -4185,7 +4214,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of spotlights",
                       name_ar: "تركيب الأضواء",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       description:
                         "The price of bulb, fixture or starter has been  mentioned as an estimate, it might be changed depending upon the brand.",
@@ -4230,7 +4259,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of light fixtures",
                       name_ar: "تركيب المصابيح",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       description:
                         "The price of bulb, fixture or starter has been  mentioned as an estimate, it might be changed depending upon the brand.",
@@ -4275,7 +4304,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of flourescent lights",
                       name_ar: "تركيب أضواء الفلورسنت",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       description:
                         "The price of bulb, fixture or starter has been  mentioned as an estimate, it might be changed depending upon the brand.",
@@ -4316,7 +4345,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of switches",
                       name_ar: "تثبيت جديد من المفاتيح",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4339,7 +4368,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of kitchen fans",
                       name_ar: "إصلاح مراوح المطبخ",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4353,7 +4382,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of kitchen fans",
                       name_ar: "تركيب مراوح المطبخ",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4367,7 +4396,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of ceiling fan",
                       name_ar: "إصلاح مروحة السقف",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4381,7 +4410,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of ceiling fans",
                       name_ar: "تركيب مراوح السقف",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4395,7 +4424,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of bathroom fans",
                       name_ar: "إصلاح مراوح الحمام",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4409,7 +4438,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of bathroom fans",
                       name_ar: "تركيب مراوح الحمام",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4423,7 +4452,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair of any other fans",
                       name_ar: "إصلاح مراوح الهواء",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4437,7 +4466,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of any other fans",
                       name_ar: "تركيب مراوح الهواء",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4460,7 +4489,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Maintenance of distribution panel",
                       name_ar: "صيانة  لوحات التحكم والتوزيع الكهربائي",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4483,7 +4512,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Wiring installation",
                       name_ar: "توصيل أسلاك كهربائية \r\n",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4497,7 +4526,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Wiring consultation",
                       name_ar: "إستشارة تسليك كهربائي",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4520,7 +4549,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "220 to 110 conversion",
                       name_ar: "محول كهربا ء من 220 الى 110",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4534,7 +4563,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "110  to 220 conversion",
                       name_ar: "محول كهربا ء من 110 الى 220",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4557,7 +4586,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Schedule Visit",
                       name_ar: "ترتيب زيارة",
-                      price: 25,
+                      price: 30,
                       pricetype: 2,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4594,7 +4623,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Making of furniture",
             //           name_ar: "أعمال الأثاث",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4608,7 +4637,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Wooden furniture repair",
             //           name_ar: "إصلاح الأثاث الخشبي",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4622,7 +4651,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "General Furniture assembly",
             //           name_ar: "تجميع الأثاث (عام)",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4636,7 +4665,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "IKEA or similar furniture assembly & installation",
             //           name_ar: "تجميع وتركيب على طريقة ايكيا او غيرها",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4650,7 +4679,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Furniture repair",
             //           name_ar: "إصلاح الأثاث",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4701,7 +4730,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Bed Repair",
             //           name_ar: "إصلاح السرير",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4738,7 +4767,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Repair table",
             //           name_ar: "تصليح الطاولات",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4803,7 +4832,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Cabinet Repair",
             //           name_ar: "إصلاح الخزانة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4928,7 +4957,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Have an issue/problem",
             //           name_ar: "هل لديك اي مشكلة؟",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -4979,7 +5008,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Install new door",
             //           name_ar: "تركيب باب جديد",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5049,7 +5078,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Have an issue/problem",
             //           name_ar: "هل لديك اي مشكلة؟",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5114,7 +5143,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Have an issue/problem",
             //           name_ar: "هل لديك اي مشكلة؟",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5137,7 +5166,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Carpenter Consultation",
             //           name_ar: "زيارة نجار",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5233,7 +5262,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Schedule Visit",
             //           name_ar: "أدخل عدد الغرف",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           description:
             //             "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
@@ -5263,7 +5292,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Schedule Visit",
             //           name_ar: "أدخل عدد الغرف",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           description:
             //             "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.",
@@ -5320,7 +5349,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Repair consultation",
             //           name_ar: "استشارة لاصلاح ",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5343,7 +5372,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Repair consultation for microwave",
             //           name_ar: "استشارة لاصلاح الميكرويف",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5366,7 +5395,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Repair of washing machine",
             //           name_ar: "استشارة لاصلاح الغسالة ",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5403,7 +5432,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Repair consultation of TV",
             //           name_ar: "استشارة لاصلاح التليفزيون ",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5426,7 +5455,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Repair consultation of dishwasher",
             //           name_ar: "إستشارة تصليح آلة غسيل الصحون",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5462,7 +5491,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Unfurnished Dusty Apartment",
             //           name_ar: "تنظيف شقة غير مفروشة من الغبار",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5483,7 +5512,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Unfurnished Dusty Apartment\r\nHave Stains",
             //           name_ar: "تنظيف شقة غير مفروشة من الغبار والبقع المتسخة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5501,7 +5530,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Furnished Dusty Apartment",
             //           name_ar: "تنظيف شقة مفروشة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5528,7 +5557,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Unfurnished Dusty Villa\r\n[300 x500 meters]",
             //           name_ar: "غير مفروشة من الغبار بمساحة\r\n[300X500م]",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5550,7 +5579,7 @@ export default class LandingSecreen extends React.Component {
             //           name: "Unfurnished Dusty Villa\r\n[200 x300 meters]",
             //           name_ar:
             //             "تنظيف فيلا غير مفروشة من الغبار بمساحة\r\n[200X300م]",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5577,7 +5606,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "6 Seater Sofa",
             //           name_ar: "أريكة [6 مقاعد]",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5598,7 +5627,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "8 Seater Sofa",
             //           name_ar: "أريكة [8 مقاعد]",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5616,7 +5645,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "10 Seater Sofa",
             //           name_ar: "أريكة [10 مقاعد]",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5643,7 +5672,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Carpet Cleaning  [4X3m]",
             //           name_ar: "تنظيف السجاد [4x3 م]",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5673,7 +5702,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Swimming Pool Cleaning  [12 x 20]",
             //           name_ar: "تنظيف حوض المياة بمساحة 12X20 م",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5703,7 +5732,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Drawing Room [4X5m] + Curtains + Carpet ",
             //           name_ar: "غرفة الجلوس 4x5 م + ستارة + سجاد",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 9,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
@@ -5805,7 +5834,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Schedule a visit",
             //           name_ar: "جدولة زيارة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5828,7 +5857,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Schedule a visit",
             //           name_ar: "جدولة زيارة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5864,7 +5893,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Garden Caring",
             //           name_ar: "العناية بالحديقة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5878,7 +5907,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Garden Trimming",
             //           name_ar: "ترتيب وتقليم الحديقة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5892,7 +5921,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Garden Soil Checking",
             //           name_ar: "فحص تربة الحديقة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5915,7 +5944,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Recreation of a new area garden",
             //           name_ar: "بناء حديقة جديدة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5929,7 +5958,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Changing or updating garden",
             //           name_ar: "تغيير او تحسين الحديقة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -5952,7 +5981,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Water supply over a garden",
             //           name_ar: "توصيل المياة وري الحديقة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           cartnotes:
             //             "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
@@ -6295,7 +6324,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "New Ceramic Tile Installation",
                       name_ar: "تركيب بلاط سيراميك جديد",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6320,7 +6349,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Ceramic Tile Renovation",
                       name_ar: "ترميم بلاط سيراميك",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6338,7 +6367,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Natural Stone Tile Installation",
                       name_ar: "تركيب بلاط أحجار طبيعية جديد",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6356,7 +6385,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Natural Stone Tile Renovation",
                       name_ar: "تركيب بلاط أحجار طبيعية جديد",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6374,7 +6403,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Hardwood Floor Installation",
                       name_ar: "تركيب أرضيات خشبية صلبة",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6384,7 +6413,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 25,
+                      meterprice: 30,
                     },
                     {
                       id: 322,
@@ -6392,7 +6421,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Floor Mirror Installation",
                       name_ar: "تركيب مرايا على الأرضيات",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6410,7 +6439,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Wooden Floor Installation",
                       name_ar: "تركيب أرضيات خشبية",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6420,7 +6449,7 @@ export default class LandingSecreen extends React.Component {
                       cartnotes_ar:
                         "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
-                      meterprice: 25,
+                      meterprice: 30,
                     },
                   ],
                 },
@@ -6437,7 +6466,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Ceiling Wood Board  Installation",
                       name_ar: "تركيب سقف خشبي",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6462,7 +6491,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Ceiling Gypsum Board  Installation",
                       name_ar: "تركيب سقف سيراميك",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6480,7 +6509,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Ceiling Tile Installation",
                       name_ar: "تركيب سقف بلاط",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6498,7 +6527,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Ceiling Metal Installation",
                       name_ar: "تركيب سقف معدني",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6525,7 +6554,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Wallpaper Installation",
                       name_ar: "تركيب حائط ورقي",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6550,7 +6579,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Wall Mirrors Installation",
                       name_ar: "تركيب مرايا الجدران",
-                      price: 25,
+                      price: 30,
                       pricetype: 7,
                       description:
                         "1- Our professional will visit you and let you chose the tiles design and size",
@@ -6699,7 +6728,7 @@ export default class LandingSecreen extends React.Component {
             //           pricelimit: 49,
             //           name: "Schedule Visit",
             //           name_ar: "رتب زيارة",
-            //           price: 25,
+            //           price: 30,
             //           pricetype: 2,
             //           description:
             //             "1- Our professional will visit you and let you chose the tiles design and size",
