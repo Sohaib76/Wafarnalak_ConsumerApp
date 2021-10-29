@@ -82,6 +82,7 @@ export default class OrderSummaryScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isUpdateAvailable: false,
       disableOrder: false,
       userForensePoints: 0,
       lan: "en",
@@ -315,6 +316,20 @@ export default class OrderSummaryScreen extends React.Component {
   };
 
   componentDidMount = async () => {
+    Updates.checkForUpdateAsync().then(async (update) => {
+      if (update.isAvailable) {
+        await Updates.reloadAsync();
+      }
+    });
+
+    // console.log("update", this.state.isUpdateAvailable);
+    // setTimeout(function () {
+    //   console.log("wait");
+    // }, 5000);
+    // this.setState({ isUpdateAvailable: true });
+    // console.log("update After", this.state.isUpdateAvailable);
+    // console.log("Afterr");
+
     this.setState({ alertVisible: true });
     const { navigation } = this.props;
     let getJobs = await AsyncStorage.getItem("jobs");
@@ -1189,6 +1204,33 @@ export default class OrderSummaryScreen extends React.Component {
     }
   };
   submitOrder = async () => {
+    // Updates.checkForUpdateAsync().then((update) => {
+    //   if (update.isAvailable) {
+    //     this.setState({ isUpdateAvailable: true });
+    //     setTimeout(function () {
+    //       console.log("update", this.state.isUpdateAvailable);
+    //     }, 5000);
+    //   }
+    // });
+
+    //Check
+    // console.log("update", this.state.isUpdateAvailable);
+    // this.setState({ isUpdateAvailable: true }, ()=>console.log("update After", this.state.isUpdateAvailable));
+    // setTimeout(
+    //   function () {
+    //     console.log("waited for 5 sec");
+    //   }.bind(this),
+    //   5000
+    // );
+    // console.log("update After", this.state.isUpdateAvailable);
+
+    console.log("update Before", this.state.isUpdateAvailable);
+    Updates.checkForUpdateAsync().then((update) => {
+      if (update.isAvailable) {
+        this.setState({ isUpdateAvailable: true });
+      }
+    });
+
     let address = this.state.address.addressdetail;
     let ads = "4994 King Fahd Rd, Al Muntazah, Al-Kharj 16439, Saudi Arabia";
     await this.finder(this.state.jobs);
@@ -1202,6 +1244,8 @@ export default class OrderSummaryScreen extends React.Component {
     // } else {
     this.setState({ limitMessage: "" });
     await this.checkLimts();
+
+    console.log("update After", this.state.isUpdateAvailable);
 
     let orderDetails = ([] = []);
     let varients = ([] = []);
@@ -1264,7 +1308,7 @@ export default class OrderSummaryScreen extends React.Component {
       orderDetails.push(obj);
     });
 
-    if (this.state.user !== null) {
+    if (this.state.user !== null && this.state.isUpdateAvailable == false) {
       if (this.state.address !== null && this.state.address !== "") {
         if (this.state.orderdate !== "") {
           if (this.state.time !== "") {
@@ -1390,7 +1434,7 @@ export default class OrderSummaryScreen extends React.Component {
       Toast.show({
         text:
           this.state.lan == "en"
-            ? "Please login with your valid mobile number!"
+            ? "Please login with your valid mobile number! OR Update the App"
             : "يرجى تسجيل الدخول برقم جوالك الصحيح!",
         position: "bottom",
       });

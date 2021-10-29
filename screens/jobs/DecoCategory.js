@@ -348,14 +348,14 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
             marginLeft: 1,
             marginRight: 1,
             width: widthPercentageToDP(92),
-            alignSelf: "center"
+            alignSelf: "center",
           }}
         >
           <Text
             style={{
               fontWeight: "bold",
               textAlign: "left",
-              paddingHorizontal: widthPercentageToDP(2)
+              paddingHorizontal: widthPercentageToDP(2),
             }}
           >
             {lan == "en" ? "Notes:" : "ملاحظات:"}
@@ -364,15 +364,16 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
             style={{
               fontSize: 12,
               textAlign: "left",
-              paddingHorizontal: widthPercentageToDP(2)
+              paddingHorizontal: widthPercentageToDP(2),
             }}
           >
-            {lan == "en" ? job.note : job.note_ar
-            // : "1-" +
-            //   " سيقوم فنيونا بزيارتك لتحديد المواد المستخدمة للأرضية، وكذلك التصميم والحجم" +
-            //   "\n" +
-            //   "2-" +
-            // " كل الأسعار قابلة للتخفيض"
+            {
+              lan == "en" ? job.note : job.note_ar
+              // : "1-" +
+              //   " سيقوم فنيونا بزيارتك لتحديد المواد المستخدمة للأرضية، وكذلك التصميم والحجم" +
+              //   "\n" +
+              //   "2-" +
+              // " كل الأسعار قابلة للتخفيض"
             }
           </Text>
         </View>
@@ -388,7 +389,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
             borderWidth: 1,
             borderTopWidth: index == 0 ? 1 : 0,
             borderColor: "#283a97",
-            borderTopWidth: 1
+            borderTopWidth: 1,
           }}
         >
           <View style={{ alignSelf: "center" }}>
@@ -399,7 +400,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                 fontSize: 12,
                 textAlign: "left",
                 marginTop: 7,
-                alignSelf: "center"
+                alignSelf: "center",
               }}
               numberOfLines={2}
             >
@@ -410,12 +411,12 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
-              paddingHorizontal: widthPercentageToDP(3)
+              paddingHorizontal: widthPercentageToDP(3),
             }}
           >
             <View
               style={{
-                marginTop: 4
+                marginTop: 4,
               }}
             >
               <Text
@@ -424,7 +425,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   fontFamily: "montserrat_semi_blod",
                   fontSize: 12,
                   textAlign: "left",
-                  marginTop: 7
+                  marginTop: 7,
                 }}
                 numberOfLines={2}
               >
@@ -437,7 +438,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   style={{
                     backgroundColor: "#0764af",
                     width: 90,
-                    paddingVertical: 5
+                    paddingVertical: 5,
                   }}
                 >
                   <View
@@ -448,13 +449,13 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                       alignContent: "center",
                       alignItems: "center",
                       flex: 1,
-                      justifyContent: "flex-start"
+                      justifyContent: "flex-start",
                     }}
                   >
                     <Text
                       style={{
                         color: "white",
-                        fontSize: 12
+                        fontSize: 12,
                       }}
                     >
                       SAR{" "}
@@ -462,7 +463,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                     <Text
                       style={{
                         color: "#ff9c00",
-                        fontSize: 12
+                        fontSize: 12,
                       }}
                     >
                       {job.meterprice}
@@ -470,7 +471,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                     <Text
                       style={{
                         color: "white",
-                        fontSize: 12
+                        fontSize: 12,
                       }}
                     >
                       {lan == "en" ? " /m" : " م/ "}
@@ -486,14 +487,14 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
-              paddingHorizontal: widthPercentageToDP(3)
+              paddingHorizontal: widthPercentageToDP(3),
             }}
           >
             <View
               style={{
                 backgroundColor: "white",
                 justifyContent: "center",
-                marginTop: 10
+                marginTop: 10,
               }}
             >
               <Text
@@ -504,7 +505,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   // marginTop: 20,
                   textAlign: "left",
                   // width: Dimensions.get("screen").width - 140,
-                  marginTop: 10
+                  marginTop: 10,
                 }}
                 numberOfLines={2}
               >
@@ -518,7 +519,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   width: 90,
                   paddingVertical: 0,
                   marginTop: 15,
-                  height: 25
+                  height: 25,
                 }}
               >
                 <View
@@ -527,13 +528,13 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                     alignSelf: "center",
                     alignContent: "center",
                     alignItems: "center",
-                    flex: 1
+                    flex: 1,
                   }}
                 >
                   <Text
                     style={{
                       color: "white",
-                      fontSize: 12
+                      fontSize: 12,
                     }}
                   >
                     SAR{" "}
@@ -541,7 +542,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   <Text
                     style={{
                       color: "#ff9c00",
-                      fontSize: 12
+                      fontSize: 12,
                     }}
                   >
                     {job.price}
@@ -555,7 +556,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   width: 90,
                   paddingVertical: 5,
                   marginTop: 27,
-                  marginLeft: widthPercentageToDP(1)
+                  marginLeft: widthPercentageToDP(1),
                 }}
               >
                 <View
@@ -564,13 +565,13 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                     alignSelf: "center",
                     alignContent: "center",
                     alignItems: "center",
-                    flex: 1
+                    flex: 1,
                   }}
                 >
                   <Text
                     style={{
                       color: "white",
-                      fontSize: 12
+                      fontSize: 12,
                     }}
                   >
                     SAR{" "}
@@ -578,7 +579,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   <Text
                     style={{
                       color: "#ff9c00",
-                      fontSize: 12
+                      fontSize: 12,
                     }}
                   >
                     {job.price}
@@ -592,7 +593,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
               flexDirection: "row",
               justifyContent: "space-between",
               marginTop: 0,
-              marginBottom: 15
+              marginBottom: 15,
             }}
           >
             <View style={{ marginTop: 0, marginLeft: 12 }}></View>
@@ -601,7 +602,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
               style={{
                 alignSelf: "center",
                 marginRight: lan == "en" ? 15 : 28,
-                marginTop: 0
+                marginTop: 0,
               }}
             >
               <Text
@@ -610,7 +611,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   fontSize: 12,
                   color: "#4a4b4c",
                   marginBottom: 3,
-                  marginTop: 4
+                  marginTop: 4,
                 }}
                 numberOfLines={2}
               >
@@ -628,7 +629,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   // alignSelf: "center",
                   marginRight: 20,
                   marginTop: 0,
-                  marginLeft: 25
+                  marginLeft: 25,
                 }}
               />
             </View>
@@ -639,7 +640,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
               style={{
                 backgroundColor: "white",
                 marginLeft: 1,
-                marginRight: 1
+                marginRight: 1,
               }}
             >
               {/* <Text style={{ fontWeight: "bold", textAlign: "left" }}>
@@ -647,8 +648,8 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
             </Text> */}
               <Text style={{ textAlign: "left", fontSize: 9 }}>
                 {lan == "en"
-                  ? "By scheduling the visit, you agree that this is only the visit/inspection charge. In case you dont take the service after visit, you are required to pay visit charge (SAR 25) to professional. "
-                  : "بإختيارك ترتيب زيارة، فإنك توافق على أن الـ 25 ريال سعودي هي فقط رسوم الزيارة (الفحص)، ويتعين عليك الدفع في حال عدم اخذ الخدمة."}
+                  ? "By scheduling the visit, you agree that this is only the visit/inspection charge. In case you dont take the service after visit, you are required to pay visit charge (SAR 30) to professional. "
+                  : "بإختيارك ترتيب زيارة، فإنك توافق على أن الـ 30 ريال سعودي هي فقط رسوم الزيارة (الفحص)، ويتعين عليك الدفع في حال عدم اخذ الخدمة."}
               </Text>
             </View>
           </View>

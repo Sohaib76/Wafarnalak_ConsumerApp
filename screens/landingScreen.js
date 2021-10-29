@@ -1750,9 +1750,9 @@ export default class LandingSecreen extends React.Component {
               offerwebimage:
                 "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/web_site_banners%2FPackages%2FEng%2FAC-Checkup-min.png?alt=media&token=6ba6adee-9d6c-4332-bd8a-6008b41be2cf",
               offerdescription:
-                "Book an AC Technician visit for an unlimited number of AC units and types and get as many consultation services as you want only in SAR 25",
+                "Book an AC Technician visit for an unlimited number of AC units and types and get as many consultation services as you want only in SAR 30",
               offerdescription_ar:
-                "احجز زيارة فني التكييف لعدد غير محدود من المكيفات بكل أنواعها وأحصل على الإستشارات التي تبحث عنها فقط بـ 25 ريال. ",
+                "احجز زيارة فني التكييف لعدد غير محدود من المكيفات بكل أنواعها وأحصل على الإستشارات التي تبحث عنها فقط بـ 30 ريال. ",
               services: [
                 {
                   serviceid: 29,
@@ -1841,9 +1841,9 @@ export default class LandingSecreen extends React.Component {
               offerwebimage:
                 "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/web_site_banners%2FPackages%2FEng%2FFurnish-My-Room-min.png?alt=media&token=1c7ea7ca-1fbb-4e90-8caf-332d3793cbcc",
               offerdescription:
-                "Furnish your room by getting the carpentry and AC technician services from experts. Carpentry services range from furniture assembly to curtain installation. For AC technician, you can choose unlimited consultation services only in SAR 25",
+                "Furnish your room by getting the carpentry and AC technician services from experts. Carpentry services range from furniture assembly to curtain installation. For AC technician, you can choose unlimited consultation services only in SAR 30",
               offerdescription_ar:
-                "قم بتأثيث غرفتك عبر خبراء النجارة والتكييف، تتوزع خدمات النجارة بين تركيب الأثاث إلى الستائر بينما التكييف بإمكانك طلب خدمات استشارية غير محدودة بـ 25 ريال فقط  ",
+                "قم بتأثيث غرفتك عبر خبراء النجارة والتكييف، تتوزع خدمات النجارة بين تركيب الأثاث إلى الستائر بينما التكييف بإمكانك طلب خدمات استشارية غير محدودة بـ 30 ريال فقط  ",
               services: [
                 {
                   serviceid: 4,
@@ -2360,7 +2360,7 @@ export default class LandingSecreen extends React.Component {
               offerdescription:
                 "Set up an elegant and modern lobby by getting the carpentry and AC technician services. Carpentry services range from furniture assembly to curtain installation. For AC technician, you can choose unlimited consultation services only in SAR 2",
               offerdescription_ar:
-                " جهز غرفة الإستراحة بشكل أنيق وعصري من خلال خدمات النجارة واالتكييف، تتوزع خدمات النجارة بين تركيف الأثاث إلى الستائر بينما التكييف بإمكانك طلب خدمات استشارية غير محدودة بـ 25 ريال فقط ",
+                " جهز غرفة الإستراحة بشكل أنيق وعصري من خلال خدمات النجارة واالتكييف، تتوزع خدمات النجارة بين تركيف الأثاث إلى الستائر بينما التكييف بإمكانك طلب خدمات استشارية غير محدودة بـ 30 ريال فقط ",
               services: [
                 {
                   serviceid: 4,
@@ -5209,9 +5209,9 @@ export default class LandingSecreen extends React.Component {
             //           description_ar:
             //             "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
             //           cartnotes:
-            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
             //           cartnotes_ar:
-            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
             //           carttype: 2,
             //           note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
             //           note_ar:
@@ -5239,9 +5239,9 @@ export default class LandingSecreen extends React.Component {
             //           description_ar:
             //             "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
             //           cartnotes:
-            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
             //           cartnotes_ar:
-            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
             //           carttype: 2,
             //           note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
             //           note_ar:
@@ -5269,9 +5269,9 @@ export default class LandingSecreen extends React.Component {
             //           description_ar:
             //             "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
             //           cartnotes:
-            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
             //           cartnotes_ar:
-            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
             //           carttype: 2,
             //           note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
             //           note_ar:
@@ -5299,9 +5299,9 @@ export default class LandingSecreen extends React.Component {
             //           description_ar:
             //             "i- سيقوم الفني بزيارتك للسماح لك باختيار شركة الطلاء واللون.\r\nii- لكل غرفة تختارها ستحصل على طلاء للحمام او المطبخ مجاناً",
             //           cartnotes:
-            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+            //             "1- The price of the paint is not included in the prices\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
             //           cartnotes_ar:
-            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+            //             "السعر لا يشمل سعر الطلاء \r\nالأسعار تشمل تكاليف الزيارة\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
             //           carttype: 2,
             //           note: "1- The professional will visit you to let you chose the paint company & colour.\r\n2- For each room selected you will get a bathroom or a kitchen free of charge painted.\r\n3- All prices are subjected to discount.",
             //           note_ar:
@@ -6330,9 +6330,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 20,
                       note: "1. Our Professional will visit you and let you choose the floor materials, design and size. \r\n2. All prices are subjected to discount. ",
@@ -6355,9 +6355,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 35,
                     },
@@ -6373,9 +6373,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 20,
                     },
@@ -6391,9 +6391,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 35,
                     },
@@ -6409,9 +6409,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 30,
                     },
@@ -6427,9 +6427,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 55,
                     },
@@ -6445,9 +6445,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 30,
                     },
@@ -6472,9 +6472,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 35,
                       note: "1. Our Professional will visit you and let you choose the ceiling materials, design and size. \r\n2. All prices are subjected to discount. ",
@@ -6497,9 +6497,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 75,
                     },
@@ -6515,9 +6515,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 75,
                     },
@@ -6533,9 +6533,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 40,
                     },
@@ -6560,9 +6560,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 15,
                       note: "1. Our Professional will visit you and let you choose the wall materials, design and size. \r\n2. All prices are subjected to discount. ",
@@ -6585,9 +6585,9 @@ export default class LandingSecreen extends React.Component {
                         "1- Our professional will visit you and let you chose the tiles design and size",
                       description_ar: "سيزورك الفني لمعرفة التصميم والحجم",
                       cartnotes:
-                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 25 for the visit, in case the job is not finalized",
+                        "1- The price of the tiles are not included, this is only the price of the service\r\n2- These prices are inclusive of the visit charge\r\n3- The professional would charge SAR 30 for the visit, in case the job is not finalized",
                       cartnotes_ar:
-                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
+                        "السعر لا يشمل سعر الطلاء، فقط سعر الخدمة، الأسعار تشمل تكاليف الزيارة.\r\nسيكون عليك دفع 30 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة",
                       carttype: 3,
                       meterprice: 55,
                     },

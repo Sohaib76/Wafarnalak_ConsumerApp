@@ -3,6 +3,11 @@
 // https://fnd.io/#/pk/search?mediaType=all&term=Google
 // https://theappstore.org/
 
+// defaults:
+// "updates": {
+//   "fallbackToCacheTimeout": 290000 > how to increase
+// },
+
 import {
   AsyncStorage,
   Dimensions,
