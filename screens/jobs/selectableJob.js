@@ -154,16 +154,18 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
               </View>
             </View>
           </View>
-          <View style={{ marginRight: lan == "en" ? 30 : 37 }}>
+          <View style={{ marginRight: lan == "en" ? 20 : 37 }}>
+            {/* 30 */}
             <Text
               style={{
-                textAlign: "center",
+                // textAlign: "center",
                 fontSize: 12,
                 color: "#4a4b4c",
                 marginBottom: 3,
+                //marginLeft: 50,
               }}
             >
-              {lan == "en" ? "Inspection Visit" : "زيارة تفقدية"}
+              {lan == "en" ? "Book Appointment" : "إحجز موعد"}
             </Text>
             <TouchableOpacity
               onPress={() => selectJob(job)}
@@ -197,8 +199,8 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
             {/* fontSize : 9 */}
             <Text style={{ textAlign: "justify", fontSize: 11 }}>
               {lan == "en"
-                ? "By scheduling the visit, you agree that this is only the inspection visit charge. The technician will quote the price after inspection. In case you don't take the service after inspection, you are required to pay visit charge (SAR 30) to professional."
-                : "من خلال تحديد موعد الزيارة ، فإنك توافق على أن هذه هي رسوم زيارة التفتيش فقط. سيقدم الفني السعر بعد الفحص. في حالة عدم أخذ الخدمة بعد الفحص ، يتعين عليك دفع رسوم الزيارة (30 ريال ) إلى المختص."}
+                ? "This is only visit charge, our technician will quote the service price after survey."
+                : "هذه ليست سوى رسوم زيارة ، سيقوم الفني لدينا بتحديد سعر الخدمة بعد فحص المشكلة."}
             </Text>
           </View>
         </View>

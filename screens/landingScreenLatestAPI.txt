@@ -3,6 +3,9 @@ import * as Analytics from "expo-firebase-analytics";
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 
+// Naming Change for new API
+// dataSource = bannersDetailList
+
 import {
   Accordion,
   Badge,
@@ -63,22 +66,20 @@ const SCROLL_HEIGHT = IMAGE_HEIGHT - HEADER_HEIGHT;
 
 const AcBanners_ar = [
   "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png", //window  Ac
-  //"https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png", //window ac
+  "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png", //window ac
   // "https://i.ibb.co/Vp9QFWw/Ac-app-banner-Arabic-Text-Change.png", //split Ac
   //[url=https://ibb.co/CPK4xjK][img]https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png[/img][/url]
-  //"https://i.ibb.co/YchN3YR/Split-ac-Installation-arabic-1.png", //split ac
+  "https://i.ibb.co/YchN3YR/Split-ac-Installation-arabic-1.png", //split ac
   // "https://i.ibb.co/Y8fghB0/Tower-AC-Refill-Cleaning-Banner-Ar-min.png" //Tower  Ac
-  "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
   "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png", //Split Indoor Cleanin
   "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
 ];
 const AcBanners = [
   "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png", //window ac
-  //"https://i.ibb.co/y4GL1HY/AC-installation-2.png", //window ac
+  "https://i.ibb.co/y4GL1HY/AC-installation-2.png", //window ac
   // "https://i.ibb.co/0hKJ02H/Ac-app-banner-2-Text-Change.png", //split ac
-  // "https://i.ibb.co/ys57G29/Split-Installation-eng.png", // split ac installation
+  "https://i.ibb.co/ys57G29/Split-Installation-eng.png", // split ac installation
   // "https://i.ibb.co/8x8cvqp/Tower-AC-Refill-Cleaning-Banner-Eng-min.png" //tower ac
-  "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
   "https://i.ibb.co/PWSc9QP/Ac-app-banner.png", //Split AC Indoor CLeaning
   "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
 
@@ -137,31 +138,35 @@ const AcOffersDataEng = [
   },
   {
     job: {
-      jobserviceName: "Water Heater",
-      jobserviceNameAr: "سخان الماء  ",
-      id: 60,
-      serviceid: 3,
-      pricelimit: 49,
-      name: "Installation of water heater",
-      name_ar: "تركيب سخان الماء",
-      price: 110,
-      pricetype: 1,
-      saleprice: 79,
-      is_promoted: true,
-      t_price: 0,
-      i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
-      i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
       cartnotes:
-        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
       cartnotes_ar:
-        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
+      jobServiceIcon: "https://i.ibb.co/y4GL1HY/AC-installation-2.png",
+      jobserviceName: "Window Unit",
+      jobserviceNameAr: "مكيف ويندو (شباك)  ",
+      id: 60,
+      serviceid: 29,
+      pricelimit: 49,
+      name: "Installation",
+      name_ar: "تركيب",
+      price: 99,
+      pricetype: 1,
+      is_promoted: true,
+      saleprice: 75,
+      t_price: 0,
+      i_notes: "2 or more = SAR 75 / Unit",
+      i_notes_ar: "تنظيف مكيفين ويندو او اكثر بـ75 ريال للمكيف الواحد",
 
-      productseoname: "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+      productseoname:
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
     },
-    webbanner: "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+    webbanner: "https://i.ibb.co/y4GL1HY/AC-installation-2.png",
     banner: {
-      url: "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+      url: "https://i.ibb.co/y4GL1HY/AC-installation-2.png",
     },
 
     //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
@@ -183,7 +188,7 @@ const AcOffersDataEng = [
   //     jobServiceIcon: "https://i.ibb.co/3yz3LHy/Ac-app-banner-2.png",
   //     jobserviceName: "Split Unit",
   //     jobserviceNameAr: "مكيف اسبليت",
-  //     name: "Deep Cleaning + Gas Top up", //Freon Refill + Cleaning
+  //     name: "Deep Cleanng + Gas Top up", //Freon Refill + Cleaning
   //     name_ar: "تعبئة فريون + تنظيف",
   //     price: 229, //150
   //     pricelimit: 49,
@@ -203,41 +208,41 @@ const AcOffersDataEng = [
 
   //   // htttps://i.ibb.co/L6XdvKV/Split-Ac-30-Per-Off-Eng-min.png
   // },
-  // {
-  //   job: {
-  //     cartnotes:
-  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-  //     cartnotes_ar:
-  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-  //     carttype: 1,
-  //     jobServiceIcon:
-  //       "https://i.ibb.co/DVx43S1/AC-installation-1.pnghttps://i.ibb.co/ys57G29/Split-Installation-eng.png",
-  //     jobserviceName: "Split Unit",
-  //     jobserviceNameAr: "مكيف اسبليت",
-  //     id: 65,
-  //     serviceid: 29,
-  //     pricelimit: 49,
-  //     name: "Installation",
-  //     name_ar: "تركيب",
-  //     price: 200, //200
-  //     pricetype: 1,
-  //     is_promoted: true,
-  //     t_price: 0,
-  //     saleprice: 150, //150
-  //     i_notes: "Get 2 or more units installed in SAR 150 each",
-  //     i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
+  {
+    job: {
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+      jobServiceIcon:
+        "https://i.ibb.co/DVx43S1/AC-installation-1.pnghttps://i.ibb.co/ys57G29/Split-Installation-eng.png",
+      jobserviceName: "Split Unit",
+      jobserviceNameAr: "مكيف اسبليت",
+      id: 65,
+      serviceid: 29,
+      pricelimit: 49,
+      name: "Installation",
+      name_ar: "تركيب",
+      price: 200, //200
+      pricetype: 1,
+      is_promoted: true,
+      t_price: 0,
+      saleprice: 150, //150
+      i_notes: "Get 2 or more units installed in SAR 150 each",
+      i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
 
-  //     productseoname: "https://i.ibb.co/ys57G29/Split-Installation-eng.png",
-  //   },
-  //   webbanner: "https://i.ibb.co/ys57G29/Split-Installation-eng.png",
-  //   banner: {
-  //     url: "https://i.ibb.co/ys57G29/Split-Installation-eng.png",
-  //   },
+      productseoname: "https://i.ibb.co/ys57G29/Split-Installation-eng.png",
+    },
+    webbanner: "https://i.ibb.co/ys57G29/Split-Installation-eng.png",
+    banner: {
+      url: "https://i.ibb.co/ys57G29/Split-Installation-eng.png",
+    },
 
-  //   //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
-  // },
+    //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
+  },
 
   {
     job: {
@@ -350,25 +355,28 @@ const AcOffersData_ar = [
   },
   {
     job: {
-      jobserviceName: "Water Heater",
-      jobserviceNameAr: "سخان الماء  ",
-      id: 60,
-      serviceid: 3,
-      pricelimit: 49,
-      name: "Installation of water heater",
-      name_ar: "تركيب سخان الماء",
-      price: 110,
-      pricetype: 1,
-      saleprice: 79,
-      is_promoted: true,
-      t_price: 0,
-      i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
-      i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
       cartnotes:
-        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
       cartnotes_ar:
-        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
+      jobServiceIcon: "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png",
+      jobserviceName: "Window Unit",
+      jobserviceNameAr: "مكيف ويندو (شباك)  ",
+      id: 60,
+      serviceid: 29,
+      pricelimit: 49,
+      name: "Installation",
+      name_ar: "تركيب",
+      price: 99,
+      pricetype: 1,
+      is_promoted: true,
+      saleprice: 75,
+      t_price: 0,
+      i_notes: "2 or more = SAR 75 / Unit",
+      i_notes_ar: "تنظيف مكيفين ويندو او اكثر بـ75 ريال للمكيف الواحد",
 
       productseoname:
         "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
@@ -413,38 +421,38 @@ const AcOffersData_ar = [
   //     url: "https://i.ibb.co/Vp9QFWw/Ac-app-banner-Arabic-Text-Change.png",
   //   },
   // },
-  // {
-  //   job: {
-  //     cartnotes:
-  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-  //     cartnotes_ar:
-  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-  //     carttype: 1,
-  //     jobServiceIcon: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
-  //     jobserviceName: "Split Unit",
-  //     jobserviceNameAr: "مكيف اسبليت",
-  //     id: 65,
-  //     serviceid: 29,
-  //     pricelimit: 49,
-  //     name: "Installation",
-  //     name_ar: "تركيب",
-  //     price: 200, //Change > 249
-  //     pricetype: 1,
-  //     is_promoted: true,
-  //     t_price: 0,
-  //     saleprice: 150,
-  //     i_notes: "2 or more = SAR 150 / Unit",
-  //     i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
+  {
+    job: {
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+      jobServiceIcon: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
+      jobserviceName: "Split Unit",
+      jobserviceNameAr: "مكيف اسبليت",
+      id: 65,
+      serviceid: 29,
+      pricelimit: 49,
+      name: "Installation",
+      name_ar: "تركيب",
+      price: 200, //Change > 249
+      pricetype: 1,
+      is_promoted: true,
+      t_price: 0,
+      saleprice: 150,
+      i_notes: "2 or more = SAR 150 / Unit",
+      i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
 
-  //     productseoname: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
-  //   },
-  //   webbanner: "https://i.ibb.co/YchN3YR/Split-ac-Installation-arabic-1.png",
-  //   banner: {
-  //     url: "https://i.ibb.co/qWdmQMQ/banner-images-01.png",
-  //   },
-  // }, //htttps://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png
+      productseoname: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
+    },
+    webbanner: "https://i.ibb.co/YchN3YR/Split-ac-Installation-arabic-1.png",
+    banner: {
+      url: "https://i.ibb.co/qWdmQMQ/banner-images-01.png",
+    },
+  }, //htttps://i.ibb.co/FqG5xSc/split-ac-installation-arabic.pn
   {
     job: {
       cartnotes:
@@ -976,7 +984,11 @@ export default class LandingSecreen extends React.Component {
           arBannersList.push(bn.image_ar);
         });
         console.log("banners List", enBannersList, arBannersList);
-        this.setState({ enBannersList, arBannersList });
+        this.setState({
+          enBannersList,
+          arBannersList,
+          bannersDetailList: response.data.slideshows,
+        });
       });
   };
 
@@ -1691,7 +1703,13 @@ export default class LandingSecreen extends React.Component {
         });
         console.log(" data source ", ban);
         if (this.state.lan == "en") {
+          //banner change
           this.setState({ dataSource: AcOffersDataEng, offersUrls: urls });
+          // this.state.bannersDetailList &&
+          //   this.setState({
+          //     dataSource: this.state.bannersDetailList,
+          //     offersUrls: urls,
+          //   });
         } else {
           this.setState({ dataSource: AcOffersData_ar, offersUrls: urls });
         }
@@ -2699,10 +2717,10 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation",
                       name_ar: "تركيب",
-                      price: 30,
-                      pricetype: 2,
+                      price: 99,
+                      pricetype: 1,
                       is_promoted: true,
-                      // saleprice: 75,
+                      saleprice: 75,
                       t_price: 0,
                       i_notes: "Get 2 or more units installed in SAR 75 each",
                       i_notes_ar: "تركيب وحدتين أو اكثر بـ 75 ريال  لكل وحدة",
@@ -2748,8 +2766,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Relocation",
                       name_ar: "نقل",
-                      price: 30,
-                      pricetype: 2,
+                      price: 149,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -2844,11 +2862,11 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation",
                       name_ar: "تركيب",
-                      price: 30,
-                      pricetype: 2,
+                      price: 200,
+                      pricetype: 1,
                       is_promoted: true,
                       t_price: 0,
-                      // saleprice: 150,
+                      saleprice: 150,
                       i_notes: "Get 2 or more units installed in SAR 150 each",
                       i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
                       cartnotes:
@@ -2905,8 +2923,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Relocation",
                       name_ar: "نقل",
-                      price: 30,
-                      pricetype: 2,
+                      price: 299,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3026,8 +3044,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Relocation",
                       name_ar: "نقل",
-                      price: 30,
-                      pricetype: 2,
+                      price: 149,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3087,11 +3105,11 @@ export default class LandingSecreen extends React.Component {
                       name_ar: "تركيب",
                       is_promoted: true,
                       t_price: 0,
-                      // saleprice: 179,
+                      saleprice: 179,
                       i_notes: "Get 2 or more units installed in SAR 179 each",
                       i_notes_ar: "تركيب وحدتين أو اكثر بـ 179 ريال  لكل وحدة",
-                      price: 30,
-                      pricetype: 2,
+                      price: 199,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3150,10 +3168,10 @@ export default class LandingSecreen extends React.Component {
                       id: 69,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Relocation",
+                      name: "Relocation to same place/inside home",
                       name_ar: "نقل الى مكان أخر / داخل المنزل",
-                      price: 30,
-                      pricetype: 2,
+                      price: 169,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3161,20 +3179,20 @@ export default class LandingSecreen extends React.Component {
                       carttype: 1,
                     },
 
-                    // {
-                    //   id: 69,
-                    //   serviceid: 29,
-                    //   pricelimit: 49,
-                    //   name: "Relocation to another place",
-                    //   name_ar: "نقل إلى مكان آخر",
-                    //   price: 329,
-                    //   pricetype: 1,
-                    //   cartnotes:
-                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                    //   cartnotes_ar:
-                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                    //   carttype: 1,
-                    // },
+                    {
+                      id: 69,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "Relocation to another place",
+                      name_ar: "نقل إلى مكان آخر",
+                      price: 329,
+                      pricetype: 1,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
                   ],
                 },
                 {
@@ -3244,8 +3262,8 @@ export default class LandingSecreen extends React.Component {
                       name: "Relocation",
 
                       name_ar: "نقل",
-                      price: 30,
-                      pricetype: 2,
+                      price: 149,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3295,7 +3313,7 @@ export default class LandingSecreen extends React.Component {
                       id: 82,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Large Desert Cooler Cleaning",
+                      name: "Large desert Cooler Cleaning",
                       name_ar: "تنظيف المبرد الكبير",
                       price: 130,
                       pricetype: 1,
@@ -3321,11 +3339,11 @@ export default class LandingSecreen extends React.Component {
                       name_ar: "تركيب",
                       is_promoted: true,
                       t_price: 0,
-                      // saleprice: 120,
+                      saleprice: 120,
                       i_notes: "Get 2 or more units installed in SAR 120 each",
                       i_notes_ar: "ركيب وحدتين أو أكثر ب120 ريال لكل وحدة",
-                      price: 30,
-                      pricetype: 2,
+                      price: 160,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3465,9 +3483,9 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Replace old heater with new heater",
                       name_ar: "استبدال سخان قديم مع سخان جديد",
-                      price: 30,
-                      pricetype: 2,
-                      // saleprice: 99,
+                      price: 120,
+                      pricetype: 1,
+                      saleprice: 99,
                       is_promoted: true,
                       i_notes:
                         "Replace two or more water heater in SAR 99 per unit.\r\n",
@@ -3587,8 +3605,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of mixers",
                       name_ar: "تركيب الخلاطات",
-                      price: 30,
-                      pricetype: 2,
+                      price: 49,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3601,8 +3619,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Replacement of mixers",
                       name_ar: "استبدال الخلاطات",
-                      price: 30,
-                      pricetype: 2,
+                      price: 65,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3652,8 +3670,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of shower head",
                       name_ar: "تركيب رأس دش",
-                      price: 30,
-                      pricetype: 2,
+                      price: 49,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3675,8 +3693,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation / Replacement of faucets",
                       name_ar: "تركيب / استبدال الحنفيات",
-                      price: 30,
-                      pricetype: 2,
+                      price: 49,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3893,8 +3911,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of toilets",
                       name_ar: "تركيب المراحيض",
-                      price: 30,
-                      pricetype: 2,
+                      price: 135,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3930,8 +3948,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Installation of water pumps",
                       name_ar: "تركيب مضخات المياه",
-                      price: 30,
-                      pricetype: 2,
+                      price: 110,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -4108,8 +4126,8 @@ export default class LandingSecreen extends React.Component {
                       id: 1,
                       serviceid: 1,
                       pricelimit: 49,
-                      name: "Replacing Chandeliers bulb",
-                      name_ar: "استبدال لمبة الثريات ",
+                      name: "Replacing Chandeliers",
+                      name_ar: "تبديل الثريات وغيرها من المصابيح ",
                       price: 10,
                       pricetype: 1,
                       description:
@@ -4126,8 +4144,8 @@ export default class LandingSecreen extends React.Component {
                       id: 2,
                       serviceid: 1,
                       pricelimit: 49,
-                      name: "Installation of Chandeliers bulb",
-                      name_ar: "تركيب لمبة الثريات",
+                      name: "Installation of chandeliers",
+                      name_ar: "تركيب الثريات",
                       price: 30,
                       pricetype: 2,
                       description:
@@ -4144,8 +4162,8 @@ export default class LandingSecreen extends React.Component {
                       id: 2,
                       serviceid: 1,
                       pricelimit: 49,
-                      name: "Removal of Chandeliers bulb",
-                      name_ar: "إزالة لمبة الثريات",
+                      name: "Removal of chandeliers",
+                      name_ar: "إزالة الثريات",
                       price: 30,
                       pricetype: 2,
                       description:
@@ -4171,8 +4189,8 @@ export default class LandingSecreen extends React.Component {
                       id: 3,
                       serviceid: 1,
                       pricelimit: 49,
-                      name: "Change a small spotlight bulb",
-                      name_ar: "تغيير لمبة الضوء الصغير",
+                      name: "Change a small spotlight",
+                      name_ar: "تغيير ضوء كشاف صغير",
                       price: 10,
                       pricetype: 1,
                       description:
@@ -4189,8 +4207,8 @@ export default class LandingSecreen extends React.Component {
                       id: 4,
                       serviceid: 1,
                       pricelimit: 49,
-                      name: "Change a large spotlight bulb\r\n(10 cm or more)",
-                      name_ar: "تغيير لمبة الكشاف الكبيرة (10 سم أو أكثر)",
+                      name: "Change a large spotlight\r\n(10 cm or more)",
+                      name_ar: "تغيير ضوء كشاف كبير (10 سم أو أكثر)",
                       price: 12,
                       pricetype: 1,
                       description:
@@ -4207,8 +4225,8 @@ export default class LandingSecreen extends React.Component {
                       id: 5,
                       serviceid: 1,
                       pricelimit: 49,
-                      name: "Installation of spotlight bulb",
-                      name_ar: "تركيب لمبة الكشاف",
+                      name: "Installation of spotlights",
+                      name_ar: "تركيب الأضواء",
                       price: 30,
                       pricetype: 2,
                       description:
@@ -4225,8 +4243,8 @@ export default class LandingSecreen extends React.Component {
                 },
                 {
                   id: 3,
-                  name: "Lightbulbs",
-                  name_ar: "المصابيح الكهربائية",
+                  name: "Normal Lightbulbs",
+                  name_ar: "المصابيح العادية",
                   seo_name:
                     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FNormal-Light-min.png?alt=media&token=80f7c5d9-38aa-4ce9-9bb4-d869ac7f4d0f",
                   jobs: [
@@ -4234,8 +4252,8 @@ export default class LandingSecreen extends React.Component {
                       id: 6,
                       serviceid: 1,
                       pricelimit: 49,
-                      name: "Changing lights",
-                      name_ar: "تغيير الأضواء",
+                      name: "Changing normal lights",
+                      name_ar: "تغيير الاضواء العادية",
                       price: 10,
                       pricetype: 1,
                       description:
@@ -4326,8 +4344,8 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Repair/replace switches",
                       name_ar: "إصلاح/استبدال من المفاتيح",
-                      price: 30,
-                      pricetype: 2,
+                      price: 17,
+                      pricetype: 1,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -4506,7 +4524,7 @@ export default class LandingSecreen extends React.Component {
                       serviceid: 1,
                       pricelimit: 49,
                       name: "Wiring installation",
-                      name_ar: "توصيل أسلاك كهربائية \r\n",
+                      name_ar: "توصيل أسلاك كهربائية \r\n",
                       price: 30,
                       pricetype: 2,
                       cartnotes:
@@ -4515,20 +4533,20 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
-                    // {
-                    //   id: 235,
-                    //   serviceid: 1,
-                    //   pricelimit: 49,
-                    //   name: "Wiring consultation",
-                    //   name_ar: "إستشارة تسليك كهربائي",
-                    //   price: 30,
-                    //   pricetype: 2,
-                    //   cartnotes:
-                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                    //   cartnotes_ar:
-                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-                    //   carttype: 1,
-                    // },
+                    {
+                      id: 235,
+                      serviceid: 1,
+                      pricelimit: 49,
+                      name: "Wiring consultation",
+                      name_ar: "إستشارة تسليك كهربائي",
+                      price: 30,
+                      pricetype: 2,
+                      cartnotes:
+                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                      cartnotes_ar:
+                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                      carttype: 1,
+                    },
                   ],
                 },
                 {
@@ -5695,7 +5713,7 @@ export default class LandingSecreen extends React.Component {
             //           id: 341,
             //           serviceid: 56,
             //           pricelimit: 49,
-            //           name: "Swimming Pool Cleaning  [12 x 20]",
+            //           name: "Swimming Pool Cleaning  [12 x 20]",
             //           name_ar: "تنظيف حوض المياة بمساحة 12X20 م",
             //           price: 30,
             //           pricetype: 9,
@@ -5779,7 +5797,7 @@ export default class LandingSecreen extends React.Component {
             //           carttype: 1,
             //           note: "1- Service Includes furniture and fixtures, curtains fixing, TV mounting, LCD/LED fixing, kitchen cabinet fixing and AC fixing.\r\n2- Please select how many kitchens, bedrooms, living rooms and halls do you have at your residence",
             //           note_ar:
-            //             "1- الخدمة تشمل الآثاث والتجهيزات وتركيب الستائر واصلاح التلفاز بنوعيه LED او LCD وايضاً اصلاح المكيف وخزانات المطبخ. \r\n2- يرجى تحديد عدد المطابخ وغرف النوم والجلوس والصالات في سكنك",
+            //             "1- الخدمة تشمل الآثاث والتجهيزات وتركيب الستائر واصلاح التلفاز بنوعيه LED او LCD وايضاً اصلاح المكيف وخزانات المطبخ. \r\n2- يرجى تحديد عدد المطابخ وغرف النوم والجلوس والصالات في سكنك",
             //         },
             //         {
             //           id: 286,
@@ -6965,20 +6983,23 @@ export default class LandingSecreen extends React.Component {
   };
   componentWillUnmount() {}
   openPromotionScreen = async (index) => {
-    console.log(" promotion screen ", this.state.dataSource[index]);
+    console.log("index", index);
+    console.log("banner Detail", this.state.bannersDetailList);
+    console.log(" promotion screen ", this.state.bannersDetailList[index]);
     if (
       Platform.OS === "android" &&
       this.state.lan === "ar" &&
       this.state.isReversed === false
     ) {
-      this.state.dataSource.reverse();
+      this.state.bannersDetailList.reverse();
       this.setState({ isReversed: true });
     }
-    if (this.state.dataSource[index].job !== false) {
+    if (this.state.bannersDetailList[index].job !== false) {
       this.props.navigation.navigate("Promotion", {
-        job: this.state.dataSource[index].job,
+        job: this.state.bannersDetailList[index].job,
         lan: this.state.lan,
-        url: this.state.dataSource[index].banner.url,
+        // url: this.state.dataSource[index].banner.url,
+        url: this.state.bannersDetailList[index].image,
       });
       await Analytics.logEvent("PromotionalBanners", {
         name: "PromotionalBanners",
@@ -7305,23 +7326,30 @@ export default class LandingSecreen extends React.Component {
             style={{ zIndex: 0 }}
           >
             <View style={{ marginTop: 15, borderRadius: 20 }}>
-              <SliderBox
-                images={this.state.lan == "en" ? AcBanners : AcBanners_ar}
-                // images={this.state.offersUrls}
-                sliderBoxHeight={153}
-                ImageComponentStyle={{
-                  width: "100%",
-                }}
-                onCurrentImagePressed={(index) =>
-                  this.openPromotionScreen(index)
-                }
-                dotColor="#ff8a29"
-                inactiveDotColor="#F5F5F5"
-                paginationBoxVerticalPadding={20}
-                autoplay
-                resizeMode={"contain"}
-                circleLoop={true}
-              />
+              {this.state.enBannersList && (
+                <SliderBox
+                  // images={this.state.lan == "en" ? AcBanners : AcBanners_ar}
+                  // images={this.state.offersUrls}
+                  images={
+                    this.state.lan == "en"
+                      ? this.state.enBannersList
+                      : this.state.arBannersList
+                  }
+                  sliderBoxHeight={153}
+                  ImageComponentStyle={{
+                    width: "100%",
+                  }}
+                  onCurrentImagePressed={(index) =>
+                    this.openPromotionScreen(index)
+                  }
+                  dotColor="#ff8a29"
+                  inactiveDotColor="#F5F5F5"
+                  paginationBoxVerticalPadding={20}
+                  autoplay
+                  resizeMode={"contain"}
+                  circleLoop={true}
+                />
+              )}
             </View>
             <View
               style={{

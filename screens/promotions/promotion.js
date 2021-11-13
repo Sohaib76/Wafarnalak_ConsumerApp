@@ -1270,23 +1270,24 @@ export default class Promotion extends React.Component {
     else job.items = 1;
     if (
       // job.id === 70 ||
-      job.id === 82 ||
-      job.id === 46 ||
-      job.id === 230 ||
-      job.id === 60 ||
-      job.id === 223 ||
-      job.id === 232 ||
-      job.id === 65 ||
-      job.id === 71 ||
-      job.id === 74 ||
-      job.id === 288 ||
-      job.id === 228 ||
-      job.id === 77 ||
-      job.id === 79 ||
-      job.id === 82 ||
-      job.id === 81 ||
-      job.id === 46 ||
-      job.id === 47
+      // job.id === 82 ||
+      // job.id === 46 ||
+      // job.id === 230 ||
+      // job.id === 60 ||
+      // job.id === 223 ||
+      // job.id === 232 ||
+      // job.id === 65 ||
+      // job.id === 71 ||
+      // job.id === 74 ||
+      // job.id === 288 ||
+      // job.id === 228 ||
+      // job.id === 77 ||
+      // job.id === 79 ||
+      // job.id === 82 ||
+      // job.id === 81 ||
+      // job.id === 46 ||
+      // job.id === 47
+      job.items > 1
     ) {
       job.t_price =
         parseFloat(job.items > 1 ? job.saleprice : job.price) * job.items;
@@ -1306,7 +1307,10 @@ export default class Promotion extends React.Component {
       //   job.items;
     } else {
       job.t_price =
-        parseFloat(job.saleprice ? job.saleprice : job.price) * job.items;
+        // parseFloat(job.saleprice ? job.saleprice : job.price) * job.items;
+        parseFloat(job.price) * job.items;
+
+      console.log("ppp", parseFloat(job.price) * job.items);
     }
 
     job.selected = true;
@@ -1346,11 +1350,21 @@ export default class Promotion extends React.Component {
         // job.t_price =
         //   parseFloat(job.items > 1 ? job.saleprice : job.price) * job.items;
       } else {
-        job.t_price =
-          parseFloat(job.saleprice ? job.saleprice : job.price) * job.items;
+        if (job.items > 1) {
+          job.t_price =
+            parseFloat(job.saleprice ? job.saleprice : job.price) * job.items;
+        } else {
+          console.log("Goes to else");
+
+          job.t_price = parseFloat(job.price) * job.items;
+
+          // parseFloat(job.saleprice ? job.saleprice : job.price) * job.items;
+        }
       }
+      console.log("Goes to el");
       this.addRemoveIntoSelectedServices(job, true);
     } else {
+      console.log("Goes to else last");
       job.items = 0;
       job.t_price = 0;
       job.selected = false;
@@ -1413,6 +1427,8 @@ export default class Promotion extends React.Component {
             {this.state.lan === "en" ? (
               <Ionicons
                 onPress={() => {
+                  // this.setState({ totalPrice: 0, selectedServices: [] });
+                  // this.addRemoveIntoSelectedServices(this.state.job, true);
                   this.props.navigation.goBack();
                 }}
                 name={"chevron-back-outline"}
@@ -1495,7 +1511,7 @@ export default class Promotion extends React.Component {
                 <View style={{ flexDirection: "row" }}>
                   {this.state.job ? (
                     <Image
-                      source={{ uri: this.state.job.productseoname }}
+                      source={{ uri: this.state.job.service_icon }}
                       style={{
                         marginLeft: 10,
                         marginTop: 1.3,
@@ -1525,7 +1541,7 @@ export default class Promotion extends React.Component {
                     {" "}
                     {this.state.job && this.state.lan == "en"
                       ? this.state.job.jobserviceName
-                      : this.state.job && this.state.job.jobserviceNameAr}
+                      : this.state.job && this.state.job.jobserviceName_ar}
                   </Text>
                 </View>
                 <View
@@ -1559,6 +1575,7 @@ export default class Promotion extends React.Component {
               </View>
             </View>
             {this.state.job && this.state.job.pricetype == 1 ? (
+              // this.state.job.pricetype == 1
               <View
                 style={{
                   marginLeft: 0,
@@ -1689,10 +1706,12 @@ export default class Promotion extends React.Component {
                     </View>
                   </View>
                   <View>
-                    {this.state.job.id == 228 ||
+                    {/* {this.state.job.id == 228 ||
                     this.state.job.id == 232 ||
                     this.state.job.id == 223 ||
-                    this.state.job.id == 230 ? (
+                    this.state.job.id == 230 ? ( */}
+
+                    {this.state.job.isWarranty == 1 ? (
                       <View
                         style={{
                           alignSelf: "center",

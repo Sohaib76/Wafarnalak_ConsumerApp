@@ -349,6 +349,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
             marginRight: 1,
             width: widthPercentageToDP(92),
             alignSelf: "center",
+            marginBottom: 5,
           }}
         >
           <Text
@@ -392,7 +393,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
             borderTopWidth: 1,
           }}
         >
-          <View style={{ alignSelf: "center" }}>
+          <View style={{ alignSelf: "center", marginBottom: 10 }}>
             <Text
               style={{
                 color: "#0764af",
@@ -425,7 +426,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   fontFamily: "montserrat_semi_blod",
                   fontSize: 12,
                   textAlign: "left",
-                  marginTop: 7,
+                  // marginTop: 7,
                 }}
                 numberOfLines={2}
               >
@@ -602,7 +603,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
               style={{
                 alignSelf: "center",
                 marginRight: lan == "en" ? 15 : 28,
-                marginTop: 0,
+                marginTop: 10, //0
               }}
             >
               <Text
@@ -612,10 +613,11 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   color: "#4a4b4c",
                   marginBottom: 3,
                   marginTop: 4,
+                  // marginLeft: 10,
                 }}
                 numberOfLines={2}
               >
-                {lan == "en" ? "Schedule Visit" : " رتب زيارة"}
+                {lan == "en" ? "Book Appointment" : " إحجز موعد"}
               </Text>
               <Ionicons
                 name={
@@ -629,7 +631,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                   // alignSelf: "center",
                   marginRight: 20,
                   marginTop: 0,
-                  marginLeft: 25,
+                  marginLeft: 40,
                 }}
               />
             </View>
@@ -641,6 +643,7 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
                 backgroundColor: "white",
                 marginLeft: 1,
                 marginRight: 1,
+                marginBottom: 10,
               }}
             >
               {/* <Text style={{ fontWeight: "bold", textAlign: "left" }}>
@@ -648,8 +651,8 @@ const DecoCategory = ({ job, selectJob, lan, index }) => {
             </Text> */}
               <Text style={{ textAlign: "left", fontSize: 9 }}>
                 {lan == "en"
-                  ? "By scheduling the visit, you agree that this is only the visit/inspection charge. In case you dont take the service after visit, you are required to pay visit charge (SAR 30) to professional. "
-                  : "بإختيارك ترتيب زيارة، فإنك توافق على أن الـ 30 ريال سعودي هي فقط رسوم الزيارة (الفحص)، ويتعين عليك الدفع في حال عدم اخذ الخدمة."}
+                  ? "This is only visit charge, our technician will quote the service price after survey."
+                  : "هذه ليست سوى رسوم زيارة ، سيقوم الفني لدينا بتحديد سعر الخدمة بعد فحص المشكلة."}
               </Text>
             </View>
           </View>
