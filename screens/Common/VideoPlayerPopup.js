@@ -13,12 +13,12 @@ import {
   ScrollView,
   Text,
   FlatList,
-  Animated
+  Animated,
 } from "react-native";
 import { Thumbnail } from "react-native-thumbnail-video";
 import {
   heightPercentageToDP as hp,
-  widthPercentageToDP as wp
+  widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import Modal from "react-native-modal";
 import { Video } from "expo-av";
@@ -33,58 +33,72 @@ import { AllVideosJson } from "./VideosJson";
 const VideosLink = [
   {
     Video: "https://youtu.be/oVC4WxslwSg",
-    Video_ar: "https://youtu.be/ESvbQh9r_2w"
+    Video_ar: "https://youtu.be/ESvbQh9r_2w",
   },
   {
     Video: "https://youtu.be/Ljap9x7mFF8",
-    Video_ar: "https://youtu.be/XhyhT-AZqzc"
+    Video_ar: "https://youtu.be/XhyhT-AZqzc",
   },
   {
     Video: "https://youtu.be/nYyL2aof26I",
-    Video_ar: "https://youtu.be/RNbnQB5IYF0"
+    Video_ar: "https://youtu.be/RNbnQB5IYF0",
   },
   {
     Video: "https://youtu.be/ljoD66rS43I",
-    Video_ar: "https://youtu.be/WbOTdGSV26g"
+    Video_ar: "https://youtu.be/WbOTdGSV26g",
   },
   {
     Video: "https://youtu.be/XwhsSY0p8dI",
-    Video_ar: "https://youtu.be/E0aLaL9zELs"
+    Video_ar: "https://youtu.be/E0aLaL9zELs",
   },
+  // {
+  //   Video: "https://youtu.be/MpW7MvG7gcM",
+  //   Video_ar: "https://youtu.be/peNY4Scojz8"
+  // },
   {
-    Video: "https://youtu.be/MpW7MvG7gcM",
-    Video_ar: "https://youtu.be/peNY4Scojz8"
-  },
-  {
-    Video: "https://youtu.be/RDo6jQjwRnQ",
-    Video_ar: "https://youtu.be/CO-OyIcsqls"
-  },
-  {
-    Video: "https://youtu.be/NMI_h_aGW-g",
-    Video_ar: "https://youtu.be/TIYpQDwYLsU"
-  },
-  {
-    Video: "https://youtu.be/7g5pEDeegSw",
-    Video_ar: "https://youtu.be/jWtNgwoVb5k"
-  },
-  {
-    Video: "https://youtu.be/JIjPsYM8Yag",
-    Video_ar: "https://youtu.be/jDsWdumxjJc"
-  },
-  {
-    Video: "https://youtu.be/eS_MLxu9Ehk",
-    Video_ar: "https://youtu.be/7df4aSMdwIQ"
+    Video: "https://youtu.be/CbMMivza1Es",
+    Video_ar: "https://youtu.be/hQu0FOt58K4",
   },
   {
     Video: "https://youtu.be/CbMMivza1Es",
-    Video_ar: "https://youtu.be/hQu0FOt58K4"
+    Video_ar: "https://youtu.be/hQu0FOt58K4",
   },
   {
-    Video: "https://youtu.be/tOWLH4WjhMI",
-    Video_ar: "https://youtu.be/pQPeyYkYcXE"
-  }
+    Video: "https://youtu.be/CbMMivza1Es",
+    Video_ar: "https://youtu.be/hQu0FOt58K4",
+  },
+
+  // {
+  //   Video: "https://youtu.be/RDo6jQjwRnQ",
+  //   Video_ar: "https://youtu.be/CO-OyIcsqls"
+  // },
+  // {
+  //   Video: "https://youtu.be/NMI_h_aGW-g",
+  //   Video_ar: "https://youtu.be/TIYpQDwYLsU",
+  // },
+  {
+    Video: "https://youtu.be/MpW7MvG7gcM",
+    Video_ar: "https://youtu.be/peNY4Scojz8",
+  },
+  {
+    Video: "https://youtu.be/7g5pEDeegSw",
+    Video_ar: "https://youtu.be/jWtNgwoVb5k",
+  },
+  {
+    Video: "https://youtu.be/JIjPsYM8Yag",
+    Video_ar: "https://youtu.be/jDsWdumxjJc",
+  },
+  {
+    Video: "https://youtu.be/eS_MLxu9Ehk",
+    Video_ar: "https://youtu.be/7df4aSMdwIQ",
+  },
+
+  // {
+  //   Video: "https://youtu.be/tOWLH4WjhMI",
+  //   Video_ar: "https://youtu.be/pQPeyYkYcXE",
+  // },
 ];
-const VideoPlayerPopup = props => {
+const VideoPlayerPopup = (props) => {
   // const [AllServices, setAllServices] = React.useState(AllVideosJson);
   // const [selectedId, setSelected] = React.useState(props.selectedItem);
   // const [AllVideos, setAllVideos] = React.useState(VideosLink);
@@ -106,7 +120,7 @@ const VideoPlayerPopup = props => {
   const getItemLayout = (data, index) => ({
     length: 80,
     offset: 80 * index,
-    index
+    index,
   });
 
   const scrollToIndex = () => {
@@ -138,13 +152,13 @@ const VideoPlayerPopup = props => {
           backgroundColor: "rgba(128,128,128,1)",
           paddingHorizontal: wp(0),
 
-          justifyContent: "space-between"
+          justifyContent: "space-between",
           // alignItems: "flex-start"
         }}
       >
         <ScrollView
           contentContainerStyle={{
-            flexGrow: 1
+            flexGrow: 1,
             // height: height,
             // width: wp(100),
             // flex: 1
@@ -177,7 +191,7 @@ const VideoPlayerPopup = props => {
               alignSelf: "center",
               // borderRadius: SPACING,
               borderWidth: SPACING / 8,
-              borderColor: "white"
+              borderColor: "white",
               // shadowColor: "rgba(255,255,255,1)",
               // shadowOffset: {
               //   width: 0,
@@ -201,7 +215,7 @@ const VideoPlayerPopup = props => {
                 uri:
                   props.lan == "en"
                     ? VideosLink[props.selectedItem].Video
-                    : VideosLink[props.selectedItem].Video_ar
+                    : VideosLink[props.selectedItem].Video_ar,
               }}
               style={{
                 flex: 1,
@@ -211,7 +225,7 @@ const VideoPlayerPopup = props => {
                 //  marginBottom: -hp(2.5),
                 // borderRadius: SPACING,
                 borderWidth: SPACING / 8,
-                borderColor: "white"
+                borderColor: "white",
               }}
             />
           </View>
@@ -464,7 +478,7 @@ const VideoPlayerPopup = props => {
               alignItems: "center",
               borderRadius: 25,
               marginTop: hp(8.5),
-              height: 40
+              height: 40,
             }}
           >
             <Entypo
@@ -488,11 +502,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: wp(1),
-    flexDirection: "row"
+    flexDirection: "row",
   },
   locationTextStyle: {
     fontSize: SPACING,
-    color: "#fff"
+    color: "#fff",
     //  fontFamily: "montserrat_arabic_regular"
   },
   controlBar: {
@@ -505,7 +519,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-end",
     justifyContent: "space-between",
-    backgroundColor: "rgba(0, 0, 0, 0.5)"
-  }
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+  },
 });
 export default VideoPlayerPopup;

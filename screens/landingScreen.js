@@ -68,7 +68,11 @@ const AcBanners_ar = [
   //[url=https://ibb.co/CPK4xjK][img]https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png[/img][/url]
   //"https://i.ibb.co/YchN3YR/Split-ac-Installation-arabic-1.png", //split ac
   // "https://i.ibb.co/Y8fghB0/Tower-AC-Refill-Cleaning-Banner-Ar-min.png" //Tower  Ac
+
   "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
+  "https://i.ibb.co/JRKxMkZ/Electrician-Banner-1-Arabic.png",
+  "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
+
   // "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png", //Split Indoor Cleanin
   // "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
 ];
@@ -78,7 +82,11 @@ const AcBanners = [
   // "https://i.ibb.co/0hKJ02H/Ac-app-banner-2-Text-Change.png", //split ac
   // "https://i.ibb.co/ys57G29/Split-Installation-eng.png", // split ac installation
   // "https://i.ibb.co/8x8cvqp/Tower-AC-Refill-Cleaning-Banner-Eng-min.png" //tower ac
+
   "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+  "https://i.ibb.co/whNMW9s/Electrician-Banner-1.png",
+  "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
+
   // "https://i.ibb.co/PWSc9QP/Ac-app-banner.png", //Split AC Indoor CLeaning
   // "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
 
@@ -166,6 +174,92 @@ const AcOffersDataEng = [
 
     //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
   },
+  {
+    job: {
+      jobserviceName: "Electrician",
+      jobserviceNameAr: "كهربائي",
+      id: 290,
+      serviceid: 3,
+      pricelimit: 49,
+      name: "Electrician Visit",
+      name_ar: "زيارة كهربائي",
+      price: 35,
+      pricetype: 2,
+      saleprice: 35,
+      is_promoted: true,
+      t_price: 0,
+      // i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
+      // i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+
+      productseoname: "https://i.ibb.co/whNMW9s/Electrician-Banner-1.png",
+    },
+    webbanner: "https://i.ibb.co/whNMW9s/Electrician-Banner-1.png",
+    banner: {
+      url: "https://i.ibb.co/whNMW9s/Electrician-Banner-1.png",
+    },
+
+    //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
+  },
+
+  {
+    job: {
+      jobserviceName: "Plumbing",
+      jobserviceNameAr: "سباك",
+      id: 25,
+      serviceid: 3,
+      pricelimit: 49,
+      name: "Plumber Visit",
+      name_ar: "زيارة سباك",
+      price: 35,
+      pricetype: 2,
+      saleprice: 35,
+      is_promoted: true,
+      t_price: 0,
+      // i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
+      // i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+
+      productseoname:
+        "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
+    },
+    webbanner: "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
+    banner: {
+      url: "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
+    },
+
+    //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
+  },
+
+  // {
+  //   id: 98,
+  //   name: "Electrician Visit",
+  //   name_ar: "زيارة كهربائي",
+  //   seo_name:
+  //     "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FElectrician-Visit-min.png?alt=media&token=5d672cea-38aa-4bdb-be4d-9a37d220402b",
+  //   jobs: [
+  //     {
+  //       id: 290,
+  //       serviceid: 1,
+  //       pricelimit: 49,
+  //       name: "Schedule Visit",
+  //       name_ar: "ترتيب زيارة",
+  //       price: 35,
+  //       pricetype: 2,
+  //       cartnotes:
+  //         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+  //       cartnotes_ar:
+  //         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+  //       carttype: 1,
+  //     },
 
   // {
   //   job: {
@@ -370,14 +464,78 @@ const AcOffersData_ar = [
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
 
-      productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
+      productseoname: "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
     },
-    webbanner: "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png",
+    webbanner: "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
     banner: {
-      url: "https://i.ibb.co/f4Lrt9j/AC-installation-Arabic-06.png",
+      url: "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
     },
     // htttps://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png
+  },
+
+  {
+    job: {
+      jobserviceName: "Electrician",
+      jobserviceNameAr: "كهربائي",
+      id: 290,
+      serviceid: 3,
+      pricelimit: 49,
+      name: "Electrician Visit",
+      name_ar: "زيارة كهربائي",
+      price: 35,
+      pricetype: 2,
+      saleprice: 35,
+      is_promoted: true,
+      t_price: 0,
+      // i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
+      // i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+
+      productseoname:
+        "https://i.ibb.co/JRKxMkZ/Electrician-Banner-1-Arabic.png",
+    },
+    webbanner: "https://i.ibb.co/JRKxMkZ/Electrician-Banner-1-Arabic.png",
+    banner: {
+      url: "https://i.ibb.co/JRKxMkZ/Electrician-Banner-1-Arabic.png",
+    },
+
+    //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
+  },
+
+  {
+    job: {
+      jobserviceName: "Plumbing",
+      jobserviceNameAr: "سباك",
+      id: 25,
+      serviceid: 3,
+      pricelimit: 49,
+      name: "Plumber Visit",
+      name_ar: "زيارة سباك",
+      price: 35,
+      pricetype: 2,
+      saleprice: 35,
+      is_promoted: true,
+      t_price: 0,
+      // i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
+      // i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+
+      productseoname: "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
+    },
+    webbanner: "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
+    banner: {
+      url: "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
+    },
+
+    //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
   },
 
   // {
@@ -445,74 +603,74 @@ const AcOffersData_ar = [
   //     url: "https://i.ibb.co/qWdmQMQ/banner-images-01.png",
   //   },
   // }, //htttps://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png
-  {
-    job: {
-      cartnotes:
-        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-      cartnotes_ar:
-        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-      carttype: 1,
-      i_notes: "2 or more = SAR 80 / Unit",
-      i_notes_ar: "تنظيف وحدتين أو أكثر ب 80 ريال لكل وحدة",
-      id: 228,
-      is_promoted: true,
-      jobServiceIcon: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
-      // name: "Tower Unit",
-      // name_ar: "مكيف تاور (برج/نقال)",
-      name: "Cleaning (Indoor)",
-      name_ar: "التنظيف (داخلي)",
-      jobserviceName: "Split Unit",
-      jobserviceNameAr: "مكيف تاور (برج/نقال)",
-      price: 89,
-      pricelimit: 49,
-      pricetype: 1,
-      serviceid: 29,
-      saleprice: 80,
-      t_price: 0,
-      productseoname: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
-    },
-    webbanner: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
-    banner: {
-      url: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
-    },
-  },
-  {
-    job: {
-      cartnotes:
-        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-      cartnotes_ar:
-        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-      carttype: 1,
-      i_notes: "2 or more = SAR 168 / Unit",
-      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 168 ريال للوحدة (مكيف",
-      id: 228,
-      is_promoted: true,
-      jobServiceIcon:
-        "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
-      // name: "Tower Unit",
-      // name_ar: "مكيف تاور (برج/نقال)",
-      name: "Freon Refill + Cleaning",
-      name_ar: "تعبئة فريون + تنظيف",
-      jobserviceName: "Tower Unit",
-      jobserviceNameAr: "مكيف تاور (برج/نقال)",
-      price: 240,
-      pricelimit: 49,
-      pricetype: 1,
-      serviceid: 29,
-      saleprice: 168,
-      t_price: 0,
-      productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
-    },
-    webbanner: "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
-    banner: {
-      url: "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
-    },
-  },
+  // {
+  //   job: {
+  //     cartnotes:
+  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+  //     cartnotes_ar:
+  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+  //     carttype: 1,
+  //     i_notes: "2 or more = SAR 80 / Unit",
+  //     i_notes_ar: "تنظيف وحدتين أو أكثر ب 80 ريال لكل وحدة",
+  //     id: 228,
+  //     is_promoted: true,
+  //     jobServiceIcon: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
+  //     // name: "Tower Unit",
+  //     // name_ar: "مكيف تاور (برج/نقال)",
+  //     name: "Cleaning (Indoor)",
+  //     name_ar: "التنظيف (داخلي)",
+  //     jobserviceName: "Split Unit",
+  //     jobserviceNameAr: "مكيف تاور (برج/نقال)",
+  //     price: 89,
+  //     pricelimit: 49,
+  //     pricetype: 1,
+  //     serviceid: 29,
+  //     saleprice: 80,
+  //     t_price: 0,
+  //     productseoname: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
+  //   },
+  //   webbanner: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
+  //   banner: {
+  //     url: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
+  //   },
+  // },
+  // {
+  //   job: {
+  //     cartnotes:
+  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+  //     cartnotes_ar:
+  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+  //     carttype: 1,
+  //     i_notes: "2 or more = SAR 168 / Unit",
+  //     i_notes_ar: "(لعدد وحدتين او أكثر، السعر 168 ريال للوحدة (مكيف",
+  //     id: 228,
+  //     is_promoted: true,
+  //     jobServiceIcon:
+  //       "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
+  //     // name: "Tower Unit",
+  //     // name_ar: "مكيف تاور (برج/نقال)",
+  //     name: "Freon Refill + Cleaning",
+  //     name_ar: "تعبئة فريون + تنظيف",
+  //     jobserviceName: "Tower Unit",
+  //     jobserviceNameAr: "مكيف تاور (برج/نقال)",
+  //     price: 240,
+  //     pricelimit: 49,
+  //     pricetype: 1,
+  //     serviceid: 29,
+  //     saleprice: 168,
+  //     t_price: 0,
+  //     productseoname:
+  //       "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
+  //   },
+  //   webbanner: "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
+  //   banner: {
+  //     url: "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
+  //   },
+  // },
 ];
 
 // const AcOffersDataEng = [
@@ -875,6 +1033,7 @@ export default class LandingSecreen extends React.Component {
     inputRange: [0, SCROLL_HEIGHT, SCROLL_HEIGHT + 1],
     outputRange: [0, 0, 1],
   });
+
   constructor(props) {
     super(props);
 
@@ -920,6 +1079,15 @@ export default class LandingSecreen extends React.Component {
     let lan = await AsyncStorage.getItem("lan");
     let user = await AsyncStorage.getItem("user");
     let feedbackShow = await AsyncStorage.getItem("PopUp_Feedback");
+
+    console.log("user_information", JSON.parse(user));
+    if (
+      JSON.parse(user).mobile == "0568625880" ||
+      JSON.parse(user).mobile == "0567948133"
+    ) {
+      //or get from customer id
+      await AsyncStorage.removeItem("user");
+    }
 
     // http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wfportal/api/cu/v.3/app
 
@@ -5280,14 +5448,14 @@ export default class LandingSecreen extends React.Component {
                       id: 298,
                       name: "Inside Only",
                       name_ar: "بالداخل فقط",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Inside & Outside",
                       name_ar: "داخل وخارج",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                   ],
@@ -5303,7 +5471,7 @@ export default class LandingSecreen extends React.Component {
                       id: 297,
                       name: "Schedule Visit",
                       name_ar: "جدولة الزيارة",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                   ],
@@ -5318,7 +5486,7 @@ export default class LandingSecreen extends React.Component {
                       id: 297,
                       name: "Schedule Visit",
                       name_ar: "جدولة الزيارة",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                   ],
@@ -5390,28 +5558,28 @@ export default class LandingSecreen extends React.Component {
                       id: 297,
                       name: "Install Wooden board",
                       name_ar: "تركيب لوح خشبي",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Gybsum board",
                       name_ar: "تركيب ألواح الجبس",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Tile Ceiling",
                       name_ar: "تركيب لوح خشبي",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Metal Ceiling",
                       name_ar: "تركيب ألواح الجبس",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                   ],
@@ -5426,28 +5594,28 @@ export default class LandingSecreen extends React.Component {
                       id: 297,
                       name: "Repair/replace Wooden board",
                       name_ar: "إصلاح / استبدال لوح خشبي",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Repair/replace Gybsum board",
                       name_ar: "إصلاح / استبدال ألواح الجبس",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Repair/replace Tile Ceiling",
                       name_ar: "إصلاح / استبدال بلاط السقف",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Repair/replace Metal Ceiling",
                       name_ar: "إصلاح / استبدال السقف المعدني",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                   ],
@@ -5474,63 +5642,63 @@ export default class LandingSecreen extends React.Component {
                       id: 297,
                       name: "Install Ceramic Tiles",
                       name_ar: "تركيب بلاط السيراميك",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Gybsum board",
                       name_ar: "تركيب ألواح الجبس",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Natural Stone Tiles",
                       name_ar: "تركيب بلاط الحجر الطبيعي",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Marbles Floor",
                       name_ar: "تركيب ارضيات رخام",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Granite Floor",
                       name_ar: "تركيب ارضيات جرانيت",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Cement Floor",
                       name_ar: "أرضية أسمنتية",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Hardwood Floor",
                       name_ar: "تركيب أرضية خشبية مقوى",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Plywood Floor",
                       name_ar: "تركيب أرضية من الخشب الرقائقي",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                     {
                       id: 297,
                       name: "Install Glass Floor",
                       name_ar: "تركيب أرضية زجاجية",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                   ],
@@ -5657,7 +5825,7 @@ export default class LandingSecreen extends React.Component {
                       id: 297,
                       name: "Wall Fixing",
                       name_ar: "إصلاح  الجدار",
-                      price: 35,
+                      price: 50,
                       pricetype: 2,
                     },
                   ],
@@ -6636,7 +6804,7 @@ export default class LandingSecreen extends React.Component {
                       pricelimit: 49,
                       name: "Pest Control of Commercial\r\nBuilding",
                       name_ar: "مكافحة الحشرات في المباني التجارية",
-                      price: 449, //449
+                      price: 35, //449
                       pricetype: 2,
                       description: "Based on no of floors",
                       description_ar: "Based on no of floors",

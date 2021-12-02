@@ -1187,6 +1187,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 import Spinner from "react-native-loading-spinner-overlay";
+import SelectableJob from "../jobs/selectableJob";
 
 let totalPrice = 0;
 export default class Promotion extends React.Component {
@@ -1202,6 +1203,24 @@ export default class Promotion extends React.Component {
       toolTipVisible: false,
     };
   }
+  selectJob = (job) => {
+    job.selected = !job.selected;
+    job.items = 1;
+    if (job.selected) job.t_price = job.saleprice ? job.saleprice : job.price;
+    else job.t_price = 0;
+
+    if (job.selected) this.addRemoveIntoSelectedServices(job, true);
+    else this.addRemoveIntoSelectedServices(job, false);
+  };
+
+  calculateTotalOrderPrices = () => {
+    let total = 0;
+    this.state.selectedServices.forEach((service) => {
+      total = total + service.t_price;
+    });
+    this.setState({ totalOrderPrice: total });
+  };
+
   cahngeToolTip = () => {
     this.setState({ toolTipVisible: !this.state.toolTipVisible });
   };
@@ -2231,7 +2250,204 @@ export default class Promotion extends React.Component {
                   />
                 </View>
               </TouchableOpacity>
+            ) : this.state.job && this.state.job.pricetype == 2 ? (
+              <View>
+                <SelectableJob
+                  lan={this.state.lan}
+                  job={this.state.job}
+                  index={0}
+                  selectJob={this.selectJob}
+                  isBanner={true}
+                />
+              </View>
             ) : (
+              // <View
+              //   style={{
+              //     marginLeft: 15,
+              //     marginRight: 15,
+              //     backgroundColor: "white",
+              //     borderWidth: 1,
+              //     borderTopWidth: 1,
+              //     borderColor: "#283a97",
+              //     borderTopWidth: 1,
+              //   }}
+              // >
+              //   <View
+              //     style={{
+              //       flexDirection: "row",
+              //       justifyContent: "space-between",
+              //       marginLeft: 8,
+              //       marginRight: 6,
+              //     }}
+              //   >
+              //     <View
+              //       style={{
+              //         marginTop: 4,
+              //       }}
+              //     >
+              //       <Text
+              //         style={{
+              //           color: "#0764af",
+              //           fontFamily: "montserrat_semi_blod",
+              //           fontSize: 12,
+              //           textAlign: "left",
+              //           width: Dimensions.get("screen").width - 140,
+              //         }}
+              //         numberOfLines={2}
+              //       >
+              //         {/* {lan == "en" ? job.name : " ترتيب زيارة"}{" "} */}
+              //         {this.state.lan == "en"
+              //           ? this.state.job.name
+              //           : this.state.job.name_ar}{" "}
+              //       </Text>
+              //     </View>
+              //     <View
+              //       style={{
+              //         marginRight: 26,
+              //         marginTop: 8,
+
+              //         marginLeft: 8,
+              //       }}
+              //     >
+              //       <View
+              //         style={{
+              //           flexDirection:
+              //             this.state.lan == "en" ? "row" : "row-reverse",
+              //         }}
+              //       >
+              //         <Text
+              //           style={{
+              //             fontSize: 10,
+              //             color: "#0764af",
+              //             fontWeight: "bold",
+              //           }}
+              //         >
+              //           Total SAR{" "}
+              //         </Text>
+              //         <Text
+              //           style={{
+              //             color: "#ff9c00",
+              //             fontSize: 10,
+              //             paddingLeft: 4,
+              //           }}
+              //         >
+              //           {this.state.job.t_price ? this.state.job.t_price : 0}{" "}
+              //         </Text>
+              //       </View>
+              //     </View>
+              //   </View>
+              //   <View
+              //     style={{
+              //       flexDirection: "row",
+              //       justifyContent: "space-between",
+              //       marginTop: 15,
+              //       marginBottom: 15,
+              //     }}
+              //   >
+              //     <View style={{ marginLeft: 12, marginTop: 12 }}>
+              //       <View>
+              //         <View
+              //           style={{
+              //             backgroundColor: "#0764af",
+              //             width: 90,
+              //           }}
+              //         >
+              //           <View
+              //             style={{
+              //               flexDirection:
+              //                 this.state.lan == "en" ? "row" : "row-reverse",
+              //               alignSelf: "center",
+              //               alignContent: "center",
+              //               alignItems: "center",
+              //               flex: 1,
+              //             }}
+              //           >
+              //             <Text
+              //               style={{
+              //                 color: "white",
+              //                 fontSize: 12,
+              //               }}
+              //             >
+              //               SAR{" "}
+              //             </Text>
+              //             <Text
+              //               style={{
+              //                 color: "#ff9c00",
+              //                 fontSize: 12,
+              //               }}
+              //             >
+              //               {this.state.job.price}
+              //             </Text>
+              //             <Text
+              //               style={{
+              //                 color: "white",
+              //                 fontSize: 12,
+              //               }}
+              //             >
+              //               {this.state.lan == "en" ? "/Visit" : "زيارة/"}
+              //             </Text>
+              //           </View>
+              //         </View>
+              //       </View>
+              //     </View>
+              //     <View
+              //       style={{ marginRight: this.state.lan == "en" ? 20 : 37 }}
+              //     >
+              //       {/* 30 */}
+              //       <Text
+              //         style={{
+              //           // textAlign: "center",
+              //           fontSize: 12,
+              //           color: "#4a4b4c",
+              //           marginBottom: 3,
+              //           //marginLeft: 50,
+              //         }}
+              //       >
+              //         {this.state.lan == "en"
+              //           ? "Book Appointment"
+              //           : "إحجز موعد"}
+              //       </Text>
+              //       <TouchableOpacity
+              //         onPress={() => this.selectJob(this.state.job)}
+              //         hitSlop={{ top: 30, bottom: 30, left: 30, right: 30 }}
+              //       >
+              //         <View style={{ alignSelf: "center" }}>
+              //           <Ionicons
+              //             name={
+              //               this.state.job.selected &&
+              //               this.state.job.selected == true
+              //                 ? "ios-checkmark-circle"
+              //                 : "ios-checkmark-circle-outline"
+              //             }
+              //             size={26}
+              //             color={"#0764af"}
+              //           />
+              //         </View>
+              //       </TouchableOpacity>
+              //     </View>
+              //   </View>
+              //   <View
+              //     style={{ marginLeft: 15, marginRight: 15, marginBottom: 5 }}
+              //   >
+              //     <View
+              //       style={{
+              //         backgroundColor: "white",
+              //         marginLeft: 1,
+              //         marginRight: 1,
+              //       }}
+              //     >
+              //       {/* <Text style={{ fontWeight: "bold", textAlign: "left" }}>
+              //       {lan == "en" ? "Notes:" : "ملاحظات:"}
+              //     </Text> */}
+              //       {/* fontSize : 9 */}
+              //       <Text style={{ textAlign: "justify", fontSize: 11 }}>
+              //         {this.state.lan == "en"
+              //           ? "This is only visit charge, our technician will quote the service price after survey."
+              //           : "هذه ليست سوى رسوم زيارة ، سيقوم الفني لدينا بتحديد سعر الخدمة بعد فحص المشكلة."}
+              //       </Text>
+              //     </View>
+              //   </View>
+              // </View>
               <View></View>
             )}
           </View>

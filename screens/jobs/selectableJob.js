@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const SelectableJob = ({ job, selectJob, lan, index }) => {
+const SelectableJob = ({ job, selectJob, lan, index, isBanner }) => {
   console.log("selectable job ", job);
   return (
     <View>
@@ -43,8 +43,8 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
 
       <View
         style={{
-          marginLeft: 15,
-          marginRight: 15,
+          marginLeft: isBanner ? 0 : 15,
+          marginRight: isBanner ? 0 : 15,
           backgroundColor: "white",
           borderWidth: 1,
           borderTopWidth: index == 0 ? 1 : 0,
@@ -123,7 +123,7 @@ const SelectableJob = ({ job, selectJob, lan, index }) => {
                     alignSelf: "center",
                     alignContent: "center",
                     alignItems: "center",
-                    flex: 1,
+                    // flex: 1,
                   }}
                 >
                   <Text
