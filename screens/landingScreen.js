@@ -1707,15 +1707,22 @@ export default class LandingSecreen extends React.Component {
     let user = await AsyncStorage.getItem("user");
     let feedbackShow = await AsyncStorage.getItem("PopUp_Feedback");
 
-    console.log("user_information", JSON.parse(user));
-    if (
-      // JSON.parse(user).mobile == "0568625880" ||
-      // JSON.parse(user).mobile == "0567948133"
-      this.usersToLogout.includes(JSON.parse(user).mobile)
-    ) {
-      //or get from customer id
-      await AsyncStorage.removeItem("user");
-    }
+    this.setState({
+      lan: lan !== null ? lan : "en",
+      user: user !== null ? JSON.parse(user) : null,
+    });
+
+    console.log("user_information", JSON.parse(user), lan);
+    // if (
+    //   // JSON.parse(user).mobile == "0568625880" ||
+    //   // JSON.parse(user).mobile == "0567948133"
+    //   this.usersToLogout.includes(JSON.parse(user).mobile)
+    // ) {
+    //   //or get from customer id
+    //   await AsyncStorage.removeItem("user");
+    // }
+
+    console.log("My Language");
 
     // http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wfportal/api/cu/v.3/app
 
