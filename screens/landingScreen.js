@@ -8216,6 +8216,7 @@ export default class LandingSecreen extends React.Component {
       this.consoleNotificationFirebase(notification);
       if (notification.request.content.data.isPromoted) {
         this.props.navigation.navigate("Promotion", {
+          isNotification: true,
           job: notification.request.content.data.job,
           lan: this.state.lan,
           url:
@@ -8257,7 +8258,7 @@ export default class LandingSecreen extends React.Component {
           lan: this.state.lan,
         });
       } else {
-        this.props.navigation.navigate("OrderDetails", {
+        this.props.navigation.navigate("LandingSecreen", {
           order: notification.request.content.data,
           lan: this.state.lan,
           user: this.state.user,

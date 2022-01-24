@@ -635,6 +635,7 @@ export default class OrderDetailsSecreen extends React.Component {
     }
   };
   openSupportChannel = () => {
+    console.log("OYD", orderDetail);
     if (this.state.orderDetail.is_support) {
       if (
         this.state.orderDetail.support &&

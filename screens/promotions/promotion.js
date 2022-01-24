@@ -1239,6 +1239,7 @@ export default class Promotion extends React.Component {
       job: newJob,
       user: user !== null ? JSON.parse(user) : null,
       lan: navigation.getParam("lan"),
+      isNotification: navigation.getParam("isNotification"),
     });
   };
   addRemoveIntoSelectedServices = async (job, add) => {
@@ -1308,8 +1309,12 @@ export default class Promotion extends React.Component {
       // job.id === 47
       job.items > 1
     ) {
+      console.log(
+        "if",
+        parseFloat(job.saleprice ? job.saleprice : job.price) * job.items
+      );
       job.t_price =
-        parseFloat(job.items > 1 ? job.saleprice : job.price) * job.items;
+        parseFloat(job.saleprice ? job.saleprice : job.price) * job.items;
       // if (job.items > 1 && job.items < 4) {
       //   console.log("1 ----------", job.items);
 
@@ -1341,23 +1346,23 @@ export default class Promotion extends React.Component {
       job.items--;
       if (
         // job.id === 70 ||
-        job.id === 82 ||
-        job.id === 46 ||
-        job.id === 230 ||
-        job.id === 60 ||
-        job.id === 223 ||
-        job.id === 232 ||
-        job.id === 65 ||
-        job.id === 71 ||
-        job.id === 74 ||
-        job.id === 288 ||
-        job.id === 228 ||
-        job.id === 77 ||
-        job.id === 79 ||
-        job.id === 82 ||
-        job.id === 81 ||
-        job.id === 46 ||
-        job.id === 47
+        job.id === 82
+        // job.id === 46 ||
+        // job.id === 230 ||
+        // job.id === 60 ||
+        // job.id === 223 ||
+        // job.id === 232 ||
+        // job.id === 65 ||
+        // job.id === 71 ||
+        // job.id === 74 ||
+        // job.id === 288 ||
+        // job.id === 228 ||
+        // job.id === 77 ||
+        // job.id === 79 ||
+        // job.id === 82 ||
+        // job.id === 81 ||
+        // job.id === 46 ||
+        // job.id === 47
       ) {
         if (job.items > 1 && job.items < 4) {
           job.t_price = job.saleprice * job.items;
@@ -1497,9 +1502,10 @@ export default class Promotion extends React.Component {
             <View style={{ alignSelf: "center", marginTop: 6 }}>
               <Image
                 source={{
-                  uri:
-                    //   "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/" +
-                    this.state.url,
+                  uri: this.state.isNotification
+                    ? "http://ec2-13-234-48-248.ap-south-1.compute.amazonaws.com/wf/" +
+                      this.state.url
+                    : this.state.url,
                 }}
                 style={{
                   width: Dimensions.get("screen").width,
@@ -1686,9 +1692,17 @@ export default class Promotion extends React.Component {
                             fontSize: 12,
                           }}
                         >
-                          {this.state.job.items > 1
+                          {this.state.isNotification
+                            ? this.state.job.price
+                            : this.state.job.items > 1
                             ? this.state.job.saleprice
                             : this.state.job.price}
+                          {/* {isNotification && this.state.job.price} */}
+
+                          {/* {isNotification == undefined &&
+                          this.state.job.items > 1
+                            ? this.state.job.saleprice
+                            : this.state.job.price} */}
                         </Text>
                         <Text style={{ color: "white", fontSize: 12 }}>
                           {this.state.lan == "en" ? "/Unit" : "وحدة /"}
