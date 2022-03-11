@@ -69,9 +69,15 @@ const AcBanners_ar = [
   //"https://i.ibb.co/YchN3YR/Split-ac-Installation-arabic-1.png", //split ac
   // "https://i.ibb.co/Y8fghB0/Tower-AC-Refill-Cleaning-Banner-Ar-min.png" //Tower  Ac
 
-  "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
+  // "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
+  "https://i.ibb.co/N2d9ySH/window-ac-unit-Arabic.png",
+
   "https://i.ibb.co/JRKxMkZ/Electrician-Banner-1-Arabic.png",
-  "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
+  // "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
+  "https://i.ibb.co/HBnwpS4/Split-AC-Cleaning-Arabic.png",
+  "https://i.ibb.co/J3D5p6Q/Split-Ac-app-banner-Arabic.png",
+
+  "https://i.ibb.co/BgxfyHm/Schedule-AC-Technician-Visit-Arabic.png",
 
   // "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png", //Split Indoor Cleanin
   // "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
@@ -83,9 +89,15 @@ const AcBanners = [
   // "https://i.ibb.co/ys57G29/Split-Installation-eng.png", // split ac installation
   // "https://i.ibb.co/8x8cvqp/Tower-AC-Refill-Cleaning-Banner-Eng-min.png" //tower ac
 
-  "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+  // "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+  "https://i.ibb.co/VqfQLNQ/window-ac-unit-Eng.png",
+
   "https://i.ibb.co/whNMW9s/Electrician-Banner-1.png",
-  "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
+  // "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
+  "https://i.ibb.co/H2DRM0X/Split-AC-Cleaning-Eng.png",
+  "https://i.ibb.co/ZhPNmp5/Split-Ac-app-banner.png",
+
+  "https://i.ibb.co/cCJDnFf/Schedule-AC-Technician-Visit-Eng.png",
 
   // "https://i.ibb.co/PWSc9QP/Ac-app-banner.png", //Split AC Indoor CLeaning
   // "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
@@ -107,73 +119,73 @@ const AcBanners = [
   //require("../assets/AcBanners/Desert-Cooler-Cleaning-1.png"), //central Ac
 ];
 const AcOffersDataEng = [
-  // {
-  //   job: {
-  //     cartnotes:
-  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-  //     cartnotes_ar:
-  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-  //     carttype: 1,
-  //     i_notes: "2 or more = SAR  84 / Unit",
-  //     i_notes_ar: "( لعدد وحدتين او أكثر، السعر 84 ريال للوحدة (مكيف",
-  //     id: 230,
-  //     is_promoted: true,
-  //     jobServiceIcon:
-  //       "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
-  //     jobserviceName: "Window Unit",
-  //     jobserviceNameAr: "مكيف ويندو (شباك)  ",
-  //     name: "Freon Refill + Cleaning",
-  //     name_ar: "تعبئة فريون + تنظيف",
-  //     price: 120,
-  //     pricelimit: 49,
-  //     pricetype: 1,
-  //     serviceid: 29,
-  //     t_price: 0,
-  //     saleprice: 84,
-
-  //     productseoname:
-  //       "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
-  //   },
-  //   webbanner:
-  //     "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
-  //   banner: {
-  //     url: "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
-  //   },
-  //   //--htttps://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png
-  // },
   {
     job: {
-      jobserviceName: "Water Heater",
-      jobserviceNameAr: "سخان الماء  ",
-      id: 60,
-      serviceid: 3,
-      pricelimit: 49,
-      name: "Installation of water heater",
-      name_ar: "تركيب سخان الماء",
-      price: 110,
-      pricetype: 1,
-      saleprice: 79,
-      is_promoted: true,
-      t_price: 0,
-      i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
-      i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
       cartnotes:
-        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
       cartnotes_ar:
-        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
+      i_notes: "2 or more = SAR  84 / Unit",
+      i_notes_ar: "( لعدد وحدتين او أكثر، السعر 84 ريال للوحدة (مكيف",
+      id: 230,
+      is_promoted: true,
+      jobServiceIcon:
+        "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
+      jobserviceName: "Window Unit",
+      jobserviceNameAr: "مكيف ويندو (شباك)  ",
+      name: "Freon Refill + Cleaning",
+      name_ar: "تعبئة فريون + تنظيف",
+      price: 120,
+      pricelimit: 49,
+      pricetype: 1,
+      serviceid: 29,
+      t_price: 0,
+      saleprice: 84,
 
-      productseoname: "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+      productseoname:
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
     },
-    webbanner: "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+    webbanner:
+      "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
     banner: {
-      url: "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+      url: "https://i.ibb.co/VqfQLNQ/window-ac-unit-Eng.png",
     },
-
-    //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
+    //--htttps://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png
   },
+  // {
+  //   job: {
+  //     jobserviceName: "Water Heater",
+  //     jobserviceNameAr: "سخان الماء  ",
+  //     id: 60,
+  //     serviceid: 3,
+  //     pricelimit: 49,
+  //     name: "Installation of water heater",
+  //     name_ar: "تركيب سخان الماء",
+  //     price: 110,
+  //     pricetype: 1,
+  //     saleprice: 79,
+  //     is_promoted: true,
+  //     t_price: 0,
+  //     i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
+  //     i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
+  //     cartnotes:
+  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+  //     cartnotes_ar:
+  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+  //     carttype: 1,
+
+  //     productseoname: "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+  //   },
+  //   webbanner: "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+  //   banner: {
+  //     url: "https://i.ibb.co/Ltq2ZfT/Water-Heater-Banner-Eng.png",
+  //   },
+
+  //   //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
+  // },
   {
     job: {
       jobserviceName: "Electrician",
@@ -206,38 +218,38 @@ const AcOffersDataEng = [
     //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
   },
 
-  {
-    job: {
-      jobserviceName: "Plumbing",
-      jobserviceNameAr: "سباك",
-      id: 25,
-      serviceid: 3,
-      pricelimit: 49,
-      name: "Plumber Visit",
-      name_ar: "زيارة سباك",
-      price: 35,
-      pricetype: 2,
-      saleprice: 35,
-      is_promoted: true,
-      t_price: 0,
-      // i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
-      // i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
-      cartnotes:
-        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-      cartnotes_ar:
-        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-      carttype: 1,
+  // {
+  //   job: {
+  //     jobserviceName: "Plumbing",
+  //     jobserviceNameAr: "سباك",
+  //     id: 25,
+  //     serviceid: 3,
+  //     pricelimit: 49,
+  //     name: "Plumber Visit",
+  //     name_ar: "زيارة سباك",
+  //     price: 35,
+  //     pricetype: 2,
+  //     saleprice: 35,
+  //     is_promoted: true,
+  //     t_price: 0,
+  //     // i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
+  //     // i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
+  //     cartnotes:
+  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+  //     cartnotes_ar:
+  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+  //     carttype: 1,
 
-      productseoname:
-        "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
-    },
-    webbanner: "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
-    banner: {
-      url: "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
-    },
+  //     productseoname:
+  //       "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
+  //   },
+  //   webbanner: "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
+  //   banner: {
+  //     url: "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
+  //   },
 
-    //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
-  },
+  //   //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
+  // },
 
   // {
   //   id: 98,
@@ -362,49 +374,12 @@ const AcOffersDataEng = [
     },
     webbanner: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
     banner: {
-      url: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
+      url: "https://i.ibb.co/H2DRM0X/Split-AC-Cleaning-Eng.png",
     },
 
     //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
   },
 
-  {
-    job: {
-      cartnotes:
-        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-      cartnotes_ar:
-        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-      carttype: 1,
-      i_notes: "2 or more = SAR 168 / Unit",
-      i_notes_ar: "(لعدد وحدتين او أكثر، السعر 168 ريال للوحدة (مكيف",
-      id: 228,
-      is_promoted: true,
-      jobServiceIcon: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
-      // name: "Tower Unit",
-      // name_ar: "مكيف تاور (برج/نقال)",
-      name: "Freon Refill + Cleaning",
-      name_ar: "تعبئة فريون + تنظيف",
-      jobserviceName: "Tower Unit",
-      jobserviceNameAr: "مكيف تاور (برج/نقال)",
-      price: 240,
-      pricelimit: 49,
-      pricetype: 1,
-      serviceid: 29,
-      saleprice: 168,
-      t_price: 0,
-      productseoname:
-        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
-    },
-    webbanner: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
-    banner: {
-      url: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
-    },
-    // htttps://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png
-  },
-];
-const AcOffersData_ar = [
   // {
   //   job: {
   //     cartnotes:
@@ -414,63 +389,139 @@ const AcOffersData_ar = [
   //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
   //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
   //     carttype: 1,
-  //     i_notes: "2 or more = SAR  84 / Unit",
-  //     i_notes_ar: "( لعدد وحدتين او أكثر، السعر 84 ريال للوحدة (مكيف",
-  //     id: 230,
+  //     i_notes: "2 or more = SAR 168 / Unit",
+  //     i_notes_ar: "(لعدد وحدتين او أكثر، السعر 168 ريال للوحدة (مكيف",
+  //     id: 228,
   //     is_promoted: true,
-  //     jobServiceIcon:
-  //       "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png",
-  //     jobserviceName: "Window Unit",
-  //     jobserviceNameAr: "مكيف ويندو (شباك)  ",
+  //     jobServiceIcon: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
+  //     // name: "Tower Unit",
+  //     // name_ar: "مكيف تاور (برج/نقال)",
   //     name: "Freon Refill + Cleaning",
   //     name_ar: "تعبئة فريون + تنظيف",
-  //     price: 120,
+  //     jobserviceName: "Tower Unit",
+  //     jobserviceNameAr: "مكيف تاور (برج/نقال)",
+  //     price: 240,
   //     pricelimit: 49,
   //     pricetype: 1,
   //     serviceid: 29,
+  //     saleprice: 168,
   //     t_price: 0,
-  //     saleprice: 84,
-
   //     productseoname:
-  //       "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
+  //       "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
   //   },
-  //   webbanner:
-  //     "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png",
+  //   webbanner: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
   //   banner: {
-  //     url: "https://i.ibb.co/LdrtWXw/Window-AC-Refill-Cleaning-Banner-Ar-min.png",
+  //     url: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
   //   },
-
-  //   // htttps://i.ibb.co/sPqjBGJ/Tower-AC-banner-arabic.png
+  //   // htttps://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png
   // },
   {
     job: {
-      jobserviceName: "Water Heater",
-      jobserviceNameAr: "سخان الماء  ",
-      id: 60,
-      serviceid: 3,
-      pricelimit: 49,
-      name: "Installation of water heater",
-      name_ar: "تركيب سخان الماء",
-      price: 110,
-      pricetype: 1,
-      saleprice: 79,
-      is_promoted: true,
-      t_price: 0,
-      i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
-      i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
+      i_notes: "Cleaning & Freon refill on 2 or more units in SAR 105 each",
+      i_notes_ar:
+        "التنظيف وإعادة تعبئة الفريون على وحدتين أو أكثر ب 105 ريال  لكل وحدة",
       cartnotes:
         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
       cartnotes_ar:
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
-
-      productseoname: "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
+      id: 228,
+      is_promoted: true,
+      jobServiceIcon: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
+      // name: "Tower Unit",
+      // name_ar: "مكيف تاور (برج/نقال)",
+      name: "Indoor Cleaning + Freon Refill (Partial)",
+      name_ar: "التنظيف الداخلي + إعادة تعبئة الفريون (جزئي)",
+      jobserviceName: "Split Unit",
+      jobserviceNameAr: "مكيف تاور (برج/نقال)",
+      price: 150,
+      pricelimit: 49,
+      pricetype: 1,
+      serviceid: 29,
+      saleprice: 105,
+      t_price: 0,
+      productseoname:
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
     },
-    webbanner: "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
+    webbanner: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
     banner: {
-      url: "https://i.ibb.co/m4QJKyC/Water-Heater-Banner-Arabic.png",
+      url: "https://i.ibb.co/ZhPNmp5/Split-Ac-app-banner.png",
     },
-    // htttps://i.ibb.co/1KYhYkD/Window-ac-installation-arabic.png
+    // htttps://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png
+  },
+
+  {
+    job: {
+      i_notes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      i_notes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+      id: 228,
+      is_promoted: true,
+      jobServiceIcon: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
+      // name: "Tower Unit",
+      // name_ar: "مكيف تاور (برج/نقال)",
+      name: "AC Technician Visit",
+      name_ar: "زيارة فني تكييف",
+      jobserviceName: "Schedule Visit",
+      jobserviceNameAr: "ترتيب زيارة",
+      price: 35,
+      pricelimit: 49,
+      pricetype: 2,
+      serviceid: 29,
+      saleprice: 35,
+      t_price: 0,
+      productseoname:
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
+    },
+    webbanner: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
+    banner: {
+      url: "https://i.ibb.co/cCJDnFf/Schedule-AC-Technician-Visit-Eng.png",
+    },
+    // htttps://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png
+  },
+];
+const AcOffersData_ar = [
+  {
+    job: {
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+      i_notes: "2 or more = SAR  84 / Unit",
+      i_notes_ar: "( لعدد وحدتين او أكثر، السعر 84 ريال للوحدة (مكيف",
+      id: 230,
+      is_promoted: true,
+      jobServiceIcon:
+        "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
+      jobserviceName: "Window Unit",
+      jobserviceNameAr: "مكيف ويندو (شباك)  ",
+      name: "Freon Refill + Cleaning",
+      name_ar: "تعبئة فريون + تنظيف",
+      price: 120,
+      pricelimit: 49,
+      pricetype: 1,
+      serviceid: 29,
+      t_price: 0,
+      saleprice: 84,
+
+      productseoname:
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FWindow-min.png?alt=media&token=6338733b-3d6f-43dc-a744-cb60b1d74448",
+    },
+    webbanner:
+      "https://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png",
+    banner: {
+      url: "https://i.ibb.co/N2d9ySH/window-ac-unit-Arabic.png",
+    },
+    //--htttps://i.ibb.co/WPLQwM1/Window-AC-Refill-Cleaning-Banner-Eng-min.png
   },
 
   {
@@ -495,182 +546,119 @@ const AcOffersData_ar = [
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
 
-      productseoname:
-        "https://i.ibb.co/JRKxMkZ/Electrician-Banner-1-Arabic.png",
+      productseoname: "https://i.ibb.co/whNMW9s/Electrician-Banner-1.png",
     },
-    webbanner: "https://i.ibb.co/JRKxMkZ/Electrician-Banner-1-Arabic.png",
+    webbanner: "https://i.ibb.co/whNMW9s/Electrician-Banner-1.png",
     banner: {
       url: "https://i.ibb.co/JRKxMkZ/Electrician-Banner-1-Arabic.png",
     },
 
     //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
   },
-
   {
     job: {
-      jobserviceName: "Plumbing",
-      jobserviceNameAr: "سباك",
-      id: 25,
-      serviceid: 3,
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
+        "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
+        " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+      jobServiceIcon: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
+      jobserviceName: "Split Unit",
+      jobserviceNameAr: "مكيف اسبليت",
+      id: 70,
+      serviceid: 29,
       pricelimit: 49,
-      name: "Plumber Visit",
-      name_ar: "زيارة سباك",
-      price: 35,
-      pricetype: 2,
-      saleprice: 35,
+      name: "Cleaning (Indoor)",
+      name_ar: "التنظيف (داخلي)",
+      price: 89, //200
+      pricetype: 1,
       is_promoted: true,
       t_price: 0,
-      // i_notes: "Get 2 or more Water Heater Installation  Only in SAR 79 Each",
-      // i_notes_ar: "ركُب سخانين او أكثر فقط 79 ريال للسخان",
+      saleprice: 80, //150
+      i_notes: "Get 2 or more units cleaned in SAR 80 each",
+      i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
+
+      productseoname: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
+    },
+    webbanner: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
+    banner: {
+      url: "https://i.ibb.co/HBnwpS4/Split-AC-Cleaning-Arabic.png",
+    },
+
+    //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
+  },
+  {
+    job: {
+      i_notes: "Cleaning & Freon refill on 2 or more units in SAR 105 each",
+      i_notes_ar:
+        "التنظيف وإعادة تعبئة الفريون على وحدتين أو أكثر ب 105 ريال  لكل وحدة",
       cartnotes:
         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
       cartnotes_ar:
         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
       carttype: 1,
-
-      productseoname: "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
+      id: 228,
+      is_promoted: true,
+      jobServiceIcon: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
+      // name: "Tower Unit",
+      // name_ar: "مكيف تاور (برج/نقال)",
+      name: "Indoor Cleaning + Freon Refill (Partial)",
+      name_ar: "التنظيف الداخلي + إعادة تعبئة الفريون (جزئي)",
+      jobserviceName: "Split Unit",
+      jobserviceNameAr: "مكيف تاور (برج/نقال)",
+      price: 150,
+      pricelimit: 49,
+      pricetype: 1,
+      serviceid: 29,
+      saleprice: 105,
+      t_price: 0,
+      productseoname:
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
     },
-    webbanner: "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
+    webbanner: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
     banner: {
-      url: "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
+      url: "https://i.ibb.co/J3D5p6Q/Split-Ac-app-banner-Arabic.png",
     },
-
-    //htttps://i.ibb.co/XZngvwL/Window-ac-installation-english.png
+    // htttps://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png
   },
 
-  // {
-  //   job: {
-  //     cartnotes:
-  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-  //     cartnotes_ar:
-  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-  //     carttype: 1,
-  //     i_notes: "2 or more = SAR  105 / Unit",
-  //     i_notes_ar: "(لعدد وحدتين او أكثر، السعر 105 ريال للوحدة (مكيف",
-  //     id: 223,
-  //     is_promoted: true,
-  //     jobServiceIcon: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
-  //     jobserviceName: "Split Unit",
-  //     jobserviceNameAr: "مكيف اسبليت",
-  //     name: "Freon Refill + Cleaning",
-  //     name_ar: "تعبئة فريون + تنظيف",
-  //     price: 229,
-  //     pricelimit: 49,
-  //     pricetype: 1,
-  //     serviceid: 29,
-  //     saleprice: 199,
-  //     t_price: 0,
-
-  //     productseoname:
-  //       "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FSplit-min.png?alt=media&token=1a0943d3-ae9a-4422-b82c-d3d1862910de",
-  //   },
-  //   webbanner: "https://i.ibb.co/Bn2v8h2/Ac-app-banner-Arabic-2.png",
-  //   banner: {
-  //     url: "https://i.ibb.co/Vp9QFWw/Ac-app-banner-Arabic-Text-Change.png",
-  //   },
-  // },
-  // {
-  //   job: {
-  //     cartnotes:
-  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-  //     cartnotes_ar:
-  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-  //     carttype: 1,
-  //     jobServiceIcon: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
-  //     jobserviceName: "Split Unit",
-  //     jobserviceNameAr: "مكيف اسبليت",
-  //     id: 65,
-  //     serviceid: 29,
-  //     pricelimit: 49,
-  //     name: "Installation",
-  //     name_ar: "تركيب",
-  //     price: 200, //Change > 249
-  //     pricetype: 1,
-  //     is_promoted: true,
-  //     t_price: 0,
-  //     saleprice: 150,
-  //     i_notes: "2 or more = SAR 150 / Unit",
-  //     i_notes_ar: "تركيب وحدتين أو اكثر بـ 150 ريال  لكل وحدة",
-
-  //     productseoname: "https://i.ibb.co/0G5ZH7C/AC-installation-Arabic-01.png",
-  //   },
-  //   webbanner: "https://i.ibb.co/YchN3YR/Split-ac-Installation-arabic-1.png",
-  //   banner: {
-  //     url: "https://i.ibb.co/qWdmQMQ/banner-images-01.png",
-  //   },
-  // }, //htttps://i.ibb.co/FqG5xSc/split-ac-installation-arabic.png
-  // {
-  //   job: {
-  //     cartnotes:
-  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-  //     cartnotes_ar:
-  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-  //     carttype: 1,
-  //     i_notes: "2 or more = SAR 80 / Unit",
-  //     i_notes_ar: "تنظيف وحدتين أو أكثر ب 80 ريال لكل وحدة",
-  //     id: 228,
-  //     is_promoted: true,
-  //     jobServiceIcon: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
-  //     // name: "Tower Unit",
-  //     // name_ar: "مكيف تاور (برج/نقال)",
-  //     name: "Cleaning (Indoor)",
-  //     name_ar: "التنظيف (داخلي)",
-  //     jobserviceName: "Split Unit",
-  //     jobserviceNameAr: "مكيف تاور (برج/نقال)",
-  //     price: 89,
-  //     pricelimit: 49,
-  //     pricetype: 1,
-  //     serviceid: 29,
-  //     saleprice: 80,
-  //     t_price: 0,
-  //     productseoname: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
-  //   },
-  //   webbanner: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
-  //   banner: {
-  //     url: "https://i.ibb.co/5xn6Dm4/Ac-app-banner-Arabic.png",
-  //   },
-  // },
-  // {
-  //   job: {
-  //     cartnotes:
-  //       "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work" +
-  //       "- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-  //     cartnotes_ar:
-  //       "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. " +
-  //       " ↵السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
-  //     carttype: 1,
-  //     i_notes: "2 or more = SAR 168 / Unit",
-  //     i_notes_ar: "(لعدد وحدتين او أكثر، السعر 168 ريال للوحدة (مكيف",
-  //     id: 228,
-  //     is_promoted: true,
-  //     jobServiceIcon:
-  //       "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
-  //     // name: "Tower Unit",
-  //     // name_ar: "مكيف تاور (برج/نقال)",
-  //     name: "Freon Refill + Cleaning",
-  //     name_ar: "تعبئة فريون + تنظيف",
-  //     jobserviceName: "Tower Unit",
-  //     jobserviceNameAr: "مكيف تاور (برج/نقال)",
-  //     price: 240,
-  //     pricelimit: 49,
-  //     pricetype: 1,
-  //     serviceid: 29,
-  //     saleprice: 168,
-  //     t_price: 0,
-  //     productseoname:
-  //       "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
-  //   },
-  //   webbanner: "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
-  //   banner: {
-  //     url: "https://i.ibb.co/BrV4mZQ/Feron-refil-Cleaning-arabic.png",
-  //   },
-  // },
+  {
+    job: {
+      i_notes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      i_notes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      cartnotes:
+        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+      cartnotes_ar:
+        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+      carttype: 1,
+      id: 228,
+      is_promoted: true,
+      jobServiceIcon: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
+      // name: "Tower Unit",
+      // name_ar: "مكيف تاور (برج/نقال)",
+      name: "AC Technician Visit",
+      name_ar: "زيارة فني تكييف",
+      jobserviceName: "Schedule Visit",
+      jobserviceNameAr: "ترتيب زيارة",
+      price: 35,
+      pricelimit: 49,
+      pricetype: 2,
+      serviceid: 29,
+      saleprice: 35,
+      t_price: 0,
+      productseoname:
+        "https://firebasestorage.googleapis.com/v0/b/foren-se-customers.appspot.com/o/wafarnalak1.2%2FTower-Unit-min.png?alt=media&token=57032c5d-3e16-4476-ac59-ddb5ba4a7973",
+    },
+    webbanner: "https://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png",
+    banner: {
+      url: "https://i.ibb.co/BgxfyHm/Schedule-AC-Technician-Visit-Arabic.png",
+    },
+    // htttps://i.ibb.co/pKhLVCz/Feron-refil-Cleaning-eng.png
+  },
 ];
 
 // const AcOffersDataEng = [

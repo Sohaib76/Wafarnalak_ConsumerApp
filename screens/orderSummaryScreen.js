@@ -39,7 +39,12 @@ import { StatusBar } from "expo-status-bar";
 const withPaint =
   "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job\n3- The price of the paint is not included in the prices\r\n4- These prices are inclusive of the visit charge\r\n5- The professional would charge SAR 25 for the visit, in case the job is not finalized";
 const withOutPaint =
-  "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job";
+  // "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job";
+  "1- This is only consultation charge; our technician will quote the service price after survey." +
+  "\n" +
+  "2- The price displayed is for service only and it does not include price for any parts or material required to perform the job." +
+  "\n" +
+  "3. This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of work.";
 const withPaint_ar =
   "1 ) هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل." +
   "\n" +
@@ -51,9 +56,16 @@ const withPaint_ar =
   "\n" +
   "5)سيكون عليك دفع 25 ريال بدل زيارة للفني في حالة لم يتم التوافق على الخدمة";
 const withOutPaint_ar =
-  "1 ) هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل." +
+  // "1 ) هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل." +
+  // "\n" +
+  // "2) السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.";
+
+  "1. هذه هي رسوم الاستشارة فقط ، سيقوم الفني لدينا بإقتباس سعر الخدمة بعد الاستطلاع." +
   "\n" +
-  "2) السعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.";
+  "2. السعر المعروض هو للخدمة فقط ولا يشمل سعر أي أجزاء أو مادة مطلوبة لأداء المهمة." +
+  "\n" +
+  "3. هذا سعر تقديري للوظيفة ، وسيتم تقاسم السعر الفعلي من قبل المحترف اعتمادًا على  العمل ومدى تعقيده.";
+
 let persianNumbers = [
   /۰/g,
   /۱/g,
@@ -2717,13 +2729,14 @@ export default class OrderSummaryScreen extends React.Component {
                         </Text>
                       </View>
                     </View>
-                    <View style={{ marginTop: 6 }}>
+                    <View style={{ marginTop: 10 }}></View>
+                    {/* <View style={{ marginTop: 6 }}>
                       <Text style={{ textAlign: "right", fontSize: 13 }}>
                         {this.state.lan == "en"
                           ? "All Prices are 15% VAT inclusive"
                           : "جميع الأسعار شاملة ضريبة القيمة المضافة بنسبة %15"}
                       </Text>
-                    </View>
+                    </View> */}
                   </View>
                 </View>
               </View>
