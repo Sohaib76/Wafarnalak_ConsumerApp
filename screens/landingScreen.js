@@ -74,7 +74,8 @@ const AcBanners_ar = [
 
   "https://i.ibb.co/JRKxMkZ/Electrician-Banner-1-Arabic.png",
   // "https://i.ibb.co/dJXJXmJ/banner-image-arabic-17.png",
-  "https://i.ibb.co/HBnwpS4/Split-AC-Cleaning-Arabic.png",
+  // "https://i.ibb.co/HBnwpS4/Split-AC-Cleaning-Arabic.png",
+  "https://i.ibb.co/ZJC8XVd/Splt-AC-Cleaning-Arabic.jpg",
   "https://i.ibb.co/J3D5p6Q/Split-Ac-app-banner-Arabic.png",
 
   "https://i.ibb.co/BgxfyHm/Schedule-AC-Technician-Visit-Arabic.png",
@@ -94,7 +95,8 @@ const AcBanners = [
 
   "https://i.ibb.co/whNMW9s/Electrician-Banner-1.png",
   // "https://i.ibb.co/SmTM14q/water-heater-banner-image-15.png",
-  "https://i.ibb.co/H2DRM0X/Split-AC-Cleaning-Eng.png",
+  // "https://i.ibb.co/H2DRM0X/Split-AC-Cleaning-Eng.png",
+  "https://i.ibb.co/F4yBH30/Split-AC-Cleaning-Eng.jpg",
   "https://i.ibb.co/ZhPNmp5/Split-Ac-app-banner.png",
 
   "https://i.ibb.co/cCJDnFf/Schedule-AC-Technician-Visit-Eng.png",
@@ -374,7 +376,7 @@ const AcOffersDataEng = [
     },
     webbanner: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
     banner: {
-      url: "https://i.ibb.co/H2DRM0X/Split-AC-Cleaning-Eng.png",
+      url: "https://i.ibb.co/F4yBH30/Split-AC-Cleaning-Eng.jpg",
     },
 
     //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
@@ -584,7 +586,7 @@ const AcOffersData_ar = [
     },
     webbanner: "https://i.ibb.co/PWSc9QP/Ac-app-banner.png",
     banner: {
-      url: "https://i.ibb.co/HBnwpS4/Split-AC-Cleaning-Arabic.png",
+      url: "https://i.ibb.co/ZJC8XVd/Splt-AC-Cleaning-Arabic.jpg",
     },
 
     //htttps://i.ibb.co/17MmDg0/Split-ac-installation-eng.png
@@ -2259,9 +2261,29 @@ export default class LandingSecreen extends React.Component {
     }
   };
   plusQuantity = (job) => {
+    //curr
     console.log("plusQuantity ", job);
     if (job.items) job.items++;
-    else job.items = 1;
+    else {
+      if (job.id == 154) {
+        job.items = 5;
+      } else {
+        job.items = 1;
+      }
+    }
+    // if (job.id === 61) {
+    //   if (job.items == 2) {
+    //     job.t_price = parseFloat(job.saleprice) * job.items;
+    //   } else if (job.items == 3) {
+    //     job.t_price = parseFloat(job.saleprice3) * job.items;
+    //   } else if (job.items == 4) {
+    //     job.t_price = parseFloat(job.saleprice4) * job.items;
+    //   } else if (job.items == 5) {
+    //     job.t_price = parseFloat(job.saleprice5) * job.items;
+    //   } else {
+    //     job.t_price = parseFloat(job.price) * job.items;
+    //   }
+    // }
     if (
       job.id === 70 ||
       job.id === 61 ||
@@ -2322,8 +2344,13 @@ export default class LandingSecreen extends React.Component {
     }
   };
   minusQuantity = (job) => {
+    //curr
     if (job.items && job.items >= 1) {
-      job.items--;
+      if (job.items <= 5 && job.id == 154) {
+        job.items = 0;
+      } else {
+        job.items--;
+      }
       if (
         job.id === 70 ||
         job.id === 61 ||
@@ -3382,6 +3409,7 @@ export default class LandingSecreen extends React.Component {
           ],
           services: [
             //categories
+            //curr
             {
               id: 29,
               name: "AC Technician",
@@ -3444,40 +3472,164 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    // {
+                    //   id: 230,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Freon Refill + Cleaning",
+                    //   name_ar: "تعبئة فريون + تنظيف",
+                    //   price: 120,
+                    //   pricetype: 1,
+                    //   is_promoted: true,
+                    //   saleprice: 84,
+                    //   t_price: 0,
+                    //   i_notes:
+                    //     "Cleaning & Freon refill on 2 or more units in SAR 84 each",
+                    //   i_notes_ar:
+                    //     "التنظيف وإعادة تعبئة الفريون على وحدتين أو أكثر ب 84 ريال  لكل وحدة",
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
+                    // {
+                    //   id: 61,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Cleaning",
+                    //   name_ar: "تنظيف",
+                    //   price: 65,
+                    //   pricetype: 1,
+                    //   is_promoted: true,
+                    //   saleprice: 89,
+                    //   saleprice3: 79,
+                    //   saleprice4: 69,
+                    //   saleprice5: 55,
+                    //   t_price: 0,
+                    //   i_notes: "Get 2 or more units cleaned in SAR 55 each",
+                    //   i_notes_ar: "تنظيف وحدتين أو أكثر ب 55 ريال لكل وحدة",
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
+                    //curr
+                    // no blue color
+                    // Book Offer
                     {
-                      id: 230,
+                      id: 153,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Freon Refill + Cleaning",
-                      name_ar: "تعبئة فريون + تنظيف",
-                      price: 120,
+                      name: " Freon Refill + Cleaning For 1 AC unit",
+                      name_ar: "إعادة تعبئة فريون + تنظيف لوحدة تكييف واحدة",
+                      price: 180,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " Freon Refill + Cleaning For 2 AC unit",
+                      name_ar: "إعادة تعبئة فريون + تنظيف لوحدتي تكييف",
+                      price: 170,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " Freon Refill + Cleaning For 3 AC unit",
+                      name_ar: "إعادة تعبئة فريون + تنظيف 3 وحدات تكييف",
+                      price: 160,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " Freon Refill + Cleaning For 4 AC unit",
+                      name_ar: "إعادة تعبئة فريون + تنظيف 4 وحدات تكييف",
+                      price: 150,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 154,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " Freon Refill + Cleaning For 5 or 5+ AC units",
+                      name_ar: "إعادة تعبئة فريون + تنظيف 5 أو 5+ وحدات تكييف",
+                      price: 140,
                       pricetype: 1,
                       is_promoted: true,
-                      saleprice: 84,
+                      saleprice: 140,
                       t_price: 0,
-                      i_notes:
-                        "Cleaning & Freon refill on 2 or more units in SAR 84 each",
-                      i_notes_ar:
-                        "التنظيف وإعادة تعبئة الفريون على وحدتين أو أكثر ب 84 ريال  لكل وحدة",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
                     {
-                      id: 61,
+                      id: 153,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Cleaning",
-                      name_ar: "تنظيف",
-                      price: 65,
+                      name: "1 Window AC Cleaning",
+                      name_ar: " تنظيف مكيف 1 شباك",
+                      price: 99,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "2 Window AC Cleaning",
+                      name_ar: " تنظيف مكيف 2 شباك",
+                      price: 89,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " 3 Window AC Cleaning",
+                      name_ar: "تنظيف مكيف 3 شباك",
+                      price: 79,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "4 Window AC Cleaning",
+                      name_ar: "تنظيف مكيف42 شباك",
+                      price: 69,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 154,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "5 or 5+ Window AC Cleaning",
+                      name_ar: " تنظيف 5 أو 5+ مكيفات شباك",
+                      price: 55,
                       pricetype: 1,
                       is_promoted: true,
                       saleprice: 55,
                       t_price: 0,
-                      i_notes: "Get 2 or more units cleaned in SAR 55 each",
-                      i_notes_ar: "تنظيف وحدتين أو أكثر ب 55 ريال لكل وحدة",
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -3588,41 +3740,160 @@ export default class LandingSecreen extends React.Component {
                         "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
                       carttype: 1,
                     },
+                    // {
+                    //   id: 223,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Indoor Cleaning + Freon Refill (Partial)",
+                    //   name_ar: "التنظيف الداخلي + إعادة تعبئة الفريون (جزئي)",
+                    //   price: 150,
+                    //   pricetype: 1,
+                    //   is_promoted: true,
+                    //   t_price: 0,
+                    //   saleprice: 105,
+                    //   i_notes:
+                    //     "Cleaning & Freon refill on 2 or more units in SAR 105 each",
+                    //   i_notes_ar:
+                    //     "التنظيف وإعادة تعبئة الفريون على وحدتين أو أكثر ب 105 ريال  لكل وحدة",
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
+                    // {
+                    //   id: 70,
+                    //   serviceid: 29,
+                    //   pricelimit: 49,
+                    //   name: "Cleaning (Indoor)",
+                    //   name_ar: "التنظيف (داخلي)",
+                    //   price: 89,
+                    //   pricetype: 1,
+                    //   pricetype: 1,
+                    //   is_promoted: true,
+                    //   t_price: 0,
+                    //   saleprice: 80,
+                    //   i_notes: "Get 2 or more units cleaned in SAR 80 each",
+                    //   i_notes_ar: "تنظيف وحدتين أو أكثر ب 80 ريال لكل وحدة",
+                    //   cartnotes:
+                    //     "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
+                    //   cartnotes_ar:
+                    //     "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    //   carttype: 1,
+                    // },
+
                     {
-                      id: 223,
+                      id: 153,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Indoor Cleaning + Freon Refill (Partial)",
-                      name_ar: "التنظيف الداخلي + إعادة تعبئة الفريون (جزئي)",
-                      price: 150,
-                      pricetype: 1,
+                      name: " Freon Refill + Cleaning For 1 AC unit",
+                      name_ar: "إعادة تعبئة فريون + تنظيف لوحدة تكييف واحدة",
+                      price: 180,
+                      pricetype: 2,
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 105,
-                      i_notes:
-                        "Cleaning & Freon refill on 2 or more units in SAR 105 each",
-                      i_notes_ar:
-                        "التنظيف وإعادة تعبئة الفريون على وحدتين أو أكثر ب 105 ريال  لكل وحدة",
-                      cartnotes:
-                        "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
-                      cartnotes_ar:
-                        "هذا هو السعر التقريبي للعمل ، سيتم تحديد السعر الحقيقي بواسطة المهني (مقدم الخدمة) على حسب المسافة وتعقيد العمل. \r\nالسعر المعروض هنا -فقط - للخدمة ولا يشمل السعر قيمة اي أجزاء أو مواد مطلوبه لأنجاز العمل.",
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " Freon Refill + Cleaning For 2 AC unit",
+                      name_ar: "إعادة تعبئة فريون + تنظيف لوحدتي تكييف",
+                      price: 170,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " Freon Refill + Cleaning For 3 AC unit",
+                      name_ar: "إعادة تعبئة فريون + تنظيف 3 وحدات تكييف",
+                      price: 160,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " Freon Refill + Cleaning For 4 AC unit",
+                      name_ar: "إعادة تعبئة فريون + تنظيف 4 وحدات تكييف",
+                      price: 150,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 154,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " Freon Refill + Cleaning For 5 or 5+ AC units",
+                      name_ar: "إعادة تعبئة فريون + تنظيف 5 أو 5+ وحدات تكييف",
+                      price: 140,
+                      pricetype: 1,
+                      is_promoted: true,
+                      saleprice: 140,
+                      t_price: 0,
                       carttype: 1,
                     },
                     {
-                      id: 70,
+                      id: 153,
                       serviceid: 29,
                       pricelimit: 49,
-                      name: "Cleaning (Indoor)",
-                      name_ar: "التنظيف (داخلي)",
-                      price: 89,
-                      pricetype: 1,
-                      pricetype: 1,
+                      name: "1 Split AC Cleaning",
+                      name_ar: "  تنظيف 1 مكيفات سبلت",
+                      price: 110,
+                      pricetype: 2,
                       is_promoted: true,
                       t_price: 0,
-                      saleprice: 80,
-                      i_notes: "Get 2 or more units cleaned in SAR 80 each",
-                      i_notes_ar: "تنظيف وحدتين أو أكثر ب 80 ريال لكل وحدة",
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "2 Split AC Cleaning",
+                      name_ar: "  تنظيف2 مكيفات سبلت",
+                      price: 95,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: " 3 Split AC Cleaning",
+                      name_ar: " تنظيف 3 مكيفات سبلت",
+                      price: 90,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 153,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "4 Split AC Cleaning",
+                      name_ar: " تنظيف 4 مكيفات سبلت",
+                      price: 85,
+                      pricetype: 2,
+                      is_promoted: true,
+                      t_price: 0,
+                    },
+                    {
+                      id: 154,
+                      serviceid: 29,
+                      pricelimit: 49,
+                      name: "5 or 5+ Split AC Cleaning",
+                      name_ar: "   تنظيف 5 أو 5+ مكيفات سبلت",
+                      price: 80,
+                      pricetype: 1,
+                      is_promoted: true,
+                      saleprice: 55,
+                      t_price: 0,
                       cartnotes:
                         "1- This is an estimated price for the job, the actual price will be shared by the professional depending upon the distance and complexity of the work\r\n2- The price displayed is for service only and it does not include price for any parts or materials required to perform the job",
                       cartnotes_ar:
@@ -8240,11 +8511,17 @@ export default class LandingSecreen extends React.Component {
             notification.request.content.data.statusid == 5 ? true : false,
           isFeedback: true,
         });
+      } else if (notification.request.content.data.statusid == 2) {
+        this.props.navigation.navigate("PromotionService", {
+          serviceid: notification.request.content.data.serviceid,
+          lan: this.state.lan,
+        });
       } else if (notification.request.content.data.statusid) {
         this.props.navigation.navigate("PromotionService", {
           serviceid: notification.request.content.data.serviceid,
           lan: this.state.lan,
         });
+        // Add condition for promotion
       } else {
         this.props.navigation.navigate("LandingSecreen", {
           order: notification.request.content.data,

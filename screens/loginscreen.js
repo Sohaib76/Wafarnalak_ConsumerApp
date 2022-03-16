@@ -589,6 +589,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
+  KeyboardAvoidingView,
 } from "react-native";
 import {
   Body,
@@ -835,7 +836,12 @@ export default class LoginScreen extends React.Component {
   };
   render() {
     return (
-      <View style={{ backgroundColor: "#0866b0", flex: 1 }}>
+      <KeyboardAvoidingView
+        behavior="position"
+        style={{ flex: 1, backgroundColor: "#0866b0" }}
+        keyboardVerticalOffset={4}
+      >
+        {/* <View style={{ backgroundColor: "#0866b0", flex: 1 }}> */}
         <Spinner visible={this.state.loading} textContent={""} />
         <View
           style={{
@@ -1171,7 +1177,8 @@ export default class LoginScreen extends React.Component {
             </View>
           </View>
         </Modal>
-      </View>
+        {/* </View> */}
+      </KeyboardAvoidingView>
     );
   }
 }

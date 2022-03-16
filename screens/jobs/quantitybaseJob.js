@@ -12,7 +12,7 @@ const QuantitybaseJob = ({
   index,
   toolTipVisible,
   cahngeToolTip,
-  womens
+  womens,
 }) => {
   console.log("quantity base job ", job);
   return (
@@ -26,7 +26,7 @@ const QuantitybaseJob = ({
               style={{
                 fontWeight: "bold",
                 textAlign: "left",
-                paddingHorizontal: widthPercentageToDP(2)
+                paddingHorizontal: widthPercentageToDP(2),
               }}
             >
               {lan == "en" ? "Notes:" : "ملاحظات:"}
@@ -35,7 +35,7 @@ const QuantitybaseJob = ({
               style={{
                 paddingHorizontal: widthPercentageToDP(2),
                 fontSize: 12,
-                textAlign: "left"
+                textAlign: "left",
               }}
             >
               {lan == "en" ? job.note : job.note_ar}
@@ -52,7 +52,7 @@ const QuantitybaseJob = ({
           backgroundColor: job.is_promoted == true ? "#9dbacd" : "white",
           borderWidth: 1,
           borderTopWidth: index == 0 ? 1 : 0,
-          borderColor: "#283a97"
+          borderColor: "#283a97",
         }}
       >
         <View
@@ -60,7 +60,7 @@ const QuantitybaseJob = ({
             flexDirection: "row",
             justifyContent: "space-between",
             marginLeft: 8,
-            marginRight: 6
+            marginRight: 6,
           }}
         >
           <View style={{ marginTop: 4 }}>
@@ -70,7 +70,7 @@ const QuantitybaseJob = ({
                 fontFamily: "montserrat_semi_blod",
                 fontSize: 12,
                 textAlign: "left",
-                width: Dimensions.get("screen").width - 140
+                width: Dimensions.get("screen").width - 140,
               }}
               numberOfLines={2}
             >
@@ -85,7 +85,7 @@ const QuantitybaseJob = ({
                 style={{
                   fontSize: 10,
                   color: "#0764af",
-                  fontWeight: "bold"
+                  fontWeight: "bold",
                 }}
               >
                 Total SAR{" "}
@@ -93,7 +93,7 @@ const QuantitybaseJob = ({
               <Text
                 style={{
                   color: job.is_promoted == true ? "white" : "#ff9c00",
-                  fontSize: 10
+                  fontSize: 10,
                 }}
               >
                 {job.t_price ? job.t_price : 0}{" "}
@@ -107,14 +107,14 @@ const QuantitybaseJob = ({
             flexDirection: "row",
             justifyContent: "space-between",
             marginTop: 15,
-            marginBottom: 15
+            marginBottom: 15,
           }}
         >
           <View style={{ marginLeft: 12, marginTop: 12 }}>
             <View
               style={{
                 backgroundColor: "#0764af",
-                width: 90
+                width: 90,
               }}
             >
               <View
@@ -123,14 +123,14 @@ const QuantitybaseJob = ({
                   alignSelf: "center",
                   alignContent: "center",
                   alignItems: "center",
-                  flex: 1
+                  flex: 1,
                 }}
               >
                 <Text style={{ color: "white", fontSize: 12 }}>SAR </Text>
                 <Text
                   style={{
                     color: "#ff9c00",
-                    fontSize: 12
+                    fontSize: 12,
                   }}
                 >
                   {job.items > 1 && job.saleprice ? job.saleprice : job.price}
@@ -148,7 +148,7 @@ const QuantitybaseJob = ({
                 flex: 1,
                 marginLeft: 10,
                 marginTop: 8,
-                marginBottom: 4
+                marginBottom: 4,
               }}
             >
               <TouchableOpacity onPress={() => cahngeToolTip(index)}>
@@ -168,7 +168,7 @@ const QuantitybaseJob = ({
                         borderColor: "#0764af",
                         alignSelf: "flex-start",
                         borderTopLeftRadius: 0,
-                        zIndex: 2
+                        zIndex: 2,
                       }}
                     >
                       <Text
@@ -183,11 +183,13 @@ const QuantitybaseJob = ({
                     <View></View>
                   )}
                   <View style={{ alignSelf: "flex-start" }}>
-                    <Ionicons
-                      name="ios-information-circle"
-                      size={20}
-                      color={"#0764af"}
-                    />
+                    {job.id != 154 && (
+                      <Ionicons
+                        name="ios-information-circle"
+                        size={20}
+                        color={"#0764af"}
+                      />
+                    )}
                   </View>
                 </View>
               </TouchableOpacity>
@@ -205,7 +207,7 @@ const QuantitybaseJob = ({
                   style={{
                     textAlign: "center",
                     fontSize: 12,
-                    color: "#4a4b4c"
+                    color: "#4a4b4c",
                   }}
                 >
                   {lan == "en" ? "Number of units" : "عدد الوحدات"}
@@ -224,7 +226,7 @@ const QuantitybaseJob = ({
                 height: 25,
                 borderRadius: 12,
                 alignSelf: "flex-end",
-                marginTop: 5
+                marginTop: 5,
               }}
             >
               <View
@@ -234,7 +236,7 @@ const QuantitybaseJob = ({
                   borderRadius: 12.5,
                   backgroundColor: "#0764af",
                   alignSelf: "center",
-                  marginTop: -1
+                  marginTop: -1,
                 }}
               >
                 <TouchableOpacity onPress={() => minus(job)}>
@@ -254,7 +256,7 @@ const QuantitybaseJob = ({
                   height: 25,
                   borderRadius: 12.5,
                   backgroundColor: "#0764af",
-                  marginTop: 0
+                  marginTop: 0,
                 }}
               >
                 <TouchableOpacity onPress={() => plus(job)}>

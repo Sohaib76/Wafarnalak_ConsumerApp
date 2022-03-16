@@ -45,7 +45,7 @@ const SelectableJob = ({ job, selectJob, lan, index, isBanner }) => {
         style={{
           marginLeft: isBanner ? 0 : 15,
           marginRight: isBanner ? 0 : 15,
-          backgroundColor: "white",
+          backgroundColor: job.id == 153 ? "#9dbacd" : "white",
           borderWidth: 1,
           borderTopWidth: index == 0 ? 1 : 0,
           borderColor: "#283a97",
@@ -95,7 +95,13 @@ const SelectableJob = ({ job, selectJob, lan, index, isBanner }) => {
               >
                 Total SAR{" "}
               </Text>
-              <Text style={{ color: "#ff9c00", fontSize: 10, paddingLeft: 4 }}>
+              <Text
+                style={{
+                  color: job.id == 153 ? "white" : "#0764af",
+                  fontSize: 10,
+                  paddingLeft: 4,
+                }}
+              >
                 {job.t_price ? job.t_price : 0}{" "}
               </Text>
             </View>
@@ -148,13 +154,30 @@ const SelectableJob = ({ job, selectJob, lan, index, isBanner }) => {
                       fontSize: 12,
                     }}
                   >
-                    {lan == "en" ? "/Visit" : "زيارة/"}
+                    {job.id == 153
+                      ? lan == "en"
+                        ? "/Unit"
+                        : "وحدة/"
+                      : lan == "en"
+                      ? "/Visit"
+                      : "زيارة/"}
                   </Text>
                 </View>
               </View>
             </View>
           </View>
-          <View style={{ marginRight: lan == "en" ? 20 : 37 }}>
+          <View
+            style={{
+              marginRight:
+                job.id == 153
+                  ? lan == "en"
+                    ? 32
+                    : 37 + 12
+                  : lan == "en"
+                  ? 20
+                  : 37,
+            }}
+          >
             {/* 30 */}
             <Text
               style={{
@@ -165,7 +188,14 @@ const SelectableJob = ({ job, selectJob, lan, index, isBanner }) => {
                 //marginLeft: 50,
               }}
             >
-              {lan == "en" ? "Book Appointment" : "إحجز موعد"}
+              {/* curr */}
+              {job.id == 153
+                ? lan == "en"
+                  ? "Book Offer"
+                  : "إحجز موعد"
+                : lan == "en"
+                ? "Book Appointment"
+                : "إحجز موعد"}
             </Text>
             <TouchableOpacity
               onPress={() => selectJob(job)}
@@ -197,11 +227,13 @@ const SelectableJob = ({ job, selectJob, lan, index, isBanner }) => {
               {lan == "en" ? "Notes:" : "ملاحظات:"}
             </Text> */}
             {/* fontSize : 9 */}
-            <Text style={{ textAlign: "justify", fontSize: 11 }}>
-              {lan == "en"
-                ? "This is only visit charge, our technician will quote the service price after survey."
-                : "هذه ليست سوى رسوم زيارة ، سيقوم الفني لدينا بتحديد سعر الخدمة بعد فحص المشكلة."}
-            </Text>
+            {job.id != 153 && (
+              <Text style={{ textAlign: "justify", fontSize: 11 }}>
+                {lan == "en"
+                  ? "This is only visit charge, our technician will quote the service price after survey."
+                  : "هذه ليست سوى رسوم زيارة ، سيقوم الفني لدينا بتحديد سعر الخدمة بعد فحص المشكلة."}
+              </Text>
+            )}
           </View>
         </View>
       </View>

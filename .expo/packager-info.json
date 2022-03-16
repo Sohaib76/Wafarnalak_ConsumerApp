@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": null,
-  "packagerPort": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "packagerPort": 19000,
+  "expoServerNgrokUrl": "https://rp-9rr.farhanmalik.consumer-latest.exp.direct",
+  "packagerNgrokUrl": "https://packager.rp-9rr.farhanmalik.consumer-latest.exp.direct",
+  "ngrokPid": 1404,
   "packagerPid": null,
   "webpackServerPort": null
 }
