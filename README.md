@@ -1,29 +1,27 @@
-# README #
+# Wafarnalak
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## Features:
 
-### What is this repository for? ###
+### Dashboard (Services, Jobs, Promotions)
+![WhatsApp Image 2022-04-28 at 3 11 32 AM (6)](https://user-images.githubusercontent.com/35189275/165639932-1af5b709-ac43-4ad2-8a12-0a743c175448.jpeg)
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### Sign In
+![WhatsApp Image 2022-04-28 at 3 11 32 AM (5)](https://user-images.githubusercontent.com/35189275/165639916-daef7019-f3db-44fd-b677-a41dd38f6af4.jpeg)
 
-### How do I get set up? ###
+### Billingual
+![WhatsApp Image 2022-04-28 at 3 11 32 AM (3)](https://user-images.githubusercontent.com/35189275/165640004-6f150516-403e-4841-9951-7e39055b25b4.jpeg)
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
 
-### Contribution guidelines ###
+### Select Quantity
+![WhatsApp Image 2022-04-28 at 3 11 32 AM (2)](https://user-images.githubusercontent.com/35189275/165640038-0839fbf2-3e57-4912-ba7b-6262bfb4d3e8.jpeg)
 
-* Writing tests
-* Code review
-* Other guidelines
+### Select Address and Time then Place Order
+![WhatsApp Image 2022-04-28 at 3 11 32 AM (4)](https://user-images.githubusercontent.com/35189275/165640062-caaf2788-c33b-475c-9506-154a56312305.jpeg)
 
-### Who do I talk to? ###
+### Orders List
+![WhatsApp Image 2022-04-28 at 3 11 32 AM (1)](https://user-images.githubusercontent.com/35189275/165640094-7f1ae19e-fa6f-4997-8c8f-1e92d3f01265.jpeg)
 
-* Repo owner or admin
-* Other community or team contact
+### Track Order
+![WhatsApp Image 2022-04-28 at 3 11 32 AM](https://user-images.githubusercontent.com/35189275/165640123-7a3d3a6c-5ca1-4d33-8671-3f862d4780d1.jpeg)
+
+
